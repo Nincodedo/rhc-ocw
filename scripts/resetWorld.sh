@@ -18,11 +18,14 @@ do
     docker ps -f name=mc | grep healthy > /dev/null
   done
   echo "Found, tailing log"
+  seed=`rcon_command seed`
+  echo "`date +\"%d-%m-%Y %l:%M %p\"` $seed" >> seed.log
   ( tail -f -n0 "$server_log" & ) | grep -q "$grep_phrase"
   dead_player=`tail -n 10 "$server_log" | grep "$grep_phrase" | awk '{print $4}'`
   echo "$dead_player died, restarting server"
   rcon_command "say $dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
-  echo "SERVER_NAME=OCW Minecraft, last incident `date +\"%d-%m-%Y %l:%M %p\"`" > docker.env
+  echo "`date +\"%d-%m-%Y %H:%m %p\"` $dead_player died" >> death.log
+  echo "MOTD=OCW Minecraft\nLast incident `date +\"%d-%m-%Y %H:%m %p\"`" > /app/ocw-minecraft/docker.env
   sleep $death_reset_delay_seconds
   docker stop mc
   docker rm mc
