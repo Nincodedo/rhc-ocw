@@ -15,7 +15,7 @@ services:
       DIFFICULTY: 'hard'
       OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
-      MOTD: 'OCW Minecraft'
+      SERVER_NAME: 'OCW Minecraft'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
       MEMORY: '2G'
