@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bone"
+    },
+    "title": "You did this",
+    "description": "How could you",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "anydeath": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "player": {
+            "stats": [
+              {
+                "type": "minecraft:custom",
+                "stat": "deaths",
+                "value": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:death_notify"
+  }
+}
