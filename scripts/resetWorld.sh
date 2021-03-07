@@ -23,6 +23,6 @@ do
   rm -rf world
   mkdir world world/datapacks
   cp -r /app/death-notify/ world/datapacks/
-  docker-compose -f /app/docker-compose.yaml up -d mc-java
+  docker-compose -f /app/ocw-minecraft/docker-compose.yaml up -d mc-java
 done  
 
