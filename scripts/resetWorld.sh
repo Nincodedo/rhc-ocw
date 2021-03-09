@@ -9,14 +9,19 @@ scoreboard_setup(){
   rcon_command "scoreboard objectives modify health rendertype hearts"
 }
 
+log(){
+  local current_datetime = `date +"%d-%m-%Y %H:%m %p"`
+  echo "$current_datetime $@"
+}
+
 cd /mnt/e/Docker/minecraft
-echo "Starting script in: `pwd`"
+log "Starting script in: `pwd`"
 server_log=logs/latest.log
 grep_phrase="\[Server thread\/INFO\]\: .* has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 while : ;
 do
-  echo "Checking for server log and healthy container status"
+  log "Checking for server log and healthy container status"
   docker ps -f name=mc | grep healthy > /dev/null
   until [ -f "$server_log" -a $? -eq 0 ];
   do
@@ -27,11 +32,11 @@ do
   seed=`rcon_command seed`
   current_datetime=`date +"%d-%m-%Y %H:%m %p"`
   echo "$current_datetime $seed" >> seed.log
-  echo "Found, tailing log"
+  log "Found, tailing log"
   ( tail -f -n0 "$server_log" & ) | grep -q "$grep_phrase"
   dead_player=`tail -n 10 "$server_log" | grep "$grep_phrase" | awk '{print $4}'`
   current_datetime=`date +"%d-%m-%Y %H:%m %p"`
-  echo "$dead_player died, restarting server"
+  log "$dead_player died, restarting server"
   rcon_command "say $dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
   echo "$current_datetime $dead_player died" >> death.log
   echo "MOTD=OCW Minecraft\nLast incident $current_datetime" > /app/ocw-minecraft/docker.env
