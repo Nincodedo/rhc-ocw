@@ -8,6 +8,7 @@ services:
     - "25575:25575"
     - "25575:25575/udp"
     env_file:
+      - motd_override.env
       - docker.env
     environment:
       EULA: 'true'
@@ -15,7 +16,6 @@ services:
       DIFFICULTY: 'hard'
       OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
-      SERVER_NAME: 'OCW Minecraft'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
       MEMORY: '2G'
@@ -33,6 +33,10 @@ services:
     build: .
     image: nincodedo/mc-lame-log-watcher:latest
     container_name: log-watcher
+    env_file:
+      - docker.env
+    environment:
+      TZ: 'CST7CDT'
     volumes:
     - /mnt/e/Docker/minecraft:/mnt/e/Docker/minecraft
     - /var/run/docker.sock:/var/run/docker.sock

@@ -10,7 +10,7 @@ scoreboard_setup(){
 }
 
 log(){
-  local current_datetime = `date +"%d-%m-%Y %H:%m %p"`
+  local current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   echo "$current_datetime $@"
 }
 
@@ -30,16 +30,16 @@ do
   done
   scoreboard_setup
   seed=`rcon_command seed`
-  current_datetime=`date +"%d-%m-%Y %H:%m %p"`
+  current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   echo "$current_datetime $seed" >> seed.log
   log "Found, tailing log"
   ( tail -f -n0 "$server_log" & ) | grep -q "$grep_phrase"
   dead_player=`tail -n 10 "$server_log" | grep "$grep_phrase" | awk '{print $4}'`
-  current_datetime=`date +"%d-%m-%Y %H:%m %p"`
+  current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   log "$dead_player died, restarting server"
   rcon_command "say $dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
   echo "$current_datetime $dead_player died" >> death.log
-  echo "MOTD=OCW Minecraft\nLast incident $current_datetime" > /app/ocw-minecraft/docker.env
+  echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > /app/ocw-minecraft/motd_override.env
   sleep $death_reset_delay_seconds
   docker stop mc
   docker rm mc
