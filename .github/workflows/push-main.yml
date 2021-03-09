@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - main
+name: Main Build
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build Dockerfile
+        run: docker-compose build
