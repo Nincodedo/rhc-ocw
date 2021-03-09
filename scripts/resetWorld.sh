@@ -13,7 +13,7 @@ cd /mnt/e/Docker/minecraft
 echo "Starting script in: `pwd`"
 server_log=logs/latest.log
 grep_phrase="\[Server thread\/INFO\]\: .* has made the advancement \[You did this\]"
-death_reset_delay_seconds=15
+death_reset_delay_seconds=20
 while : ;
 do
   echo "Checking for server log and healthy container status"
