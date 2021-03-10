@@ -4,14 +4,14 @@ rcon_command(){
 }
 
 scoreboard_setup(){
-  rcon_command "scoreboard objectives add health health"
-  rcon_command "scoreboard objectives setdisplay list health"  
-  rcon_command "scoreboard objectives modify health rendertype hearts"
+  rcon_command "scoreboard objectives add health health" > /dev/null
+  rcon_command "scoreboard objectives setdisplay list health" > /dev/null
+  rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
 }
 
 log(){
   local current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
-  echo "$current_datetime $@"
+  echo "$current_datetime [LogWatcher]: $@"
 }
 
 cd /mnt/e/Docker/minecraft
@@ -41,8 +41,8 @@ do
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   log "$dead_player died, restarting server"
   rcon_command "say $dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
-  rcon_command "you survived $mc_days_survived in game days"
-  rcon_command "the high score is $mc_days_highscore in game days"
+  rcon_command "say you survived $mc_days_survived in game days"
+  rcon_command "say the high score is $mc_days_highscore in game days"
   echo "$current_datetime $dead_player died" >> death.log
   echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > /app/ocw-minecraft/motd_override.env
   sleep $death_reset_delay_seconds
