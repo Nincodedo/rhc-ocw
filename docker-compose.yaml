@@ -22,6 +22,8 @@ services:
       HARDCORE: 'true'
       FUNCTION_PERMISSION_LEVEL: '4'
       SPAWN_PROTECTION: '0'
+      ENABLE_AUTOPAUSE: 'true'
+      MAX_TICK_TIME: "-1"
     volumes:
     - /mnt/e/Docker/minecraft:/data
     container_name: mc
