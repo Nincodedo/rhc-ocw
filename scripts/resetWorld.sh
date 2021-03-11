@@ -32,15 +32,15 @@ world_ending_announcements() {
 }
 
 cd /mnt/e/Docker/minecraft
-log "Starting script in: `pwd`"
+log "Starting LogWatcher in: `pwd`"
 server_log=logs/latest.log
 grep_phrase="\[Server thread\/INFO\]\: .* has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 while : ;
 do
-  log "Checking for server log and healthy container status"
+  log "Checking for healthy container status"
   docker ps -f name=mc | grep healthy > /dev/null
-  until [ -f "$server_log" -a $? -eq 0 ];
+  until [ $? -eq 0 ];
   do
     sleep 0.1
     docker ps -f name=mc | grep healthy > /dev/null
@@ -51,7 +51,7 @@ do
   current_date=`date +"%d-%m-%Y"`
   echo "$current_datetime $seed" >> seed.log
   log "Found, tailing log"
-  ( tail -f -n0 "$server_log" & ) | grep -q "$grep_phrase"
+  ( docker logs --tail 0 -f mc "$server_log" & ) | grep -q "$grep_phrase"
   world_ending_announcements
   echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > /app/ocw-minecraft/motd_override.env
   sleep $death_reset_delay_seconds
