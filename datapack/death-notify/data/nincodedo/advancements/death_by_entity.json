@@ -19,7 +19,10 @@
               {
                 "type": "minecraft:custom",
                 "stat": "deaths",
-                "value": 1
+                "value": {
+                  "min": 1,
+                  "max": 999
+                }
               }
             ]
           }
