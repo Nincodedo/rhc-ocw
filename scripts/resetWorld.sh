@@ -51,7 +51,7 @@ do
   current_date=`date +"%d-%m-%Y"`
   echo "$current_datetime $seed" >> seed.log
   log "Found, tailing log"
-  ( docker logs --tail 0 -f mc "$server_log" & ) | grep -q "$grep_phrase"
+  ( docker logs mc --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
   echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > /app/ocw-minecraft/motd_override.env
   sleep $death_reset_delay_seconds
