@@ -19,7 +19,7 @@ log() {
 
 world_ending_announcements() {
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
-  dead_player=`tail -n 10 "$server_log" | grep "$grep_phrase" | awk '{print $4}'`
+  dead_player=`docker logs mc --tail 10 | grep "$grep_phrase" | awk '{print $4}'`
   mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
   echo $mc_days_survived >> $mc_days_survived_log_name
   mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
