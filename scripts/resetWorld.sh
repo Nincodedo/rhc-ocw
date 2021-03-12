@@ -8,8 +8,8 @@ world_ready_setup() {
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
-  rcon_command "datapack list"
-  rcon_command "datapack enable 'file/death-notify'"
+  rcon_command "datapack list" > /dev/null
+  rcon_command "datapack enable 'file/death-notify'" > /dev/null
 }
 
 log() {
