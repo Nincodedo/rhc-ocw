@@ -25,7 +25,7 @@ services:
       ENABLE_AUTOPAUSE: 'true'
       MAX_TICK_TIME: "-1"
       AUTOPAUSE_TIMEOUT_EST: '30'
-      AUTOPAUSE_TIMEOUT_INIT: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '120'
     volumes:
     - /mnt/e/Docker/minecraft:/data
     container_name: mc
