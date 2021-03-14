@@ -24,8 +24,8 @@ services:
       SPAWN_PROTECTION: '0'
       ENABLE_AUTOPAUSE: 'true'
       MAX_TICK_TIME: "-1"
-      AUTOPAUSE_TIMEOUT_EST: '300'
-      AUTOPAUSE_TIMEOUT_INIT: '300'
+      AUTOPAUSE_TIMEOUT_EST: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '30'
     volumes:
     - /mnt/e/Docker/minecraft:/data
     container_name: mc
