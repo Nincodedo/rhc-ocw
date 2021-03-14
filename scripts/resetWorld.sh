@@ -20,7 +20,7 @@ log() {
 world_ending_announcements() {
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $4}'`
-  if [ ! -z "$dead_player"]
+  if [ ! -z "$dead_player" ]
   then
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
     echo $mc_days_survived >> $mc_days_survived_log_name
@@ -62,7 +62,7 @@ do
   log "Found healthy container, tailing docker log"
   ( docker logs mc --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
-  if [ ! -z "$dead_player"]
+  if [ ! -z "$dead_player" ]
   then
     echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > $minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
