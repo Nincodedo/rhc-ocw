@@ -33,7 +33,7 @@ world_ending_announcements() {
   fi
 }
 
-minecraft_server_dir=/mnt/e/Docker/minecraft
+minecraft_server_dir=/data
 app_dir=/app
 minecraft_compose_dir=$app_dir/ocw-minecraft
 minecraft_server_log=$minecraft_server_dir/logs/latest.log

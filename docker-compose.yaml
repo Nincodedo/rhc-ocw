@@ -27,7 +27,7 @@ services:
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
     volumes:
-    - /mnt/e/Docker/minecraft:/data
+    - mc_vanilla:/data
     container_name: mc
     tty: true
     stdin_open: true
@@ -42,5 +42,7 @@ services:
     environment:
       TZ: 'CST7CDT'
     volumes:
-    - /mnt/e/Docker/minecraft:/mnt/e/Docker/minecraft
+    - mc_vanilla:/data
     - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+  mc_vanilla:
