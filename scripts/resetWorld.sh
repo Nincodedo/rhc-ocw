@@ -1,5 +1,5 @@
 #!/bin/sh
-rcon_command() {
+rcon_command(){
   docker exec mc rcon-cli $1
 }
 
@@ -13,8 +13,8 @@ world_ready_setup() {
 }
 
 log() {
-  local current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
-  echo "$current_datetime [LogWatcher]: $@"
+  log_time=`date +"%d-%m-%Y %I:%M:%S %p"`
+  echo "$log_time [LogWatcher]: $@"
 }
 
 world_ending_announcements() {
