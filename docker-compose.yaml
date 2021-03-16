@@ -26,8 +26,14 @@ services:
       MAX_TICK_TIME: "-1"
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
+      TYPE: 'FORGE'
+      FORGEVERSION: '36.1.0'
+    depends_on:
+      - log-watcher
     volumes:
-    - mc_vanilla:/data
+    - mc_server:/data
+    - mc_mods:/mods
+    - mc_mod_configs:/config
     container_name: mc
     tty: true
     stdin_open: true
@@ -42,7 +48,11 @@ services:
     environment:
       TZ: 'CST7CDT'
     volumes:
-    - mc_vanilla:/data
+    - mc_server:/data
+    - mc_mods:/mods
+    - mc_mod_configs:/config
     - /var/run/docker.sock:/var/run/docker.sock
 volumes:
-  mc_vanilla:
+  mc_server:
+  mc_mods:
+  mc_mod_configs:
