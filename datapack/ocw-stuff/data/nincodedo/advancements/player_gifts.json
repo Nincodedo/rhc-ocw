@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_chest"
+    },
+    "title": "OCW Gifts",
+    "description": "Get them what they need!",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:root",
+  "criteria": {
+    "got_root": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "player": {
+            "advancements": {
+              "nincodedo:root": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "got_root"
+    ]
+  ]
+}

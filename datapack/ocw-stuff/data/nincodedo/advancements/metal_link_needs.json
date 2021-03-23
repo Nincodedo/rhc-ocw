@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:Metal_Link}"
+    },
+    "title": "Metal_Link appreciates this",
+    "description": "He needs his green",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts",
+  "criteria": {
+    "give_ml_cactus": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "entity": {
+          "nbt": "{UUID:[I;-1953028026,-856931226,-1240793240,-1598231354]}"
+        },
+        "item": {
+            "item": "minecraft:cactus"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_ml_cactus"
+    ]
+  ]
+}

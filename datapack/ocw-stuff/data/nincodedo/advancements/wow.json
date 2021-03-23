@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:white_carpet"
+    },
+    "title": "You did THIS?",
+    "description": "How could you",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:root",
+  "criteria": {
+    "you_did_THIS?": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:llama"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "you_did_THIS?"
+    ]
+  ]
+}

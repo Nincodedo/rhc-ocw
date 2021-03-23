@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:black_banner",
+      "nbt": "{BlockEntityTag:{Base:15,Patterns:[{Pattern:ts,Color:0},{Pattern:hhb,Color:11},{Pattern:cs,Color:3},{Pattern:bs,Color:3},{Pattern:bo,Color:3}]}}"
+    },
+    "title": "Nin's Challenges",
+    "description": "OCW Custom Challenges",
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crafting_table"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crafting_table"
+    ]
+  ]
+}
