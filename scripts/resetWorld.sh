@@ -44,6 +44,7 @@ grep_phrase="\[Server thread\/INFO\]\: .* has made the advancement \[You did thi
 death_reset_delay_seconds=20
 while : ;
 do
+  dead_player=""
   log "Checking for healthy container status"
   docker ps -f name=mc | grep healthy > /dev/null
   until [ $? -eq 0 ];
