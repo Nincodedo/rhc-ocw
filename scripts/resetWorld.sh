@@ -10,6 +10,7 @@ world_ready_setup() {
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
   rcon_command "datapack list" > /dev/null
   rcon_command "datapack enable 'file/death-notify'" > /dev/null
+  rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
 }
 
 log() {
@@ -52,7 +53,7 @@ do
     sleep 0.1
     docker ps -f name=mc | grep healthy > /dev/null
   done
-  current_date=`date +"%d-%m-%Y"`
+  current_date=`date +"%m-%Y"`
   seed_log_name="logs/seed-$current_date.log"
   death_log_name="logs/death-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
