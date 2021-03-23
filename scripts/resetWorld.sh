@@ -27,9 +27,9 @@ world_ending_announcements() {
     mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
     log "$dead_player died, restarting server"
     echo "$current_datetime $dead_player died" >> $death_log_name
-    rcon_command "say $dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
-    rcon_command "say you survived $mc_days_survived in game days"
-    rcon_command "say the high score is $mc_days_highscore in game days"
+    rcon_command "tellraw @a {\"text\": \"$dead_player has died, the server is restarting in $death_reset_delay_seconds seconds\"}"
+    rcon_command "tellraw @a {\"text\": \"You survived $mc_days_survived in game days\"}"
+    rcon_command "tellraw @a {\"text\": \"The high score is $mc_days_highscore in game days\"}"
   fi
 }
 
