@@ -28,8 +28,6 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FORGE'
       FORGEVERSION: '36.1.0'
-    depends_on:
-      - log-watcher
     volumes:
     - mc_server:/data
     - mc_mods:/mods
