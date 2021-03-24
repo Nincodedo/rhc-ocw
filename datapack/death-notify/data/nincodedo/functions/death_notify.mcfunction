@@ -6,3 +6,4 @@ execute as @p run summon minecraft:lightning_bolt ~ ~10 ~
 execute as @p run summon minecraft:lightning_bolt ~ ~ ~10
 execute as @p run summon minecraft:lightning_bolt ~5 ~ ~
 weather thunder
+function nincodedo:create_countdown
