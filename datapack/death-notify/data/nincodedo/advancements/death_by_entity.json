@@ -5,7 +5,6 @@
     },
     "title": "You did this",
     "description": "How could you",
-    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
