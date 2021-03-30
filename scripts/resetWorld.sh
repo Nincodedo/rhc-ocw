@@ -4,13 +4,13 @@ rcon_command(){
 }
 
 world_ready_setup() {
-  cp -r /app/death-notify/ world/datapacks/
+  cp -r /app/who-did-this/ world/datapacks/
   cp -r /app/ocw-stuff/ world/datapacks/
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
   rcon_command "datapack list" > /dev/null
-  rcon_command "datapack enable 'file/death-notify'" > /dev/null
+  rcon_command "datapack enable 'file/who-did-this'" > /dev/null
   rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
 }
 
