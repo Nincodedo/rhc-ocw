@@ -8,4 +8,5 @@ COPY scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/ftbbackups-common.toml /config/
 RUN wget -P /mods https://media.forgecdn.net/files/3038/811/ftb-backups-2.1.1.6.jar
+RUN wget -P /mods https://media.forgecdn.net/files/3215/383/Morpheus-1.16.5-4.2.70.jar
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
