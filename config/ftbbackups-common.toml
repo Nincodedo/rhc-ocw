@@ -6,7 +6,7 @@ silent = true
 #More backups = more space used
 #0 - Infinite
 #Range: 0 ~ 32000
-backups_to_keep = 12
+backups_to_keep = 24
 #Timer in minutes.
 #5 - backups every 5 minutes
 #60 - backups every hour
