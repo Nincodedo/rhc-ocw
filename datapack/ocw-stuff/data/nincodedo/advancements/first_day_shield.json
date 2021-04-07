@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cookie"
+    },
+    "title": "Smart Cookie",
+    "description": "Craft a shield by the end of the first day",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:root",
+  "criteria": {
+    "first_day_shield": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:time_check",
+            "value": {
+              "min": 0,
+              "max": 24000
+            }
+          }
+        ],
+        "items": [
+          {
+            "item": "minecraft:shield"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}

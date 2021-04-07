@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:chest"
+    },
+    "title": "This is a Good Omen",
+    "description": "Found buried treasure",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:root",
+  "criteria": {
+    "buried_treasure": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "buried_treasure"
+        }
+      }
+    }
+  }
+}

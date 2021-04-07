@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:pufferfish"
+    },
+    "title": "gALAXY bRAIN",
+    "description": "wow, you did this in the worst way",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:root",
+  "criteria": {
+    "killed_another_player": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:killed_by_player"
+          }
+        ]
+      }
+    }
+  }
+}
