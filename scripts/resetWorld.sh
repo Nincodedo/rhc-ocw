@@ -58,6 +58,11 @@ do
   seed_log_name="logs/seed-$current_date.log"
   death_log_name="logs/death-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
+  mc_days_survived_all_logs="logs/mc_days_survived-*"
+  touch $mc_days_survived_log_name
+  attempt_number=`wc -l $mc_days_survived_all_logs | sort -r | head -n 1 | awk '{print $1}'`
+  attempt_number=$((++attempt_number))
+  echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
   world_ready_setup
   seed=`rcon_command seed`
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
@@ -67,7 +72,8 @@ do
   world_ending_announcements
   if [ ! -z "$dead_player" ]
   then
-    echo "MOTD=$SERVER_NAME\nLast incident $current_datetime" > $minecraft_compose_dir/motd_override.env
+    attempt_number=$((++attempt_number))
+    echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
     docker stop mc
     docker rm mc
