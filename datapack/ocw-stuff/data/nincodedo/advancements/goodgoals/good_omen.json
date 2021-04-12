@@ -9,7 +9,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:goodgoals",
+  "parent": "nincodedo:goodgoals/root",
   "criteria": {
     "find_buried_treasure": {
       "trigger": "minecraft:location",

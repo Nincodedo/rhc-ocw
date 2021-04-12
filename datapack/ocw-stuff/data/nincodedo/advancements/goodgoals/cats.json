@@ -9,7 +9,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:goodgoals",
+  "parent": "nincodedo:goodgoals/root",
   "criteria": {
     "cats": {
       "trigger": "minecraft:bred_animals",

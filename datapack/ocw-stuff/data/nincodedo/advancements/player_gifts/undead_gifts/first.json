@@ -2,18 +2,18 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:Nincodedo}"
+      "nbt": "{SkullOwner:Undead_Zeratul}"
     },
-    "title": "Duh",
-    "description": "Blue dye for Nin, of course",
+    "title": "He Goes Up and He Goes Down",
+    "description": "Scaffolding for the building boy",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts",
+  "parent": "nincodedo:player_gifts/root",
   "criteria": {
-    "give_nin_blue_dye": {
+    "give_undead_scaffolding": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
       "conditions": {
         "player": [
@@ -21,23 +21,23 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "nincodedo:isentitynincodedo"
+              "name": "nincodedo:isentityundeadzeratul"
             }
           }
         ],
         "entity": {
           "type": "minecraft:player",
-          "nbt": "{UUID:[I; -584958556, -1931130868, -1889383291, 1877270125]}"
+          "nbt": "{UUID:[I; -223431324, 1556303093, -1412706370, -1585750994]}"
         },
         "item": {
-          "item": "minecraft:blue_dye"
+          "item": "minecraft:scaffolding"
         }
       }
     }
   },
   "requirements": [
     [
-      "give_nin_blue_dye"
+      "give_undead_scaffolding"
     ]
   ]
 }

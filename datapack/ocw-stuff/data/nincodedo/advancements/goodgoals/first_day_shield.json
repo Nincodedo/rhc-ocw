@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:goodgoals",
+  "parent": "nincodedo:goodgoals/root",
   "criteria": {
     "first_day_shield": {
       "trigger": "minecraft:inventory_changed",

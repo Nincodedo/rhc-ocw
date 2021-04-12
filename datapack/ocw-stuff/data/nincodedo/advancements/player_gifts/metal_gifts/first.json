@@ -2,18 +2,18 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:Undead_Zeratul}"
+      "nbt": "{SkullOwner:Metal_Link}"
     },
-    "title": "He Goes Up and He Goes Down",
-    "description": "Scaffolding for the building boy",
+    "title": "Metal_Link appreciates this",
+    "description": "He needs his green",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts",
+  "parent": "nincodedo:player_gifts/root",
   "criteria": {
-    "give_undead_scaffolding": {
+    "give_ml_cactus": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
       "conditions": {
         "player": [
@@ -21,23 +21,23 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "nincodedo:isentityundeadzeratul"
+              "name": "nincodedo:isentitymetallink"
             }
           }
         ],
         "entity": {
           "type": "minecraft:player",
-          "nbt": "{UUID:[I; -223431324, 1556303093, -1412706370, -1585750994]}"
+          "nbt": "{UUID:[I; -2145763756, 845696088, -1763149853, 991948061]}"
         },
         "item": {
-          "item": "minecraft:scaffolding"
+          "item": "minecraft:cactus"
         }
       }
     }
   },
   "requirements": [
     [
-      "give_undead_scaffolding"
+      "give_ml_cactus"
     ]
   ]
 }
