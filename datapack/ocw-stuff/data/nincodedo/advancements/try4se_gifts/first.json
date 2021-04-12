@@ -1,0 +1,403 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:Try4se}"
+    },
+    "title": "The Entire Rainbow",
+    "description": "That's a lot of sheep",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts",
+  "criteria": {
+    "give_try4se_white_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:white_wool"
+        }
+      }
+    },
+    "give_try4se_orange_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:orange_wool"
+        }
+      }
+    },
+    "give_try4se_magenta_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:magenta_wool"
+        }
+      }
+    },
+    "give_try4se_light_blue_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:light_blue_wool"
+        }
+      }
+    },
+    "give_try4se_yellow_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:yellow_wool"
+        }
+      }
+    },
+    "give_try4se_lime_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:lime_wool"
+        }
+      }
+    },
+    "give_try4se_pink_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:pink_wool"
+        }
+      }
+    },
+    "give_try4se_gray_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:gray_wool"
+        }
+      }
+    },
+    "give_try4se_light_gray_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:light_gray_wool"
+        }
+      }
+    },
+    "give_try4se_cyan_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:cyan_wool"
+        }
+      }
+    },
+    "give_try4se_purple_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:purple_wool"
+        }
+      }
+    },
+    "give_try4se_blue_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:blue_wool"
+        }
+      }
+    },
+    "give_try4se_brown_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:brown_wool"
+        }
+      }
+    },
+    "give_try4se_green_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:green_wool"
+        }
+      }
+    },
+    "give_try4se_red_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:red_wool"
+        }
+      }
+    },
+    "give_try4se_black_wool": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytry4se"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
+        },
+        "item": {
+          "item": "minecraft:black_wool"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_try4se_white_wool"
+    ],
+    [
+      "give_try4se_orange_wool"
+    ],
+    [
+      "give_try4se_magenta_wool"
+    ],
+    [
+      "give_try4se_light_blue_wool"
+    ],
+    [
+      "give_try4se_yellow_wool"
+    ],
+    [
+      "give_try4se_lime_wool"
+    ],
+    [
+      "give_try4se_pink_wool"
+    ],
+    [
+      "give_try4se_gray_wool"
+    ],
+    [
+      "give_try4se_light_gray_wool"
+    ],
+    [
+      "give_try4se_cyan_wool"
+    ],
+    [
+      "give_try4se_purple_wool"
+    ],
+    [
+      "give_try4se_blue_wool"
+    ],
+    [
+      "give_try4se_brown_wool"
+    ],
+    [
+      "give_try4se_green_wool"
+    ],
+    [
+      "give_try4se_red_wool"
+    ],
+    [
+      "give_try4se_black_wool"
+    ]
+  ]
+}
