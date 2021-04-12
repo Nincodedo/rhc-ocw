@@ -21,7 +21,7 @@ log() {
 
 world_ending_announcements() {
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
-  dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $4}'`
+  dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $6}'`
   if [ ! -z "$dead_player" ]
   then
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
@@ -42,7 +42,7 @@ minecraft_server_log=$minecraft_server_dir/logs/latest.log
 dead_player=""
 cd $minecraft_server_dir
 log "Starting LogWatcher in: `pwd`"
-grep_phrase="\[Server thread\/INFO\]\: .* has made the advancement \[You did this\]"
+grep_phrase="\[Server thread\/INFO\] .* has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 while : ;
 do
