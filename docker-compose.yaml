@@ -44,7 +44,7 @@ services:
     env_file:
       - docker.env
     environment:
-      TZ: 'CST7CDT'
+      TZ: 'CST6CDT'
     volumes:
     - mc_server:/data
     - mc_mods:/mods
