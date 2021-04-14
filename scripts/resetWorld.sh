@@ -4,8 +4,9 @@ rcon_command(){
 }
 
 world_ready_setup() {
-  cp -r /app/who-did-this/ world/datapacks/
-  cp -r /app/ocw-stuff/ world/datapacks/
+  rm -r world/datapacks/*
+  cp -r /app/who-did-this/ /app/ocw-stuff world/datapacks/
+  chown -R 1000:1000 world/datapacks/
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
