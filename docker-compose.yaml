@@ -43,6 +43,8 @@ services:
     container_name: log-watcher
     env_file:
       - docker.env
+    secrets:
+      - discord_webhook
     environment:
       TZ: 'CST6CDT'
     volumes:
@@ -54,3 +56,6 @@ volumes:
   mc_server:
   mc_mods:
   mc_mod_configs:
+secrets:
+  discord_webhook:
+    file: ./secrets/discord_webhook.txt
