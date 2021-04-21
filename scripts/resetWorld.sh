@@ -29,6 +29,7 @@ world_ending_announcements() {
   dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $6}'`
   if [ ! -z "$dead_player" ]
   then
+    death_message=`tail -n 10 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f6- -d' '`
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
     echo $mc_days_survived >> $mc_days_survived_log_name
     mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
@@ -40,7 +41,7 @@ world_ending_announcements() {
     rcon_command "tellraw @a {\"text\": \"$world_end_text1\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text2\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text3\"}"
-    discord_webhook_send "$dead_player Did This" "$world_end_text1\n$world_end_text2\n$world_end_text3"
+    discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3"
   fi
 }
 
