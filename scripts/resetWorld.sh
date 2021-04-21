@@ -1,4 +1,11 @@
 #!/bin/sh
+
+aggregate_player_stats() {
+  attempt_log_dir="logs/stats/attempt$attempt_number"
+  mkdir -p $attempt_log_dir
+  cp -r world/stats/ $attempt_log_dir
+}
+
 rcon_command() {
   docker exec $minecraft_docker_container_name rcon-cli $1
 }
@@ -45,6 +52,7 @@ world_ending_announcements() {
   fi
 }
 
+
 minecraft_server_dir=/data
 app_dir=/app
 minecraft_compose_dir=$app_dir/ocw-minecraft
@@ -87,6 +95,7 @@ do
   log "Found healthy container, tailing docker log"
   ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
+  aggregate_player_stats
   if [ ! -z "$dead_player" ]
   then
     attempt_number=$((++attempt_number))
@@ -97,4 +106,4 @@ do
     rm -rf world
     docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
   fi
-done  
+done
