@@ -35,9 +35,7 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "max": 1
-              }
+              "count": 1
             },
             {
               "function": "minecraft:set_nbt",
