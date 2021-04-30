@@ -16,6 +16,8 @@ discord_webhook_send() {
 
 world_ready_setup() {
   rm -r world/datapacks/*
+  rm /mods/*.jar
+  cp /app/mods/*.jar /mods/
   cp -r /app/who-did-this/ /app/ocw-stuff world/datapacks/
   chown -R 1000:1000 world/
   rcon_command "scoreboard objectives add health health" > /dev/null
