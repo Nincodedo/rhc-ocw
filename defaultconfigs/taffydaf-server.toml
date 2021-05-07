@@ -7,9 +7,9 @@
 #Feature settings
 [Feature]
 	#Should we show the Date? [True/False]
-	enableDate = false
+	enableDate = true
 	#Should we show the Season? [True/False]
-	enableSeasons = true
+	enableSeasons = false
 	#Should we show the Weather? [True/False]
 	enableWeather = true
 	#Should we show the Time? [True/False]
@@ -46,5 +46,5 @@
 	#What should we show as the Summer text?
 	labelSummer = "Summer"
 	#What should we show as the Date text?
-	labelDate = "Date: "
+	labelDate = "Current Day: "
 

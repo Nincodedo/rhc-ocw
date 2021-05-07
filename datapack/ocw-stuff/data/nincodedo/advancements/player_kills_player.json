@@ -15,11 +15,11 @@
     "killed_another_player": {
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:killed_by_player"
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:player"
           }
-        ]
+        }
       }
     }
   }

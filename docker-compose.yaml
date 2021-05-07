@@ -28,6 +28,8 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FORGE'
       FORGEVERSION: '36.1.0'
+      VERSION: '1.16.5'
+      REMOVE_OLD_MODS: 'true'
     volumes:
     - mc_server:/data
     - mc_mods:/mods
@@ -43,6 +45,8 @@ services:
     container_name: log-watcher
     env_file:
       - docker.env
+    secrets:
+      - discord_webhook
     environment:
       TZ: 'CST6CDT'
     volumes:
@@ -54,3 +58,6 @@ volumes:
   mc_server:
   mc_mods:
   mc_mod_configs:
+secrets:
+  discord_webhook:
+    file: ./secrets/discord_webhook.txt

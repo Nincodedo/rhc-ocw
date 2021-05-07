@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "SGS",
+        "S S"
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:logs"
+        },
+        "S": {
+            "item": "minecraft:stone"
+        },
+        "G": {
+            "item": "minecraft:gold_block"
+        }
+    },
+    "result": {
+        "item": "minecraft:bell",
+        "count": 1
+    }
+}
