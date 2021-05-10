@@ -40,9 +40,10 @@ world_ending_announcements() {
   then
     death_message=`tail -n 10 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f6- -d' '`
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
+    mc_time_survived=`rcon_command "time query gametime" | awk '{print $4}'`
     echo $mc_days_survived >> $mc_days_survived_log_name
     mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
-    log "$dead_player died, restarting server"
+    log "$dead_player died on day $mc_days_survived, restarting server"
     echo "$current_datetime $dead_player died" >> $death_log_name
     world_end_text1="$dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
     world_end_text2="You survived $mc_days_survived in game days"
@@ -63,14 +64,14 @@ minecraft_docker_container_name=mc
 dead_player=""
 discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
+grep_phrase="\[Server thread\/INFO\] .* has made the advancement \[You did this\]"
+death_reset_delay_seconds=20
 if [ -f "$discord_webhook_file" ]
 then
   discord_webhook=`cat $discord_webhook_file`
 fi
 cd $minecraft_server_dir
 log "Starting LogWatcher in: `pwd`"
-grep_phrase="\[Server thread\/INFO\] .* has made the advancement \[You did this\]"
-death_reset_delay_seconds=20
 while : ;
 do
   dead_player=""
