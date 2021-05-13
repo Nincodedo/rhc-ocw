@@ -1,3 +1,7 @@
+FROM debian:buster-slim AS build
+COPY scripts/downloadVanillaTweaksPack.sh .
+RUN ./downloadVanillaTweaksPack.sh datapacks/
+
 FROM docker/compose
 RUN mkdir -p /app/ocw-minecraft /app/mods /app/datapacks /config /data/defaultconfigs
 WORKDIR /app
