@@ -107,6 +107,9 @@ do
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
     rm -rf world
+    mkdir world/
+    cp -r /app/datapacks/ world/
+    chown -R 1000:1000 world/
     docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
   fi
 done
