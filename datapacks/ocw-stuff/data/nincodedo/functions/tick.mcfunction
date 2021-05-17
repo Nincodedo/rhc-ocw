@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:pillager] run data merge entity @s {CustomName: '{"text":"Salesman"}', CustomNameVisible: 1}
+execute as @e[type=minecraft:pillager,name=!"Salesman",limit=1] run data merge entity @s {CustomName: '{"text":"Salesman"}', CustomNameVisible: 1}
