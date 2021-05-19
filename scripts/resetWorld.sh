@@ -62,6 +62,7 @@ minecraft_compose_dir=$app_dir/ocw-minecraft
 minecraft_server_log=$minecraft_server_dir/logs/latest.log
 minecraft_docker_container_name=mc
 dead_player=""
+death_reset=false
 discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
 grep_phrase="\[Server thread\/INFO\] .* has made the advancement \[You did this\]"
@@ -95,12 +96,18 @@ do
   seed=`rcon_command seed`
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   echo "$current_datetime $seed" >> $seed_log_name
+  if [ "$death_reset" = true ]
+  then
+    discord_webhook_send "Server is up for attempt # $attempt_number" ""
+  fi
+  death_reset=false
   log "Found healthy container, tailing docker log"
   ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
   aggregate_player_stats
   if [ ! -z "$dead_player" ]
   then
+    death_reset=true
     attempt_number=$((++attempt_number))
     echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
