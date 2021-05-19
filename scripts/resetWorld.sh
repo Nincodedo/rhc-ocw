@@ -26,6 +26,8 @@ world_ready_setup() {
   rcon_command "datapack list" > /dev/null
   rcon_command "datapack enable 'file/who-did-this'" > /dev/null
   rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
+  rcon_command "datapack enable 'file/VanillaTweaks.zip'" > /dev/null
+  rcon_command "reload" > /dev/null
 }
 
 log() {

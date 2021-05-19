@@ -1,10 +1,19 @@
 FROM debian:buster-slim AS build
+RUN apt-get update \
+  && apt-get install jq -y --no-install-recommends \
+  && apt-get install curl -y --no-install-recommends \
+  && apt-get install wget -y --no-install-recommends \
+  && apt-get install ca-certificates -y --no-install-recommends \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+RUN mkdir /datapacks
 COPY scripts/downloadVanillaTweaksPack.sh .
-RUN ./downloadVanillaTweaksPack.sh datapacks/
+RUN /downloadVanillaTweaksPack.sh /datapacks/
 
 FROM docker/compose
 RUN mkdir -p /app/ocw-minecraft /app/mods /app/datapacks /config /data/defaultconfigs
 WORKDIR /app
+COPY --from=build /datapacks/VanillaTweaks.zip /app/datapacks/
 COPY datapacks/ /app/datapacks/
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
