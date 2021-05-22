@@ -1,6 +1,8 @@
 #!/bin/sh
 
 aggregate_player_stats() {
+  # save world right before moving stats so they are up to date
+  rcon_command "save-all"
   attempt_log_dir="logs/stats/attempt$attempt_number"
   mkdir -p $attempt_log_dir
   cp -r world/stats/ $attempt_log_dir
