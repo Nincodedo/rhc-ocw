@@ -31,6 +31,7 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3038/811/ftb-backups-2.1.
   && wget -P /app/mods https://media.forgecdn.net/files/3190/50/Quick+Harvest-1.16.4-1.2.0.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3285/916/performant-1.16.2-5-3.54m.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3217/166/dynviewdist-1.9.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3227/647/forgery-1.3.4.jar
+  && wget -P /app/mods https://media.forgecdn.net/files/3227/647/forgery-1.3.4.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3103/750/towers_of_the_wild-1.16.4-2.0.1.jar
 RUN apk --no-cache add curl
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
