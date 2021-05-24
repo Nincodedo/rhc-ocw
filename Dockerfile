@@ -4,6 +4,7 @@ RUN apt-get update \
   && apt-get install curl -y --no-install-recommends \
   && apt-get install wget -y --no-install-recommends \
   && apt-get install ca-certificates -y --no-install-recommends \
+  && apt-get install dos2unix -y --no-install-recommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 RUN mkdir /datapacks
