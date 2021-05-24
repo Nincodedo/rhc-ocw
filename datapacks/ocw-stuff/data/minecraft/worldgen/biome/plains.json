@@ -21,6 +21,7 @@
   },
   "starts": [
     "nincodedo:undeadcottage",
+    "nincodedo:mountacemore",
     "minecraft:village_plains",
     "minecraft:pillager_outpost",
     "minecraft:mineshaft",
