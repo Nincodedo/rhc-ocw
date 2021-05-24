@@ -8,6 +8,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 RUN mkdir /datapacks
 COPY scripts/downloadVanillaTweaksPack.sh .
+RUN dos2unix /downloadVanillaTweaksPack.sh /downloadVanillaTweaksPack.sh
 RUN /downloadVanillaTweaksPack.sh /datapacks/
 
 FROM docker/compose
