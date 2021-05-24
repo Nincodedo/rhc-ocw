@@ -11,3 +11,11 @@ jobs:
       - uses: actions/checkout@master
       - name: Build Dockerfile
         run: docker-compose build
+      - name: GitHub Docker Action
+        uses: matootie/github-docker@v3.1.0
+        with:
+          accessToken: ${{ secrets.PACKAGE_ACTIONS_TOKEN }}
+          tag: |
+            latest
+            ${{ github.sha }}
+          containerRegistry: true
