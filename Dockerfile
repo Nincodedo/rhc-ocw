@@ -36,4 +36,5 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3038/811/ftb-backups-2.1.
   && wget -P /app/mods https://media.forgecdn.net/files/3103/750/towers_of_the_wild-1.16.4-2.0.1.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3324/668/bettersafebed-forge-1.16.5-1.3.jar
 RUN apk --no-cache add curl
+LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
