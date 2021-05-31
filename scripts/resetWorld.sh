@@ -107,20 +107,20 @@ do
   death_reset=false
   log "Found healthy container, tailing docker log"
   ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
-  world_ending_announcements
-  aggregate_player_stats
-  if [ ! -z "$dead_player" ]
-  then
-    death_reset=true
-    attempt_number=$((++attempt_number))
-    echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
-    sleep $death_reset_delay_seconds
-    docker stop $minecraft_docker_container_name
-    docker rm $minecraft_docker_container_name
-    rm -rf world
-    mkdir world/
-    cp -r /app/datapacks/ world/
-    chown -R 1000:1000 world/
-    docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
-  fi
+  #world_ending_announcements
+  #aggregate_player_stats
+  #if [ ! -z "$dead_player" ]
+  #then
+  #  death_reset=true
+  #  attempt_number=$((++attempt_number))
+  #  echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+  #  sleep $death_reset_delay_seconds
+  #  docker stop $minecraft_docker_container_name
+  #  docker rm $minecraft_docker_container_name
+  #  rm -rf world
+  #  mkdir world/
+  #  cp -r /app/datapacks/ world/
+  #  chown -R 1000:1000 world/
+  #  docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
+  #fi
 done

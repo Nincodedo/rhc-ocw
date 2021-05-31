@@ -19,7 +19,6 @@ services:
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
       MEMORY: '2G'
-      HARDCORE: 'true'
       FUNCTION_PERMISSION_LEVEL: '4'
       SPAWN_PROTECTION: '0'
       ENABLE_AUTOPAUSE: 'true'
@@ -38,7 +37,39 @@ services:
     tty: true
     stdin_open: true
     labels:
-      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft"
+      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft 1.16.5"
+  mc-latest:
+    image: itzg/minecraft-server:latest
+    ports:
+    - "25564:25565"
+    - "25574:25575"
+    - "25574:25575/udp"
+    environment:
+      SERVER_NAME: 'OCW Minecraft Latest Snapshot'
+      MOTD: 'OCW Minecraft Latest Snapshot'
+      EULA: 'true'
+      EULA: 'true'
+      TZ: 'America/Chicago'
+      DIFFICULTY: 'hard'
+      OPS: 'nincodedo'
+      OVERRIDE_SERVER_PROPERTIES: 'true'
+      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
+      OVERRIDE_ICON: 'true'
+      MEMORY: '2G'
+      FUNCTION_PERMISSION_LEVEL: '4'
+      SPAWN_PROTECTION: '0'
+      ENABLE_AUTOPAUSE: 'true'
+      MAX_TICK_TIME: "-1"
+      AUTOPAUSE_TIMEOUT_EST: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '120'
+      VERSION: 'SNAPSHOT'
+    volumes:
+      - mc_server_latest:/data
+    container_name: mc-latest
+    tty: true
+    stdin_open: true
+    labels:
+      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft Latest"
   log-watcher:
     build: .
     image: nincodedo/mc-lame-log-watcher:latest
@@ -51,6 +82,7 @@ services:
       TZ: 'CST6CDT'
     volumes:
     - mc_server:/data
+    - mc_server_latest:/data2
     - mc_mods:/mods
     - mc_mod_configs:/config
     - /var/run/docker.sock:/var/run/docker.sock
@@ -58,6 +90,7 @@ volumes:
   mc_server:
   mc_mods:
   mc_mod_configs:
+  mc_server_latest:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
