@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:pillager_outpost",
+  "config": {
+    "start_pool": "nincodedo:undeadcottage",
+    "size": 7
+  }
+}

@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      - dev
 name: Main Build
 jobs:
   build:
@@ -9,5 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - name: Build Dockerfile
         run: docker-compose build
+      - name: GitHub Docker Action
+        uses: matootie/github-docker@v3.1.0
+        with:
+          accessToken: ${{ secrets.PACKAGE_ACTIONS_TOKEN }}
+          tag: |
+            latest
+            ${{ github.sha }}
+            ${{ steps.extract_branch.outputs.branch }}
+          containerRegistry: true
