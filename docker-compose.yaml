@@ -51,6 +51,7 @@ services:
       EULA: 'true'
       TZ: 'America/Chicago'
       DIFFICULTY: 'hard'
+      HARDCORE: 'true'
       OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
@@ -70,9 +71,21 @@ services:
     stdin_open: true
     labels:
       dev.nincodedo.gameservercommander.game: "Vanilla Minecraft Latest"
-  log-watcher:
+  log-watcher-latest:
     build: .
-    image: nincodedo/mc-lame-log-watcher:latest
+    image: ghcr.io/nincodedo/rhc-ocw:latest
+    container_name: log-watcher-latest
+    env_file:
+      - docker.env
+    secrets:
+      - discord_webhook
+    environment:
+      TZ: 'CST6CDT'
+    volumes:
+    - mc_server_latest:/data
+    - /var/run/docker.sock:/var/run/docker.sock
+  log-watcher:
+    image: ghcr.io/nincodedo/rhc-ocw:2.6
     container_name: log-watcher
     env_file:
       - docker.env
@@ -82,7 +95,6 @@ services:
       TZ: 'CST6CDT'
     volumes:
     - mc_server:/data
-    - mc_server_latest:/data2
     - mc_mods:/mods
     - mc_mod_configs:/config
     - /var/run/docker.sock:/var/run/docker.sock
