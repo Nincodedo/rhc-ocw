@@ -1,2 +1,4 @@
 scoreboard objectives add sleepAdvCheck dummy
-execute unless score global sleepAdvCheck matches 3.. run gamerule playersSleepingPercentage 100
+scoreboard objectives add current_day dummy
+execute store result score global current_day run time query day
+function nincodedo:runsleepchecks
