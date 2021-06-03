@@ -1,0 +1,21 @@
+{
+  "condition": "minecraft:alternative",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/dungeon_spawner"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/stronghold"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/ruined_portal"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/village"
+    }
+  ]
+}
