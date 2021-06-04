@@ -1,19 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:Nincodedo}"
+      "item": "minecraft:white_wool"
     },
-    "title": "Duh",
-    "description": "Blue dye for Nin, of course",
-    "frame": "task",
+    "title": "A Good Start",
+    "description": "Any old wool? You got a long road ahead of you bud",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/root",
+  "parent": "nincodedo:player_gifts/try4se_gifts/root",
   "criteria": {
-    "give_nin_blue_dye": {
+    "give_try4se_any_wool": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
       "conditions": {
         "player": [
@@ -21,23 +19,23 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "nincodedo:isentitynincodedo"
+              "name": "nincodedo:isentitytry4se"
             }
           }
         ],
         "entity": {
           "type": "minecraft:player",
-          "nbt": "{UUID:[I; -584958556, -1931130868, -1889383291, 1877270125]}"
+          "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:blue_dye"
+          "tag": "minecraft:wool"
         }
       }
     }
   },
   "requirements": [
     [
-      "give_nin_blue_dye"
+      "give_try4se_any_wool"
     ]
   ]
 }

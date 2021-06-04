@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:scaffolding"
+    },
+    "title": "He Goes Up and He Goes Down",
+    "description": "Scaffolding for the building boy",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts/undead_gifts/root",
+  "criteria": {
+    "give_undead_scaffolding": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentityundeadzeratul"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; -223431324, 1556303093, -1412706370, -1585750994]}"
+        },
+        "item": {
+          "items": [
+            "minecraft:scaffolding"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_undead_scaffolding"
+    ]
+  ]
+}

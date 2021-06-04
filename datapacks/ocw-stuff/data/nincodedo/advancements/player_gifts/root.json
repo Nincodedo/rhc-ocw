@@ -5,11 +5,12 @@
     },
     "title": "OCW Gifts",
     "description": "Give gifts to friends! How nice of you",
+    "background": "minecraft:textures/gui/advancements/backgrounds/end.png",
+    "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "nincodedo:root",
   "criteria": {
     "got_root": {
       "trigger": "minecraft:tick",
