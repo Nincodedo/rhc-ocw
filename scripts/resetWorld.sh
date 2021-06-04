@@ -49,6 +49,7 @@ world_ending_announcements() {
     mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
     log "$dead_player died on day $mc_days_survived, restarting server"
     echo "$current_datetime $dead_player died" >> $death_log_name
+    echo "$current_datetime, $dead_player, $mc_days_survived, $death_message" >> $combined_log_name
     world_end_text1="$dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
     world_end_text2="You survived $mc_days_survived in game days"
     world_end_text3="The high score is $mc_days_highscore in game days"
@@ -92,6 +93,7 @@ do
   death_log_name="logs/death-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
   mc_days_survived_all_logs="logs/mc_days_survived-*"
+  combined_log_name="logs/combined-$current_date.log"
   touch $mc_days_survived_log_name
   attempt_number=`wc -l $mc_days_survived_all_logs | sort -r | head -n 1 | awk '{print $1}'`
   attempt_number=$((++attempt_number))
