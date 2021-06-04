@@ -2,48 +2,11 @@ version: "3.8"
 
 services:
   mc:
-    image: itzg/minecraft-server:java11
+    image: itzg/minecraft-server:latest
     ports:
     - "25565:25565"
     - "25575:25575"
     - "25575:25575/udp"
-    env_file:
-      - motd_override.env
-      - docker.env
-    environment:
-      EULA: 'true'
-      TZ: 'America/Chicago'
-      DIFFICULTY: 'hard'
-      OPS: 'nincodedo'
-      OVERRIDE_SERVER_PROPERTIES: 'true'
-      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
-      OVERRIDE_ICON: 'true'
-      MEMORY: '2G'
-      FUNCTION_PERMISSION_LEVEL: '4'
-      SPAWN_PROTECTION: '0'
-      ENABLE_AUTOPAUSE: 'true'
-      MAX_TICK_TIME: "-1"
-      AUTOPAUSE_TIMEOUT_EST: '30'
-      AUTOPAUSE_TIMEOUT_INIT: '120'
-      TYPE: 'FORGE'
-      FORGEVERSION: '36.1.0'
-      VERSION: '1.16.5'
-      REMOVE_OLD_MODS: 'true'
-    volumes:
-    - mc_server:/data
-    - mc_mods:/mods
-    - mc_mod_configs:/config
-    container_name: mc
-    tty: true
-    stdin_open: true
-    labels:
-      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft 1.16.5"
-  mc-latest:
-    image: itzg/minecraft-server:latest
-    ports:
-    - "25564:25565"
-    - "25574:25575"
-    - "25574:25575/udp"
     - "24454:24454/udp"
     env_file:
       - motd_override.env
@@ -68,36 +31,24 @@ services:
       REMOVE_OLD_MODS: 'true'
       VERSION: 'SNAPSHOT'
     volumes:
-      - mc_server_latest:/data
-      - mc_mods_latest:/mods
-      - mc_mod_configs_latest:/config
-    container_name: mc-latest
+      - mc_server:/data
+      - mc_mods:/mods
+      - mc_mod_configs:/config
+    container_name: mc
     tty: true
     stdin_open: true
     labels:
-      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft Latest"
-  log-watcher-latest:
+      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft"
+  log-watcher:
     build: .
     image: ghcr.io/nincodedo/rhc-ocw:latest
-    container_name: log-watcher-latest
-    env_file:
-      - docker.env
-    environment:
-      TZ: 'CST6CDT'
-    volumes:
-    - mc_server_latest:/data
-    - mc_mods_latest:/mods
-    - mc_mod_configs_latest:/config
-    - /var/run/docker.sock:/var/run/docker.sock
-  log-watcher:
-    image: ghcr.io/nincodedo/rhc-ocw:2.6
     container_name: log-watcher
     env_file:
       - docker.env
-    secrets:
-      - discord_webhook
     environment:
       TZ: 'CST6CDT'
+    secrets:
+      - discord_webhook
     volumes:
     - mc_server:/data
     - mc_mods:/mods
@@ -107,9 +58,6 @@ volumes:
   mc_server:
   mc_mods:
   mc_mod_configs:
-  mc_server_latest:
-  mc_mods_latest:
-  mc_mod_configs_latest:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
