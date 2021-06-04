@@ -10,7 +10,8 @@ RUN apt-get update \
 RUN mkdir /datapacks
 COPY scripts/downloadVanillaTweaksPack.sh .
 RUN dos2unix /downloadVanillaTweaksPack.sh /downloadVanillaTweaksPack.sh
-RUN wget -P /datapacks https://storage.googleapis.com/nincraft-cdn/ocw-minecraft/FastLeafDecay.zip
+RUN wget -P /datapacks https://storage.googleapis.com/nincraft-cdn/ocw-minecraft/FastLeafDecay.zip \
+  && wget -P /datapacks https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip
 RUN /downloadVanillaTweaksPack.sh /datapacks/
 
 FROM docker/compose

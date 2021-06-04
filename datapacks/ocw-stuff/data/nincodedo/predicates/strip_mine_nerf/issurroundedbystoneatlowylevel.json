@@ -35,8 +35,8 @@
     "predicate": {
       "position": {
         "y": {
-          "min": 0,
-          "max": 15
+          "min": -64,
+          "max": -32
         }
       }
     }
