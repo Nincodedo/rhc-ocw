@@ -17,7 +17,7 @@ RUN /downloadVanillaTweaksPack.sh /datapacks/
 FROM docker/compose
 RUN mkdir -p /app/ocw-minecraft /app/mods /app/datapacks /config /data/defaultconfigs
 WORKDIR /app
-COPY --from=build /datapacks/VanillaTweaks.zip /app/datapacks/
+COPY --from=build /datapacks/* /app/datapacks/
 COPY datapacks/ /app/datapacks/
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/

@@ -42,7 +42,7 @@ world_ending_announcements() {
   dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $6}'`
   if [ ! -z "$dead_player" ]
   then
-    death_message=`tail -n 10 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f6- -d' '`
+    death_message=`tail -n 10 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f4- -d' '`
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
     mc_time_survived=`rcon_command "time query gametime" | awk '{print $4}'`
     echo $mc_days_survived >> $mc_days_survived_log_name
@@ -70,7 +70,7 @@ dead_player=""
 death_reset=false
 discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
-grep_phrase="\[Server thread\/INFO\] .* has made the advancement \[You did this\]"
+grep_phrase="\[Server thread\/INFO\]: .* has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 if [ -f "$discord_webhook_file" ]
 then

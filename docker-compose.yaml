@@ -45,10 +45,10 @@ services:
     - "25574:25575"
     - "25574:25575/udp"
     - "24454:24454/udp"
+    env_file:
+      - motd_override.env
+      - docker.env
     environment:
-      SERVER_NAME: 'OCW Minecraft Latest Snapshot'
-      MOTD: 'OCW Minecraft Latest Snapshot'
-      EULA: 'true'
       EULA: 'true'
       TZ: 'America/Chicago'
       DIFFICULTY: 'hard'
@@ -82,8 +82,6 @@ services:
     container_name: log-watcher-latest
     env_file:
       - docker.env
-    secrets:
-      - discord_webhook
     environment:
       TZ: 'CST6CDT'
     volumes:
@@ -96,6 +94,8 @@ services:
     container_name: log-watcher
     env_file:
       - docker.env
+    secrets:
+      - discord_webhook
     environment:
       TZ: 'CST6CDT'
     volumes:
