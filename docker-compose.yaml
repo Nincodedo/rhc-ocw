@@ -44,6 +44,7 @@ services:
     - "25564:25565"
     - "25574:25575"
     - "25574:25575/udp"
+    - "24454:24454/udp"
     environment:
       SERVER_NAME: 'OCW Minecraft Latest Snapshot'
       MOTD: 'OCW Minecraft Latest Snapshot'
@@ -63,9 +64,13 @@ services:
       MAX_TICK_TIME: "-1"
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
+      TYPE: 'FABRIC'
+      REMOVE_OLD_MODS: 'true'
       VERSION: 'SNAPSHOT'
     volumes:
       - mc_server_latest:/data
+      - mc_mods_latest:/mods
+      - mc_mod_configs_latest:/config
     container_name: mc-latest
     tty: true
     stdin_open: true
@@ -83,6 +88,8 @@ services:
       TZ: 'CST6CDT'
     volumes:
     - mc_server_latest:/data
+    - mc_mods_latest:/mods
+    - mc_mod_configs_latest:/config
     - /var/run/docker.sock:/var/run/docker.sock
   log-watcher:
     image: ghcr.io/nincodedo/rhc-ocw:2.6
@@ -101,6 +108,8 @@ volumes:
   mc_mods:
   mc_mod_configs:
   mc_server_latest:
+  mc_mods_latest:
+  mc_mod_configs_latest:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
