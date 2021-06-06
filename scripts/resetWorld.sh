@@ -39,10 +39,10 @@ log() {
 
 world_ending_announcements() {
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
-  dead_player=`tail -n 10 $minecraft_server_log | grep "$grep_phrase" | awk '{print $6}'`
+  dead_player=`tail -n 50 $minecraft_server_log | grep "$grep_phrase" | head -n 1 | awk '{print $4}'`
   if [ ! -z "$dead_player" ]
   then
-    death_message=`tail -n 10 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f4- -d' '`
+    death_message=`tail -n 50 $minecraft_server_log | grep -B 1 "$grep_phrase" | head -n 1 | cut -f4- -d' '`
     mc_days_survived=`rcon_command "time query day" | awk '{print $4}'`
     mc_time_survived=`rcon_command "time query gametime" | awk '{print $4}'`
     echo $mc_days_survived >> $mc_days_survived_log_name
