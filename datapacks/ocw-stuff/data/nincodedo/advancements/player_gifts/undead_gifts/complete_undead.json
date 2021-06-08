@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "criteria": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "player": {
+                "advancements": {
+                  "nincodedo:player_gifts/undead_gifts/scaffolding": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:advancements/completeundead"
+  }
+}

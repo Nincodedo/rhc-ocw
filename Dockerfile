@@ -10,12 +10,14 @@ RUN apt-get update \
 RUN mkdir /datapacks
 COPY scripts/downloadVanillaTweaksPack.sh .
 RUN dos2unix /downloadVanillaTweaksPack.sh /downloadVanillaTweaksPack.sh
+RUN wget -P /datapacks https://storage.googleapis.com/nincraft-cdn/ocw-minecraft/FastLeafDecay.zip \
+  && wget -P /datapacks https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip
 RUN /downloadVanillaTweaksPack.sh /datapacks/
 
 FROM docker/compose
 RUN mkdir -p /app/ocw-minecraft /app/mods /app/datapacks /config /data/defaultconfigs
 WORKDIR /app
-COPY --from=build /datapacks/VanillaTweaks.zip /app/datapacks/
+COPY --from=build /datapacks/* /app/datapacks/
 COPY datapacks/ /app/datapacks/
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
@@ -24,18 +26,9 @@ RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/*.toml /config/
 COPY defaultconfigs/*.toml /data/defaultconfigs/
 RUN chown -R 1000:1000 /data/defaultconfigs/
-RUN wget -P /app/mods https://media.forgecdn.net/files/3038/811/ftb-backups-2.1.1.6.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3215/383/Morpheus-1.16.5-4.2.70.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3245/79/jei-1.16.5-7.6.1.75.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3052/146/FastLeafDecay-v25.jar \
-  && wget -P /app/mods https://github.com/Nincodedo/TaffyDAF/releases/download/1.16.5-1.6-nin/taffydaf-1.16.5-1.6-nin.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3190/50/Quick+Harvest-1.16.4-1.2.0.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3324/120/performant-1.16.2-5-3.60m.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3217/166/dynviewdist-1.9.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3227/647/forgery-1.3.4.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3103/750/towers_of_the_wild-1.16.4-2.0.1.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3324/668/bettersafebed-forge-1.16.5-1.3.jar \
-  && wget -P /app/mods https://github.com/Nincodedo/Crowmap/releases/download/1.2-1.16.5/crowmap-1.2.jar
 RUN apk --no-cache add curl
+RUN wget -P /app/mods https://media.forgecdn.net/files/3327/200/fabric-api-0.34.8%2B1.17.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3338/12/voicechat-1.17-rc1-1.0.0.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3154/458/itemflexer-1.1.3.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]

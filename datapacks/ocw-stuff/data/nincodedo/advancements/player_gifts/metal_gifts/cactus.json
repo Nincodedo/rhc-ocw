@@ -1,17 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:Metal_Link}"
+      "item": "minecraft:cactus"
     },
-    "title": "Metal_Link appreciates this",
-    "description": "He needs his green",
+    "title": "Metal_Link Appreciates This",
+    "description": "Gotta find that desert",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/root",
+  "parent": "nincodedo:player_gifts/metal_gifts/root",
   "criteria": {
     "give_ml_cactus": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
@@ -30,7 +29,9 @@
           "nbt": "{UUID:[I; -2145763756, 845696088, -1763149853, 991948061]}"
         },
         "item": {
-          "item": "minecraft:cactus"
+          "items": [
+            "minecraft:cactus"
+          ]
         }
       }
     }

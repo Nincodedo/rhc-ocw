@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:green_dye"
+    },
+    "title": "Wow, The Extra Mile",
+    "description": "Good job on smelting stuff",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts/metal_gifts/root",
+  "criteria": {
+    "give_ml_green_dye": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitymetallink"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I; -2145763756, 845696088, -1763149853, 991948061]}"
+        },
+        "item": {
+          "items": [
+            "minecraft:green_dye"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_ml_green_dye"
+    ]
+  ]
+}

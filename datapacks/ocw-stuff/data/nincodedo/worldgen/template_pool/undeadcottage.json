@@ -8,7 +8,18 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "nincodedo:ocw_old/world1_2/undeadcottage",
-        "processors": "minecraft:empty"
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_rot",
+              "integrity": 0.4
+            },
+            {
+              "processor_type": "minecraft:block_age",
+              "mossiness": 0.4
+            }
+          ]
+        }
       }
     }
   ]

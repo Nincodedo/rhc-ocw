@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:Try4se}"
+      "nbt": "{SkullOwner:{Id:[I;-1907288465,-1437970451,-1762994848,-1504458630],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjdlMmJmNTM5YzhlMGFkNDY4ZTUyN2I0N2NmM2EyMWQ0ZTlhY2UxODcyM2E3MjI0OWI3ZDYzZTg1ZmI4YWUwIn19fQ==\"}]}}}"
     },
     "title": "The Entire Rainbow",
     "description": "That's a lot of sheep",
@@ -11,7 +11,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/root",
+  "parent": "nincodedo:player_gifts/try4se_gifts/root",
   "criteria": {
     "give_try4se_white_wool": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
@@ -30,7 +30,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:white_wool"
+          "items": [
+            "minecraft:white_wool"
+          ]
         }
       }
     },
@@ -51,7 +53,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:orange_wool"
+          "items": [
+            "minecraft:orange_wool"
+          ]
         }
       }
     },
@@ -72,7 +76,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:magenta_wool"
+          "items": [
+            "minecraft:magenta_wool"
+          ]
         }
       }
     },
@@ -93,7 +99,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:light_blue_wool"
+          "items": [
+            "minecraft:light_blue_wool"
+          ]
         }
       }
     },
@@ -114,7 +122,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:yellow_wool"
+          "items": [
+            "minecraft:yellow_wool"
+          ]
         }
       }
     },
@@ -135,7 +145,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:lime_wool"
+          "items": [
+            "minecraft:lime_wool"
+          ]
         }
       }
     },
@@ -156,7 +168,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:pink_wool"
+          "items": [
+            "minecraft:pink_wool"
+          ]
         }
       }
     },
@@ -177,7 +191,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:gray_wool"
+          "items": [
+            "minecraft:gray_wool"
+          ]
         }
       }
     },
@@ -198,7 +214,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:light_gray_wool"
+          "items": [
+            "minecraft:light_gray_wool"
+          ]
         }
       }
     },
@@ -219,7 +237,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:cyan_wool"
+          "items": [
+            "minecraft:cyan_wool"
+          ]
         }
       }
     },
@@ -240,7 +260,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:purple_wool"
+          "items": [
+            "minecraft:purple_wool"
+          ]
         }
       }
     },
@@ -261,7 +283,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:blue_wool"
+          "items": [
+            "minecraft:blue_wool"
+          ]
         }
       }
     },
@@ -282,7 +306,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:brown_wool"
+          "items": [
+            "minecraft:brown_wool"
+          ]
         }
       }
     },
@@ -303,7 +329,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:green_wool"
+          "items": [
+            "minecraft:green_wool"
+          ]
         }
       }
     },
@@ -324,7 +352,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:red_wool"
+          "items": [
+            "minecraft:red_wool"
+          ]
         }
       }
     },
@@ -345,7 +375,9 @@
           "nbt": "{UUID:[I; 769093600, -1959968053, -1514102921, 1462075729]}"
         },
         "item": {
-          "item": "minecraft:black_wool"
+          "items": [
+            "minecraft:black_wool"
+          ]
         }
       }
     }

@@ -28,7 +28,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Caving 101\",author:\"Ace Jon\",pages:['{\"text\":\"When you\\'re in a cave, put torches on the left so you and future spelunkers don\\'t get lost! Duh.\"}']}"
+              "tag": "{title:\"Caving 101\",author:\"Ace Jon\",generation:3,resolved:1b,pages:['{\"text\":\"When you\\'re in a cave, put torches on the left so you and future spelunkers don\\'t get lost! Duh.\"}']}"
             }
           ]
         }

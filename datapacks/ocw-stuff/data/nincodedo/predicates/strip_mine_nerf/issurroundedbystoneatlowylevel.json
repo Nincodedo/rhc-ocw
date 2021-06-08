@@ -1,0 +1,44 @@
+[
+  {
+    "condition": "minecraft:alternative",
+    "terms": [
+      {
+        "condition": "minecraft:reference",
+        "name": "nincodedo:strip_mine_nerf/zstonecheck"
+      },
+      {
+        "condition": "minecraft:reference",
+        "name": "nincodedo:strip_mine_nerf/xstonecheck"
+      }
+    ]
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetY": 2,
+    "predicate": {
+      "block": {
+        "tag": "minecraft:base_stone_overworld"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetY": -1,
+    "predicate": {
+      "block": {
+        "tag": "minecraft:base_stone_overworld"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "position": {
+        "y": {
+          "min": -64,
+          "max": -32
+        }
+      }
+    }
+  }
+]

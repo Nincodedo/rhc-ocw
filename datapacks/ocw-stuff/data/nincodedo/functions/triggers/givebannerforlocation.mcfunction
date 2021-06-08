@@ -1,0 +1,15 @@
+execute as @s positioned as @s if predicate nincodedo:feature_locations/village run give @s minecraft:yellow_banner
+
+execute as @s positioned as @s if predicate nincodedo:feature_locations/ruined_portal run give @s minecraft:magenta_banner
+
+execute as @s positioned as @s if predicate nincodedo:feature_locations/stronghold run give @s minecraft:green_banner
+
+execute as @s positioned as @s if predicate nincodedo:feature_locations/dungeon_spawner run give @s minecraft:orange_banner
+
+execute as @s positioned as @s if predicate nincodedo:feature_locations/any_known_structure run scoreboard players add @s bannerplz 1
+
+execute unless score @s bannerplz matches 1 run schedule function nincodedo:triggers/resetbannertrigger 300s replace
+execute unless score @s bannerplz matches 1 run tellraw @s {"text":"Banner found for your location! 5 minute command cooldown started.","color":"aqua"}
+execute if score @s bannerplz matches 1 run tellraw @s {"text":"Did not find a known location. Try moving closer to the \"center\" of the structure you're in.","color":"red"}
+execute if score @s bannerplz matches 1 run scoreboard players enable @s bannerplz
+execute if score @s bannerplz matches 1 run scoreboard players set @s bannerplz 0

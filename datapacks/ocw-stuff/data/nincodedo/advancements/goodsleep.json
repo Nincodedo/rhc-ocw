@@ -1,16 +1,7 @@
 {
   "criteria": {
     "goodsleepo": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": {
-          "player": {
-            "advancements": {
-              "minecraft:adventure/sleep_in_bed": true
-            }
-          }
-        }
-      }
+      "trigger": "minecraft:slept_in_bed"
     }
   },
   "rewards": {
