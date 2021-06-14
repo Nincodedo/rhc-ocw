@@ -27,7 +27,7 @@ COPY config/*.toml /config/
 COPY defaultconfigs/*.toml /data/defaultconfigs/
 RUN chown -R 1000:1000 /data/defaultconfigs/
 RUN apk --no-cache add curl
-RUN wget -P /app/mods https://media.forgecdn.net/files/3327/200/fabric-api-0.34.8%2B1.17.jar \
+RUN wget -P /app/mods https://media.forgecdn.net/files/3352/240/fabric-api-0.35.2%2B1.17.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/527/fabric-chunkpregen-0.3.4.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3154/458/itemflexer-1.1.3.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/514/crowmap-1.17-1.0.1.jar \
