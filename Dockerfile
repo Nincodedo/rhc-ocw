@@ -37,6 +37,7 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3352/240/fabric-api-0.35.
   && wget -P /app/mods https://media.forgecdn.net/files/3344/942/KeepHeadNames-1.3.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3346/807/FabricSit-1.5.0-1.17.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3343/950/servertick-mc1.17-1.5.jar \
-  && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/1.0.0/mc-server-description-1.0.0.jar
+  && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/1.0.0/mc-server-description-1.0.0.jar \
+  && wget -P /app/mods https://cdn.modrinth.com/data/HygVekKN/versions/1.0.2/easy-painter-1.0.2.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
