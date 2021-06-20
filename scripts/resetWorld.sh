@@ -1,11 +1,12 @@
 #!/bin/sh
 
-aggregate_player_stats() {
+backup_attempt() {
   # save world right before moving stats so they are up to date
-  rcon_command "save-all"
-  attempt_log_dir="logs/stats/attempt$attempt_number"
+  rcon_command "save-all flush"
+  attempt_log_dir="logs/backups/attempt$attempt_number"
   mkdir -p $attempt_log_dir
   cp -r world/stats/ $attempt_log_dir
+  tar -czvf "$attempt_log_dir/world_attempt$attempt_number.tar.gz" world/
 }
 
 rcon_command() {
@@ -115,7 +116,7 @@ do
   log "Found healthy container, tailing docker log"
   ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
-  aggregate_player_stats
+  backup_attempt
   if [ ! -z "$dead_player" ]
   then
     death_reset=true
