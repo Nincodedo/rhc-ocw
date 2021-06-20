@@ -30,6 +30,11 @@ world_ready_setup() {
   rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
   rcon_command "datapack enable 'file/VanillaTweaks.zip'" > /dev/null
   rcon_command "reload" > /dev/null
+  # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
+  if [ "$death_reset" = true ]
+  then
+    rcon_command "time set 0" > /dev/null
+  fi
 }
 
 log() {
