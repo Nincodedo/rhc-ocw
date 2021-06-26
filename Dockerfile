@@ -39,7 +39,6 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3352/240/fabric-api-0.35.
   && wget -P /app/mods https://media.forgecdn.net/files/3343/950/servertick-mc1.17-1.5.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/607/InvView-1.4.2-1.17%2B.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/455/villagernames-1.17-2.0.0.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3357/510/textile_backup-2.1.0-1.17.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3353/740/datapackportals-1.0.4-1.17.jar
+  && wget -P /app/mods https://media.forgecdn.net/files/3357/510/textile_backup-2.1.0-1.17.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
