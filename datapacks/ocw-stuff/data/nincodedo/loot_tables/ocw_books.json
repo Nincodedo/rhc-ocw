@@ -6,6 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 1,
           "name": "minecraft:written_book",
           "functions": [
             {
@@ -20,6 +21,7 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 1,
           "name": "minecraft:written_book",
           "functions": [
             {
@@ -29,6 +31,51 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{title:\"Caving 101\",author:\"Ace Jon\",generation:3,resolved:1b,pages:['{\"text\":\"When you\\'re in a cave, put torches on the left so you and future spelunkers don\\'t get lost! Duh.\"}']}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Lost Knowledge Vol 1\",author:\"???\",generation:3,resolved:1b,pages:['[{\"text\":\"Hidden Recipes\\n\"},{\"text\":\"| p | p | p |\\n| p | p | p |\\n| r | p | r |\\n\"},{\"text\":\"\\np = Pink Woll\\nr = Red Woll\\n\\nI think that blue fellow would like one of these...\"}]']}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Lost Knowledge Vol 2\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Another type of portal?\\nIt seems nether portals and the end portal are not the only types of interdimensional travel. Combining the magic essence within Lapis can form a portal as well. But the flint and steel does not seem to activate it...\"}']"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Lost Knowledge Vol 3\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Advanced Smelting\\nThrough some experimentation it seems that its possible to process compressed raw ores. I need to do more research on this. Perhaps the local library will have more information on this...\"}']}"
             }
           ]
         }
