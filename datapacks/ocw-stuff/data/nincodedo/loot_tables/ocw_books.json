@@ -45,7 +45,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 1\",author:\"???\",generation:3,resolved:1b,pages:['[{\"text\":\"Hidden Recipes\\n\"},{\"text\":\"| p | p | p |\\n| p | p | p |\\n| r | p | r |\\n\"},{\"text\":\"\\np = Pink Woll\\nr = Red Woll\\n\\nI think that blue fellow would like one of these...\"}]']}"
+              "tag": "{title:\"Lost Knowledge Vol 1\",author:\"???\",generation:3,resolved:1b,pages:['[{\"text\":\"Hidden Recipes\n\"},{\"text\":\"| p | p | p |\n| p | p | p |\n| r | p | r |\n\"},{\"text\":\"\np = Pink Woll\nr = Red Woll\n\nI think that blue fellow would like one of these...\"}]']}"
             }
           ]
         },
@@ -60,7 +60,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 2\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Another type of portal?\\nIt seems nether portals and the end portal are not the only types of interdimensional travel. Combining the magic essence within Lapis can form a portal as well. But the flint and steel does not seem to activate it...\"}']"
+              "tag": "{title:\"Lost Knowledge Vol 2\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Another type of portal?\nIt seems nether portals and the end portal are not the only types of interdimensional travel. Combining the magic essence within Lapis can form a portal as well. But the flint and steel does not seem to activate it...\"}']}"
             }
           ]
         },
@@ -75,7 +75,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 3\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Advanced Smelting\\nThrough some experimentation it seems that its possible to process compressed raw ores. I need to do more research on this. Perhaps the local library will have more information on this...\"}']}"
+              "tag": "{title:\"Lost Knowledge Vol 3\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Advanced Smelting\nThrough some experimentation it seems that its possible to process compressed raw ores. I need to do more research on this. Perhaps the local library will have more information on this...\"}']}"
             }
           ]
         }
