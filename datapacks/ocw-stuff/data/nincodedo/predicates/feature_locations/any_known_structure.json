@@ -16,6 +16,14 @@
     {
       "condition": "minecraft:reference",
       "name": "nincodedo:feature_locations/village"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/amethyst_geode"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:feature_locations/desert_pyramid"
     }
   ]
 }
