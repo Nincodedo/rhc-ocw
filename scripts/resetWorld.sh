@@ -1,11 +1,12 @@
 #!/bin/sh
 
-aggregate_player_stats() {
+backup_attempt() {
   # save world right before moving stats so they are up to date
-  rcon_command "save-all"
-  attempt_log_dir="logs/stats/attempt$attempt_number"
+  rcon_command "save-all flush"
+  attempt_log_dir="logs/backups/attempt$attempt_number"
   mkdir -p $attempt_log_dir
   cp -r world/stats/ $attempt_log_dir
+  tar -czvf "$attempt_log_dir/world_attempt$attempt_number.tar.gz" world/
 }
 
 rcon_command() {
@@ -30,6 +31,11 @@ world_ready_setup() {
   rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
   rcon_command "datapack enable 'file/VanillaTweaks.zip'" > /dev/null
   rcon_command "reload" > /dev/null
+  # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
+  if [ "$death_reset" = true ]
+  then
+    rcon_command "time set 0" > /dev/null
+  fi
 }
 
 log() {
@@ -48,7 +54,6 @@ world_ending_announcements() {
     echo $mc_days_survived >> $mc_days_survived_log_name
     mc_days_highscore=`cat $mc_days_survived_log_name | sort -n -r | head -n 1`
     log "$dead_player died on day $mc_days_survived, restarting server"
-    echo "$current_datetime $dead_player died" >> $death_log_name
     echo "$current_datetime, $dead_player, $mc_days_survived, $death_message" >> $combined_log_name
     world_end_text1="$dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
     world_end_text2="You survived $mc_days_survived in game days"
@@ -90,12 +95,10 @@ do
   done
   current_date=`date +"%m-%Y"`
   seed_log_name="logs/seed-$current_date.log"
-  death_log_name="logs/death-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
-  mc_days_survived_all_logs="logs/mc_days_survived-*"
   combined_log_name="logs/combined-$current_date.log"
-  touch $mc_days_survived_log_name
-  attempt_number=`wc -l $mc_days_survived_all_logs | sort -r | head -n 1 | awk '{print $1}'`
+  touch $combined_log_name
+  attempt_number=`wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}'`
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
   world_ready_setup
@@ -110,7 +113,7 @@ do
   log "Found healthy container, tailing docker log"
   ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
   world_ending_announcements
-  aggregate_player_stats
+  backup_attempt
   if [ ! -z "$dead_player" ]
   then
     death_reset=true
