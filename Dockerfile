@@ -23,9 +23,7 @@ COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
 COPY scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
-COPY config/*.toml /config/
-COPY defaultconfigs/*.toml /data/defaultconfigs/
-RUN chown -R 1000:1000 /data/defaultconfigs/
+COPY config/* /config/
 RUN apk --no-cache add curl
 RUN wget -P /app/mods https://media.forgecdn.net/files/3352/240/fabric-api-0.35.2%2B1.17.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/527/fabric-chunkpregen-0.3.4.jar \
