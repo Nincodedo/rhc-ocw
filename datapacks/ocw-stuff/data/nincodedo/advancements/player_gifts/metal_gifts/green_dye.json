@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/metal_gifts/root",
+  "parent": "nincodedo:player_gifts/metal_gifts/cactus",
   "criteria": {
     "give_ml_green_dye": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",

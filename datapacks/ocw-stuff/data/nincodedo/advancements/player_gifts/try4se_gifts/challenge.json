@@ -11,7 +11,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/try4se_gifts/root",
+  "parent": "nincodedo:player_gifts/try4se_gifts/any_wool",
   "criteria": {
     "give_try4se_white_wool": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",

@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/nin_gifts/root",
+  "parent": "nincodedo:player_gifts/nin_gifts/lapis",
   "criteria": {
     "give_nin_blue_dye": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",

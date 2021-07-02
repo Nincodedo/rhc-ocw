@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/nova_gifts/root",
+  "parent": "nincodedo:player_gifts/nova_gifts/bones",
   "criteria": {
     "give_nova_bone_block": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
