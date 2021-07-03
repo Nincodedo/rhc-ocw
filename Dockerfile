@@ -38,6 +38,6 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3358/619/fabric-api-0.36.
   && wget -P /app/mods https://media.forgecdn.net/files/3344/607/InvView-1.4.2-1.17%2B.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/455/villagernames-1.17-2.0.0.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3357/510/textile_backup-2.1.0-1.17.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3352/61/fabrilous-updater-2.2.jar
+  && wget -P /app/mods https://media.forgecdn.net/files/3373/459/fabrilous-updater-2.3.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
