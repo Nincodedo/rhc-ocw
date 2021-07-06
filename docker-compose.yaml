@@ -29,7 +29,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: 'LATEST'
+      VERSION: '1.17.1'
     volumes:
       - mc_server:/data
       - mc_mods:/mods

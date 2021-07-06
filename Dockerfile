@@ -25,17 +25,16 @@ COPY scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/* /config/
 RUN apk --no-cache add curl
-RUN wget -P /app/mods https://media.forgecdn.net/files/3358/619/fabric-api-0.36.0%2B1.17.jar \
+RUN wget -P /app/mods https://media.forgecdn.net/files/3377/591/fabric-api-0.36.1%2B1.17.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/527/fabric-chunkpregen-0.3.4.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/514/crowmap-1.17-1.0.1.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3354/305/lithium-fabric-mc1.17-0.7.1.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3343/650/bettersafebed-fabric-1.17-1.4.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3337/405/rightclickharvest-1.2.4.jar \
+  && wget -P /app/mods https://edge.forgecdn.net/files/3366/380/rightclickharvest-1.3.0.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/942/KeepHeadNames-1.3.jar \
   && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/1.0.1/mc-server-description-1.0.1.jar \
   && wget -P /app/mods https://cdn.modrinth.com/data/HygVekKN/versions/1.0.2/easy-painter-1.0.2.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3343/950/servertick-mc1.17-1.5.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3344/607/InvView-1.4.2-1.17%2B.jar \
+  && wget -P /app/mods https://cdn.modrinth.com/data/jrDKjZP7/versions/1.4.3/InvView-1.4.3-1.17+.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/455/villagernames-1.17-2.0.0.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3357/510/textile_backup-2.1.0-1.17.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3373/459/fabrilous-updater-2.3.jar
