@@ -26,6 +26,7 @@ RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/* /config/
 RUN apk --no-cache add curl
 RUN wget -P /app/mods https://media.forgecdn.net/files/3377/591/fabric-api-0.36.1%2B1.17.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3380/166/lithium-fabric-mc1.17.1-0.7.3.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/527/fabric-chunkpregen-0.3.4.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3344/514/crowmap-1.17-1.0.1.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3343/650/bettersafebed-fabric-1.17-1.4.jar \
