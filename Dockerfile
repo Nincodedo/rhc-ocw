@@ -24,8 +24,6 @@ RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/* /config/
 RUN apk --no-cache add curl
 RUN wget -P /app/mods https://media.forgecdn.net/files/3530/684/fabric-api-0.42.8%2B1.18.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3439/799/interdimensional-map-markers-1.0.0.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3512/413/fabric-console-1.0.5%2B21w43a.jar \
   && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/2.0.0/mc-server-description-2.0.0.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
