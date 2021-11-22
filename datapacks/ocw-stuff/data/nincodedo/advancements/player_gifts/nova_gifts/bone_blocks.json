@@ -1,18 +1,18 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:green_dye"
+      "item": "minecraft:bone_block"
     },
-    "title": "Wow, The Extra Mile",
-    "description": "Good job on smelting stuff",
+    "title": "Square Bones",
+    "description": "bones²",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:player_gifts/metal_gifts/cactus",
+  "parent": "nincodedo:player_gifts/nova_gifts/bones",
   "criteria": {
-    "give_ml_green_dye": {
+    "give_nova_bone_block": {
       "trigger": "minecraft:thrown_item_picked_up_by_entity",
       "conditions": {
         "player": [
@@ -20,17 +20,17 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "nincodedo:isentitymetallink"
+              "name": "nincodedo:isentitynovastardust"
             }
           }
         ],
         "entity": {
           "type": "minecraft:player",
-          "nbt": "{UUID:[I; -2145763756, 845696088, -1763149853, 991948061]}"
+          "nbt": "{UUID:[I;-1414250168,1208962941,-1850872904,-2001836343]}"
         },
         "item": {
           "items": [
-            "minecraft:green_dye"
+            "minecraft:bone_block"
           ]
         }
       }
@@ -38,7 +38,7 @@
   },
   "requirements": [
     [
-      "give_ml_green_dye"
+      "give_nova_bone_block"
     ]
   ]
 }
