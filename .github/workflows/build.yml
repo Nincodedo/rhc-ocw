@@ -27,5 +27,4 @@ jobs:
           tag: |
             latest
             ${{ github.sha }}
-            ${{ steps.extract_branch.outputs.branch }}
           containerRegistry: true
