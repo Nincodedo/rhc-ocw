@@ -14,7 +14,7 @@ rcon_command() {
 }
 
 discord_webhook_send() {
-  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\"}]}" $discord_webhook > /dev/null
+  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" $discord_webhook > /dev/null
 }
 
 world_ready_setup() {
@@ -62,7 +62,8 @@ world_ending_announcements() {
     rcon_command "tellraw @a {\"text\": \"$world_end_text1\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text2\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text3\"}"
-    discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3"
+    dead_player_skin="https://mc-heads.net/body/$dead_player/left.png"
+    discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3" "$dead_player_skin"
   fi
 }
 
