@@ -77,7 +77,7 @@ dead_player=""
 death_reset=false
 discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
-grep_phrase="\[Server thread\/INFO\]: [^<].*[^>] has made the advancement \[You did this\]$"
+grep_phrase="\[Server thread\/INFO\]: [^<].*[^>] has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 if [ -f "$discord_webhook_file" ]
 then
