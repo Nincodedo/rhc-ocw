@@ -109,7 +109,7 @@ do
   echo "$current_datetime $seed" >> $seed_log_name
   if [ "$death_reset" = true ]
   then
-    discord_webhook_send "Server is up for attempt # $attempt_number" ""
+    discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
   log "Found healthy container, tailing docker log"
