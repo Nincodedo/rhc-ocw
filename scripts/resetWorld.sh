@@ -29,7 +29,8 @@ world_ready_setup() {
   rcon_command "datapack list" > /dev/null
   rcon_command "datapack enable 'file/who-did-this'" > /dev/null
   rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
-  rcon_command "datapack enable 'file/VanillaTweaks.zip'" > /dev/null
+  rcon_command "datapack enable 'file/VanillaTweaksCrafting.zip'" > /dev/null
+  rcon_command "datapack enable 'file/fastleafdecay.zip'" > /dev/null
   rcon_command "reload" > /dev/null
   # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
   if [ "$death_reset" = true ]
@@ -75,7 +76,7 @@ dead_player=""
 death_reset=false
 discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
-grep_phrase="\[Server thread\/INFO\]: .* has made the advancement \[You did this\]"
+grep_phrase="\[Server thread\/INFO\]: [^<].*[^>] has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
 if [ -f "$discord_webhook_file" ]
 then

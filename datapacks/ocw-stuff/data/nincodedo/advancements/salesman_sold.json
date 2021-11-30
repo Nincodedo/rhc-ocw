@@ -1,18 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:white_carpet"
+      "item": "minecraft:crossbow"
     },
-    "title": "You did THIS?",
-    "description": "How could you",
-    "frame": "challenge",
+    "title": "Don't need what you're selling",
+    "description": "Send a pillager to the shadow realm",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
   "parent": "nincodedo:root",
   "criteria": {
-    "you_did_THIS?": {
+    "kill_pillager": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": [
@@ -20,7 +19,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:llama"
+              "type": "minecraft:pillager"
             }
           }
         ]
@@ -29,7 +28,7 @@
   },
   "requirements": [
     [
-      "you_did_THIS?"
+      "kill_pillager"
     ]
   ]
 }
