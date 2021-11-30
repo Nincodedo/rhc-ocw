@@ -3,6 +3,10 @@ on:
     branches:
       - main
       - dev
+  pull_request:
+    branches:
+      - main
+      - dev
 name: Main Build
 jobs:
   build:
@@ -23,5 +27,4 @@ jobs:
           tag: |
             latest
             ${{ github.sha }}
-            ${{ steps.extract_branch.outputs.branch }}
           containerRegistry: true
