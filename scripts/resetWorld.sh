@@ -95,6 +95,7 @@ do
     sleep 0.1
     docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
   done
+  log "Container healthy, continuing with startup"
   current_date=`date +"%m-%Y"`
   seed_log_name="logs/seed-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"

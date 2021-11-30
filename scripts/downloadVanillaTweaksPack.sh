@@ -24,4 +24,8 @@ wget -O $1/VanillaTweaksData.zip $dataPackDownloadUrl
 
 unzip $1/VanillaTweaksData.zip -d $1
 mv $1/fast* $1/fastleafdecay.zip
+if [ ! -f "$1/fastleafdecay.zip" ]
+then
+  exit 1
+fi
 rm $1/VanillaTweaksData.zip

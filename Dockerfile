@@ -5,6 +5,7 @@ RUN apt-get update \
   && apt-get install wget -y --no-install-recommends \
   && apt-get install ca-certificates -y --no-install-recommends \
   && apt-get install dos2unix -y --no-install-recommends \
+  && apt-get install unzip -y --no-install-recommends \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 RUN mkdir /datapacks
@@ -23,8 +24,9 @@ COPY scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/* /config/
 RUN apk --no-cache add curl
-RUN wget -P /app/mods https://media.forgecdn.net/files/3530/684/fabric-api-0.42.8%2B1.18.jar \
+RUN wget -P /app/mods https://media.forgecdn.net/files/3537/5/fabric-api-0.43.1%2B1.18.jar \
   && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/2.0.0/mc-server-description-2.0.0.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3536/188/deathlog-0.2.2%2B1.18.jar
+  && wget -P /app/mods https://media.forgecdn.net/files/3540/921/deathlog-0.2.3%2B1.18.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3541/965/rightclickharvest-1.5.1.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
