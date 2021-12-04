@@ -23,10 +23,14 @@ COPY *.env /app/ocw-minecraft/
 COPY scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 COPY config/* /config/
-RUN apk --no-cache add curl
-RUN wget -P /app/mods https://media.forgecdn.net/files/3537/5/fabric-api-0.43.1%2B1.18.jar \
+RUN apk --no-cache add curl && apk --no-cache add jq
+RUN wget -P /app/mods https://media.forgecdn.net/files/3546/679/fabric-api-0.44.0%2B1.18.jar \
   && wget -P /app/mods https://github.com/Nincodedo/mc-server-description/releases/download/2.0.0/mc-server-description-2.0.0.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3540/921/deathlog-0.2.3%2B1.18.jar \
-  && wget -P /app/mods https://media.forgecdn.net/files/3541/965/rightclickharvest-1.5.1.jar
+  && wget -P /app/mods https://media.forgecdn.net/files/3541/965/rightclickharvest-1.5.1.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3524/837/cloth-config-6.0.42-fabric.jar \
+  && wget -P /app/mods https://cdn.modrinth.com/data/GSw2U2lp/versions/1.0.1/ihgm-1.0.1.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3523/820/incantationem-1.1.2%2B1.18-pre1.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3542/373/textile_backup-2.3.0-1.18.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
