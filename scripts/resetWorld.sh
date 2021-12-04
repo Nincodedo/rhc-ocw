@@ -88,22 +88,33 @@ log "Starting LogWatcher in: `pwd`"
 while : ;
 do
   dead_player=""
-  log "Checking for healthy container status"
-  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
-  until [ $? -eq 0 ];
-  do
-    sleep 0.1
-    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
-  done
-  log "Container healthy, continuing with startup"
-  current_date=`date +"%m-%Y"`
+  current_date=$(date +"%Y")
   seed_log_name="logs/seed-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
   combined_log_name="logs/combined-$current_date.log"
   touch $combined_log_name
-  attempt_number=`wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}'`
+  attempt_number=$(wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+  log "Checking for healthy container status"
+  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+  checkHealth=$?
+  until [ $checkHealth -eq 0 ];
+  do
+    sleep 0.1
+    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+    checkHealth=$?
+    checkMotd=`docker inspect mc | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs`
+    checkMotdLength=`expr length "$checkMotd"`
+    if [ $checkMotdLength -eq 0 ] && [ $checkHealth -eq 0 ]
+    then
+      log "Restarting $minecraft_docker_container_name container because bad motd"
+      docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name > /dev/null
+      docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+      checkHealth=$?
+    fi
+  done
+  log "Container healthy, continuing with startup"
   world_ready_setup
   seed=`rcon_command seed`
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
