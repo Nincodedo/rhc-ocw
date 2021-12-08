@@ -18,11 +18,6 @@ discord_webhook_send() {
 }
 
 world_ready_setup() {
-  rm -r world/datapacks/*
-  rm /mods/*.jar
-  cp /app/mods/*.jar /mods/
-  cp -r /app/datapacks/ world/
-  chown -R 1000:1000 world/
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
@@ -96,6 +91,11 @@ do
   attempt_number=$(wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+  rm -r world/datapacks/*
+  rm /mods/*.jar
+  cp /app/mods/*.jar /mods/
+  cp -r /app/datapacks/ world/
+  chown -R 1000:1000 world/
   log "Checking for healthy container status"
   docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
   checkHealth=$?
