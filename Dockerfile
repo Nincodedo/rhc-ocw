@@ -31,6 +31,11 @@ RUN wget -P /app/mods https://media.forgecdn.net/files/3546/679/fabric-api-0.44.
   && wget -P /app/mods https://media.forgecdn.net/files/3524/837/cloth-config-6.0.42-fabric.jar \
   && wget -P /app/mods https://cdn.modrinth.com/data/GSw2U2lp/versions/1.0.1/ihgm-1.0.1.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3523/820/incantationem-1.1.2%2B1.18-pre1.jar \
+  && wget -P /app/mods https://cdn.modrinth.com/data/EAe3MQt5/versions/1.0.1.18/crowmap-1.18-1.0.1.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3549/487/fabrication-1.18-2.2.1-exp4.jar \
+  && wget -P /app/mods https://cdn.modrinth.com/data/BlRLr0FS/versions/1.1.2/disguiselib-1.1.2-fabric.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3549/256/taterzens-1.6.4-fabric.jar \
+  && wget -P /app/mods https://media.forgecdn.net/files/3551/560/dynview.fabric-1.18-1.5.jar \
   && wget -P /app/mods https://media.forgecdn.net/files/3542/373/textile_backup-2.3.0-1.18.jar
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]
