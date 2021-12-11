@@ -14,15 +14,10 @@ rcon_command() {
 }
 
 discord_webhook_send() {
-  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\"}]}" $discord_webhook > /dev/null
+  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" $discord_webhook > /dev/null
 }
 
 world_ready_setup() {
-  rm -r world/datapacks/*
-  rm /mods/*.jar
-  cp /app/mods/*.jar /mods/
-  cp -r /app/datapacks/ world/
-  chown -R 1000:1000 world/
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
@@ -62,7 +57,8 @@ world_ending_announcements() {
     rcon_command "tellraw @a {\"text\": \"$world_end_text1\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text2\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text3\"}"
-    discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3"
+    dead_player_skin="https://mc-heads.net/body/$dead_player/left.png"
+    discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3" "$dead_player_skin"
   fi
 }
 
@@ -87,28 +83,45 @@ log "Starting LogWatcher in: `pwd`"
 while : ;
 do
   dead_player=""
-  log "Checking for healthy container status"
-  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
-  until [ $? -eq 0 ];
-  do
-    sleep 0.1
-    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
-  done
-  current_date=`date +"%m-%Y"`
+  current_date=$(date +"%Y")
   seed_log_name="logs/seed-$current_date.log"
   mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
   combined_log_name="logs/combined-$current_date.log"
   touch $combined_log_name
-  attempt_number=`wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}'`
+  attempt_number=$(wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+  rm -r world/datapacks/*
+  rm /mods/*.jar
+  cp /app/mods/*.jar /mods/
+  cp -r /app/datapacks/ world/
+  chown -R 1000:1000 world/
+  log "Checking for healthy container status"
+  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+  checkHealth=$?
+  until [ $checkHealth -eq 0 ];
+  do
+    sleep 0.1
+    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+    checkHealth=$?
+    checkMotd=`docker inspect mc | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs`
+    checkMotdLength=`expr length "$checkMotd"`
+    if [ $checkMotdLength -eq 0 ] && [ $checkHealth -eq 0 ]
+    then
+      log "Restarting $minecraft_docker_container_name container because bad motd"
+      docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name > /dev/null
+      docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+      checkHealth=$?
+    fi
+  done
+  log "Container healthy, continuing with startup"
   world_ready_setup
   seed=`rcon_command seed`
   current_datetime=`date +"%d-%m-%Y %I:%M:%S %p"`
   echo "$current_datetime $seed" >> $seed_log_name
   if [ "$death_reset" = true ]
   then
-    discord_webhook_send "Server is up for attempt # $attempt_number" ""
+    discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
   log "Found healthy container, tailing docker log"
