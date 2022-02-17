@@ -38,7 +38,9 @@ services:
     tty: true
     stdin_open: true
     labels:
-      dev.nincodedo.gameservercommander.game: "Vanilla Minecraft"
+      dev.nincodedo.gameservercommander.game: "Minecraft"
+      dev.nincodedo.gameservercommander.group: "MC-RHC"
+      dev.nincodedo.gameservercommander.name: "OCW RHC"
   log-watcher:
     build:
       context: .
@@ -57,6 +59,9 @@ services:
     - mc_mods:/mods
     - mc_mod_configs:/config
     - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      dev.nincodedo.gameservercommander.group: "MC-RHC"
+      com.centurylinklabs.watchtower.enable: false
 volumes:
   mc_server:
   mc_mods:
