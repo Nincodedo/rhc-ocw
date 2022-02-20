@@ -1,5 +1,7 @@
 {
   "type": "minecraft:pillager_outpost",
+  "biomes": "#minecraft:has_structure/pillager_outpost",
+  "adapt_noise": true,
   "config": {
     "start_pool": "nincodedo:undeadcottage",
     "size": 7
