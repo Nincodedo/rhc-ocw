@@ -40,7 +40,7 @@ services:
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
-      dev.nincodedo.gameservercommander.name: "OCW RHC"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
   log-watcher:
     build:
       context: .
