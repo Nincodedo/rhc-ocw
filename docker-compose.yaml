@@ -41,6 +41,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2-rc1"
   log-watcher:
     build:
       context: .
