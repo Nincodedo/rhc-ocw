@@ -15,7 +15,7 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "buried_treasure"
+          "feature": "minecraft:buried_treasure"
         }
       }
     },
@@ -23,7 +23,15 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "feature": "mineshaft"
+          "feature": "minecraft:mineshaft"
+        }
+      }
+    },
+    "find_mineshaft_mesa": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "minecraft:mineshaft_mesa"
         }
       }
     }
@@ -34,6 +42,9 @@
     ],
     [
       "find_buried_treasure"
+    ],
+    [
+      "find_mineshaft_mesa"
     ]
   ],
   "rewards": {

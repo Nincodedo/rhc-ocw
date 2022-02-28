@@ -11,12 +11,23 @@
         "processors": {
           "processors": [
             {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:water",
+                  "Properties": {
+                    "level": "15"
+                  }
+                }
+              ]
+            },
+            {
               "processor_type": "minecraft:block_rot",
-              "integrity": 0.4
+              "integrity": 0.8
             },
             {
               "processor_type": "minecraft:block_age",
-              "mossiness": 0.4
+              "mossiness": 0.2
             }
           ]
         }

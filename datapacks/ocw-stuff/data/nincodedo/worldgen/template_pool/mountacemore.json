@@ -8,7 +8,7 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "nincodedo:ocw_old/mountacemore",
-        "processors": "minecraft:empty"
+        "processors": "minecraft:mossify_20_percent"
       }
     }
   ]

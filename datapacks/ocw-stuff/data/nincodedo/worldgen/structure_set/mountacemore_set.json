@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "nincodedo:mountacemore",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 28,
+    "separation": 8,
+    "salt": 935486321
+  }
+}

@@ -1,7 +1,10 @@
 {
   "type": "minecraft:pillager_outpost",
+  "biomes": "#minecraft:has_structure/pillager_outpost",
+  "adapt_noise": true,
+  "spawn_overrides": {},
   "config": {
     "start_pool": "nincodedo:mountacemore",
-    "size": 3
+    "size": 7
   }
 }
