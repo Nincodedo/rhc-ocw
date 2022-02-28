@@ -12,7 +12,7 @@ RUN mkdir -p /datapacks /mods
 COPY scripts/downloadVanillaTweaksPack.sh .
 COPY modlist.txt .
 RUN dos2unix /downloadVanillaTweaksPack.sh /downloadVanillaTweaksPack.sh
-RUN /downloadVanillaTweaksPack.sh /datapacks/
+#RUN /downloadVanillaTweaksPack.sh /datapacks/
 RUN wget -P mods -i modlist.txt
 
 FROM docker/compose
