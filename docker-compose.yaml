@@ -29,7 +29,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.18.2-rc1'
+      VERSION: '1.18.2'
     volumes:
       - mc_server:/data
       - mc_mods:/mods
@@ -41,7 +41,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2-rc1"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2"
   log-watcher:
     build:
       context: .

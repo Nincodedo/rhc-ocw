@@ -1,15 +1,2 @@
-https://media.forgecdn.net/files/3546/679/fabric-api-0.44.0%2B1.18.jar
+https://media.forgecdn.net/files/3660/981/fabric-api-0.47.8%2B1.18.2.jar
 https://github.com/Nincodedo/mc-server-description/releases/download/2.0.0/mc-server-description-2.0.0.jar
-https://media.forgecdn.net/files/3540/921/deathlog-0.2.3%2B1.18.jar
-https://media.forgecdn.net/files/3541/965/rightclickharvest-1.5.1.jar
-https://media.forgecdn.net/files/3641/132/cloth-config-6.2.57-fabric.jar
-https://cdn.modrinth.com/data/GSw2U2lp/versions/1.0.1/ihgm-1.0.1.jar
-https://media.forgecdn.net/files/3571/914/incantationem-1.1.3%2B1.18.1.jar
-https://cdn.modrinth.com/data/EAe3MQt5/versions/1.0.1.18/crowmap-1.18-1.0.1.jar
-https://media.forgecdn.net/files/3559/916/towers_of_the_wild_reworked-2.0.0.jar
-https://media.forgecdn.net/files/3549/487/fabrication-1.18-2.2.1-exp4.jar
-https://cdn.modrinth.com/data/BlRLr0FS/versions/1.1.2/disguiselib-1.1.2-fabric.jar
-https://media.forgecdn.net/files/3549/256/taterzens-1.6.4-fabric.jar
-https://media.forgecdn.net/files/3565/566/lithium-fabric-mc1.18.1-0.7.6.jar
-https://media.forgecdn.net/files/3542/373/textile_backup-2.3.0-1.18.jar
-https://cdn.modrinth.com/data/kzdWjLDh/versions/1.1.0-1.18.1-fabric/totw_additions-1.1.0-1.18.1-fabric.jar

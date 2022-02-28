@@ -12,13 +12,13 @@ RUN mkdir -p /datapacks /mods
 COPY scripts/downloadVanillaTweaksPack.sh .
 COPY modlist.txt .
 RUN dos2unix /downloadVanillaTweaksPack.sh /downloadVanillaTweaksPack.sh
-RUN /downloadVanillaTweaksPack.sh /datapacks/
+#RUN /downloadVanillaTweaksPack.sh /datapacks/
 RUN wget -P mods -i modlist.txt
 
 FROM docker/compose
 RUN mkdir -p /app/ocw-minecraft /app/mods /app/datapacks /config /data/defaultconfigs
 WORKDIR /app
-COPY --from=build /datapacks/* /app/datapacks/
+#COPY --from=build /datapacks/* /app/datapacks/
 COPY --from=build /mods/* /app/mods/
 COPY datapacks/ /app/datapacks/
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
