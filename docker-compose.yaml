@@ -4,7 +4,6 @@ services:
   mc:
     image: itzg/minecraft-server:latest
     ports:
-    - "25565:25565"
     - "25575:25575"
     - "25575:25575/udp"
     - "24454:24454/udp"
@@ -63,6 +62,11 @@ services:
     labels:
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       com.centurylinklabs.watchtower.enable: false
+  router:
+    image: itzg/mc-router
+    ports:
+      - 25565:25565
+    command: --mapping=games.nincodedo.dev=mc:25565
 volumes:
   mc_server:
   mc_mods:
