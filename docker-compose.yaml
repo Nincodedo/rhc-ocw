@@ -62,15 +62,47 @@ services:
     labels:
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       com.centurylinklabs.watchtower.enable: false
+  mc-manhunt:
+    image: itzg/minecraft-server:latest
+    container_name: mc-manhunt
+    tty: true
+    stdin_open: true
+    labels:
+      dev.nincodedo.gameservercommander.game: "Minecraft"
+      dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
+      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
+    environment:
+      EULA: 'true'
+      TZ: 'America/Chicago'
+      MOTD: 'OCW Manhunt'
+      DIFFICULTY: 'hard'
+      OPS: 'nincodedo'
+      OVERRIDE_SERVER_PROPERTIES: 'true'
+      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
+      OVERRIDE_ICON: 'true'
+      MEMORY: '2G'
+      FUNCTION_PERMISSION_LEVEL: '4'
+      SPAWN_PROTECTION: '0'
+      ENABLE_AUTOPAUSE: 'true'
+      MAX_TICK_TIME: "-1"
+      AUTOPAUSE_TIMEOUT_EST: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '120'
+      TYPE: 'SPIGOT'
+      SPIGET_RESOURCES: '86708,28140'
+      VERSION: '1.18.2'
+    volumes:
+      - mc_manhunt_server:/data
   router:
     image: itzg/mc-router
     ports:
       - 25565:25565
-    command: --mapping=games.nincodedo.dev=mc:25565
+    command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565
 volumes:
   mc_server:
   mc_mods:
   mc_mod_configs:
+  mc_manhunt_server:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
