@@ -4,7 +4,7 @@ services:
   mc:
     build:
       context: .
-      dockerfile: rhc/Dockerfile-mc
+      dockerfile: Dockerfile-mc
     image: ghcr.io/nincodedo/rhc-ocw-mc:latest
     ports:
     - "25575:25575"
@@ -43,10 +43,13 @@ services:
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
       dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2"
+    depends_on:
+      - log-watcher
+      - router
   log-watcher:
     build:
       context: .
-      dockerfile: rhc/Dockerfile-log-watcher
+      dockerfile: Dockerfile-log-watcher
       labels:
         - "com.centurylinklabs.watchtower.enable=false"
     image: ghcr.io/nincodedo/rhc-ocw:latest
@@ -95,6 +98,8 @@ services:
       VERSION: '1.18.2'
     volumes:
       - mc_manhunt_server:/data
+    depends_on:
+      - router
   router:
     image: itzg/mc-router
     ports:
