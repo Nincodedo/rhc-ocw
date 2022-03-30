@@ -19,7 +19,7 @@ jobs:
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
       - name: Build Dockerfile
-        run: docker-compose build
+        run: docker compose build log-watcher
       - name: GitHub Docker Action
         uses: matootie/github-docker@v3.1.0
         with:
@@ -28,3 +28,4 @@ jobs:
             latest
             ${{ github.sha }}
           containerRegistry: true
+          contextName: Dockerfile-log-watcher

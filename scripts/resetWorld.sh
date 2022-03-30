@@ -21,11 +21,6 @@ world_ready_setup() {
   rcon_command "scoreboard objectives add health health" > /dev/null
   rcon_command "scoreboard objectives setdisplay list health" > /dev/null
   rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
-  rcon_command "datapack list" > /dev/null
-  rcon_command "datapack enable 'file/who-did-this'" > /dev/null
-  rcon_command "datapack enable 'file/ocw-stuff'" > /dev/null
-  rcon_command "datapack enable 'file/VanillaTweaksCrafting.zip'" > /dev/null
-  rcon_command "datapack enable 'file/fastleafdecay.zip'" > /dev/null
   rcon_command "reload" > /dev/null
   # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
   if [ "$death_reset" = true ]
@@ -91,10 +86,8 @@ do
   attempt_number=$(wc -l $combined_log_name | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
-  rm -r world/datapacks/*
   rm /mods/*.jar
   cp /app/mods/*.jar /mods/
-  cp -r /app/datapacks/ world/
   chown -R 1000:1000 world/
   log "Checking for healthy container status"
   docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
@@ -138,7 +131,6 @@ do
     docker rm $minecraft_docker_container_name
     rm -rf world
     mkdir world/
-    cp -r /app/datapacks/ world/
     chown -R 1000:1000 world/
     docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
   fi

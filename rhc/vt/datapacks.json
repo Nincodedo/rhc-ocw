@@ -1,0 +1,9 @@
+{
+  "type": "datapacks",
+  "version": "1.18",
+  "packs": {
+    "survival": [
+      "fast leaf decay"
+    ]
+  }
+}
