@@ -2,7 +2,10 @@ version: "3.8"
 
 services:
   mc:
-    image: itzg/minecraft-server:latest
+    build:
+      context: .
+      dockerfile: rhc/Dockerfile-mc
+    image: ghcr.io/nincodedo/rhc-ocw-mc:latest
     ports:
     - "25575:25575"
     - "25575:25575/udp"
@@ -31,7 +34,6 @@ services:
       VERSION: '1.18.2'
     volumes:
       - mc_server:/data
-      - mc_mods:/mods
       - mc_mod_configs:/config
     container_name: mc
     tty: true
@@ -44,6 +46,7 @@ services:
   log-watcher:
     build:
       context: .
+      dockerfile: rhc/Dockerfile-log-watcher
       labels:
         - "com.centurylinklabs.watchtower.enable=false"
     image: ghcr.io/nincodedo/rhc-ocw:latest
@@ -56,7 +59,6 @@ services:
       - discord_webhook
     volumes:
     - mc_server:/data
-    - mc_mods:/mods
     - mc_mod_configs:/config
     - /var/run/docker.sock:/var/run/docker.sock
     labels:
@@ -100,7 +102,6 @@ services:
     command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565
 volumes:
   mc_server:
-  mc_mods:
   mc_mod_configs:
   mc_manhunt_server:
 secrets:

@@ -1,0 +1,27 @@
+FROM debian:buster-slim AS build
+RUN apt-get update \
+  && apt-get install zip -y --no-install-recommends \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY ../datapacks /datapacks
+RUN cd /datapacks/ocw-stuff \
+  && zip -r ocw-stuff.zip . \
+  && mv ocw-stuff.zip /datapacks \
+  && cd /datapacks/who-did-this \
+  && zip -r who-did-this.zip . \
+  && mv who-did-this.zip /datapacks
+
+FROM itzg/minecraft-server:latest
+
+ENV MODS_FILE=/modlist.txt
+COPY rhc/modlist.txt /modlist.txt
+
+ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
+RUN mkdir -p /datapacks
+COPY --from=build /datapacks/* /datapacks
+
+ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
+RUN mkdir -p /vt
+COPY rhc/vt/craftingtweaks.json /vt/
+COPY rhc/vt/datapacks.json /vt/
