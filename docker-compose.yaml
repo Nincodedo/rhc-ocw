@@ -96,6 +96,11 @@ services:
       TYPE: 'SPIGOT'
       SPIGET_RESOURCES: '86708,28140'
       VERSION: '1.18.2'
+      RCON_CMDS_STARTUP:  |-
+        scoreboard objectives add health health
+        scoreboard objectives setdisplay list health
+        scoreboard objectives modify health rendertype hearts
+        luckperms group default permission set manhuntplus.* true
     depends_on:
       - router
   router:
