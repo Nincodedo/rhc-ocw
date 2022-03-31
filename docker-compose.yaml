@@ -96,8 +96,6 @@ services:
       TYPE: 'SPIGOT'
       SPIGET_RESOURCES: '86708,28140'
       VERSION: '1.18.2'
-    volumes:
-      - mc_manhunt_server:/data
     depends_on:
       - router
   router:
@@ -108,7 +106,6 @@ services:
 volumes:
   mc_server:
   mc_mod_configs:
-  mc_manhunt_server:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
