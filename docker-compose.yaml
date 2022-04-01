@@ -108,6 +108,22 @@ services:
       dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
     depends_on:
       - router
+      - log-watcher-manhunt
+  log-watcher-manhunt:
+    build:
+      context: .
+      dockerfile: Dockerfile-log-watcher-manhunt
+      labels:
+        - "com.centurylinklabs.watchtower.enable=false"
+    image: ghcr.io/nincodedo/rhc-ocw-manhunt:latest
+    container_name: log-watcher-manhunt
+    environment:
+      TZ: 'CST6CDT'
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
+      com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
     ports:
