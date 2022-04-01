@@ -72,11 +72,6 @@ services:
     container_name: mc-manhunt
     tty: true
     stdin_open: true
-    labels:
-      dev.nincodedo.gameservercommander.game: "Minecraft"
-      dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
-      dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
-      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
     environment:
       EULA: 'true'
       TZ: 'America/Chicago'
@@ -101,6 +96,11 @@ services:
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
         luckperms group default permission set manhuntplus.* true
+    labels:
+      dev.nincodedo.gameservercommander.game: "Minecraft"
+      dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
+      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
     depends_on:
       - router
   router:
