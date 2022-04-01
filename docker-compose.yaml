@@ -88,14 +88,19 @@ services:
       MAX_TICK_TIME: "-1"
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
-      TYPE: 'SPIGOT'
-      SPIGET_RESOURCES: '86708,28140'
+      TYPE: 'PAPER'
+      SPIGET_RESOURCES: '86708,28140,74429'
       VERSION: '1.18.2'
       RCON_CMDS_STARTUP:  |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
         luckperms group default permission set manhuntplus.* true
+        fcp start 3000 world
+      RCON_CMDS_ON_CONNECT: |-
+        fcp pause
+      RCON_CMDS_LAST_DISCONNECT: |-
+        fcp resume
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
