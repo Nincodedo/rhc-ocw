@@ -44,7 +44,6 @@ services:
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
       dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2"
     depends_on:
-      - log-watcher
       - router
   log-watcher:
     build:
@@ -108,7 +107,6 @@ services:
       dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
     depends_on:
       - router
-      - log-watcher-manhunt
   log-watcher-manhunt:
     build:
       context: .
