@@ -26,14 +26,6 @@
           "feature": "minecraft:mineshaft"
         }
       }
-    },
-    "find_mineshaft_mesa": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "location": {
-          "feature": "minecraft:mineshaft_mesa"
-        }
-      }
     }
   },
   "requirements": [
@@ -42,9 +34,6 @@
     ],
     [
       "find_buried_treasure"
-    ],
-    [
-      "find_mineshaft_mesa"
     ]
   ],
   "rewards": {
