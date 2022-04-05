@@ -1,30 +1,28 @@
 #!/bin/sh
 
 rcon_command() {
-  docker exec $minecraft_docker_container_name rcon-cli $1
+  docker exec "$minecraft_docker_container_name" rcon-cli "$1"
 }
 
 log() {
-  log_time=`date +"%d-%m-%Y %I:%M:%S %p"`
-  echo "$log_time [LogWatcher]: $@"
+  log_time=$(date +"%d-%m-%Y %I:%M:%S %p")
+  echo "$log_time [LogWatcher]: $*"
 }
 
 world_ending_announcements() {
-    sleep $death_reset_delay_seconds
-    docker stop $minecraft_docker_container_name
-    docker rm $minecraft_docker_container_name
-    docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
+    sleep "$death_reset_delay_seconds"
+    docker stop "$minecraft_docker_container_name"
+    docker rm "$minecraft_docker_container_name"
+    docker-compose -f "$minecraft_compose_dir"/docker-compose.yaml up -d "$minecraft_docker_container_name"
 }
 
-minecraft_server_dir=/data
 app_dir=/app
 minecraft_compose_dir=$app_dir/ocw-minecraft
-minecraft_server_log=$minecraft_server_dir/logs/latest.log
 minecraft_docker_container_name=mc-manhunt
 death_reset_delay_seconds=20
 grep_phrase="\[.* INFO\]: Hunters win! Do \/huntplus start to play again!"
 
-log "Starting LogWatcher in: `pwd`"
+log "Starting LogWatcher in: $(pwd)"
 while : ;
 do
   log "Checking for healthy container status"
