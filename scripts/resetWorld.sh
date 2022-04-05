@@ -14,14 +14,13 @@ rcon_command() {
 }
 
 discord_webhook_send() {
-  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" "$discord_webhook" > /dev/null
+  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" "$discord_webhook" >/dev/null
 }
 
 world_ready_setup() {
   # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
-  if [ "$death_reset" = true ]
-  then
-    rcon_command "time set 0" > /dev/null
+  if [ "$death_reset" = true ]; then
+    rcon_command "time set 0" >/dev/null
   fi
 }
 
@@ -33,15 +32,14 @@ log() {
 world_ending_announcements() {
   current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
   dead_player=$(tail -n 50 "$minecraft_server_log" | grep "$grep_phrase" | head -n 1 | awk '{print $4}')
-  if [ -n "$dead_player" ]
-  then
+  if [ -n "$dead_player" ]; then
     death_message=$(tail -n 50 "$minecraft_server_log" | grep -B 1 "$grep_phrase" | head -n 1 | cut -f4- -d' ')
     mc_days_survived=$(rcon_command "time query day" | awk '{print $4}')
     mc_time_survived=$(rcon_command "time query gametime" | awk '{print $4}')
-    echo "$mc_days_survived" >> "$mc_days_survived_log_name"
+    echo "$mc_days_survived" >>"$mc_days_survived_log_name"
     mc_days_highscore=$(sort -n -r "$mc_days_survived_log_name" | head -n 1)
     log "$dead_player died on day $mc_days_survived, restarting server"
-    echo "$current_datetime, $dead_player, $mc_days_survived, $death_message" >> "$combined_log_name"
+    echo "$current_datetime, $dead_player, $mc_days_survived, $death_message" >>"$combined_log_name"
     world_end_text1="$dead_player has died, the server is restarting in $death_reset_delay_seconds seconds"
     world_end_text2="You survived $mc_days_survived in game days"
     world_end_text3="The high score is $mc_days_highscore in game days"
@@ -52,7 +50,6 @@ world_ending_announcements() {
     discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3" "$dead_player_skin"
   fi
 }
-
 
 minecraft_server_dir=/data
 app_dir=/app
@@ -65,14 +62,12 @@ discord_webhook_file="/run/secrets/discord_webhook"
 discord_webhook=""
 grep_phrase="\[Server thread\/INFO\]: [^<].*[^>] has made the advancement \[You did this\]"
 death_reset_delay_seconds=20
-if [ -f "$discord_webhook_file" ]
-then
+if [ -f "$discord_webhook_file" ]; then
   discord_webhook=$(cat $discord_webhook_file)
 fi
 cd $minecraft_server_dir
 log "Starting LogWatcher in: $(pwd)"
-while : ;
-do
+while :; do
   dead_player=""
   current_date=$(date +"%Y")
   seed_log_name="logs/seed-$current_date.log"
@@ -81,23 +76,21 @@ do
   touch "$combined_log_name"
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
-  echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+  echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
   chown -R 1000:1000 world/
   log "Checking for healthy container status"
-  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+  docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
   checkHealth=$?
-  until [ $checkHealth -eq 0 ];
-  do
+  until [ $checkHealth -eq 0 ]; do
     sleep 0.1
-    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+    docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
     checkHealth=$?
     checkMotd=$(docker inspect $minecraft_docker_container_name | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs)
     checkMotdLength=${#checkMotd}
-    if [ "$checkMotdLength" -eq 0 ] && [ $checkHealth -eq 0 ]
-    then
+    if [ "$checkMotdLength" -eq 0 ] && [ $checkHealth -eq 0 ]; then
       log "Restarting $minecraft_docker_container_name container because bad motd"
-      docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name > /dev/null
-      docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+      docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name >/dev/null
+      docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
       checkHealth=$?
     fi
   done
@@ -105,21 +98,19 @@ do
   world_ready_setup
   seed=$(rcon_command seed)
   current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
-  echo "$current_datetime $seed" >> "$seed_log_name"
-  if [ "$death_reset" = true ]
-  then
+  echo "$current_datetime $seed" >>"$seed_log_name"
+  if [ "$death_reset" = true ]; then
     discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
   log "Found healthy container, tailing docker log"
-  ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
+  (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   world_ending_announcements
   backup_attempt
-  if [ -n "$dead_player" ]
-  then
+  if [ -n "$dead_player" ]; then
     death_reset=true
     attempt_number=$((++attempt_number))
-    echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" > $minecraft_compose_dir/motd_override.env
+    echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name

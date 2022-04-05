@@ -10,10 +10,10 @@ log() {
 }
 
 world_ending_announcements() {
-    sleep "$death_reset_delay_seconds"
-    docker stop "$minecraft_docker_container_name"
-    docker rm "$minecraft_docker_container_name"
-    docker-compose -f "$minecraft_compose_dir"/docker-compose.yaml up -d "$minecraft_docker_container_name"
+  sleep "$death_reset_delay_seconds"
+  docker stop "$minecraft_docker_container_name"
+  docker rm "$minecraft_docker_container_name"
+  docker-compose -f "$minecraft_compose_dir"/docker-compose.yaml up -d "$minecraft_docker_container_name"
 }
 
 app_dir=/app
@@ -23,19 +23,17 @@ death_reset_delay_seconds=20
 grep_phrase="\[.* INFO\]: Hunters win! Do \/huntplus start to play again!"
 
 log "Starting LogWatcher in: $(pwd)"
-while : ;
-do
+while :; do
   log "Checking for healthy container status"
-  docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+  docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
   checkHealth=$?
-  until [ $checkHealth -eq 0 ];
-  do
+  until [ $checkHealth -eq 0 ]; do
     sleep 0.1
-    docker ps -f name=$minecraft_docker_container_name | grep healthy > /dev/null
+    docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
     checkHealth=$?
   done
   log "Found healthy container, tailing docker log"
-  ( docker logs $minecraft_docker_container_name --tail 0 -f & ) | grep -q "$grep_phrase"
+  (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   log "Game has ended. Restarting in $death_reset_delay_seconds seconds"
   world_ending_announcements
 done
