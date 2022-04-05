@@ -5,9 +5,12 @@ charset = utf-8
 end_of_line = crlf
 indent_size = 4
 indent_style = space
-insert_final_newline = false
+insert_final_newline = true
 max_line_length = 120
 tab_width = 4
+
+[{*.markdown,*.md}]
+trim_trailing_whitespace = false
 
 [{*.bash,*.sh,*.zsh}]
 indent_size = 2
