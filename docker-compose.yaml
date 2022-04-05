@@ -32,6 +32,10 @@ services:
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
       VERSION: '1.18.2'
+      RCON_CMDS_STARTUP:  |-
+        scoreboard objectives add health health
+        scoreboard objectives setdisplay list health
+        scoreboard objectives modify health rendertype hearts
     volumes:
       - mc_server:/data
       - mc_mod_configs:/config

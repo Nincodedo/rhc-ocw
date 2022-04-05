@@ -18,10 +18,6 @@ discord_webhook_send() {
 }
 
 world_ready_setup() {
-  rcon_command "scoreboard objectives add health health" > /dev/null
-  rcon_command "scoreboard objectives setdisplay list health" > /dev/null
-  rcon_command "scoreboard objectives modify health rendertype hearts" > /dev/null
-  rcon_command "reload" > /dev/null
   # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
   if [ "$death_reset" = true ]
   then
