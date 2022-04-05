@@ -1,2 +1,0 @@
-https://media.forgecdn.net/files/3660/981/fabric-api-0.47.8%2B1.18.2.jar
-https://github.com/Nincodedo/mc-server-description/releases/download/2.0.0/mc-server-description-2.0.0.jar
