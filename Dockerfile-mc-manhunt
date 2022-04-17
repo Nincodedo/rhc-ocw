@@ -1,0 +1,4 @@
+FROM itzg/minecraft-server:latest
+
+RUN mkdir -p /plugins
+COPY manhunt/plugins /plugins
