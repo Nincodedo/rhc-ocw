@@ -103,6 +103,7 @@ services:
         scoreboard objectives modify health rendertype hearts
         luckperms group default permission set manhuntplus.* true
         luckperms group default permission set minecraft.command.gamemode true
+        gamerule doInsomnia false
         fcp start 3000 world
       RCON_CMDS_ON_CONNECT: |-
         fcp pause
