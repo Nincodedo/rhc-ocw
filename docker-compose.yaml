@@ -118,6 +118,7 @@ services:
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
       dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
+      com.centurylinklabs.watchtower.enable: false
     depends_on:
       - router
   log-watcher-manhunt:
