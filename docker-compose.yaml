@@ -138,6 +138,7 @@ services:
       com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
+    container_name: router
     ports:
       - 25565:25565
     command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565
