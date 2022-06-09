@@ -1,0 +1,11 @@
+{
+  "file": "/data/plugins/ManhuntPlus/config.yml",
+  "ops": [
+    {
+      "$set": {
+        "path": "$.piglinPearlBoost",
+        "value": true
+      }
+    }
+  ]
+}

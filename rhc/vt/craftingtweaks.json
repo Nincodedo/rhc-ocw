@@ -1,19 +1,19 @@
 {
-    "result": "ok",
-    "packs": {
-        "unpackables": [
-            "unpackable ice",
-            "unpackable nether wart",
-            "unpackable wool"
-        ],
-        "craftables": [
-            "craftable bundles rabbit hide"
-        ],
-        "quality of life": [
-            "sandstone dyeing",
-            "universal dyeing"
-        ]
-    },
-    "type": "craftingtweaks",
-    "version": "1.18"
+  "result": "ok",
+  "packs": {
+    "unpackables": [
+      "unpackable ice",
+      "unpackable nether wart",
+      "unpackable wool"
+    ],
+    "craftables": [
+      "craftable bundles rabbit hide"
+    ],
+    "quality of life": [
+      "sandstone dyeing",
+      "universal dyeing"
+    ]
+  },
+  "type": "craftingtweaks",
+  "version": "1.19"
 }

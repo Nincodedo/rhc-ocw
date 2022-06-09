@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile-mc
     image: ghcr.io/nincodedo/rhc-ocw-mc:latest
     ports:
-    - "25575:25575"
-    - "25575:25575/udp"
-    - "24454:24454/udp"
+      - "25575:25575"
+      - "25575:25575/udp"
+      - "24454:24454/udp"
     env_file:
       - motd_override.env
       - docker.env
@@ -31,7 +31,11 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.18.2'
+      VERSION: '1.19'
+      RCON_CMDS_STARTUP: |-
+        scoreboard objectives add health health
+        scoreboard objectives setdisplay list health
+        scoreboard objectives modify health rendertype hearts
     volumes:
       - mc_server:/data
       - mc_mod_configs:/config
@@ -42,7 +46,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.18.2"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.19"
     depends_on:
       - router
   log-watcher:
@@ -60,14 +64,17 @@ services:
     secrets:
       - discord_webhook
     volumes:
-    - mc_server:/data
-    - mc_mod_configs:/config
-    - /var/run/docker.sock:/var/run/docker.sock
+      - mc_server:/data
+      - mc_mod_configs:/config
+      - /var/run/docker.sock:/var/run/docker.sock
     labels:
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       com.centurylinklabs.watchtower.enable: false
   mc-manhunt:
-    image: itzg/minecraft-server:latest
+    build:
+      context: .
+      dockerfile: Dockerfile-mc-manhunt
+    image: ghcr.io/nincodedo/rhc-ocw-mc-manhunt:latest
     container_name: mc-manhunt
     tty: true
     stdin_open: true
@@ -88,23 +95,30 @@ services:
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'PAPER'
-      SPIGET_RESOURCES: '86708,28140,74429'
-      VERSION: '1.18.2'
-      RCON_CMDS_STARTUP:  |-
+      SPIGET_RESOURCES: '28140,74429,1997,52849'
+      VERSION: '1.19'
+      RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
         luckperms group default permission set manhuntplus.* true
+        luckperms group default permission set minecraft.command.gamemode true
+        gamerule doInsomnia false
         fcp start 3000 world
       RCON_CMDS_ON_CONNECT: |-
         fcp pause
       RCON_CMDS_LAST_DISCONNECT: |-
         fcp resume
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
-      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.18.2"
+      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.19"
+      com.centurylinklabs.watchtower.enable: false
     depends_on:
       - router
   log-watcher-manhunt:
@@ -118,12 +132,13 @@ services:
     environment:
       TZ: 'CST6CDT'
     volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     labels:
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
+    container_name: router
     ports:
       - 25565:25565
     command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565
