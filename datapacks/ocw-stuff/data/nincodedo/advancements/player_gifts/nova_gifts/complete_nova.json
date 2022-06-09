@@ -8,7 +8,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "advancements": {
                   "nincodedo:player_gifts/nova_gifts/bones": true,
                   "nincodedo:player_gifts/nova_gifts/bone_blocks": true

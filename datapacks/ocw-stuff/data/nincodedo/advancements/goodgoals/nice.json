@@ -19,7 +19,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "player": {
+              "type_specific": {
+                "type": "player",
                 "stats": [
                   {
                     "type": "minecraft:custom",
