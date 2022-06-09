@@ -10,7 +10,7 @@ backup_attempt() {
 }
 
 rcon_command() {
-  docker exec "$minecraft_docker_container_name" rcon-cli "$1"
+  docker exec "$minecraft_docker_container_name" rcon-cli --password minecraft --port 25575 "$1"
 }
 
 discord_webhook_send() {

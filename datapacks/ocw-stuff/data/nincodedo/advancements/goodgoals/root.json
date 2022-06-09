@@ -15,7 +15,8 @@
       "trigger": "minecraft:tick",
       "conditions": {
         "player": {
-          "player": {
+          "type_specific": {
+            "type": "player",
             "advancements": {
               "nincodedo:root": true
             }

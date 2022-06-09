@@ -14,16 +14,20 @@
     "find_buried_treasure": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:buried_treasure"
+        "player": {
+          "location": {
+            "structure": "minecraft:buried_treasure"
+          }
         }
       }
     },
     "find_mineshaft": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "minecraft:mineshaft"
+        "player": {
+          "location": {
+            "structure": "minecraft:mineshaft"
+          }
         }
       }
     }

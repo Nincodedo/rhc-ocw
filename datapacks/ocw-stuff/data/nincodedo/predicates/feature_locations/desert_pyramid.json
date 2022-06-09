@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "feature": "minecraft:desert_pyramid"
+    "structure": "minecraft:desert_pyramid"
   }
 }
