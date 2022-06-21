@@ -31,7 +31,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.19'
+      VERSION: '1.19.1'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
@@ -46,7 +46,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.19"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.19.1"
     depends_on:
       - router
   log-watcher:
@@ -96,7 +96,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'PAPER'
       SPIGET_RESOURCES: '28140,74429,1997,52849'
-      VERSION: '1.19'
+      VERSION: '1.19.1'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
@@ -117,7 +117,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
-      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.19"
+      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.19.1"
       com.centurylinklabs.watchtower.enable: false
     depends_on:
       - router
