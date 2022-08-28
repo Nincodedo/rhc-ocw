@@ -140,7 +140,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-mc-tekkit
-    image: itzg/minecraft-server:latest
+    image: ghcr.io/nincodedo/rhc-ocw-tekkit2:latest
     container_name: tekkit2
     volumes:
       - mc_tekkit_server:/data
@@ -148,7 +148,7 @@ services:
       EULA: 'true'
       TZ: 'America/Chicago'
       MOTD: 'OCW Tekkit 2'
-      DIFFICULTY: 'easy'
+      DIFFICULTY: 'normal'
       OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ENABLE_AUTOPAUSE: 'true'
@@ -163,6 +163,7 @@ services:
       MEMORY: 3G
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
+      COPY_CONFIG_DEST: '/data'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
