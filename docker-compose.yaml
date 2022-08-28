@@ -136,15 +136,51 @@ services:
     labels:
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       com.centurylinklabs.watchtower.enable: false
+  mc-tekkit:
+    build:
+      context: .
+      dockerfile: Dockerfile-mc-tekkit
+    image: itzg/minecraft-server:latest
+    container_name: tekkit2
+    volumes:
+      - mc_tekkit_server:/data
+    environment:
+      EULA: 'true'
+      TZ: 'America/Chicago'
+      MOTD: 'OCW Tekkit 2'
+      DIFFICULTY: 'easy'
+      OPS: 'nincodedo'
+      OVERRIDE_SERVER_PROPERTIES: 'true'
+      ENABLE_AUTOPAUSE: 'true'
+      MAX_TICK_TIME: "-1"
+      SPAWN_PROTECTION: '0'
+      AUTOPAUSE_TIMEOUT_EST: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '120'
+      REMOVE_OLD_MODS: 'true'
+      TYPE: FORGE
+      VERSION: 1.12.2
+      FORGEVERSION: 14.23.5.2860
+      MEMORY: 3G
+      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
+      OVERRIDE_ICON: 'true'
+      RCON_CMDS_STARTUP: |-
+        scoreboard objectives add health health
+        scoreboard objectives setdisplay list health
+    labels:
+      dev.nincodedo.gameservercommander.game: "Minecraft"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2"
+      dev.nincodedo.gameservercommander.description: "OCW Minecraft 1.12.2"
+      com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
     container_name: router
     ports:
       - 25565:25565
-    command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565
+    command: --mapping=games.nincodedo.dev=mc:25565,mcmanhunt.nincodedo.dev=mc-manhunt:25565,tekkit.nincodedo.dev=mc-tekkit:25565
 volumes:
   mc_server:
   mc_mod_configs:
+  mc_tekkit_server:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt

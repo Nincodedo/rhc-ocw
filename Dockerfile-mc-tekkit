@@ -1,0 +1,8 @@
+FROM itzg/minecraft-server:java8-multiarch
+
+RUN mkdir -p /mods
+COPY tekkit/mods /mods
+
+RUN mkdir -p /config
+COPY tekkit/config /config
+
