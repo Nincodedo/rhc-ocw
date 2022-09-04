@@ -169,7 +169,7 @@ services:
         scoreboard objectives setdisplay list health
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
-      dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2 v1.0.1"
       dev.nincodedo.gameservercommander.description: "OCW Minecraft 1.12.2"
       com.centurylinklabs.watchtower.enable: false
   router:
