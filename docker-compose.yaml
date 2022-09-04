@@ -6,10 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile-mc
     image: ghcr.io/nincodedo/rhc-ocw-mc:latest
-    ports:
-      - "25575:25575"
-      - "25575:25575/udp"
-      - "24454:24454/udp"
     env_file:
       - motd_override.env
       - docker.env
