@@ -9,6 +9,8 @@ services:
     env_file:
       - motd_override.env
       - docker.env
+    depends_on:
+      - router
     environment:
       EULA: 'true'
       TZ: 'America/Chicago'
@@ -74,6 +76,8 @@ services:
     container_name: mc-manhunt
     tty: true
     stdin_open: true
+    depends_on:
+      - router
     environment:
       EULA: 'true'
       TZ: 'America/Chicago'
@@ -140,6 +144,8 @@ services:
     container_name: tekkit2
     volumes:
       - mc_tekkit_server:/data
+    depends_on:
+      - router
     environment:
       EULA: 'true'
       TZ: 'America/Chicago'
@@ -165,8 +171,8 @@ services:
         scoreboard objectives setdisplay list health
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
-      dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2 v1.0.1"
-      dev.nincodedo.gameservercommander.description: "OCW Minecraft 1.12.2"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2"
+      dev.nincodedo.gameservercommander.description: "Minecraft 1.12.2 - Tekkit 2 v1.0.2"
       com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
