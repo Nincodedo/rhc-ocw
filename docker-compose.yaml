@@ -12,11 +12,8 @@ services:
     depends_on:
       - router
     environment:
-      EULA: 'true'
-      TZ: 'America/Chicago'
       DIFFICULTY: 'hard'
       HARDCORE: 'true'
-      OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
@@ -29,7 +26,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.19.1'
+      VERSION: '1.19.2'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
@@ -44,7 +41,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.19.1"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Minecraft 1.19.2"
     depends_on:
       - router
   log-watcher:
@@ -78,12 +75,11 @@ services:
     stdin_open: true
     depends_on:
       - router
+    env_file:
+      - docker.env
     environment:
-      EULA: 'true'
-      TZ: 'America/Chicago'
       MOTD: 'OCW Manhunt'
       DIFFICULTY: 'easy'
-      OPS: 'nincodedo'
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       OVERRIDE_ICON: 'true'
@@ -95,8 +91,8 @@ services:
       AUTOPAUSE_TIMEOUT_EST: '30'
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'PAPER'
-      SPIGET_RESOURCES: '28140,74429,1997,52849'
-      VERSION: '1.19.1'
+      SPIGET_RESOURCES: '28140,74429,1997,52849,102931'
+      VERSION: '1.19.2'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
@@ -117,7 +113,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-MANHUNT"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft Manhunt"
-      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.19.1"
+      dev.nincodedo.gameservercommander.description: "OCW Manhunt Minecraft 1.19.2"
       com.centurylinklabs.watchtower.enable: false
     depends_on:
       - router
