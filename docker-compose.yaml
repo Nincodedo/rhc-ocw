@@ -168,7 +168,7 @@ services:
     labels:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft Tekkit 2"
-      dev.nincodedo.gameservercommander.description: "Minecraft 1.12.2 - Tekkit 2 v1.0.2"
+      dev.nincodedo.gameservercommander.description: "Minecraft 1.12.2 - Tekkit 2 v1.0.5"
       com.centurylinklabs.watchtower.enable: false
   router:
     image: itzg/mc-router
