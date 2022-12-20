@@ -1,4 +1,4 @@
-https://cdn.modrinth.com/data/P7dR8mSH/versions/XV9QDCar/fabric-api-0.61.0%2B1.19.2.jar
+https://cdn.modrinth.com/data/P7dR8mSH/versions/25Hm7c3j/fabric-api-0.69.0%2B1.19.2.jar
 https://cdn.modrinth.com/data/9s6osm5g/versions/EXrxCjl6/cloth-config-8.2.88-fabric.jar
 https://github.com/Nincodedo/mc-server-description/releases/download/3.0.0/mc-server-description-3.0.0.jar
-https://cdn.modrinth.com/data/qQyHxfxd/versions/CrvlUGPx/NoChatReports-FABRIC-1.19.2-v1.12.0.jar
+https://cdn.modrinth.com/data/qQyHxfxd/versions/YuX53PIA/NoChatReports-FABRIC-1.19.2-v1.13.12.jar
