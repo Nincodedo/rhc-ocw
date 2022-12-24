@@ -1,0 +1,11 @@
+{
+  "file": "/data/config/NoChatReports/NCR-Common.json",
+  "ops": [
+    {
+      "$set": {
+        "path": "$.demandOnClient",
+        "value": false
+      }
+    }
+  ]
+}

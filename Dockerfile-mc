@@ -24,3 +24,7 @@ ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
 RUN mkdir -p /vt
 COPY rhc/vt/craftingtweaks.json /vt/
 COPY rhc/vt/datapacks.json /vt/
+
+RUN mkdir -p /patches
+COPY rhc/*.json /patches
+ENV PATCH_DEFINITIONS=/patches

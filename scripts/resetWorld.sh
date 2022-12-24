@@ -69,10 +69,9 @@ cd $minecraft_server_dir
 log "Starting LogWatcher in: $(pwd)"
 while :; do
   dead_player=""
-  current_date=$(date +"%Y")
-  seed_log_name="logs/seed-$current_date.log"
-  mc_days_survived_log_name="logs/mc_days_survived-$current_date.log"
-  combined_log_name="logs/combined-$current_date.log"
+  seed_log_name="logs/seed.log"
+  mc_days_survived_log_name="logs/mc_days_survived.log"
+  combined_log_name="logs/combined.log"
   touch "$combined_log_name"
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
