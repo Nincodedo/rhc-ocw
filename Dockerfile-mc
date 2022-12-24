@@ -14,8 +14,7 @@ RUN cd /datapacks/ocw-stuff \
 
 FROM itzg/minecraft-server:latest
 
-ENV MODS_FILE=/modlist.txt
-COPY rhc/modlist.txt /modlist.txt
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,no-chat-reports,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
 RUN mkdir -p /datapacks
