@@ -3,7 +3,7 @@ RUN mkdir -p /app/ocw-minecraft
 WORKDIR /app
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
-COPY scripts/resetWorld-manhunt.sh /app/resetWorld-manhunt.sh
-RUN dos2unix /app/resetWorld-manhunt.sh /app/resetWorld-manhunt.sh
+COPY manhunt/scripts/resetWorld.sh /app/resetWorld.sh
+RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld-manhunt.sh"]

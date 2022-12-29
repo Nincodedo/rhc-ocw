@@ -3,7 +3,7 @@ RUN mkdir -p /app/ocw-minecraft /config /data/defaultconfigs
 WORKDIR /app
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
-COPY scripts/resetWorld.sh /app/resetWorld.sh
+COPY rhc/scripts/resetWorld.sh /app/resetWorld.sh
 RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
 RUN apk --no-cache add curl && apk --no-cache add jq
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
