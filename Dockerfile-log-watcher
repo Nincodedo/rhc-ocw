@@ -1,10 +1,10 @@
-FROM docker/compose
+FROM alpine:3.17.0
 RUN mkdir -p /app/ocw-minecraft /config /data/defaultconfigs
 WORKDIR /app
+RUN apk --no-cache add docker docker-compose curl jq
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
-COPY rhc/scripts/resetWorld.sh /app/resetWorld.sh
-RUN dos2unix /app/resetWorld.sh /app/resetWorld.sh
-RUN apk --no-cache add curl && apk --no-cache add jq
+COPY rhc/scripts/*.sh /app/
+RUN dos2unix resetWorld.sh resetWorld.sh
 LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]

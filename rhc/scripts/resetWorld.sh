@@ -1,12 +1,14 @@
 #!/bin/sh
 
 backup_attempt() {
-  # save world right before moving stats so they are up to date
-  rcon_command "save-all flush"
-  attempt_log_dir="logs/backups/attempt$attempt_number"
-  mkdir -p "$attempt_log_dir"
-  cp -r world/stats/ "$attempt_log_dir"
-  tar -czvf "$attempt_log_dir/world_attempt$attempt_number.tar.gz" world/
+  if [ -n "$dead_player" ]; then
+    # save world right before moving stats so they are up to date
+    rcon_command "save-all flush"
+    attempt_log_dir="logs/backups/attempt$attempt_number"
+    mkdir -p "$attempt_log_dir"
+    cp -r world/stats/ "$attempt_log_dir"
+    tar -czvf "$attempt_log_dir/world_attempt$attempt_number.tar.gz" world/
+  fi
 }
 
 rcon_command() {
@@ -30,9 +32,9 @@ log() {
 }
 
 world_ending_announcements() {
-  current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
   dead_player=$(tail -n 50 "$minecraft_server_log" | grep "$grep_phrase" | head -n 1 | awk '{print $4}')
   if [ -n "$dead_player" ]; then
+    current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
     death_message=$(tail -n 50 "$minecraft_server_log" | grep -B 1 "$grep_phrase" | head -n 1 | cut -f4- -d' ')
     mc_days_survived=$(rcon_command "time query day" | awk '{print $4}')
     mc_time_survived=$(rcon_command "time query gametime" | awk '{print $4}')
@@ -80,8 +82,10 @@ while :; do
   log "Checking for healthy container status"
   docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
   checkHealth=$?
+  checkMotd=$(docker inspect $minecraft_docker_container_name | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs)
+  checkMotdLength=${#checkMotd}
   until [ $checkHealth -eq 0 ]; do
-    sleep 0.1
+    sleep 1
     docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
     checkHealth=$?
     checkMotd=$(docker inspect $minecraft_docker_container_name | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs)
@@ -95,7 +99,9 @@ while :; do
   done
   log "Container healthy, continuing with startup"
   world_ready_setup
-  seed=$(rcon_command seed)
+  seed=$(rcon_command seed | awk '{print $2}')
+  seed=${seed:1:-1}
+  log "Minecraft seed: $seed"
   current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
   echo "$current_datetime $seed" >>"$seed_log_name"
   if [ "$death_reset" = true ]; then
