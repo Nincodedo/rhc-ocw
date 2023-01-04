@@ -14,7 +14,7 @@ RUN cd /datapacks/ocw-stuff \
 
 FROM itzg/minecraft-server:latest
 
-ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,phosphor,netherportalfix,no-chat-reports,right-click-harvest,polymer,mc-server-description
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,phosphor,fastback,netherportalfix,no-chat-reports,right-click-harvest,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
 RUN mkdir -p /datapacks
