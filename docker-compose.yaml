@@ -29,6 +29,11 @@ services:
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
+        gamerule doDaylightCycle false
+      RCON_CMDS_ON_CONNECT: |-
+        gamerule doDaylightCycle true
+      RCON_CMDS_LAST_DISCONNECT: |-
+        gamerule doDaylightCycle false
     volumes:
       - mc_server:/data
       - mc_mod_configs:/config
