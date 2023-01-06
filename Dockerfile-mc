@@ -18,12 +18,11 @@ ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,phosphor,fastback,netherpo
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
 RUN mkdir -p /datapacks
-COPY --from=build /datapacks/* /datapacks
+COPY --from=build /datapacks/*.zip /datapacks
 
 ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
 RUN mkdir -p /vt
-COPY rhc/vt/craftingtweaks.json /vt/
-COPY rhc/vt/datapacks.json /vt/
+COPY rhc/vt/*.json /vt
 
 RUN mkdir -p /patches
 COPY rhc/*.json /patches
