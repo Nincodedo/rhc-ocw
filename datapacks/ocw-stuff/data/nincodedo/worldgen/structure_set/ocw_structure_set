@@ -1,0 +1,58 @@
+{
+  "structures": [
+    {
+      "structure": "nincodedo:cave_base_roof",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:cave_base_workshop",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:metal_link_house",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:small_library",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:wizard_hut",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:jail",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:spiral",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:tree_farm",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:farm",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:undeadcottage",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:redstone_house",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:mountacemore",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 80668329,
+    "spacing": 27,
+    "separation": 8
+  }
+}

@@ -1,18 +1,35 @@
 {
   "type": "minecraft:jigsaw",
   "biomes": [
-    "minecraft:snowy_beach",
     "minecraft:snowy_plains",
-    "minecraft:snowy_taiga"
+    "minecraft:ice_spikes",
+    "minecraft:frozen_peaks",
+    "minecraft:jagged_peaks",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_river",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_beach"
   ],
-  "spawn_overrides": {},
-  "start_pool": "nincodedo:undeadcottage",
-  "size": 7,
   "step": "surface_structures",
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "full",
+      "spawns": [
+        {
+          "type": "minecraft:evoker",
+          "weight": 8,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  },
+  "start_pool": "nincodedo:undeadcottage",
+  "size": 1,
   "start_height": {
-    "absolute": 0
+    "absolute": -4
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "max_distance_from_center": 80,
-  "use_expansion_hack": true
+  "use_expansion_hack": false
 }
