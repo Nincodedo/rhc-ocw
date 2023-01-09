@@ -19,6 +19,10 @@
     {
       "structure": "nincodedo:mountacemore",
       "weight": 1
+    },
+    {
+      "structure": "nincodedo:the_happened_tavern",
+      "weight": 1
     }
   ],
   "placement": {

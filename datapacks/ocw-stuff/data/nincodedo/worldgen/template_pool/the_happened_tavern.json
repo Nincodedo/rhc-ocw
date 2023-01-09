@@ -1,0 +1,15 @@
+{
+  "name": "nincodedo:the_happened_tavern",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/the_happened_tavern",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
