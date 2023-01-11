@@ -35,7 +35,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"MS\", NinMSPowered:1}"
+              "tag": "{NinUnique:\"MS\", NinMSPowered:1, CustomModelData:2020202}"
             },
             {
               "function": "minecraft:set_enchantments",

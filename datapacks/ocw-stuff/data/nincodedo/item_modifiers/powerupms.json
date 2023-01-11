@@ -12,6 +12,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{NinMSPowered:1}"
+    "tag": "{NinMSPowered:1, CustomModelData:2020202}"
   }
 ]

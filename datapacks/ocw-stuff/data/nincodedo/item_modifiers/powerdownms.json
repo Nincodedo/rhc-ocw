@@ -12,6 +12,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[], NinMSPowered:0}"
+    "tag": "{Enchantments:[], NinMSPowered:0, CustomModelData:1010101}"
   }
 ]
