@@ -4,7 +4,7 @@
   "step": "surface_structures",
   "spawn_overrides": {},
   "start_pool": "nincodedo:cave_base_roof",
-  "size": 1,
+  "size": 3,
   "start_height": {
     "absolute": -10
   },
