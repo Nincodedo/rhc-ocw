@@ -1,0 +1,15 @@
+[
+  {
+    "condition": "minecraft:alternative",
+    "terms": [
+      {
+        "condition": "minecraft:reference",
+        "name": "nincodedo:nin_loot_chances"
+      },
+      {
+        "condition": "minecraft:reference",
+        "name": "nincodedo:everyone_loot_chances"
+      }
+    ]
+  }
+]

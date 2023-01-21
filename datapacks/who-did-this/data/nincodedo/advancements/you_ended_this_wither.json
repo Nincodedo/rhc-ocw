@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:root",
+  "parent": "nincodedo:you_started_this",
   "criteria": {
     "killed_wither": {
       "trigger": "minecraft:player_killed_entity",

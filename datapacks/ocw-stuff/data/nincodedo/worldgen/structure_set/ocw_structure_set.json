@@ -1,0 +1,34 @@
+{
+  "structures": [
+    {
+      "structure": "nincodedo:cave_base_roof",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:metal_link_house",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:small_library",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:undeadcottage",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:mountacemore",
+      "weight": 1
+    },
+    {
+      "structure": "nincodedo:the_happened_tavern",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 80668329,
+    "spacing": 32,
+    "separation": 12
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "any_ocw_structure": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "nincodedo:any_ocw_structure"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:uniqueitems/startrumors"
+  }
+}
