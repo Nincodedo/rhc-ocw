@@ -72,7 +72,7 @@
       "conditions": [
         {
           "condition": "minecraft:reference",
-          "name": "nincodedo:first_few_days"
+          "name": "nincodedo:day_check/first_few_days"
         }
       ]
     }
