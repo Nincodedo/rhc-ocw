@@ -12,23 +12,8 @@
     "hidden": false
   },
   "criteria": {
-    "got_root": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": {
-          "type_specific": {
-            "type": "player",
-            "advancements": {
-              "nincodedo:root": true
-            }
-          }
-        }
-      }
+    "any_ocw_structure": {
+      "trigger": "minecraft:impossible"
     }
-  },
-  "requirements": [
-    [
-      "got_root"
-    ]
-  ]
+  }
 }

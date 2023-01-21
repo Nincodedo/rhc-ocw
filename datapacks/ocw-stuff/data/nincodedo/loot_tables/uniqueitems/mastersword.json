@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinUnique:\"MS\", NinMSPowered:1, CustomModelData:2020202}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": 7
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 40,
+              "treasure": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "The Master Sword"
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "The Blade of Evil's Bane,"
+                },
+                {
+                  "text": "can only be wielded by"
+                },
+                {
+                  "text": "the Hero of Metal"
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "global"
+                },
+                "score": "mastersword"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

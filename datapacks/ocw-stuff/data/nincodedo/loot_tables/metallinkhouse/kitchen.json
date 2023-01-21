@@ -4,8 +4,8 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
-        "min": 2,
-        "max": 8
+        "min": 4,
+        "max": 12
       },
       "bonus_rolls": 0,
       "entries": [
@@ -54,27 +54,38 @@
       ]
     },
     {
-      "rolls": 3,
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
       "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:cake"
         }
-      ]
-    }
-  ],
-  "functions": [
-    {
-      "function": "minecraft:set_lore",
-      "entity": "this",
-      "lore": [
-        {
-          "text": "Made by Metal_Link",
-          "italic": true
-        }
       ],
-      "replace": true
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "text": "Made by ",
+                "italic": true
+              },
+              {
+                "text": "Metal_Link",
+                "color": "dark_green",
+                "italic": true
+              }
+            ]
+          ],
+          "replace": true
+        }
+      ]
     }
   ]
 }

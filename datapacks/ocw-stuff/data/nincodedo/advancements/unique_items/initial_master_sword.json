@@ -11,7 +11,7 @@
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "nincodedo:unique_items/root",
+  "parent": "nincodedo:unique_items/rumors",
   "criteria": {
     "got_root": {
       "trigger": "minecraft:tick",
@@ -20,7 +20,7 @@
           "type_specific": {
             "type": "player",
             "advancements": {
-              "nincodedo:root": true
+              "nincodedo:unique_items/rumors": true
             }
           }
         }
