@@ -16,7 +16,7 @@ rcon_command() {
 }
 
 discord_webhook_send() {
-  curl -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" "$discord_webhook" >/dev/null
+  curl -s -X POST -H "Content-Type: application/json" -d "{\"embeds\":[{\"title\": \"$1\", \"description\": \"$2\", \"color\": \"16711680\", \"thumbnail\": {\"url\": \"$3\"}}]}" $discord_webhook
 }
 
 world_ready_setup() {
