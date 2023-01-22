@@ -63,6 +63,7 @@ services:
       - docker.env
     environment:
       TZ: 'CST6CDT'
+      MC_CONTAINER_NAME: 'mc'
     secrets:
       - discord_webhook
     volumes:
