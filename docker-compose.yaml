@@ -25,12 +25,14 @@ services:
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
       VERSION: '1.19.3'
+      INITIAL_ENABLED_PACKS: 'update_1_20,bundle'
       RCON_CMDS_STARTUP: |-
         scoreboard objectives add health health
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
         gamerule doDaylightCycle false
-      RCON_CMDS_ON_CONNECT: |-
+        scoreboard objectives add attempt dummy
+      RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false

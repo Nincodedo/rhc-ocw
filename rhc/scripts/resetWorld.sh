@@ -97,7 +97,7 @@ while :; do
       checkHealth=$?
     fi
   done
-  log "Container healthy, continuing with startup"
+  log "Container healthy, continuing with startup for attempt #$attempt_number"
   world_ready_setup
   seed=$(rcon_command seed | awk '{print $2}')
   seed=${seed:1:-1}
@@ -108,6 +108,7 @@ while :; do
     discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
+  rcon_command "scoreboard players set global attempt $attempt_number" >/dev/null
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   world_ending_announcements
