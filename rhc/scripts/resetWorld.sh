@@ -137,6 +137,8 @@ while :; do
     sleep $death_reset_delay_seconds
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
+    tar -czvf "$attempt_log_dir/death_replay.tar.gz" "replay_recordings/$dead_player/"
+    rm -rf replay_recordings/*
     rm -rf world
     mkdir world/
     chown -R 1000:1000 world/
