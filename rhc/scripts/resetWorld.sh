@@ -1,5 +1,18 @@
 #!/bin/sh
 
+setup_background_scripts() {
+  pgrep -f "/app/cleanup.sh"
+  background_cleanup_check=$?
+  if [ $background_cleanup_check -ne 0 ]; then
+    /app/cleanup.sh &
+    background_cleanup_id=$!
+  fi
+}
+
+kill_background_scripts() {
+  kill "$background_cleanup_id"
+}
+
 backup_attempt() {
   if [ -n "$dead_player" ]; then
     # save world right before moving stats so they are up to date
@@ -26,11 +39,6 @@ world_ready_setup() {
   fi
 }
 
-log() {
-  log_time=$(date +"%d-%m-%Y %I:%M:%S %p")
-  echo "$log_time [LogWatcher]: $*"
-}
-
 world_ending_announcements() {
   dead_player=$(tail -n 50 "$minecraft_server_log" | grep "$grep_phrase" | head -n 1 | awk '{print $4}')
   if [ -n "$dead_player" ]; then
@@ -50,9 +58,13 @@ world_ending_announcements() {
     rcon_command "tellraw @a {\"text\": \"$world_end_text3\"}"
     dead_player_skin="https://mc-heads.net/body/$dead_player/left.png"
     discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3" "$dead_player_skin"
+    kill_background_scripts
   fi
 }
 
+source /app/logging.sh
+
+script_name="LogWatcher"
 minecraft_server_dir=/data
 app_dir=/app
 minecraft_compose_dir=$app_dir/ocw-minecraft
@@ -68,7 +80,7 @@ if [ -f "$discord_webhook_file" ]; then
   discord_webhook=$(cat $discord_webhook_file)
 fi
 cd $minecraft_server_dir
-log "Starting LogWatcher in: $(pwd)"
+log "Starting LogWatcher in $(pwd) with container $minecraft_docker_container_name"
 while :; do
   dead_player=""
   seed_log_name="logs/seed.log"
@@ -78,6 +90,8 @@ while :; do
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
+  printf "\n" >>$minecraft_compose_dir/motd_override.env
+  echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
   chown -R 1000:1000 world/
   log "Checking for healthy container status"
   docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
@@ -108,6 +122,7 @@ while :; do
     discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
+  setup_background_scripts
   rcon_command "scoreboard players set global attempt $attempt_number" >/dev/null
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
@@ -117,6 +132,8 @@ while :; do
     death_reset=true
     attempt_number=$((++attempt_number))
     echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
+    printf "\n" >>$minecraft_compose_dir/motd_override.env
+    echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
