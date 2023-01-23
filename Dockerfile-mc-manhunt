@@ -1,8 +1,0 @@
-FROM itzg/minecraft-server:latest
-
-RUN mkdir -p /plugins
-COPY manhunt/plugins /plugins
-
-RUN mkdir -p /patches
-COPY manhunt/manhunt-config-patch.json /patches
-ENV PATCH_DEFINITIONS=/patches
