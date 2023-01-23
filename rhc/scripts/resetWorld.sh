@@ -138,6 +138,7 @@ while :; do
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
     tar -czvf "$attempt_log_dir/death_replay.tar.gz" "replay_recordings/$dead_player/"
+    tar -czvf "$attempt_log_dir/all_replays.tar.gz" "replay_recordings/"
     rm -rf replay_recordings/*
     rm -rf world
     mkdir world/
