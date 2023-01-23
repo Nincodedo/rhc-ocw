@@ -18,6 +18,7 @@ services:
       RESOURCE_PACK_SHA1: 'bb74388dbebcc0f8135e9b35db41db96fdd37884'
       #OVERRIDE_ICON: 'true'
       MEMORY: '2G'
+      BROADCAST_RCON_TO_OPS: 'false'
       FUNCTION_PERMISSION_LEVEL: '4'
       SPAWN_PROTECTION: '0'
       ENABLE_AUTOPAUSE: 'true'
@@ -36,6 +37,8 @@ services:
         scoreboard objectives add attempt dummy
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
+      RCON_CMDS_ON_CONNECT: |-
+        schedule function nincodedo:attemptcounter/playerjoin 5s append
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
     volumes:
