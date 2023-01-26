@@ -38,7 +38,7 @@ services:
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
       RCON_CMDS_ON_CONNECT: |-
-        schedule function nincodedo:attemptcounter/playerjoin 5s append
+        schedule function nincodedo:attemptcounter/playerjoin 10s append
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
     volumes:

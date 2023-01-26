@@ -1,4 +1,5 @@
 tag @s add youdidthis
+spawnpoint @s ~ ~ ~
 title @a times 0 100 20
 title @s title {"text":"you did this", "color": "red"}
 title @a[tag=!youdidthis] title {"selector": "@s", "color": "red", "extra": [" did this"]}

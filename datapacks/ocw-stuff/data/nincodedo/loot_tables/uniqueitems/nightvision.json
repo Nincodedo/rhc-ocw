@@ -1,0 +1,90 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:aqua_affinity": 1
+              }
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 40,
+              "treasure": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Undead's Night Vision Goggles",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "Sneaky",
+                  "amount": 3,
+                  "operation": "addition",
+                  "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                  "slot": "head"
+                },
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "name": "LeatherDefense",
+                  "amount": 1,
+                  "operation": "addition",
+                  "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
+                  "slot": "head"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "A lost relic of modded Minecraft past."
+                },
+                {
+                  "text": "It seems only Undead knows how to use this."
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "global"
+                },
+                "score": "goggles"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

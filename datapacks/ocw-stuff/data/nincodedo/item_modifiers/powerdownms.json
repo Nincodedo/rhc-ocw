@@ -4,7 +4,7 @@
     "source": "this",
     "ops": [
       {
-        "source": "SelectedItem.tag.Enchantments",
+        "source": "Inventory[{tag:{NinUnique:\"MS\"}}].tag.Enchantments",
         "target": "StoredEnchantments",
         "op": "replace"
       }
@@ -12,6 +12,6 @@
   },
   {
     "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[], NinMSPowered:0, CustomModelData:1010101}"
+    "tag": "{Enchantments:[], NinPowered:0, CustomModelData:1010101}"
   }
 ]

@@ -1,0 +1,28 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": "this",
+    "ops": [
+      {
+        "source": "Inventory[{tag:{NinUnique:\"UG\"}}].tag.AttributeModifiers",
+        "target": "StoredModifiers",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": "this",
+    "ops": [
+      {
+        "source": "Inventory[{tag:{NinUnique:\"UG\"}}].tag.Enchantments",
+        "target": "StoredEnchantments",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[], AttributeModifiers:[], NinPowered:0}"
+  }
+]

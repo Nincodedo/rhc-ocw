@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"MS\", NinMSPowered:1, CustomModelData:2020202}"
+              "tag": "{NinUnique:\"MS\", NinPowered:1, CustomModelData:2020202}"
             },
             {
               "function": "minecraft:set_enchantments",
@@ -27,20 +27,27 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": "The Master Sword"
+              "name": {
+                "text": "The Master Sword",
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_lore",
               "entity": "this",
               "lore": [
                 {
-                  "text": "The Blade of Evil's Bane,"
+                  "text": "Unique Item",
+                  "color": "gold"
                 },
                 {
-                  "text": "can only be wielded by"
+                  "text": "The Blade of Evil's Bane."
                 },
                 {
-                  "text": "the Hero of Metal"
+                  "text": "It can only be wielded by"
+                },
+                {
+                  "text": "the Hero of Metal."
                 }
               ]
             }

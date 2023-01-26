@@ -1,0 +1,60 @@
+{
+  "name": "nincodedo:library_hw_hallway",
+  "fallback": "nincodedo:library_hw_terminator",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_room",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_r",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_r_room",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_3way",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_stairs",
+        "processors": "nincodedo:library/hallway"
+      }
+    }
+  ]
+}

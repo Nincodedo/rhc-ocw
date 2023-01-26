@@ -1,8 +1,9 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#minecraft:has_structure/village_plains",
+  "biomes": "#nincodedo:has_structure/cave_base",
   "step": "surface_structures",
   "spawn_overrides": {},
+  "terrain_adaptation": "bury",
   "start_pool": "nincodedo:cave_base_roof",
   "size": 3,
   "start_height": {
