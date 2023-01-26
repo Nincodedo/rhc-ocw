@@ -1,5 +1,5 @@
 {
-  "name": "nincodedo:metal_link_house",
+  "name": "nincodedo:metal_link_house_bottom",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "nincodedo:ocw_old/refugee_camp/metal_link_house_top",
+        "location": "nincodedo:ocw_old/refugee_camp/metal_link_house_bottom",
         "processors": "nincodedo:metal_link/house"
       }
     }
