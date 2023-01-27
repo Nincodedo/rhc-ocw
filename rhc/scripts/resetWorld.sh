@@ -112,6 +112,8 @@ while :; do
     fi
   done
   log "Container healthy, continuing with startup for attempt #$attempt_number"
+  # sleeping to wait for datapack initialization to finish
+  sleep 5
   world_ready_setup
   seed=$(rcon_command seed | awk '{print $2}')
   seed=${seed:1:-1}
