@@ -60,7 +60,7 @@
       "absolute": -50
     },
     "max_inclusive": {
-      "absolute": -15
+      "absolute": -30
     }
   },
   "project_start_to_heightmap": "OCEAN_FLOOR_WG",
