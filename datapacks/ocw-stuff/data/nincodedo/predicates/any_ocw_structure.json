@@ -16,6 +16,12 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
+        "structure": "nincodedo:library_hidden_wing"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
         "structure": "nincodedo:mountacemore"
       }
     },

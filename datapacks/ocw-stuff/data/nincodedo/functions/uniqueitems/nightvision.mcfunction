@@ -34,6 +34,7 @@ execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{
 execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:33b,tag:{NinUnique:"UG",NinPowered:0}}]}] as @s run item modify entity @s inventory.24 nincodedo:powerupug
 execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:34b,tag:{NinUnique:"UG",NinPowered:0}}]}] as @s run item modify entity @s inventory.25 nincodedo:powerupug
 execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:35b,tag:{NinUnique:"UG",NinPowered:0}}]}] as @s run item modify entity @s inventory.26 nincodedo:powerupug
+execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:0}}]}] as @s run item modify entity @s armor.head nincodedo:powerupug
 execute if entity @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"UG",NinPowered:0}}]}] as @s run item modify entity @s weapon.offhand nincodedo:powerupug
 
 execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:0b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s hotbar.0 nincodedo:powerdownug
@@ -72,6 +73,9 @@ execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[
 execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:33b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s inventory.24 nincodedo:powerdownug
 execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:34b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s inventory.25 nincodedo:powerdownug
 execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:35b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s inventory.26 nincodedo:powerdownug
+execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s armor.head nincodedo:powerdownug
 execute if entity @s[predicate=!nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"UG",NinPowered:1}}]}] as @s run item modify entity @s weapon.offhand nincodedo:powerdownug
+
+function nincodedo:uniqueitems/abilities/nightvision
 
 advancement revoke @s only nincodedo:unique_items/any_night_vision
