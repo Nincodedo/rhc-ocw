@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source /app/logging.sh
+source /app/common.sh
 
 script_name="ReplayCleanup"
 grep_phrase="\[Autopause loop\] No client reconnected - pausing"

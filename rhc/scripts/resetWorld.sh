@@ -7,10 +7,17 @@ setup_background_scripts() {
     /app/cleanup.sh &
     background_cleanup_id=$!
   fi
+  pgrep -f "/app/previousAttemptRewards.sh"
+  background_rewards_check=$?
+  if [ $background_rewards_check -ne 0 ]; then
+    /app/previousAttemptRewards.sh "$previous_attempt" &
+    background_rewards_id=$!
+  fi
 }
 
 kill_background_scripts() {
   kill "$background_cleanup_id"
+  kill "$background_rewards_id"
 }
 
 backup_attempt() {
@@ -20,12 +27,9 @@ backup_attempt() {
     attempt_log_dir="logs/backups/attempt$attempt_number"
     mkdir -p "$attempt_log_dir"
     cp -r world/stats/ "$attempt_log_dir"
+    cp -r world/advancements/ "$attempt_log_dir"
     tar -czvf "$attempt_log_dir/world_attempt$attempt_number.tar.gz" world/
   fi
-}
-
-rcon_command() {
-  docker exec "$minecraft_docker_container_name" rcon-cli --password minecraft --port 25575 "$1"
 }
 
 discord_webhook_send() {
@@ -34,7 +38,7 @@ discord_webhook_send() {
 
 world_ready_setup() {
   # this is a reset after a death, make sure the time is set to 0 after we've done all our stuff
-  if [ "$death_reset" = true ]; then
+  if [ "$death_reset" = "true" ]; then
     rcon_command "time set 0" >/dev/null
   fi
 }
@@ -62,7 +66,7 @@ world_ending_announcements() {
   fi
 }
 
-source /app/logging.sh
+source /app/common.sh
 
 script_name="LogWatcher"
 minecraft_server_dir=/data
@@ -88,6 +92,7 @@ while :; do
   combined_log_name="logs/combined.log"
   touch "$combined_log_name"
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
+  previous_attempt=$attempt_number
   attempt_number=$((++attempt_number))
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
   printf "\n" >>$minecraft_compose_dir/motd_override.env
@@ -120,7 +125,7 @@ while :; do
   log "Minecraft seed: $seed"
   current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
   echo "$current_datetime $seed" >>"$seed_log_name"
-  if [ "$death_reset" = true ]; then
+  if [ "$death_reset" = "true" ]; then
     discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
@@ -132,6 +137,7 @@ while :; do
   backup_attempt
   if [ -n "$dead_player" ]; then
     death_reset=true
+    previous_attempt=$attempt_number
     attempt_number=$((++attempt_number))
     echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
     printf "\n" >>$minecraft_compose_dir/motd_override.env
