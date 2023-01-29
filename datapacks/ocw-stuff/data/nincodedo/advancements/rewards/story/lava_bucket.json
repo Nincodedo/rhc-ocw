@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "nop": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "loot": [
+      "nincodedo:rewards/story/lava_bucket"
+    ]
+  }
+}
