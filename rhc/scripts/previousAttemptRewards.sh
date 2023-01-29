@@ -11,6 +11,12 @@ minecraft_docker_container_name=$MC_CONTAINER_NAME
 minecraft_server_log=/data/logs/latest.log
 grep_phrase="\[User Authenticator #\d*\/INFO\]: UUID of player \w* is \w*-\w*-\w*-\w*-\w*"
 
+if [ ! -d $attempt_log_dir ]
+then
+    log "$attempt_log_dir does not exist, exiting"
+    exit 1
+fi
+
 cd $attempt_log_dir
 
 log "Processing previous advancements in $attempt_log_dir"
