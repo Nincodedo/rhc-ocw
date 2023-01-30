@@ -28,7 +28,7 @@
             "entity": "this",
             "scores": {
               "log_break": {
-                "min": 2000
+                "min": 250
               }
             }
           }
