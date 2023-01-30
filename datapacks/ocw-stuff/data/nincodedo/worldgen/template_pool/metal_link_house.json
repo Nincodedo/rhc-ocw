@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "nincodedo:ocw_old/refugee_camp/metal_link_house",
+        "location": "nincodedo:ocw_old/refugee_camp/metal_link_house_top",
         "processors": "nincodedo:metal_link/house_age"
       }
     }
