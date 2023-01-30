@@ -4,14 +4,14 @@
       "item": "minecraft:player_head",
       "nbt": "{SkullOwner: {Id: [I; -223431324, 1556303093, -1412706370, -1585750994], Properties: {textures: [{Value: \"ewogICJ0aW1lc3RhbXAiIDogMTY3NDUyMjY0MzY4OSwKICAicHJvZmlsZUlkIiA6ICJmMmFlYjU2NDVjYzM0Y2Y1YWJjYmNmYmVhMTdiNWMyZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJVbmRlYWRfWmVyYXR1bCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81NDY2N2Q3Zjg5NmU3NjcxM2JmZjY5YjgzZjZiOTEyYWY4Y2I3MDE3MTI1NTA2NWY3MGM4YWY2ZTY0MmY5N2VkIgogICAgfSwKICAgICJDQVBFIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85NTNjYWM4Yjc3OWZlNDEzODNlNjc1ZWUyYjg2MDcxYTcxNjU4ZjIxODBmNTZmYmNlOGFhMzE1ZWE3MGUyZWQ2IgogICAgfQogIH0KfQ==\", Signature: \"Rh127qHEx8zvJI3SQDoSWqYMeTVyMuGeZxR4jHPGFCsMDtMUhdwVCq6AssNH8qk52HWWPqffse2EN3krHLXvrknlfBAjSF1lDtlS9JJ6IVm9pO23p1tLrVPSyakVXkARkarKPx1/4BT+M10p5iLMKyYX7w18VA9afkx7d/S1OWRqi2hBY75+qs+B7XY80G2Jpsu76zRJq1P54mJaNZL45+cVUyfdD5YarVxYn1Ilhn9df++2CgD2gZu+lpU07fa8zKVXglaBoZsC8XQBj3NvOulNRFfSgwo9WsnKRU86RlRxzTkt9+pqVWwwveDzQP3ZTgU8jgrU6lUA6kgbVbsdq4PoietpmxL1ZL1zcCAS1IPCpdBoWK7yjSnAldFP7PLYzQIW6u3UznHjHg3/RJ9YY3rWiezcWQEQHXp0nUov81CHmPp0Orj/Q+KerRHnyGxSf4Nclk/Hi2vROCN6mqPspUpxeMMhEi8uxwAkcX1imXMriEJQ++6Oxk1ZdyeR6/dEJzGg589QvNnwfCIK2nOKniF8Bjo0OdftPGH6CA6Y8hugQ60EfniPiv5n7eKh08aqJymegnTzrE81xYkgUrFTW6V+gAJURwuMsePvm+vId8drEhNRG1FhATu1WVx4QiWi8qoHzmmWa/5mMWxtBb81LDcQBuS4KPUpZ12/WnfkyYw=\"}]}, Name: \"Undead_Zeratul\"}}"
     },
-    "title": "Undead_Zeratul's Night Vision Goggles",
+    "title": "Undead's Night Vision Goggles",
     "description": "From one of them \"modded\" Minecrafts... whatever that means.",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "nincodedo:unique_items/rumors",
+  "parent": "nincodedo:unique_items/initial_night_vision",
   "criteria": {
     "get_night_vision": {
       "trigger": "minecraft:inventory_changed",
