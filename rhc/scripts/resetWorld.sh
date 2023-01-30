@@ -143,6 +143,9 @@ while :; do
     printf "\n" >>$minecraft_compose_dir/motd_override.env
     echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
+    # kick everyone and sleep to finalize the recordings
+    rcon_command "kick @a"
+    sleep 5
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
     tar -czvf "$attempt_log_dir/death_replay.tar.gz" "replay_recordings/$dead_player/"
