@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:torch"
+    },
+    "title": "Let's Light Things Up",
+    "description": "A whole stack of torches!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts/tunasz_gifts/root",
+  "criteria": {
+    "give_tunasz_torches": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitytunasz"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I;-1134297099,228347247,-1929822783,-611013429]}"
+        },
+        "item": {
+          "items": [
+            "minecraft:torch"
+          ],
+          "count": 64
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_tunasz_torches"
+    ]
+  ]
+}

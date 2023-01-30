@@ -107,6 +107,25 @@
           }
         ]
       }
+    },
+    "all_tunasz": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "nincodedo:player_gifts/tunasz_gifts/root": true
+                }
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "requirements": [
@@ -124,6 +143,9 @@
     ],
     [
       "all_nin"
+    ],
+    [
+      "all_tunasz"
     ]
   ]
 }
