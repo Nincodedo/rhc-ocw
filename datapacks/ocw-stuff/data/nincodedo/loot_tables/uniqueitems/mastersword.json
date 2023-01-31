@@ -6,8 +6,29 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond_sword",
+          "name": "minecraft:carrot_on_a_stick",
           "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "name": "AttackSpeed",
+                  "amount": -1.6,
+                  "operation": "addition",
+                  "id": "749f05b8-ecbc-49c6-b819-8c486b3d4160",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "name": "Attack",
+                  "amount": 7,
+                  "operation": "addition",
+                  "id": "5d5ef73b-9467-4552-8b98-a234f80fdf7e",
+                  "slot": "mainhand"
+                }
+              ]
+            },
             {
               "function": "minecraft:set_nbt",
               "tag": "{NinUnique:\"MS\", NinPowered:1, CustomModelData:2020202}"

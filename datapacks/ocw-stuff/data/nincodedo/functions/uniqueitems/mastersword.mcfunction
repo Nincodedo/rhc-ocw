@@ -36,6 +36,8 @@ execute if entity @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot
 execute if entity @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:35b,tag:{NinUnique:"MS",NinPowered:0}}]}] as @s run item modify entity @s inventory.26 nincodedo:powerupms
 execute if entity @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"MS",NinPowered:0}}]}] as @s run item modify entity @s weapon.offhand nincodedo:powerupms
 
+execute if entity @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{tag:{NinUnique:"MS",NinPowered:1}}]}] as @s run tag @s add HasMasterSword
+
 execute if entity @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:0b,tag:{NinUnique:"MS",NinPowered:1}}]}] as @s run item modify entity @s hotbar.0 nincodedo:powerdownms
 execute if entity @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:1b,tag:{NinUnique:"MS",NinPowered:1}}]}] as @s run item modify entity @s hotbar.1 nincodedo:powerdownms
 execute if entity @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:2b,tag:{NinUnique:"MS",NinPowered:1}}]}] as @s run item modify entity @s hotbar.2 nincodedo:powerdownms
@@ -75,3 +77,8 @@ execute if entity @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slo
 execute if entity @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"MS",NinPowered:1}}]}] as @s run item modify entity @s weapon.offhand nincodedo:powerdownms
 
 advancement revoke @s only nincodedo:unique_items/any_master_sword
+
+# entity is tagged, does not have sword in main hand, but it is still in the inventory, run slow checks
+execute if entity @a[tag=HasMasterSword] as @s unless entity @s[nbt={SelectedItem:{tag:{NinUnique:"MS"}}}] if entity @s[nbt={Inventory:[{tag:{NinUnique:"MS"}}]}] run schedule function nincodedo:uniqueitems/abilities/slowcheckms 10t replace
+# entity is tagged, has the sword in hand, switch to quick checks
+execute if entity @a[tag=HasMasterSword] as @s if entity @s[nbt={SelectedItem:{tag:{NinUnique:"MS"}}}] run schedule function nincodedo:uniqueitems/abilities/quickcheckms 1t replace

@@ -2,6 +2,7 @@ scoreboard objectives add sleepAdvCheck dummy
 scoreboard objectives add current_day dummy
 scoreboard objectives add player_count dummy
 scoreboard objectives add mastersword dummy
+scoreboard objectives add used_ms minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add goggles dummy
 scoreboard objectives add bannerplz trigger
 scoreboard players enable @a bannerplz
