@@ -31,6 +31,7 @@ jobs:
           file: Dockerfile-log-watcher
           platforms: linux/amd64
           push: true
+          provenance: false
           tags: |
             ghcr.io/nincodedo/rhc-ocw:latest
             ghcr.io/nincodedo/rhc-ocw:${{ github.sha }}
