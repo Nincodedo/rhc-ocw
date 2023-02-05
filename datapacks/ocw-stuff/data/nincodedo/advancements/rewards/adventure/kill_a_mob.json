@@ -5,6 +5,7 @@
     }
   },
   "rewards": {
+    "function": "nincodedo:rewards/count",
     "loot": [
       "nincodedo:rewards/adventure/kill_a_mob"
     ]

@@ -53,6 +53,7 @@ while :; do
     			rcon_command "advancement grant $player_name only $line"
     		done < rewards.txt
     		rcon_command "tag $player_name add prevreward"
+    		rcon_command "execute as $player_name run function nincodedo:rewards/announce"
     		log "Finished sending rewards to $player_name"
     	fi
     fi

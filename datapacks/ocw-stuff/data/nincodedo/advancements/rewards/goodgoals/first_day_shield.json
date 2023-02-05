@@ -5,6 +5,7 @@
     }
   },
   "rewards": {
+    "function": "nincodedo:rewards/count",
     "loot": [
       "nincodedo:rewards/goodgoals/first_day_shield"
     ]
