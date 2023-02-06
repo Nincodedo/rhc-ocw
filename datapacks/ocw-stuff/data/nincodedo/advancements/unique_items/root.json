@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:enchanted_book"
+    },
+    "title": "Unique Items",
+    "description": "Powerful rare items",
+    "background": "minecraft:textures/gui/advancements/backgrounds/end.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "any_ocw_structure": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

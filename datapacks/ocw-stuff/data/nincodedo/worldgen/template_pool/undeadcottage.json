@@ -11,19 +11,64 @@
         "processors": {
           "processors": [
             {
-              "processor_type": "minecraft:block_ignore",
-              "blocks": [
+              "processor_type": "minecraft:rule",
+              "rules": [
                 {
-                  "Name": "minecraft:water",
-                  "Properties": {
-                    "level": "15"
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:blockstate_match",
+                    "block_state": {
+                      "Name": "minecraft:torch"
+                    }
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:wall_torch"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
                   }
                 }
               ]
             },
             {
+              "processor_type": "minecraft:protected_blocks",
+              "value": "#minecraft:doors"
+            },
+            {
               "processor_type": "minecraft:block_rot",
-              "integrity": 0.8
+              "integrity": 0.7,
+              "rottable_blocks": [
+                "minecraft:cobblestone",
+                "minecraft:spruce_log",
+                "minecraft:stone",
+                "minecraft:oak_stairs",
+                "minecraft:ladder",
+                "minecraft:oak_log",
+                "minecraft:petrified_oak_slab",
+                "minecraft:furnace",
+                "minecraft:glass_pane",
+                "minecraft:glowstone",
+                "minecraft:oak_trapdoor"
+              ]
+            },
+            {
+              "processor_type": "minecraft:block_rot",
+              "integrity": 0.9,
+              "rottable_blocks": [
+                "minecraft:oak_planks",
+                "minecraft:bricks"
+              ]
             },
             {
               "processor_type": "minecraft:block_age",

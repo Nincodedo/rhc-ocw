@@ -1,0 +1,42 @@
+{
+  "name": "nincodedo:library_hw_terminator",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_terminator",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_terminator2",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_terminator2_chest",
+        "processors": "nincodedo:library/hallway"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/hallway_terminator_chest",
+        "processors": "nincodedo:library/hallway"
+      }
+    }
+  ]
+}

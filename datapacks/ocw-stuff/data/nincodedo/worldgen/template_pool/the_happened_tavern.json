@@ -1,0 +1,99 @@
+{
+  "name": "nincodedo:the_happened_tavern",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/the_happened_tavern",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:torch"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:wall_torch"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_blockstate_match",
+                    "block_state": {
+                      "Name": "minecraft:glass_pane"
+                    },
+                    "probability": 0.3
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:blockstate_match",
+                    "block_state": {
+                      "Name": "minecraft:redstone_lamp",
+                      "Properties": {
+                        "lit": "true"
+                      }
+                    }
+                  },
+                  "output_state": {
+                    "Name": "minecraft:redstone_lamp",
+                    "Properties": {
+                      "lit": "false"
+                    }
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:random_block_match",
+                    "block": "minecraft:potted_cactus",
+                    "probability": 0.5
+                  },
+                  "output_state": {
+                    "Name": "minecraft:potted_dead_bush"
+                  }
+                }
+              ]
+            },
+            {
+              "processor_type": "minecraft:block_age",
+              "mossiness": 0.35
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

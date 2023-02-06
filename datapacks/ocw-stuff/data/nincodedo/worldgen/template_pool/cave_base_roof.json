@@ -1,0 +1,15 @@
+{
+  "name": "nincodedo:cave_base_roof",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/roof_area",
+        "processors": "nincodedo:age_cave_base"
+      }
+    }
+  ]
+}

@@ -14,14 +14,22 @@ RUN cd /datapacks/ocw-stuff \
 
 FROM itzg/minecraft-server:latest
 
-ENV MODS_FILE=/modlist.txt
-COPY rhc/modlist.txt /modlist.txt
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,phosphor,fastback,server-side-replay-recorder,c2me-fabric,netherportalfix,no-chat-reports,rightclickharvest,memoryleakfix,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
 RUN mkdir -p /datapacks
-COPY --from=build /datapacks/* /datapacks
+COPY --from=build /datapacks/*.zip /datapacks
 
 ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
 RUN mkdir -p /vt
-COPY rhc/vt/craftingtweaks.json /vt/
-COPY rhc/vt/datapacks.json /vt/
+COPY rhc/vt/*.json /vt
+
+RUN mkdir -p /patches
+COPY rhc/patches/*.json /patches
+ENV PATCH_DEFINITIONS=/patches
+
+ENV REPLACE_ENV_VARIABLES=true
+ENV REPLACE_ENV_DURING_SYNC=true
+ENV SYNC_SKIP_NEWER_IN_DESTINATION=false
+RUN mkdir /config
+COPY rhc/configs/ /config

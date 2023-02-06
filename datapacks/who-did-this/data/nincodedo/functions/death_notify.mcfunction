@@ -1,9 +1,13 @@
-title @p[advancements={nincodedo:you_did_this=true}] title {"text":"you did this", "color": "red"}
-title @p[advancements={nincodedo:you_did_this=false}] title {"selector": "@p", "color": "red", "extra": [" did this"]}
-execute as @p run summon minecraft:lightning_bolt ~ ~ ~
-execute as @p run summon minecraft:lightning_bolt ~10 ~ ~
-execute as @p run summon minecraft:lightning_bolt ~ ~10 ~
-execute as @p run summon minecraft:lightning_bolt ~ ~ ~10
-execute as @p run summon minecraft:lightning_bolt ~5 ~ ~
+tag @s add youdidthis
+spawnpoint @s ~ ~ ~
+title @a times 0 100 20
+title @s title {"text":"you did this", "color": "red"}
+title @a[tag=!youdidthis] title {"selector": "@s", "color": "red", "extra": [" did this"]}
+execute as @a run summon minecraft:lightning_bolt ~ 300 ~
+execute as @s run summon minecraft:lightning_bolt ~ ~ ~
+execute as @s run summon minecraft:lightning_bolt ~10 ~ ~
+execute as @s run summon minecraft:lightning_bolt ~ ~10 ~
+execute as @s run summon minecraft:lightning_bolt ~ ~ ~10
+execute as @s run summon minecraft:lightning_bolt ~5 ~ ~
 weather thunder
 function nincodedo:create_countdown

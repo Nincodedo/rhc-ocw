@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 0,
+      "bonus_rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/mastersword",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "global"
+                    },
+                    "score": "mastersword"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/nightvision",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "global"
+                    },
+                    "score": "goggles"
+                  },
+                  "range": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

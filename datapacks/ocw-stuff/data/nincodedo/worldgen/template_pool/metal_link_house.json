@@ -1,0 +1,15 @@
+{
+  "name": "nincodedo:metal_link_house",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/refugee_camp/metal_link_house_top",
+        "processors": "nincodedo:metal_link/house_age"
+      }
+    }
+  ]
+}

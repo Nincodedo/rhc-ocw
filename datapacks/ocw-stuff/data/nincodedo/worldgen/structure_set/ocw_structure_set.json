@@ -1,0 +1,40 @@
+{
+  "structures": [
+    {
+      "structure": "nincodedo:cave_base_roof",
+      "weight": 2
+    },
+    {
+      "structure": "nincodedo:metal_link_house",
+      "weight": 3
+    },
+    {
+      "structure": "nincodedo:small_library",
+      "weight": 2
+    },
+    {
+      "structure": "nincodedo:undeadcottage",
+      "weight": 3
+    },
+    {
+      "structure": "nincodedo:mountacemore",
+      "weight": 2
+    },
+    {
+      "structure": "nincodedo:the_happened_tavern",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 80668329,
+    "frequency_reduction_method": "default",
+    "frequency": 0.5,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 6
+    },
+    "spacing": 60,
+    "separation": 24
+  }
+}

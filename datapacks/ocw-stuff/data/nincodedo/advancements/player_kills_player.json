@@ -13,13 +13,17 @@
   "parent": "nincodedo:root",
   "criteria": {
     "killed_another_player": {
-      "trigger": "minecraft:entity_killed_player",
+      "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "killing_blow": {
-          "source_entity": {
-            "type": "minecraft:player"
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
           }
-        }
+        ]
       }
     }
   }

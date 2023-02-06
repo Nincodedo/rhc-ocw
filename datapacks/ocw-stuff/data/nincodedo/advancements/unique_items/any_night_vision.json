@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/initial_night_vision",
+  "criteria": {
+    "get_night_vision": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"UG\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_night_vision"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/nightvision"
+  }
+}

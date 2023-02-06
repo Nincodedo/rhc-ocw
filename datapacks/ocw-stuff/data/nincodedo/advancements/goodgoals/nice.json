@@ -26,8 +26,7 @@
                     "type": "minecraft:custom",
                     "stat": "minecraft:bell_ring",
                     "value": {
-                      "min": 69,
-                      "max": 999
+                      "min": 69
                     }
                   }
                 ]

@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:time_check",
+            "value": {
+              "min": 24000
+            }
+          }
+        ],
+        "items": [
+          {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:vanishing_curse",
+                "levels": 2
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:rewards/removeday1tools"
+  }
+}

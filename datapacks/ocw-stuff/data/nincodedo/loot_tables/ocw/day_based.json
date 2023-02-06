@@ -1,0 +1,80 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "global"
+          },
+          "score": "player_count"
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "name": "minecraft:beds",
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 16,
+          "name": "minecraft:shield"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "nincodedo:day_check/first_day"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_iron",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:raw_copper",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": false
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:reference",
+          "name": "nincodedo:day_check/first_few_days"
+        }
+      ]
+    }
+  ]
+}

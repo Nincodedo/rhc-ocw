@@ -1,0 +1,10 @@
+[
+  {
+    "condition": "minecraft:reference",
+    "name": "nincodedo:isentitynincodedo"
+  },
+  {
+    "condition": "minecraft:random_chance",
+    "chance": 0.05
+  }
+]
