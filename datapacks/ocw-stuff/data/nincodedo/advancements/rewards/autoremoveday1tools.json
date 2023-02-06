@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:time_check",
+            "value": {
+              "min": 24000
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:rewards/removeday1tools"
+  }
+}

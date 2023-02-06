@@ -5,7 +5,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:rewards/count",
     "loot": [
       "nincodedo:rewards/story/enchant_item"
     ]

@@ -48,6 +48,8 @@ while :; do
     	then
     		log "Sending rewards to $player_name"
     		cat $player_name.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > rewards.txt
+    		count=$(wc -l rewards.txt | awk '{print $1}')
+    		rcon_command "scoreboard players set $player_name advrewards $count"
     		while read line;
     		do
     			rcon_command "advancement grant $player_name only $line"

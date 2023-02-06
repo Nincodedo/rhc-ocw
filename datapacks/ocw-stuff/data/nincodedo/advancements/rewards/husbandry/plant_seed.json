@@ -5,7 +5,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:rewards/count",
     "loot": [
       "nincodedo:rewards/husbandry/plant_seed"
     ]

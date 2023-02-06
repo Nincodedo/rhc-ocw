@@ -1,12 +1,44 @@
 {
-  "type": "minecraft:chest",
+  "type": "minecraft:advancement_reward",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:wooden_pickaxe"
+          "name": "minecraft:golden_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "advrewards"
+              },
+              "treasure": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "Day 1 Pickaxe"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:vanishing_curse": 2
+              },
+              "add": true
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Disappears after the first night"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
