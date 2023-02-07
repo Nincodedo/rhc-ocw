@@ -1,0 +1,34 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "minecraft:storage",
+    "source": "nincodedo:storage"
+  },
+  "ops": [
+    {
+      "source": "tag.Enchantments",
+      "target": "Enchantments",
+      "op": "replace"
+    },
+    {
+      "source": "tag.NinPowered",
+      "target": "NinPowered",
+      "op": "replace"
+    },
+    {
+      "source": "tag.CustomModelData",
+      "target": "CustomModelData",
+      "op": "replace"
+    },
+    {
+      "source": "tag.display",
+      "target": "display",
+      "op": "replace"
+    },
+    {
+      "source": "tag.AttributeModifiers",
+      "target": "AttributeModifiers",
+      "op": "replace"
+    }
+  ]
+}

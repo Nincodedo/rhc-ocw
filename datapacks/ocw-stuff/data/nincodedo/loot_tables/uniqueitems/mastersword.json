@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:carrot_on_a_stick",
+          "name": "minecraft:diamond_sword",
           "functions": [
             {
               "function": "minecraft:set_attributes",
@@ -43,7 +43,7 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": 40,
-              "treasure": true
+              "treasure": false
             },
             {
               "function": "minecraft:set_name",
