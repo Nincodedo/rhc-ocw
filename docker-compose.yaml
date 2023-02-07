@@ -15,7 +15,7 @@ services:
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack'
-      RESOURCE_PACK_SHA1: '9d015c62afa09fce235d83c53754ff2645186c31'
+      RESOURCE_PACK_SHA1: '8ea6fbd4cac73554def882c34efdce42b42ad8f8'
       #OVERRIDE_ICON: 'true'
       MEMORY: '2G'
       BROADCAST_RCON_TO_OPS: 'false'

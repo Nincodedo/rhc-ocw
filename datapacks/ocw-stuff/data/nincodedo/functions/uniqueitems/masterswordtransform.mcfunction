@@ -1,3 +1,41 @@
+item modify entity @s[nbt={Inventory:[{Slot:0b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.0 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:1b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.1 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:2b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.2 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:3b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.3 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:4b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.4 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:5b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.5 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:6b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.6 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:7b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.7 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:8b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.8 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:9b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.0 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:10b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.1 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:11b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.2 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:12b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.3 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:13b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.4 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:14b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.5 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:15b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.6 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:16b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.7 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:17b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.8 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:18b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.9 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:19b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.10 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:20b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.11 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:21b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.12 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:22b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.13 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:23b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.14 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:24b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.15 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:25b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.16 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:26b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.17 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:27b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.18 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:28b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.19 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:29b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.20 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:30b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.21 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:31b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.22 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:32b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.23 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:33b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.24 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:34b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.25 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:35b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] inventory.26 nincodedo:create_ms
+item modify entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] weapon.offhand nincodedo:create_ms
+
 data modify storage nincodedo:storage tag set from entity @s Inventory[{"id":"minecraft:diamond_sword", tag:{NinUnique:"MS"}}].tag
 
 item replace entity @s[nbt={Inventory:[{Slot:0b,id:"minecraft:diamond_sword",tag:{NinUnique:"MS"}}]}] hotbar.0 with minecraft:carrot_on_a_stick{NinUnique:"MS"}
