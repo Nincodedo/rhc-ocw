@@ -25,12 +25,13 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.PACKAGE_ACTIONS_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile-log-watcher
           platforms: linux/amd64
           push: true
+          provenance: false
           tags: |
             ghcr.io/nincodedo/rhc-ocw:latest
             ghcr.io/nincodedo/rhc-ocw:${{ github.sha }}
