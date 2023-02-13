@@ -35,12 +35,16 @@ services:
         scoreboard objectives modify health rendertype hearts
         gamerule doDaylightCycle false
         scoreboard objectives add attempt dummy
+        chunky radius 3000
+        chunky start
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
+        chunky pause
       RCON_CMDS_ON_CONNECT: |-
         schedule function nincodedo:attemptcounter/playerjoin 10s append
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
+        chunky continue
     volumes:
       - mc_server:/data
       - mc_mod_configs:/config
