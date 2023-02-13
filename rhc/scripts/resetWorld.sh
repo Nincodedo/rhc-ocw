@@ -148,9 +148,7 @@ while :; do
     sleep 10
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
-    tar -czvf "$attempt_log_dir/death_replay.tar.gz" "replay_recordings/$dead_player/"
-    tar -czvf "$attempt_log_dir/all_replays.tar.gz" "replay_recordings/"
-    rm -rf replay_recordings/*
+    mv replay_recordings/ "replay_recordings_$previous_attempt/" && tar -czvf "$attempt_log_dir/all_replays.tar.gz" "replay_recordings_$previous_attempt/" && rm -rf "replay_recordings_$previous_attempt/" &
     rm -rf world
     mkdir world/
     chown -R 1000:1000 world/
