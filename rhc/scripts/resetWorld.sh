@@ -145,7 +145,7 @@ while :; do
     sleep $death_reset_delay_seconds
     # kick everyone and sleep to finalize the recordings
     rcon_command "kick @a Better luck next time..."
-    sleep 5
+    sleep 10
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
     tar -czvf "$attempt_log_dir/death_replay.tar.gz" "replay_recordings/$dead_player/"
