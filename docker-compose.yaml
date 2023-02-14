@@ -37,6 +37,7 @@ services:
         scoreboard objectives add attempt dummy
         chunky radius 3000
         chunky start
+        chunky continue
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
         chunky pause
