@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416}"
+              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416}}"
             },
             {
               "function": "minecraft:set_enchantments",
@@ -66,7 +66,8 @@
                 {
                   "text": "It seems only Undead knows how to use this."
                 }
-              ]
+              ],
+              "replace": false
             }
           ],
           "conditions": [
