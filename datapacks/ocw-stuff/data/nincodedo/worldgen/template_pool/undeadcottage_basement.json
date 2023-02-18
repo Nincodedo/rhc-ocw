@@ -1,5 +1,5 @@
 {
-  "name": "nincodedo:undeadcottage",
+  "name": "nincodedo:undeadcottage_basement",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "nincodedo:ocw_old/world1_2/undeadcottage_top",
+        "location": "nincodedo:ocw_old/world1_2/undeadcottage_basement",
         "processors": {
           "processors": [
             {
