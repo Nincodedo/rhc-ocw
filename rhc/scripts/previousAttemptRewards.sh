@@ -1,5 +1,20 @@
 #!/bin/sh
 
+send_rewards() {
+	player="$1"
+    log "Sending rewards to $player"
+    cat $player.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > "$player-rewards.txt"
+    count=$(wc -l "$player-rewards.txt" | awk '{print $1}')
+    rcon_command "scoreboard players set $player advrewards $count" > /dev/null
+    while read line;
+    do
+        rcon_command "advancement grant $player only $line" > /dev/null
+    done < "$player-rewards.txt"
+    rcon_command "tag $player add prevreward" > /dev/null
+    rcon_command "execute as $player run function nincodedo:rewards/announce" > /dev/null
+    log "Finished sending rewards to $player"
+}
+
 source /app/common.sh
 
 cd /data
@@ -43,20 +58,10 @@ while :; do
 	if [ ${#player_name} -ne 0 ]
 	then
         hastag=$(rcon_command "execute as $player_name if entity @s[tag=prevreward]")
-    	#If no tag and we have a file, Player needs to be rewarded
-    	if [ ${#hastag} -eq 0 ] && [ -f ./$player_name.txt ]
-    	then
-    		log "Sending rewards to $player_name"
-    		cat $player_name.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > rewards.txt
-    		count=$(wc -l rewards.txt | awk '{print $1}')
-    		rcon_command "scoreboard players set $player_name advrewards $count"
-    		while read line;
-    		do
-    			rcon_command "advancement grant $player_name only $line"
-    		done < rewards.txt
-    		rcon_command "tag $player_name add prevreward"
-    		rcon_command "execute as $player_name run function nincodedo:rewards/announce"
-    		log "Finished sending rewards to $player_name"
-    	fi
+        #If no tag and we have a file, Player needs to be rewarded
+        if [ ${#hastag} -eq 0 ] && [ -f ./$player_name.txt ]
+        then
+            send_rewards "$player_name" &
+        fi
     fi
 done
