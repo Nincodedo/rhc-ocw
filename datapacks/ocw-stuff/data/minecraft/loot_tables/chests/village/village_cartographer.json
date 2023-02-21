@@ -92,7 +92,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "nincodedo:ocw_books"
+          "name": "nincodedo:ocw_map"
         }
       ]
     }
