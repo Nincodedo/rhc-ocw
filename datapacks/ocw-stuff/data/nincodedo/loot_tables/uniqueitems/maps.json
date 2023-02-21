@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:on_ocw_unique_items_treasure_maps",
+              "decoration": "blue_marker",
+              "zoom": 3,
+              "skip_existing_chunks": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Ancient OCW Structure Map"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "quality": 10,
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:on_large_ocw_treasure_maps",
+              "decoration": "blue_marker",
+              "zoom": 4,
+              "skip_existing_chunks": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "Ancient OCW Structure Map",
+                "color": "gold"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "The back of the map has a"
+                },
+                {
+                  "text": "bunch of books drawn on it."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
