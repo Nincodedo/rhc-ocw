@@ -1,6 +1,6 @@
 summon marker ~ ~ ~ {Tags:["direction"]}
 execute as @e[tag=direction,limit=1] positioned 0.0 0.0 0.0 run function nincodedo:uniqueitems/abilities/get_motion
-execute anchored eyes run summon snowball ^ ^ ^1 {Tags:["projectile"], NoGravity:1, Fire:-1s}
+execute anchored eyes run summon snowball ^ ^ ^1 {Tags:["projectile", "projectiles"], NoGravity:1, Fire:-1s}
 data modify entity @e[tag=projectile,limit=1] Motion set from storage nincodedo:storage Motion
 data modify entity @e[tag=projectile,limit=1] Owner set from entity @s UUID
 
