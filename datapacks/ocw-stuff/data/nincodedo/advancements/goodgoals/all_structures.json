@@ -1,0 +1,133 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_boots"
+    },
+    "title": "ALL the structures!",
+    "description": "Found all the ancient OCW structures",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:goodgoals/root",
+  "criteria": {
+    "cave_base": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:cave_base_roof"
+            }
+          }
+        ]
+      }
+    },
+    "library": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:library_hidden_wing"
+            }
+          }
+        ]
+      }
+    },
+    "metal_link_house": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:metal_link_house"
+            }
+          }
+        ]
+      }
+    },
+    "mountacemore": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:mountacemore"
+            }
+          }
+        ]
+      }
+    },
+    "small_library": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:small_library"
+            }
+          }
+        ]
+      }
+    },
+    "the_happened_tavern": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:the_happened_tavern"
+            }
+          }
+        ]
+      }
+    },
+    "undeadcottage": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:undeadcottage"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cave_base"
+    ],
+    [
+      "library"
+    ],
+    [
+      "metal_link_house"
+    ],
+    [
+      "mountacemore"
+    ],
+    [
+      "small_library"
+    ],
+    [
+      "the_happened_tavern"
+    ],
+    [
+      "undeadcottage"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}
