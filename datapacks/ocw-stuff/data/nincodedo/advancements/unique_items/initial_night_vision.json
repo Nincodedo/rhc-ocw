@@ -14,16 +14,16 @@
   "parent": "nincodedo:unique_items/rumors",
   "criteria": {
     "got_root": {
-      "trigger": "minecraft:tick",
+      "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "type_specific": {
-            "type": "player",
-            "advancements": {
-              "nincodedo:unique_items/rumors": true
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:undeadcottage"
             }
           }
-        }
+        ]
       }
     }
   },

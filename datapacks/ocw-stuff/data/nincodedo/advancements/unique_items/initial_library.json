@@ -13,16 +13,16 @@
   "parent": "nincodedo:unique_items/rumors",
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:tick",
+      "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "type_specific": {
-            "type": "player",
-            "advancements": {
-              "nincodedo:unique_items/rumors": true
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:library_hidden_wing"
             }
           }
-        }
+        ]
       }
     }
   }
