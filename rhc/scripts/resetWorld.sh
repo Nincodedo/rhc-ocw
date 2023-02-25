@@ -103,7 +103,7 @@ while :; do
   checkHealth=$?
   checkMotd=$(docker inspect $minecraft_docker_container_name | jq '.[0].Config.Env[] | select(match(".*Attempt.*"))' | xargs)
   checkMotdLength=${#checkMotd}
-  until [ $checkHealth -eq 0 ]; do
+  until [ "$checkMotdLength" -ne 0 ] && [ $checkHealth -eq 0 ]; do
     sleep 1
     docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
     checkHealth=$?
