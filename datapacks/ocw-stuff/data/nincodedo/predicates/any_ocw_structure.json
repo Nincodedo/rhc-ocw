@@ -40,6 +40,12 @@
     {
       "condition": "minecraft:location_check",
       "predicate": {
+        "structure": "nincodedo:sheep_farm"
+      }
+    },
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
         "structure": "nincodedo:undeadcottage"
       }
     }

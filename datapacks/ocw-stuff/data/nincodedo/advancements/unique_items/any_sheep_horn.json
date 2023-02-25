@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/initial_sheep_horn",
+  "criteria": {
+    "get_sheep_horn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"TH\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_sheep_horn"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/sheephorn"
+  }
+}

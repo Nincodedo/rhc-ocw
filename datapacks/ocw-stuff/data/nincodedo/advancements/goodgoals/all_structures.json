@@ -90,6 +90,19 @@
         ]
       }
     },
+    "sheep_farm": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:sheep_farm"
+            }
+          }
+        ]
+      }
+    },
     "undeadcottage": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -122,6 +135,9 @@
     ],
     [
       "the_happened_tavern"
+    ],
+    [
+      "sheep_farm"
     ],
     [
       "undeadcottage"
