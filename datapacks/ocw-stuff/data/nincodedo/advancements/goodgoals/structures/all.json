@@ -4,13 +4,13 @@
       "item": "minecraft:golden_boots"
     },
     "title": "ALL the structures!",
-    "description": "Found all the ancient OCW structures",
+    "description": "Find all the ancient OCW structures",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:goodgoals/root",
+  "parent": "nincodedo:goodgoals/structures/any",
   "criteria": {
     "cave_base": {
       "trigger": "minecraft:location",

@@ -6,7 +6,7 @@
   },
   "rewards": {
     "loot": [
-      "nincodedo:rewards/goodgoals/all_structures"
+      "nincodedo:rewards/goodgoals/structures/any"
     ]
   }
 }

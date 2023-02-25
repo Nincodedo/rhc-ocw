@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:spruce_sapling"
+    },
+    "title": "Metal_Link's House",
+    "description": "From OCW Minecraft 1.9 Beta, the Refugee Camp (2011)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:goodgoals/structures/any",
+  "criteria": {
+    "metal_link_house": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:metal_link_house"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "metal_link_house"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}

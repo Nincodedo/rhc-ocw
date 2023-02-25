@@ -4,10 +4,10 @@
       "item": "minecraft:bookshelf"
     },
     "title": "The Forbidden Wing of The Library",
-    "description": "From OCW Minecraft 1.2, originally built by Zedar",
+    "description": "Any unique item can be in the chests found here, but it won't be easy...",
     "frame": "challenge",
-    "show_toast": true,
-    "announce_to_chat": true,
+    "show_toast": false,
+    "announce_to_chat": false,
     "hidden": true
   },
   "parent": "nincodedo:unique_items/initial_library",
