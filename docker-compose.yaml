@@ -34,7 +34,6 @@ services:
         scoreboard objectives setdisplay list health
         scoreboard objectives modify health rendertype hearts
         gamerule doDaylightCycle false
-        scoreboard objectives add attempt dummy
         chunky radius 3000
         chunky start
         chunky continue

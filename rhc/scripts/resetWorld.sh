@@ -71,6 +71,7 @@ source /app/common.sh
 script_name="LogWatcher"
 minecraft_server_dir=/data
 app_dir=/app
+rhc_player_data_dir=/data/rhc-playerdata
 minecraft_compose_dir=$app_dir/ocw-minecraft
 minecraft_server_log=$minecraft_server_dir/logs/latest.log
 minecraft_docker_container_name=$MC_CONTAINER_NAME
@@ -83,7 +84,7 @@ death_reset_delay_seconds=20
 if [ -f "$discord_webhook_file" ]; then
   discord_webhook=$(cat $discord_webhook_file)
 fi
-cd $minecraft_server_dir
+cd $minecraft_server_dir || exit 1
 log "Starting LogWatcher in $(pwd) with container $minecraft_docker_container_name"
 while :; do
   dead_player=""
@@ -91,6 +92,7 @@ while :; do
   mc_days_survived_log_name="logs/mc_days_survived.log"
   combined_log_name="logs/combined.log"
   touch "$combined_log_name"
+  mkdir "$rhc_player_data_dir"
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
   previous_attempt=$attempt_number
   attempt_number=$((++attempt_number))
@@ -130,7 +132,9 @@ while :; do
   fi
   death_reset=false
   setup_background_scripts
-  rcon_command "scoreboard players set global attempt $attempt_number" >/dev/null
+  high_score=$(sort -n -r "$mc_days_survived_log_name" | head -n 1)
+  rcon_command "scoreboard players set AttemptCount rhcdata $attempt_number" >/dev/null
+  rcon_command "scoreboard players set HighScore rhcdata $high_score" >/dev/null
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   world_ending_announcements
