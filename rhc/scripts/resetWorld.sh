@@ -141,6 +141,9 @@ while :; do
   high_score=$(sort -n -r "$mc_days_survived_log_name" | head -n 1)
   rcon_command "scoreboard players set AttemptCount rhcdata $attempt_number" >/dev/null
   rcon_command "scoreboard players set HighScore rhcdata $high_score" >/dev/null
+  rcon_command "datapack disable 'file/ocw-stuff.zip'"
+  rcon_command "datapack enable 'file/ocw-stuff.zip'"
+  rcon_command "reload"
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   world_ending_announcements
