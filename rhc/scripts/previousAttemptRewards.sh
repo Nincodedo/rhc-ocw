@@ -1,18 +1,23 @@
 #!/bin/sh
 
-send_rewards() {
-	player="$1"
-    log "Sending rewards to $player"
-    cat $player.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > "$player-rewards.txt"
-    count=$(wc -l "$player-rewards.txt" | awk '{print $1}')
-    rcon_command "scoreboard players set $player advrewards $count" > /dev/null
-    while read line;
-    do
-        rcon_command "advancement grant $player only $line" > /dev/null
-    done < "$player-rewards.txt"
-    rcon_command "tag $player add prevreward" > /dev/null
-    rcon_command "execute as $player run function nincodedo:rewards/announce" > /dev/null
-    log "Finished sending rewards to $player"
+check_rewards() {
+    player="$1"
+    hastag=$(rcon_command "execute as $player if entity @s[tag=prevreward]")
+    #If no tag and we have a file, Player needs to be rewarded
+    if [ ${#hastag} -eq 0 ] && [ -f ./$player.txt ]
+    then
+        log "Sending rewards to $player"
+        cat $player.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > "$player-rewards.txt"
+        count=$(wc -l "$player-rewards.txt" | awk '{print $1}')
+        rcon_command "scoreboard players set $player advrewards $count" > /dev/null
+        while read line;
+        do
+            rcon_command "advancement grant $player only $line" > /dev/null
+        done < "$player-rewards.txt"
+        rcon_command "tag $player add prevreward" > /dev/null
+        rcon_command "execute as $player run function nincodedo:rewards/announce" > /dev/null
+        log "Finished sending rewards to $player"
+    fi
 }
 
 source /app/common.sh
@@ -55,15 +60,10 @@ done
 log "Processed $transformed out of $count total"
 
 while :; do
-	(docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
-	player_name=$(tail -n 5 "$minecraft_server_log" | grep -o "$grep_phrase" | head -n 1 | awk '{print $7}')
-	if [ ${#player_name} -ne 0 ]
-	then
-        hastag=$(rcon_command "execute as $player_name if entity @s[tag=prevreward]")
-        #If no tag and we have a file, Player needs to be rewarded
-        if [ ${#hastag} -eq 0 ] && [ -f ./$player_name.txt ]
-        then
-            send_rewards "$player_name" &
-        fi
+    (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
+    player_name=$(tail -n 5 "$minecraft_server_log" | grep -o "$grep_phrase" | head -n 1 | awk '{print $7}')
+    if [ ${#player_name} -ne 0 ]
+    then
+        check_rewards "$player_name" &
     fi
 done

@@ -60,7 +60,13 @@ world_ending_announcements() {
     rcon_command "tellraw @a {\"text\": \"$world_end_text1\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text2\"}"
     rcon_command "tellraw @a {\"text\": \"$world_end_text3\"}"
-    dead_player_skin="https://mc-heads.net/body/$dead_player/left.png"
+    dead_player_skin=""
+    if [ -f "$rhc_player_data_dir/$dead_player.txt" ]; then
+      dead_player_id=$(cat "$rhc_player_data_dir/$dead_player.txt")
+      dead_player_skin="https://visage.surgeplay.com/bust/512/$dead_player_id?y=-40"
+    else
+      dead_player_skin="https://mc-heads.net/body/$dead_player/left.png"
+    fi
     discord_webhook_send "$dead_player Did This" "$death_message\n$world_end_text1\n$world_end_text2\n$world_end_text3" "$dead_player_skin"
     kill_background_scripts
   fi
