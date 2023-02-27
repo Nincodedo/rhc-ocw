@@ -1,0 +1,239 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:poisonous_potato",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:dead_bush",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:clay_ball",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:brick",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:stone_hoe",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 1
+                },
+                {
+                  "function": "minecraft:set_damage",
+                  "damage": 62,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:dirt",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:cobblestone",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:raw_iron",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "Nice"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_count",
+                  "count": 69
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
