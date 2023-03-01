@@ -1,12 +1,6 @@
 #!/bin/sh
 
 setup_background_scripts() {
-  pgrep -f "/app/cleanup.sh"
-  background_cleanup_check=$?
-  if [ $background_cleanup_check -ne 0 ]; then
-    /app/cleanup.sh &
-    background_cleanup_id=$!
-  fi
   pgrep -f "/app/previousAttemptRewards.sh"
   background_rewards_check=$?
   if [ $background_rewards_check -ne 0 ]; then
@@ -16,7 +10,6 @@ setup_background_scripts() {
 }
 
 kill_background_scripts() {
-  kill "$background_cleanup_id"
   kill "$background_rewards_id"
 }
 
@@ -156,12 +149,9 @@ while :; do
     printf "\n" >>$minecraft_compose_dir/motd_override.env
     echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
     sleep $death_reset_delay_seconds
-    # kick everyone and sleep to finalize the recordings
     rcon_command "kick @a Better luck next time..."
-    sleep 10
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
-    mv replay_recordings/ "replay_recordings_$previous_attempt/" && tar -czvf "$attempt_log_dir/all_replays.tar.gz" "replay_recordings_$previous_attempt/" && rm -rf "replay_recordings_$previous_attempt/" &
     rm -rf world
     mkdir world/
     chown -R 1000:1000 world/
