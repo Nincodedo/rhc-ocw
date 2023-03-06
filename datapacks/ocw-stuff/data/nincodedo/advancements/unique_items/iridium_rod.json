@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:fishing_rod",
+      "nbt": "{CustomModelData:1010101}"
+    },
+    "title": "Nin's Iridium Fishing Rod",
+    "description": "Imported from Pelican Town",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/initial_iridium_rod",
+  "criteria": {
+    "get_iridium_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"NR\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_iridium_rod"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:advancements/getiridiumrod"
+  }
+}

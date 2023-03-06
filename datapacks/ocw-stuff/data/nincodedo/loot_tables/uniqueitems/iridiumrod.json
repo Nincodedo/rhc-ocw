@@ -1,0 +1,87 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:fishing_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.luck",
+                  "name": "ExtraLucky",
+                  "amount": 1,
+                  "operation": "addition",
+                  "id": "ca0df48b-985f-4b72-9648-342c35e9d5b2",
+                  "slot": [
+                    "mainhand",
+                    "offhand"
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1010101,NinUnique:\"NR\",NinPowered:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Nin's Iridium Fishing Rod",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "From Stardew Valley!"
+                },
+                {
+                  "text": "Only Nin can use this."
+                }
+              ],
+              "replace": true
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:luck_of_the_sea": 3
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": 40,
+              "treasure": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "iridiumrod"
+                },
+                "score": "rhcdata"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
