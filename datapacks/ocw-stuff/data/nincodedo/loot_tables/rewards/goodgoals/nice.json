@@ -8,23 +8,8 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:item",
-              "name": "minecraft:poisonous_potato",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/1",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -33,23 +18,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:dead_bush",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/2",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -58,23 +28,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:clay_ball",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/3",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -83,23 +38,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:brick",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/4",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -138,23 +78,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:dirt",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/6",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -163,23 +88,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:cobblestone",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/7",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -188,23 +98,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:raw_iron",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ],
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/8",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -213,23 +108,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:diamond",
-              "functions": [
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "Nice"
-                    }
-                  ]
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": 69
-                }
-              ]
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:rewards/goodgoals/nice/9"
             }
           ]
         }
