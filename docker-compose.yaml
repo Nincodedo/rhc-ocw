@@ -17,7 +17,7 @@ services:
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack'
       RESOURCE_PACK_SHA1: '44bafffa48e89903a17307782afa00e65730c666'
       #OVERRIDE_ICON: 'true'
-      MEMORY: '2G'
+      MEMORY: '3G'
       BROADCAST_RCON_TO_OPS: 'false'
       FUNCTION_PERMISSION_LEVEL: '4'
       SPAWN_PROTECTION: '0'
