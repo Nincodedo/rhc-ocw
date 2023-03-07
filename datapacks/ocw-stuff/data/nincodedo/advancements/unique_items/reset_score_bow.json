@@ -14,10 +14,13 @@
             }
           },
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "nbt": "{SelectedItem:{tag:{NinPowered:1,NinUnique:\"TT\"}}}"
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{SelectedItem:{tag:{NinPowered:1,NinUnique:\"TT\"}}}"
+              }
             }
           }
         ]
@@ -25,6 +28,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:uniqueitems/abilities/find_arrow"
+    "function": "nincodedo:uniqueitems/abilities/reset_shot_score"
   }
 }
