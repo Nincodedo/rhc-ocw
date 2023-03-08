@@ -9,3 +9,4 @@ execute unless score iridiumrod rhcdata matches 1 run scoreboard players set iri
 execute unless score global mastersword matches 1..1 run scoreboard players set global mastersword 0
 execute unless score global goggles matches 1..1 run scoreboard players set global goggles 0
 execute unless score global sheephorn matches 1..1 run scoreboard players set global sheephorn 0
+scoreboard players set config_torchbow_motion rhcdata 1
