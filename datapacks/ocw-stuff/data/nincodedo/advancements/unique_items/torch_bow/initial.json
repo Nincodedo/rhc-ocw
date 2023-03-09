@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bow"
+    },
+    "title": "What if you just... glue a torch... to a bow?",
+    "description": "Have you seen that tall tower in the desert?",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:unique_items/rumors",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:desert_tower"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

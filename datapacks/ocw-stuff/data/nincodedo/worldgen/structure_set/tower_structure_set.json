@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "nincodedo:desert_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1689777,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 4
+    },
+    "spacing": 124,
+    "separation": 62
+  }
+}

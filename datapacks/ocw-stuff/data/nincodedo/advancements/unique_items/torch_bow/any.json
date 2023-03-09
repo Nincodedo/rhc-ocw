@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/torch_bow/initial",
+  "criteria": {
+    "get_torchbow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"TT\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_torchbow"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/torchbow"
+  }
+}
