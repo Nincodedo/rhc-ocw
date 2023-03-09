@@ -4,7 +4,7 @@ execute anchored eyes run summon snowball ^ ^ ^1 {Tags:["projectile", "projectil
 data modify entity @e[tag=projectile,limit=1] Motion set from storage nincodedo:storage Motion
 data modify entity @e[tag=projectile,limit=1] Owner set from entity @s UUID
 
-playsound nincodedo:mastersword.beam player @s ~ ~ ~ 0.7
+playsound nincodedo:mastersword.beam player @a ~ ~ ~ 0.7
 
 schedule function nincodedo:uniqueitems/abilities/gravity 4t replace
 
