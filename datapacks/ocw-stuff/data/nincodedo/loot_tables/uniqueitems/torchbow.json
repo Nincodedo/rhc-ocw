@@ -16,8 +16,8 @@
               "function": "minecraft:set_enchantments",
               "enchantments": {
                 "minecraft:power": {
-                  "min": 4,
-                  "max": 5
+                  "min": 5,
+                  "max": 10
                 },
                 "minecraft:unbreaking": {
                   "min": 0,
