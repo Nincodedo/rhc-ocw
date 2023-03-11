@@ -11,7 +11,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "nincodedo:unique_items/initial_iridium_rod",
+  "parent": "nincodedo:unique_items/iridium_rod/initial",
   "criteria": {
     "get_iridium_rod": {
       "trigger": "minecraft:inventory_changed",

@@ -21,3 +21,6 @@ indent_size = 2
 
 [{*.yaml,*.yml}]
 indent_size = 2
+
+[*.mcfunction]
+max_line_length = 1200

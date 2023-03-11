@@ -95,9 +95,9 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "global"
+                  "name": "mastersword"
                 },
-                "score": "mastersword"
+                "score": "rhcdata"
               },
               "range": 0
             }

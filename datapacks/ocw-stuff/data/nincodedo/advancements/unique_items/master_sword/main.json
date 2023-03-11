@@ -11,7 +11,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "nincodedo:unique_items/initial_master_sword",
+  "parent": "nincodedo:unique_items/master_sword/initial",
   "criteria": {
     "get_mastersword": {
       "trigger": "minecraft:inventory_changed",
