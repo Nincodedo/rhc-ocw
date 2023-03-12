@@ -64,7 +64,10 @@
       ]
     },
     {
-      "rolls": 1,
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
       "entries": [
         {
           "type": "minecraft:loot_table",
@@ -73,7 +76,10 @@
       ]
     },
     {
-      "rolls": 2,
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
       "entries": [
         {
           "type": "minecraft:loot_table",
