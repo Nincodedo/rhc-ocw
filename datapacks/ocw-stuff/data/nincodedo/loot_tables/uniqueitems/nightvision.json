@@ -28,6 +28,7 @@
               "entity": "this",
               "name": {
                 "text": "Undead's Night Vision Goggles",
+                "color": "dark_purple",
                 "italic": false
               }
             },

@@ -55,6 +55,7 @@
     "entity": "this",
     "name": {
       "text": "The Master Sword",
+      "color": "dark_purple",
       "italic": false
     }
   },

@@ -17,6 +17,7 @@
               "entity": "this",
               "name": {
                 "text": "Sheep Summoning Horn",
+                "color": "dark_purple",
                 "italic": false
               }
             },
