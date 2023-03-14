@@ -9,9 +9,9 @@
           "type": "minecraft:score",
           "target": {
             "type": "minecraft:fixed",
-            "name": "global"
+            "name": "player_count"
           },
-          "score": "player_count"
+          "score": "rhcdata"
         }
       },
       "entries": [

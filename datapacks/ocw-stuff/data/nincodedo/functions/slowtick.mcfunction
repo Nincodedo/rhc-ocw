@@ -1,5 +1,5 @@
-execute store result score global current_day run time query day
-execute store result score global player_count run list
+execute store result score current_day rhcdata run time query day
+execute store result score player_count rhcdata run list
 
 execute as @e[type=minecraft:pillager,name=!"Salesman",limit=1] run data merge entity @s {CustomName: '{"text":"Salesman"}', CustomNameVisible: 1, KillMessage: '%s sold some wares to %s'}
 

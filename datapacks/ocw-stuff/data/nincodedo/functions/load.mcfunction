@@ -1,13 +1,9 @@
-scoreboard objectives add sleepAdvCheck dummy
-scoreboard objectives add current_day dummy
-scoreboard objectives add player_count dummy
-
 function nincodedo:uniqueitems/load
 
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger
 scoreboard players enable @a bannerplz
-execute store result score global current_day run time query day
+execute store result score current_day rhcdata run time query day
 function nincodedo:setuplogbreakcount
 schedule function nincodedo:calculatelogbreak 10t
 schedule function nincodedo:slowtick 5s

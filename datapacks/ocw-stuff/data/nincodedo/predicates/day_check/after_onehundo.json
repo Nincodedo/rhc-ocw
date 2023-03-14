@@ -4,9 +4,9 @@
     "type": "minecraft:score",
     "target": {
       "type": "minecraft:fixed",
-      "name": "global"
+      "name": "current_day"
     },
-    "score": "current_day"
+    "score": "rhcdata"
   },
   "range": {
     "min": 100,
