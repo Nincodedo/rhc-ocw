@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{instrument:\"minecraft:ponder_goat_horn\",NinUnique:\"PS\",NinPowered:1,Enchantments:[{}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Potion Horn",
+                "color": "dark_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Share potion effects with everyone!"
+                },
+                {
+                  "text": "Only ShokkZ knows how to use it."
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "potionhorn"
+                },
+                "score": "rhcdata"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

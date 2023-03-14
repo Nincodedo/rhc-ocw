@@ -72,6 +72,9 @@ execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion",ta
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion",tag:{Potion:"minecraft:long_slow_falling"}}]}] run effect give @a[distance=..256] minecraft:slow_falling 240 0 false
 
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] as @a[distance=..256] at @s run playsound minecraft:entity.wither.hurt hostile @a ~ ~ ~ 0.75 .2
-execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] as @a[distance=..256] at @s run particle minecraft:instant_effect ~ ~ ~ 0.5 1 0.5 0.75 200
+execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] as @a[distance=..256] at @s run particle minecraft:instant_effect ~ ~ ~ 1 1 1 0.75 400
 
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}]}] run item replace entity @s weapon.offhand with air
+
+advancement revoke @s only nincodedo:unique_items/potion_horn/use
+scoreboard players set @s used_th 0
