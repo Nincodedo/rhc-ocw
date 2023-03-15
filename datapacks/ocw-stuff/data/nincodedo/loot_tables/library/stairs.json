@@ -19,6 +19,21 @@
               ]
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:compass",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Bro, u lost?"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

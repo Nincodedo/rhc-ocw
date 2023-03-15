@@ -3,9 +3,45 @@
   "pools": [
     {
       "rolls": {
+        "min": 3,
+        "max": 6
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              },
+              "add": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
         "type": "minecraft:uniform",
-        "min": 4,
-        "max": 10
+        "min": 2,
+        "max": 8
       },
       "bonus_rolls": 0,
       "entries": [
@@ -26,31 +62,19 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "weight": 4,
-          "name": "minecraft:paper",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 4
-              },
-              "add": false
-            }
-          ]
+          "type": "minecraft:empty",
+          "weight": 6
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
+          "weight": 3,
           "name": "minecraft:iron_leggings",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 20,
-                "max": 30
+                "min": 30,
+                "max": 40
               },
               "treasure": false
             }
@@ -58,29 +82,42 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:book",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              },
-              "add": false
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
+          "weight": 3,
           "name": "minecraft:iron_boots",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 20,
-                "max": 30
+                "min": 30,
+                "max": 40
+              },
+              "treasure": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_boots",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 30,
+                "max": 40
+              },
+              "treasure": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_leggings",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 30,
+                "max": 40
               },
               "treasure": false
             }
