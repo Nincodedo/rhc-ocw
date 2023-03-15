@@ -30,9 +30,6 @@ services:
       VERSION: '1.19.3'
       INITIAL_ENABLED_PACKS: 'update_1_20,bundle'
       RCON_CMDS_STARTUP: |-
-        scoreboard objectives add health health
-        scoreboard objectives setdisplay list health
-        scoreboard objectives modify health rendertype hearts
         gamerule doDaylightCycle false
         chunky radius 3000
         chunky start
@@ -40,8 +37,6 @@ services:
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
         chunky pause
-      RCON_CMDS_ON_CONNECT: |-
-        schedule function nincodedo:attemptcounter/playerjoin 10s append
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
         chunky continue
@@ -109,14 +104,9 @@ services:
       INITIAL_ENABLED_PACKS: 'update_1_20,bundle'
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack?type=beta'
       RCON_CMDS_STARTUP: |-
-        scoreboard objectives add health health
-        scoreboard objectives setdisplay list health
-        scoreboard objectives modify health rendertype hearts
         gamerule doDaylightCycle false
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
-      RCON_CMDS_ON_CONNECT: |-
-        schedule function nincodedo:attemptcounter/playerjoin 10s append
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
     volumes:

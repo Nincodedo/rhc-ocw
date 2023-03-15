@@ -5,8 +5,6 @@ bossbar set endthegame color blue
 bossbar set endthegame max 60
 bossbar set endthegame value 60
 bossbar set endthegame players @a
-scoreboard objectives add one dummy
-scoreboard players set @s one 1
-scoreboard objectives add total dummy
-scoreboard players set @s total 60
-schedule function nincodedo:count_end_countdown 1t
+scoreboard players set one math 1
+scoreboard players set endserverprog rhcdata 60
+schedule function youdidthis:count_end_countdown 1s

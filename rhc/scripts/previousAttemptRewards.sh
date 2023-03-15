@@ -52,7 +52,7 @@ do
         echo "$username" > $id.txt
         echo "$username" > "/data/rhc-playerdata/$id.txt"
         echo "$id" > "/data/rhc-playerdata/$username.txt"
-        jq -r '. | to_entries[] | select(.value.done == true) | select(.key|contains("recipes")|not) | select(.key|startswith("uncraftable")|not) | select(.key|startswith("vanilla")|not) | .key' $f 2> /dev/null > $username.txt
+        jq -r '. | to_entries[] | select(.value.done == true) | select(.key|contains("recipes")|not) | select(.key|startswith("uncraftable")|not) | select(.key|startswith("vanilla")|not) | select(.key|startswith("youdidthis")|not) | .key' $f 2> /dev/null > $username.txt
         transformed=$((++transformed))
     fi
 done

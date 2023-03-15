@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "nincodedo:root",
+  "parent": "youdidthis:root",
   "criteria": {
     "killed_dragon": {
       "trigger": "minecraft:player_killed_entity",
@@ -33,6 +33,6 @@
     ]
   ],
   "rewards": {
-    "function": "nincodedo:create_end_countdown"
+    "function": "youdidthis:create_end_countdown"
   }
 }
