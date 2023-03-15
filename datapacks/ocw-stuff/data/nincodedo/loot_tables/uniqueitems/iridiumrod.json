@@ -17,10 +17,7 @@
                   "amount": 1,
                   "operation": "addition",
                   "id": "ca0df48b-985f-4b72-9648-342c35e9d5b2",
-                  "slot": [
-                    "mainhand",
-                    "offhand"
-                  ]
+                  "slot": "mainhand"
                 }
               ]
             },
@@ -57,14 +54,20 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:luck_of_the_sea": 3
+                "minecraft:luck_of_the_sea": {
+                  "min": 3,
+                  "max": 6
+                },
+                "minecraft:lure": {
+                  "min": 0,
+                  "max": 4
+                },
+                "minecraft:unbreaking": {
+                  "min": 1,
+                  "max": 3
+                }
               },
               "add": false
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 40,
-              "treasure": false
             }
           ],
           "conditions": [
