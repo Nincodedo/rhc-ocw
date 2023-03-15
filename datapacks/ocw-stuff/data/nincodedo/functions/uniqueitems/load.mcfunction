@@ -3,6 +3,7 @@ scoreboard objectives add goggles dummy
 scoreboard objectives add sheephorn dummy
 scoreboard objectives add used_th minecraft.used:minecraft.goat_horn
 scoreboard objectives add projectilelife dummy
+scoreboard objectives add arrowshot minecraft.used:minecraft.bow
 
 execute unless score torchbow rhcdata matches 1 run scoreboard players set torchbow rhcdata 0
 execute unless score iridiumrod rhcdata matches 1 run scoreboard players set iridiumrod rhcdata 0
