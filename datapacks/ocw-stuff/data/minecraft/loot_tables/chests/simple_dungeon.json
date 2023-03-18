@@ -68,11 +68,6 @@
               "function": "minecraft:enchant_randomly"
             }
           ]
-        },
-        {
-          "type": "minecraft:loot_table",
-          "weight": 10,
-          "name": "nincodedo:ocw_books"
         }
       ]
     },
@@ -305,7 +300,12 @@
           "name": "nincodedo:ocw_map"
         },
         {
-          "type": "minecraft:empty"
+          "type": "minecraft:loot_table",
+          "name": "nincodedo:ocw_books"
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 2
         }
       ]
     }

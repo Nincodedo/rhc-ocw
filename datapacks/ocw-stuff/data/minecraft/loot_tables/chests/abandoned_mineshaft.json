@@ -30,11 +30,6 @@
           ]
         },
         {
-          "type": "minecraft:loot_table",
-          "weight": 10,
-          "name": "nincodedo:ocw_books"
-        },
-        {
           "type": "minecraft:item",
           "weight": 5,
           "name": "minecraft:iron_pickaxe"
@@ -326,6 +321,10 @@
         {
           "type": "minecraft:loot_table",
           "name": "nincodedo:ocw_map"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "nincodedo:ocw_books"
         }
       ]
     }

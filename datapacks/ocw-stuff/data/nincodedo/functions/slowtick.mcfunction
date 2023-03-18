@@ -5,4 +5,4 @@ execute as @e[type=minecraft:pillager,name=!"Salesman",limit=1] run data merge e
 
 execute as @e[type=minecraft:wandering_trader,limit=1,tag=!traderswap] run function nincodedo:quests/tradermap
 
-schedule function nincodedo:slowtick 5s replace
+schedule function nincodedo:slowtick 2s

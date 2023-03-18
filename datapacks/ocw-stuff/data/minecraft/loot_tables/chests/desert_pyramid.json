@@ -152,11 +152,6 @@
           ]
         },
         {
-          "type": "minecraft:loot_table",
-          "weight": 20,
-          "name": "nincodedo:ocw_books"
-        },
-        {
           "type": "minecraft:item",
           "weight": 20,
           "name": "minecraft:golden_apple"
@@ -267,6 +262,10 @@
         {
           "type": "minecraft:loot_table",
           "name": "nincodedo:ocw_map"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "nincodedo:ocw_books"
         }
       ]
     }
