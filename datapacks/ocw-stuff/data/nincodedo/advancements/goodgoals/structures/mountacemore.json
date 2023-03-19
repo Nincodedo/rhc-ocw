@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": [
+      {
+        "text": "Feel "
+      },
+      {
+        "text": "inspired!",
+        "italic": true
+      }
+    ],
+    "description": "From OCW RHC early maps, AceJon made it to inspire us (2021)",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:goodgoals/structures/any",
+  "criteria": {
+    "mountacemore": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:mountacemore"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mountacemore"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}

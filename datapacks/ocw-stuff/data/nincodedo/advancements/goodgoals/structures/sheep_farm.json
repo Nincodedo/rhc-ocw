@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:shears"
+    },
+    "title": "50,000 sheep used to live here, now it's a ghost town",
+    "description": "The sheep farm from last season's Hardcore series during the successful attempt (2021)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:goodgoals/structures/any",
+  "criteria": {
+    "sheep_farm": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:sheep_farm"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sheep_farm"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}

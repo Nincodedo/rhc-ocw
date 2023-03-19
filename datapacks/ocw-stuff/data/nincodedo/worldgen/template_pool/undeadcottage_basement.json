@@ -1,0 +1,82 @@
+{
+  "name": "nincodedo:undeadcottage_basement",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/world1_2/undeadcottage_basement",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:rule",
+              "rules": [
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:blockstate_match",
+                    "block_state": {
+                      "Name": "minecraft:torch"
+                    }
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                },
+                {
+                  "location_predicate": {
+                    "predicate_type": "minecraft:always_true"
+                  },
+                  "input_predicate": {
+                    "predicate_type": "minecraft:block_match",
+                    "block": "minecraft:wall_torch"
+                  },
+                  "output_state": {
+                    "Name": "minecraft:air"
+                  }
+                }
+              ]
+            },
+            {
+              "processor_type": "minecraft:protected_blocks",
+              "value": "#minecraft:doors"
+            },
+            {
+              "processor_type": "minecraft:block_rot",
+              "integrity": 0.7,
+              "rottable_blocks": [
+                "minecraft:cobblestone",
+                "minecraft:spruce_log",
+                "minecraft:stone",
+                "minecraft:oak_stairs",
+                "minecraft:ladder",
+                "minecraft:oak_log",
+                "minecraft:petrified_oak_slab",
+                "minecraft:furnace",
+                "minecraft:glass_pane",
+                "minecraft:glowstone",
+                "minecraft:oak_trapdoor"
+              ]
+            },
+            {
+              "processor_type": "minecraft:block_rot",
+              "integrity": 0.9,
+              "rottable_blocks": [
+                "minecraft:oak_planks",
+                "minecraft:bricks"
+              ]
+            },
+            {
+              "processor_type": "minecraft:block_age",
+              "mossiness": 0.2
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

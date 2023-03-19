@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416}"
+              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416}}"
             },
             {
               "function": "minecraft:set_enchantments",
@@ -28,6 +28,7 @@
               "entity": "this",
               "name": {
                 "text": "Undead's Night Vision Goggles",
+                "color": "dark_purple",
                 "italic": false
               }
             },
@@ -66,7 +67,8 @@
                 {
                   "text": "It seems only Undead knows how to use this."
                 }
-              ]
+              ],
+              "replace": false
             }
           ],
           "conditions": [

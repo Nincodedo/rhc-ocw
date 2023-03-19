@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bookshelf"
+    },
+    "title": "Smol Library",
+    "description": "From OCW Minecraft 1.9 Beta, the Refugee Camp, but I honestly do not know who built it (2011)",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:goodgoals/structures/any",
+  "criteria": {
+    "small_library": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:small_library"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "small_library"
+    ]
+  ],
+  "rewards": {
+    "experience": 50
+  }
+}

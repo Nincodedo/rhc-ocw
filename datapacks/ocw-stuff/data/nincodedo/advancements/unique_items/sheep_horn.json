@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner: {Id: [I; 769093600, -1959968053, -1514102921, 1462075729], Properties: {textures: [{Value: \"ewogICJ0aW1lc3RhbXAiIDogMTY3NzM1NDI1MTgwOSwKICAicHJvZmlsZUlkIiA6ICIyZGQ3NmZlMDhiMmQ0MmNiYTVjMDlmNzc1NzI1ODE1MSIsCiAgInByb2ZpbGVOYW1lIiA6ICJUcnk0c2UiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWM1NzQ2YzY5YWRjMzdlODZhNGFjMDdhNTNhNWYzZTI3MzBhOTk3NmRmZmE2MTgzYTM4NGQ2OWQxMzFlMjcyNSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\", Signature: \"LX+crVv8mBXzuO2tpe8fxsC1lIlDMMThl7B93aSBPROKCTKyHz5Z1LuInXKCr0Q4KpFVMejocmJlvHxXsnve7axj8AoCLGAGvopJy2zsHql7dW2OL01ZMPNRYoevw5b4SKm7OERQUO+LVVw7yiolV8UmLukdrxf8geb5R0MyZD0vIVRL+jwlKfYY8vLNFysMu57PNs0PRJ1AWOb8pUmYmtyYyJ4hfl4y3v5HyIsSFd0HXbi0pBGfTRSOk4Sc0e2KcZ7WIGmflKj7PpwgKIrO4qjYT6KJkqgIwwOOVwELPfbtLp3MUt5ME/OBvKBcfwvudRvZOFkPtjRUPP21qg3UcOdHQB2eH00xSuVWgvKRJwq27/I57Cah4C6lyWRMD0tu9IvOiixNU8y9kSsRP1gKpS2fTusDJjvxUe2eGQ/bb3TOzcAaUtVhnXw9m3/WcCM5eXBFssEPOPbQvI33uwhFDzn0jp4qM9ZF/BW7lKUImv13sIaZphKHMcAL7gvHWxyGD3Mre+PEjVCOxdTpzvpQA7605Rfp6BcWC52FAhQnVnStt2lSnNj95r1NIt6tvmAK0VwmffKouJPDbcutY9xkrKN7IjipEDva6lMONGIj7B2tskjsI2gl7N67t7RPSbvDk2mN0UHuOZnrqGiX2O5mFdncFeY+pb3T3KSr7e+VNss=\"}]}, Name: \"Try4se\"}}"
+    },
+    "title": "The Sheep Summoning Horn",
+    "description": "An army of rainbow sheep!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/initial_sheep_horn",
+  "criteria": {
+    "get_sheep_horn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"TH\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_sheep_horn"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:advancements/getsheephorn"
+  }
+}

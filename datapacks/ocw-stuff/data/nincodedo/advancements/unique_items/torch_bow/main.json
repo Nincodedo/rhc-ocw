@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bow"
+    },
+    "title": "The Torch Bow",
+    "description": "Shoot torches to light up areas long distance!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/torch_bow/initial",
+  "criteria": {
+    "get_torchbow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"TT\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_torchbow"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:advancements/gettorchbow"
+  }
+}

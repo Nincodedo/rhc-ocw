@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{instrument:\"minecraft:admire_goat_horn\",NinUnique:\"TH\",NinPowered:1,Enchantments:[{}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Sheep Summoning Horn",
+                "color": "dark_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "Summons an army of rainbow sheep."
+                },
+                {
+                  "text": "Only Try4se can control the horn."
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "global"
+                },
+                "score": "sheephorn"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/master_sword/initial",
+  "criteria": {
+    "get_mastersword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"MS\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_mastersword"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/mastersword"
+  }
+}

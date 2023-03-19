@@ -1,1 +1,1 @@
-scoreboard players set global mastersword 1
+scoreboard players set mastersword rhcdata 1

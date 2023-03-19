@@ -4,14 +4,14 @@
     {
       "rolls": {
         "type": "minecraft:uniform",
-        "min": 2,
-        "max": 7
+        "min": 3,
+        "max": 8
       },
       "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 10,
+          "weight": 3,
           "name": "minecraft:map"
         },
         {
@@ -23,8 +23,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1,
-                "max": 5
+                "min": 2,
+                "max": 7
               },
               "add": false
             }
@@ -38,8 +38,8 @@
             {
               "function": "minecraft:enchant_with_levels",
               "levels": {
-                "min": 10,
-                "max": 20
+                "min": 30,
+                "max": 40
               },
               "treasure": false
             }
@@ -54,8 +54,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "add": false
             }
@@ -70,16 +70,23 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1,
-                "max": 4
+                "min": 2,
+                "max": 6
               },
               "add": false
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
         {
           "type": "minecraft:loot_table",
-          "weight": 10,
           "name": "nincodedo:ocw_books"
         }
       ]

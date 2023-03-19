@@ -1,0 +1,17 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": "this",
+    "ops": [
+      {
+        "source": "Inventory[{tag:{NinUnique:\"TT\"}}].tag.StoredEnchantments",
+        "target": "Enchantments",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{NinPowered:1}"
+  }
+]

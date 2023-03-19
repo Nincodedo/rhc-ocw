@@ -57,12 +57,6 @@
             }
           ]
         }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:reference",
-          "name": "nincodedo:ocw_loot_chances"
-        }
       ]
     }
   ]

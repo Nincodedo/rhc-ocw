@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/iridium_rod/initial",
+  "criteria": {
+    "get_iridium_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"NR\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_iridium_rod"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/iridiumrod"
+  }
+}

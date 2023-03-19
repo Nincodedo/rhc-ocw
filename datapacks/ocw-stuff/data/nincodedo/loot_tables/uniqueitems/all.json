@@ -2,8 +2,7 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "rolls": 0,
-      "bonus_rolls": 1,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -18,9 +17,9 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "global"
+                      "name": "mastersword"
                     },
-                    "score": "mastersword"
+                    "score": "rhcdata"
                   },
                   "range": 0
                 }
@@ -39,6 +38,60 @@
                       "name": "global"
                     },
                     "score": "goggles"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/sheephorn",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "global"
+                    },
+                    "score": "sheephorn"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/iridiumrod",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "iridiumrod"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/torchbow",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "torchbow"
+                    },
+                    "score": "rhcdata"
                   },
                   "range": 0
                 }
