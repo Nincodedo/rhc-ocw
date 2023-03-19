@@ -10,9 +10,9 @@
     "salt": 1689777,
     "exclusion_zone": {
       "other_set": "minecraft:villages",
-      "chunk_count": 4
+      "chunk_count": 2
     },
-    "spacing": 124,
-    "separation": 62
+    "spacing": 50,
+    "separation": 25
   }
 }
