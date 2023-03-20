@@ -1,0 +1,29 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{NinUnique:\"BoatCompass\"}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text": "Your Boat Compass",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Keeps track of your boat's",
+        "color": "gray"
+      },
+      {
+        "text": "location when you get out.",
+        "color": "gray"
+      }
+    ],
+    "replace": true
+  }
+]

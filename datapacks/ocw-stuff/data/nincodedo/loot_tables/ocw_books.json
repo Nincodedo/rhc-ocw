@@ -60,36 +60,6 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 2\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Another type of portal?\nIt seems nether portals and the end portal are not the only types of interdimensional travel. Combining the magic essence within Lapis can form a portal as well. But the flint and steel does not seem to activate it...\"}']}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:written_book",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 3\",author:\"???\",generation:3,resolved:1b,pages:['{\"text\":\"Advanced Smelting\nThrough some experimentation it seems that its possible to process compressed raw ores. I need to do more research on this. Perhaps the local library will have more information on this...\"}']}"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:written_book",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 1
-            },
-            {
-              "function": "minecraft:set_nbt",
               "tag": "{title:\"Forbidden Wing\",author:\"Zedar\",generation:3,resolved:1b,pages:['{\"text\":\"It is a little-known fact that the library you now stand in is not the first library to exist in this location.\nBefore the arrival of the OCWers, when Skyfort Mishrak was still a mighty stronghold, a great library, perhaps ten times the size of the\"}','{\"text\":\"present structure, stood here. Its vast wings contained the sum of all the knowledge of the ancient civilizations. Unfortunately, the surrounding earth proved to be unstable, and the building was demolished beyond any hope of repair, with only a small\"}','{\"text\":\"section escaping unscathed, forming\nthe library as we know it today.\nYet rumors persist of another surviving section, known as The Forbidden Wing. It is said that this dark wing was hidden in the deepest depths of the ancient library, filled with \"}','{\"text\":\"knowledge of the oldest magic. The wing housed many powerful relics and thousands of tomes, waiting to give up their secrets to those with a lust for power and the skill to bend the magic to their will.\nHowever, it must be stated that the existence of The\"}','{\"text\":\"Forbidden Wing, much less its survival, is still only a rumor at this point. However, if it is still intact, it may not be far from the library.\nTo those who would seek it out, take caution. Having been buried in darkness for so long, it would no doubt be\"}','{\"text\":\"crawling with foul creatures. For those brave enough to face the danger, however, The Forbidden Wing, if it exists, may prove to be a great source of knowledge, and perhaps even greater treasure.\"}']}"
             }
           ]
@@ -106,6 +76,21 @@
             {
               "function": "minecraft:set_nbt",
               "tag": "{title:\"The Power of The Forbidden Wing\",author:\"???\",generation:2,resolved:1b,pages:['{\"text\":\"The Forbidden Wing of the library had long been ignored by the OCWers. They were off to different worlds and adventures. However, the dark magic in that wing of the library had never been defeated. In fact it was growing. Expanding.\"}','{\"text\":\"The Forbidden Wing expanded out in all directions, attempting to reclaim its former glory, restore its power, and get revenge on the OCWers that abandoned it.\"}','[{\"text\":\"Map to The Forbidden Wing\n\n\n\"},{\"text\":\"(Tear out the map? Click here)\",\"italic\":true,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function nincodedo:quests/librarymap\"}}]']}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{title:\"Lost Knowledge Vol 4\",author:\"The Inventor\",generation:1,resolved:1b,pages:['[{\"text\":\"My latest creation! The \\\\\"\"},{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\".\\\\\" The name might need some work. I have a Name Guy, they\\'ll come up with something good. They always do. Anyways, you just gotta surround a compass with boats in a crafting table and BAM. \",\"italic\":false},{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\".\",\"italic\":false}]','{\"text\":\"Name Guy is on it. It\\'ll be great.\"}']}"
             }
           ]
         }

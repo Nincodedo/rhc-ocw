@@ -1,4 +1,5 @@
 function nincodedo:uniqueitems/load
+function nincodedo:items/load
 
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger
