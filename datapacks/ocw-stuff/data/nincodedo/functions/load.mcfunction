@@ -4,6 +4,9 @@ function nincodedo:items/load
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger
 scoreboard players enable @a bannerplz
+scoreboard objectives add lookingatsmallflower dummy
+scoreboard objectives add lookingatsugarcane dummy
+scoreboard objectives add sugarcaneheight dummy
 execute store result score current_day rhcdata run time query day
 function nincodedo:setuplogbreakcount
 schedule function nincodedo:calculatelogbreak 10t
