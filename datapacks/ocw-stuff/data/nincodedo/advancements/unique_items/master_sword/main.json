@@ -6,7 +6,7 @@
     },
     "title": "The Master Sword",
     "description": "The Blade of Evil's Bane",
-    "frame": "challenge",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true

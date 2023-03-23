@@ -1,0 +1,2 @@
+execute as @p[nbt={Inventory:[{tag:{NinUnique:"MS",NinPowered:1}}]}] at @s run playsound nincodedo:mastersword.power_up player @a ^-.5 ^ ^ 1
+scoreboard players set masterswordfirst rhcdata 1
