@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/potion_horn/initial",
+  "criteria": {
+    "get_potion_horn": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"PS\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_potion_horn"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/potionhorn"
+  }
+}
