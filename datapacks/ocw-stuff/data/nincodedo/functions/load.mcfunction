@@ -4,6 +4,7 @@ function nincodedo:items/load
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger
 scoreboard players enable @a bannerplz
+scoreboard objectives add nopotionsplz trigger
 scoreboard objectives add lookingatsmallflower dummy
 scoreboard objectives add lookingatsugarcane dummy
 scoreboard objectives add sugarcaneheight dummy

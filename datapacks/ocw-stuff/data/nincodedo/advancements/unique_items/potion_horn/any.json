@@ -1,11 +1,12 @@
 {
+  "parent": "nincodedo:unique_items/potion_horn/initial",
   "criteria": {
-    "get_mastersword": {
+    "get_potion_horn": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "nbt": "{NinUnique:\"MS\"}"
+            "nbt": "{NinUnique:\"PS\"}"
           }
         ]
       }
@@ -13,10 +14,10 @@
   },
   "requirements": [
     [
-      "get_mastersword"
+      "get_potion_horn"
     ]
   ],
   "rewards": {
-    "function": "nincodedo:uniqueitems/mastersword"
+    "function": "nincodedo:uniqueitems/potionhorn"
   }
 }
