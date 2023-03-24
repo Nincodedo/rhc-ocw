@@ -26,7 +26,17 @@
               "entity": "this",
               "lore": [
                 {
-                  "text": "Share potion effects with everyone!"
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "Splash potions in the off hand"
+                },
+                {
+                  "text": "get shared with everyone that"
+                },
+                {
+                  "text": "hears the horn!"
                 },
                 {
                   "text": "Only ShokkZ knows how to use it."
