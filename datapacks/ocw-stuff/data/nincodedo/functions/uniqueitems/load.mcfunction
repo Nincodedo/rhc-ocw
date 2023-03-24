@@ -11,6 +11,7 @@ execute unless score mastersword rhcdata matches 1 run scoreboard players set ma
 execute unless score masterswordfirst rhcdata matches 1.. run scoreboard players set masterswordfirst rhcdata 0
 execute unless score global goggles matches 1 run scoreboard players set global goggles 0
 execute unless score global sheephorn matches 1 run scoreboard players set global sheephorn 0
+execute unless score potionhorn rhcdata matches 1 run scoreboard players set potionhorn rhcdata 0
 scoreboard players set config_torchbow_motion rhcdata 1
 scoreboard players set config_ms_cooldown rhcdata 40
 scoreboard players set config_ms_projlife rhcdata 30
