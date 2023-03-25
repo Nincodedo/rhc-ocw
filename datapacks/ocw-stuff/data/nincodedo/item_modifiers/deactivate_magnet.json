@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[]}"
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text": "Disabled",
+          "color": "red",
+          "italic": false
+        }
+      ],
+      [
+        {
+          "keybind": "key.sneak",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": " right click to ",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "enable",
+          "color": "green",
+          "italic": false
+        }
+      ]
+    ],
+    "replace": true
+  }
+]

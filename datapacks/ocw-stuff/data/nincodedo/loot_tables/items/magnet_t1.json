@@ -1,0 +1,78 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_star",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinUnique:\"Magnet\",NinTier:1,CustomModelData:1010101,Enchantments:[]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Basic Magnet",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "text": "Range: ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "score": {
+                      "name": "config_magnet_t1_range",
+                      "objective": "rhcdata"
+                    },
+                    "extra": [
+                      {
+                        "text": " blocks",
+                        "color": "gray",
+                        "italic": false
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "text": "Disabled",
+                    "color": "red",
+                    "italic": false
+                  }
+                ],
+                [
+                  {
+                    "keybind": "key.sneak",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": " right click to ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "enable",
+                    "color": "green",
+                    "italic": false
+                  }
+                ]
+              ],
+              "replace": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
