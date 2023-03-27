@@ -16,7 +16,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"small_flower_interaction\"]}"
+              "nbt": "{Tags:[\"sugar_cane_interaction\"]}"
             }
           }
         ]
@@ -24,6 +24,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:interaction/small_flowers/use_bone_meal"
+    "function": "nincodedo:interaction/bone_meal/sugar_cane/use_bone_meal"
   }
 }

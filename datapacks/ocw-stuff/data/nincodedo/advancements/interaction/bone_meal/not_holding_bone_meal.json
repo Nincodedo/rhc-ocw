@@ -27,6 +27,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:interaction/small_flowers/remove_tag"
+    "function": "nincodedo:interaction/bone_meal/remove_tag"
   }
 }

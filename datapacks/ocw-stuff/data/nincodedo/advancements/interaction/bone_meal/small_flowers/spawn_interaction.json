@@ -11,13 +11,15 @@
               "target": "this",
               "score": "lookingatsmallflower"
             },
-            "range": 0
+            "range": {
+              "min": 1
+            }
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "nincodedo:interaction/small_flowers/remove_interaction"
+    "function": "nincodedo:interaction/bone_meal/small_flowers/spawn_interaction"
   }
 }

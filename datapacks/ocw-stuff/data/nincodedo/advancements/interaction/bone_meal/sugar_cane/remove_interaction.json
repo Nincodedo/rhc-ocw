@@ -9,17 +9,15 @@
             "value": {
               "type": "minecraft:score",
               "target": "this",
-              "score": "lookingatsmallflower"
+              "score": "lookingatsugarcane"
             },
-            "range": {
-              "min": 1
-            }
+            "range": 0
           }
         ]
       }
     }
   },
   "rewards": {
-    "function": "nincodedo:interaction/small_flowers/spawn_interaction"
+    "function": "nincodedo:interaction/bone_meal/sugar_cane/remove_interaction"
   }
 }

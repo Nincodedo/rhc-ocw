@@ -21,4 +21,4 @@ execute at @e[tag=small_flower_interaction,sort=nearest,limit=1] run particle mi
 
 kill @e[tag=place_flower,distance=..8]
 
-advancement revoke @s only nincodedo:interaction/small_flowers/bone_meal_on_flower
+advancement revoke @s only nincodedo:interaction/bone_meal/small_flowers/bone_meal_on_flower

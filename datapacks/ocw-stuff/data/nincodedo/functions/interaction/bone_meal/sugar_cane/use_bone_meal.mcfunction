@@ -11,4 +11,4 @@ execute if score @s sugarcaneheight matches 1..2 at @e[tag=sugar_cane_interactio
 execute if score @s sugarcaneheight matches 1 at @e[tag=sugar_cane_interaction,sort=nearest,limit=1] unless block ~ ~2 ~ minecraft:sugar_cane run setblock ~ ~2 ~ minecraft:sugar_cane
 execute if score @s sugarcaneheight matches 1..2 at @e[tag=sugar_cane_interaction,sort=nearest,limit=1] run particle minecraft:happy_villager ~ ~.5 ~ 0.25 0.25 0.25 .75 9
 
-advancement revoke @s only nincodedo:interaction/sugar_cane/bone_meal_on_sugar_cane
+advancement revoke @s only nincodedo:interaction/bone_meal/sugar_cane/bone_meal_on_sugar_cane
