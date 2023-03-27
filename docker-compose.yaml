@@ -79,7 +79,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-mc
-    image: ghcr.io/nincodedo/rhc-ocw-mc:latest
+    image: ghcr.io/nincodedo/rhc-ocw-mc:unstable
     env_file:
       - motd_override.env
       - docker.env
@@ -122,7 +122,7 @@ services:
       dockerfile: Dockerfile-log-watcher
       labels:
         - "com.centurylinklabs.watchtower.enable=false"
-    image: ghcr.io/nincodedo/rhc-ocw:latest
+    image: ghcr.io/nincodedo/rhc-ocw:unstable
     container_name: log-watcher-test
     env_file:
       - docker.env
