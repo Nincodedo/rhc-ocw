@@ -1,11 +1,8 @@
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-name: Main Build
+    tags:
+      - "*"
+name: Release Build
 jobs:
   buildlw:
     name: Build Log Watcher
@@ -31,8 +28,9 @@ jobs:
           push: true
           provenance: false
           tags: |
-            ghcr.io/nincodedo/rhc-ocw:unstable
+            ghcr.io/nincodedo/rhc-ocw:latest
             ghcr.io/nincodedo/rhc-ocw:${{ github.sha }}
+            ghcr.io/nincodedo/rhc-ocw:${{ github.ref_name }}
   buildmc:
     name: Build Minecraft
     runs-on: ubuntu-latest
@@ -57,5 +55,6 @@ jobs:
           push: true
           provenance: false
           tags: |
-            ghcr.io/nincodedo/rhc-ocw-mc:unstable
+            ghcr.io/nincodedo/rhc-ocw-mc:latest
             ghcr.io/nincodedo/rhc-ocw-mc:${{ github.sha }}
+            ghcr.io/nincodedo/rhc-ocw-mc:${{ github.ref_name }}
