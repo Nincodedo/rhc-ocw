@@ -14,7 +14,7 @@ RUN cd /datapacks/ocw-stuff \
 
 FROM itzg/minecraft-server:latest
 
-ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,compass-ribbon,rightclickharvest,memoryleakfix,servertick,mc-server-description
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,compass-ribbon,rightclickharvest,rei,memoryleakfix,servertick,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
 RUN mkdir -p /datapacks
