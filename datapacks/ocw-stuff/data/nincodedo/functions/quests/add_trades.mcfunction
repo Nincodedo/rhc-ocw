@@ -6,3 +6,4 @@ execute store result score traderng rhcdata run loot spawn ~ ~ ~ loot nincodedo:
 
 execute if score traderng rhcdata matches 2 run function nincodedo:quests/add_map_trade
 execute if score traderng rhcdata matches 3.. run function nincodedo:quests/add_pickaxe_trade
+tellraw @a[tag=debug_logging] [{"text":"[Debug] "},{"selector":"@s"},{"text":" spawned at "},{"nbt":"Pos","entity":"@s"}]
