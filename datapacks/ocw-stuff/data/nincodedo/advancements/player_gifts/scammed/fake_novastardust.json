@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitynovastardust"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentitynovastardust"
+            }
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "nincodedo:is/entity/wearing/novastardust_player_head"
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:bone_block",
+            "minecraft:bone"
+          ]
+        }
+      }
+    }
+  }
+}
