@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isplayerinboat"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:items/boatcompass/out_boat"
+  }
+}

@@ -5,7 +5,4 @@ data merge entity @e[type=minecraft:pillager,name=!"Salesman",limit=1] {CustomNa
 
 execute as @e[type=minecraft:wandering_trader,limit=1,tag=!traderswap] run function nincodedo:quests/tradermap
 
-scoreboard players set @a[predicate=nincodedo:isplayerinboat] inboat 1
-scoreboard players set @a[predicate=!nincodedo:isplayerinboat] inboat 0
-
 schedule function nincodedo:slowtick 2s
