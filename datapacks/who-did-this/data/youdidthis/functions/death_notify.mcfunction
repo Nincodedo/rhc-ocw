@@ -13,3 +13,4 @@ execute as @s run summon minecraft:lightning_bolt ~5 ~ ~
 execute in minecraft:overworld run weather thunder
 scoreboard players add youdidthis rhcdata 1
 execute if score youdidthis rhcdata matches 1 run function youdidthis:create_countdown
+schedule function youdidthis:schedule_text 1t
