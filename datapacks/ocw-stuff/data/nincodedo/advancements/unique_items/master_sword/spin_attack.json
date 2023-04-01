@@ -22,7 +22,7 @@
             "predicate": {
               "nbt": "{SelectedItem:{tag:{NinUnique:\"MS\",NinPowered:1}}}",
               "flags": {
-                "is_sneaking": false
+                "is_sneaking": true
               }
             }
           },
@@ -45,6 +45,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:uniqueitems/abilities/mastersword/shoot"
+    "function": "nincodedo:uniqueitems/abilities/mastersword/spin_attack"
   }
 }

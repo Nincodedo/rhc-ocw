@@ -75,7 +75,39 @@
       },
       {
         "text": "the Hero of Metal."
-      }
+      },
+      {
+        "keybind": "key.use",
+        "color": "gray",
+        "italic": true,
+        "extra": [
+          {
+            "text": ": Sword Beam"
+          }
+        ]
+      },
+      [
+        {
+          "keybind": "key.sneak",
+          "color": "gray",
+          "italic": true,
+          "extra": [
+            {
+              "text": " + ",
+              "color": "gray"
+            }
+          ]
+        },
+        {
+          "keybind": "key.use",
+          "italic": true,
+          "extra": [
+            {
+              "text": ": Spin Attack"
+            }
+          ]
+        }
+      ]
     ],
     "replace": true
   }
