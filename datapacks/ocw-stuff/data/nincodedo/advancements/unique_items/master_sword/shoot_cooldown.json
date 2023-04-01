@@ -10,9 +10,6 @@
             "scores": {
               "used_ms": {
                 "min": 1
-              },
-              "health": {
-                "min": 20
               }
             }
           },
@@ -24,18 +21,32 @@
             }
           },
           {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "ms_cooldown"
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "ms_cooldown"
+                  },
+                  "score": "rhcdata"
+                },
+                "range": {
+                  "min": 1
+                }
               },
-              "score": "rhcdata"
-            },
-            "range": {
-              "min": 1
-            }
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "health": {
+                    "max": 19
+                  }
+                }
+              }
+            ]
           }
         ]
       }
