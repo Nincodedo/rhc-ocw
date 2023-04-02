@@ -1,4 +1,24 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_axe",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": [
+      {
+        "text": "Deforestation is "
+      },
+      {
+        "text": "rad",
+        "italic": true
+      }
+    ],
+    "description": "Cut down a bunch of trees",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/goodgoals/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

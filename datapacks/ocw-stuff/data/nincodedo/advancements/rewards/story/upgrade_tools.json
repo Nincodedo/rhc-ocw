@@ -1,4 +1,21 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_pickaxe",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "advancements.story.upgrade_tools.title"
+    },
+    "description": {
+      "translate": "advancements.story.upgrade_tools.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:story/mine_stone",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

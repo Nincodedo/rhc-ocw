@@ -1,4 +1,21 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_sword",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "advancements.adventure.kill_a_mob.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.kill_a_mob.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/adventure/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

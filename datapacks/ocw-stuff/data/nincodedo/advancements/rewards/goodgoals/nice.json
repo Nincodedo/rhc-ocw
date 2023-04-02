@@ -1,4 +1,15 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond"
+    },
+    "title": "Nice",
+    "description": "Ring a bell 69 times",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/goodgoals/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

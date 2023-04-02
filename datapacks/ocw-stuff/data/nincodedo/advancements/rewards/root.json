@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": "Next Attempt Rewards",
+    "description": "Complete advancements in this attempt to receive rewards at the beginning of the next!",
+    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

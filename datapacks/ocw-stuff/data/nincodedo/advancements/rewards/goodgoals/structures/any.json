@@ -1,4 +1,17 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_boots",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": "Is that an old decrepit shack? Neat!",
+    "description": "Find any OCW structure",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/goodgoals/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

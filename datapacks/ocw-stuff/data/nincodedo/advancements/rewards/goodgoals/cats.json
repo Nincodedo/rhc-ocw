@@ -1,4 +1,15 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:cod"
+    },
+    "title": "Cats Cats Cats Cats",
+    "description": "Cat + Cat = Cat",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/goodgoals/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

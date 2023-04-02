@@ -1,4 +1,16 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:cookie"
+    },
+    "title": "Smart Cookie",
+    "description": "Craft a shield by the end of the first day",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/goodgoals/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"

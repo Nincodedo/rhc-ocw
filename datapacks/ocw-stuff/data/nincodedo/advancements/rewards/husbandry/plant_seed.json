@@ -1,4 +1,21 @@
 {
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_hoe",
+      "nbt": "{Enchantments:[{}]}"
+    },
+    "title": {
+      "translate": "advancements.husbandry.plant_seed.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.plant_seed.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:rewards/husbandry/root",
   "criteria": {
     "nop": {
       "trigger": "minecraft:impossible"
