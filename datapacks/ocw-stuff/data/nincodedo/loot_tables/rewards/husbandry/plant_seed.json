@@ -9,6 +9,10 @@
           "name": "minecraft:golden_hoe",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            },
+            {
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "type": "minecraft:score",

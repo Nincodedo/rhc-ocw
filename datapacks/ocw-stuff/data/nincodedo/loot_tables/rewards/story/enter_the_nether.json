@@ -5,7 +5,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:lava_bucket"
+          "name": "minecraft:lava_bucket",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            }
+          ]
         }
       ]
     }

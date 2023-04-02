@@ -12,6 +12,10 @@
               "name": "minecraft:cod",
               "functions": [
                 {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinReward:1}"
+                },
+                {
                   "function": "minecraft:set_count",
                   "count": {
                     "min": 1,
@@ -30,6 +34,10 @@
               "type": "minecraft:item",
               "name": "minecraft:salmon",
               "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinReward:1}"
+                },
                 {
                   "function": "minecraft:set_count",
                   "count": {

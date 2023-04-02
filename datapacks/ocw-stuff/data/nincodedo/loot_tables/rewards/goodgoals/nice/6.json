@@ -9,11 +9,15 @@
           "name": "minecraft:dirt",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            },
+            {
               "function": "minecraft:set_lore",
               "entity": "this",
               "lore": [
                 {
-                  "text": "Ni"
+                  "text": "Nice"
                 }
               ]
             },
@@ -33,11 +37,15 @@
           "name": "minecraft:dirt",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            },
+            {
               "function": "minecraft:set_lore",
               "entity": "this",
               "lore": [
                 {
-                  "text": "ce"
+                  "text": "Nice"
                 }
               ]
             },

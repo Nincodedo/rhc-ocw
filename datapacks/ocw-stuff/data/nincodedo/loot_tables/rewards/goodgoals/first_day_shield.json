@@ -9,6 +9,10 @@
           "name": "minecraft:cookie",
           "functions": [
             {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
                 "min": 1,
