@@ -6,27 +6,192 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 6,
           "name": "minecraft:map",
           "functions": [
             {
               "function": "minecraft:exploration_map",
-              "destination": "nincodedo:on_ocw_treasure_maps",
+              "destination": "nincodedo:is_cave_base",
               "decoration": "blue_marker",
               "zoom": 3,
               "skip_existing_chunks": false
             },
             {
               "function": "minecraft:set_name",
+              "entity": "this",
               "name": {
-                "text": "Ancient OCW Structure Map"
+                "text": "Ancient OCW Structure Map",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "There's a picture of a small round"
+                },
+                {
+                  "text": "blue blob thing on the back of the map."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:is_desert_tower",
+              "decoration": "blue_marker",
+              "zoom": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Ancient OCW Structure Map",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "The entire map is covered in sand."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:is_metal_links_house",
+              "decoration": "blue_marker",
+              "zoom": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Ancient OCW Structure Map",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "There's a picture on the back: "
+                },
+                {
+                  "text": "  △",
+                  "color": "gold",
+                  "italic": false
+                },
+                {
+                  "text": "△ △",
+                  "color": "gold",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:is_sheep_farm",
+              "decoration": "blue_marker",
+              "zoom": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": [
+                {
+                  "text": "Anci",
+                  "color": "red",
+                  "italic": false,
+                  "extra": [
+                    {
+                      "text": "ent ",
+                      "color": "orange",
+                      "extra": [
+                        {
+                          "text": "OCW ",
+                          "color": "yellow",
+                          "extra": [
+                            {
+                              "text": "Stru",
+                              "color": "green",
+                              "extra": [
+                                {
+                                  "text": "ctur",
+                                  "color": "blue",
+                                  "extra": [
+                                    {
+                                      "text": "e Map",
+                                      "color": "purple"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:map",
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:fire_protection": 1
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "nincodedo:is_undeads_cottage",
+              "decoration": "blue_marker",
+              "zoom": 3,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Ancient OCW Structure Map",
+                "italic": false
               }
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "quality": 10,
+          "quality": 5,
           "name": "minecraft:map",
           "functions": [
             {
@@ -40,7 +205,8 @@
               "function": "minecraft:set_name",
               "name": {
                 "text": "Ancient OCW Structure Map",
-                "color": "gold"
+                "color": "gold",
+                "italic": false
               }
             },
             {
