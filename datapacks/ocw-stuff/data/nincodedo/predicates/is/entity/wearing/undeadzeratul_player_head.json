@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "items": [
+          "minecraft:player_head"
+        ],
+        "nbt": "{SkullOwner: {Id: [I; -223431324, 1556303093, -1412706370, -1585750994]}}"
+      }
+    }
+  }
+}

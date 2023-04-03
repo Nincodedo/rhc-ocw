@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentityundeadzeratul"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentityundeadzeratul"
+            }
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "nincodedo:is/entity/wearing/undeadzeratul_player_head"
+          }
+        ],
+        "item": {
+          "items": [
+            "minecraft:scaffolding"
+          ]
+        }
+      }
+    }
+  }
+}
