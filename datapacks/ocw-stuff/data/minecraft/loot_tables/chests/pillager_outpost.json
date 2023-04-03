@@ -207,10 +207,6 @@
                     "score": "rhcdata"
                   },
                   "range": 0
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.1
                 }
               ]
             },
