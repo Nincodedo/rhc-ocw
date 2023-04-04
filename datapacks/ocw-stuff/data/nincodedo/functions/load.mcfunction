@@ -12,4 +12,4 @@ schedule function nincodedo:calculatelogbreak 10t
 schedule function nincodedo:slowtick 5s
 gamerule maxEntityCramming 8
 gamerule playersSleepingPercentage 60
-scoreboard players set config_debug rhcdata 0
+scoreboard players set config_debug rhcconfig 0

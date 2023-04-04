@@ -12,6 +12,6 @@ execute as @e[tag=spin_attack_sword] at @s positioned ^ ^ ^1 if block ~ ~ ~ #nin
 execute as @e[tag=spin_attack_sword] at @s positioned ^ ^ ^2 if block ~ ~ ~ #nincodedo:any_grass run setblock ~ ~ ~ minecraft:air destroy
 execute as @e[tag=spin_attack_sword] at @s positioned ^ ^ ^3 if block ~ ~ ~ #nincodedo:any_grass run setblock ~ ~ ~ minecraft:air destroy
 
-execute as @e[tag=spin_attack] if score @s spin_attack_life > config_ms_spinatklife rhcdata run kill @s
+execute as @e[tag=spin_attack] if score @s spin_attack_life > config_ms_spinatklife rhcconfig run kill @s
 execute if entity @e[tag=spin_attack] run schedule function nincodedo:uniqueitems/abilities/mastersword/spin_attack_animate 1t
 execute unless entity @e[tag=spin_attack] run tag @p[tag=spin_attacker] remove spin_attacker
