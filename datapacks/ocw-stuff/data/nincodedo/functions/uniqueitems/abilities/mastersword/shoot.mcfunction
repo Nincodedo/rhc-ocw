@@ -1,4 +1,4 @@
-execute store result score ms_cooldown rhcdata run scoreboard players get config_ms_cooldown rhcdata
+execute store result score ms_cooldown rhcdata run scoreboard players get config_ms_cooldown rhcconfig
 schedule function nincodedo:uniqueitems/abilities/mastersword/cooldown 1t
 summon marker ~ ~ ~ {Tags:["direction"]}
 execute as @e[tag=direction,limit=1] positioned 0.0 0.0 0.0 run function nincodedo:uniqueitems/abilities/get_motion

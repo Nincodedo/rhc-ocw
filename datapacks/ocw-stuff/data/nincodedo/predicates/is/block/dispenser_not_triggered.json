@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "block": {
+      "blocks": [
+        "minecraft:dispenser"
+      ],
+      "state": {
+        "triggered": false
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ scoreboard objectives add used_th minecraft.used:minecraft.goat_horn
 scoreboard objectives add projectilelife dummy
 scoreboard objectives add arrowshot minecraft.used:minecraft.bow
 scoreboard objectives add spin_attack_life dummy
+scoreboard objectives add nopotionsplz trigger
 
 execute unless score torchbow rhcdata matches 1 run scoreboard players set torchbow rhcdata 0
 execute unless score iridiumrod rhcdata matches 1 run scoreboard players set iridiumrod rhcdata 0
@@ -13,8 +14,8 @@ execute unless score masterswordfirst rhcdata matches 1.. run scoreboard players
 execute unless score global goggles matches 1 run scoreboard players set global goggles 0
 execute unless score global sheephorn matches 1 run scoreboard players set global sheephorn 0
 execute unless score potionhorn rhcdata matches 1 run scoreboard players set potionhorn rhcdata 0
-scoreboard players set config_torchbow_motion rhcdata 1
-scoreboard players set config_ms_cooldown rhcdata 40
-scoreboard players set config_ms_projlife rhcdata 30
-scoreboard players set config_ms_spinatklife rhcdata 20
+scoreboard players set config_torchbow_motion rhcconfig 1
+scoreboard players set config_ms_cooldown rhcconfig 40
+scoreboard players set config_ms_projlife rhcconfig 30
+scoreboard players set config_ms_spinatklife rhcconfig 20
 scoreboard players set ms_cooldown rhcdata 0

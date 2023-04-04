@@ -1,4 +1,4 @@
-execute store result score ms_cooldown rhcdata run scoreboard players get config_ms_cooldown rhcdata
+execute store result score ms_cooldown rhcdata run scoreboard players get config_ms_cooldown rhcconfig
 schedule function nincodedo:uniqueitems/abilities/mastersword/cooldown 1t
 tag @s add spin_attacker
 summon minecraft:item_display ~ ~ ~ {Tags:["spin_attack_sword","spin_attack"],interpolation_duration:0,item_display:"none",item:{id:"minecraft:diamond_sword",Count:1b,tag:{CustomModelData:2020202,Enchantments:[{}]}}}
