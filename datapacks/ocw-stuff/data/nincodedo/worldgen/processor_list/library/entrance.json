@@ -15,6 +15,19 @@
           "output_state": {
             "Name": "minecraft:oak_planks"
           }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "minecraft:redstone_wall_torch",
+            "probability": 0.9
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
         }
       ]
     },
