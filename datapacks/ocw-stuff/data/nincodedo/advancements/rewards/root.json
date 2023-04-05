@@ -5,7 +5,7 @@
     },
     "title": "Next Attempt Rewards",
     "description": "Complete advancements in this attempt to receive rewards at the beginning of the next!",
-    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+    "background": "minecraft:textures/block/birch_planks.png",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

@@ -5,7 +5,7 @@
     },
     "title": "Unique Items",
     "description": "Powerful rare items",
-    "background": "minecraft:textures/gui/advancements/backgrounds/end.png",
+    "background": "minecraft:textures/block/sandstone_top.png",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
