@@ -3,8 +3,17 @@
     "icon": {
       "item": "minecraft:totem_of_undying"
     },
-    "title": "You should have died",
-    "description": "That fall should have killed you",
+    "title": {
+      "text": "You could have ",
+      "italic": false,
+      "extra": [
+        {
+          "text": "died",
+          "italic": true
+        }
+      ]
+    },
+    "description": "That fall could have killed you",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
