@@ -12,7 +12,7 @@ RUN cd /datapacks/ocw-stuff \
   && zip -r who-did-this.zip . \
   && mv who-did-this.zip /datapacks
 
-FROM itzg/minecraft-server:latest
+FROM itzg/minecraft-server:2023.3.0
 
 ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,rightclickharvest,rei,memoryleakfix,servertick,mc-server-description
 
@@ -31,3 +31,5 @@ ENV PATCH_DEFINITIONS=/patches
 ENV REPLACE_ENV_VARIABLES=true
 ENV REPLACE_ENV_DURING_SYNC=true
 ENV SYNC_SKIP_NEWER_IN_DESTINATION=false
+
+LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
