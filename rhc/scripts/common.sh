@@ -4,7 +4,7 @@ log() {
 }
 
 rcon_command() {
-  docker exec "$MC_CONTAINER_NAME" rcon-cli --password minecraft --port 25575 "$1"
+  docker exec "$MC_CONTAINER_NAME" rcon-cli "$1"
 }
 
 script_name=""
