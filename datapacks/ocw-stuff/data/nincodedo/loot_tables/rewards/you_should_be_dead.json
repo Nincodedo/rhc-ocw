@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:advancement_reward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_book",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinReward:1}"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:feather_falling": {
+                  "min": 1,
+                  "max": 4
+                }
+              },
+              "add": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

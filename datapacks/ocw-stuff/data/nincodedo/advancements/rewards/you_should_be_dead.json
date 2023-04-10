@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": {
+      "text": "You could have ",
+      "italic": false,
+      "extra": [
+        {
+          "text": "died",
+          "italic": true
+        }
+      ]
+    },
+    "description": "That fall could have killed you",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:rewards/root",
+  "criteria": {
+    "nop": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "loot": [
+      "nincodedo:rewards/you_should_be_dead"
+    ]
+  }
+}
