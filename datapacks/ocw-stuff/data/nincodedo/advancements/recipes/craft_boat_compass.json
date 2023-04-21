@@ -1,9 +1,9 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe": "nincodedo:boat_compass"
+        "recipe_id": "nincodedo:boat_compass"
       }
     }
   },

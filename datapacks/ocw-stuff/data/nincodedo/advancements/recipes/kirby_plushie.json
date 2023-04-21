@@ -1,9 +1,9 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe": "nincodedo:kirby_plushie"
+        "recipe_id": "nincodedo:kirby_plushie"
       }
     }
   },
