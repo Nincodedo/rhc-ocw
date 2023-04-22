@@ -10,4 +10,4 @@ When any player dies, it is announced to everyone on the server. The Overworld's
 
 ### OCW Features
 
-There are a lot of additional custom features added for the OCW community in the [ocw-stuff datapack](../datapacks/ocw-stuff/). It can be safely removed if you're only looking for the RHC content. [Full details on the OCW features can be found here](ocw/index.md).
+There are a lot of additional custom features added for the OCW community in the [ocw-stuff datapack](https://github.com/Nincodedo/rhc-ocw/tree/main/datapacks/ocw-stuff). It can be safely removed if you're only looking for the RHC content. [Full details on the OCW features can be found here](ocw/index.md).
