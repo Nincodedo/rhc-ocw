@@ -37,13 +37,13 @@ Straight from the Legend of Zelda, The Master Sword is a diamond sword equivilan
 
 Default key: Use (Right click)
 
-![A video of Minecraft. The player is holding a sword and facing a Creeper. The player's sword is the Master Sword and they are shooting sword beams at the Creeper. After 4 hits, the Creeper dies.](/docs/images/sword_beam_demo.gif)
+![A video of Minecraft. The player is holding a sword and facing a Creeper. The player's sword is the Master Sword and they are shooting sword beams at the Creeper. After 4 hits, the Creeper dies.](/images/sword_beam_demo.gif)
 
 #### Spin Attack
 
 Default key: Sneak + Use (Right click)
 
-![A video of Minecraft. The player is holding a sword and facing a Creeper. The player's sword is the Master Sword. The player crouches near the Creeper and spins the Master Sword around themselves, damaging the Creeper. The player does this twice, before killing the Creeper with a regular sword attack.](/docs/images/spin_attack_demo.gif)
+![A video of Minecraft. The player is holding a sword and facing a Creeper. The player's sword is the Master Sword. The player crouches near the Creeper and spins the Master Sword around themselves, damaging the Creeper. The player does this twice, before killing the Creeper with a regular sword attack.](/images/spin_attack_demo.gif)
 
 ### Night Vision Helmet
 
