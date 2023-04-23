@@ -33,6 +33,6 @@
     ]
   ],
   "rewards": {
-    "function": "youdidthis:create_end_countdown"
+    "function": "youdidthis:small_celebration"
   }
 }
