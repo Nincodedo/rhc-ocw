@@ -10,13 +10,16 @@ RUN cd /datapacks/ocw-stuff \
   && mv ocw-stuff.zip /datapacks \
   && cd /datapacks/who-did-this \
   && zip -r who-did-this.zip . \
-  && mv who-did-this.zip /datapacks
+  && mv who-did-this.zip /datapacks \
+  && cd /datapacks/bedrock-bone-meal \
+  && zip -r bedrock-bone-meal.zip . \
+  && mv bedrock-bone-meal.zip /datapacks
 
 FROM itzg/minecraft-server:2023.3.0
 
 ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,rightclickharvest,rei,memoryleakfix,servertick,mc-server-description
 
-ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip
+ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip
 RUN mkdir -p /datapacks
 COPY --from=build /datapacks/*.zip /datapacks
 
