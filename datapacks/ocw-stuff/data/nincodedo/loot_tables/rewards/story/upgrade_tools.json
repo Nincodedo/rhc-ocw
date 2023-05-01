@@ -29,9 +29,10 @@
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:vanishing_curse": 2
+                "minecraft:vanishing_curse": 2,
+                "minecraft:silk_touch": 0
               },
-              "add": true
+              "add": false
             },
             {
               "function": "minecraft:set_lore",
