@@ -126,17 +126,19 @@ while :; do
   log "Minecraft seed: $seed"
   current_datetime=$(date +"%d-%m-%Y %I:%M:%S %p")
   echo "$current_datetime $seed" >>"$seed_log_name"
+  high_score=$(sort -n -r "$mc_days_survived_log_name" | head -n 1)
+  previous_attempt=$((attempt_number-1))
+  rcon_command "scoreboard players set AttemptCount rhcdata $attempt_number" >/dev/null
+  rcon_command "scoreboard players set HighScore rhcdata $high_score" >/dev/null
+  rcon_command "scoreboard players set PrevAttempt rhcdata $previous_attempt" >/dev/null
+  rcon_command "datapack disable 'file/ocw-stuff.zip'" >/dev/null
+  rcon_command "datapack enable 'file/ocw-stuff.zip'" >/dev/null
+  rcon_command "reload" >/dev/null
   if [ "$death_reset" = "true" ]; then
     discord_webhook_send "Server is up for attempt #$attempt_number" ""
   fi
   death_reset=false
   setup_background_scripts
-  high_score=$(sort -n -r "$mc_days_survived_log_name" | head -n 1)
-  rcon_command "scoreboard players set AttemptCount rhcdata $attempt_number" >/dev/null
-  rcon_command "scoreboard players set HighScore rhcdata $high_score" >/dev/null
-  rcon_command "datapack disable 'file/ocw-stuff.zip'"
-  rcon_command "datapack enable 'file/ocw-stuff.zip'"
-  rcon_command "reload"
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
   world_ending_announcements

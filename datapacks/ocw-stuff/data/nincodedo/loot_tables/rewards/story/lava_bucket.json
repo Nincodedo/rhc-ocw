@@ -17,6 +17,23 @@
                 "min": 1,
                 "max": 10
               }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "A reward from attempt #",
+                  "extra": [
+                    {
+                      "score": {
+                        "name": "PrevAttempt",
+                        "objective": "rhcdata"
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

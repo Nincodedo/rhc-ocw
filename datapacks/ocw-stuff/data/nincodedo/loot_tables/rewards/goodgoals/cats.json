@@ -18,9 +18,26 @@
                 {
                   "function": "minecraft:set_count",
                   "count": {
-                    "min": 1,
-                    "max": 5
+                    "min": 3,
+                    "max": 8
                   }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "A reward from attempt #",
+                      "extra": [
+                        {
+                          "score": {
+                            "name": "PrevAttempt",
+                            "objective": "rhcdata"
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               ],
               "conditions": [
@@ -41,9 +58,26 @@
                 {
                   "function": "minecraft:set_count",
                   "count": {
-                    "min": 1,
-                    "max": 5
+                    "min": 3,
+                    "max": 8
                   }
+                },
+                {
+                  "function": "minecraft:set_lore",
+                  "entity": "this",
+                  "lore": [
+                    {
+                      "text": "A reward from attempt #",
+                      "extra": [
+                        {
+                          "score": {
+                            "name": "PrevAttempt",
+                            "objective": "rhcdata"
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }

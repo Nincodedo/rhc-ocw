@@ -52,6 +52,17 @@
               "lore": [
                 {
                   "text": "Disappears after the first night"
+                },
+                {
+                  "text": "A reward from attempt #",
+                  "extra": [
+                    {
+                      "score": {
+                        "name": "PrevAttempt",
+                        "objective": "rhcdata"
+                      }
+                    }
+                  ]
                 }
               ]
             }

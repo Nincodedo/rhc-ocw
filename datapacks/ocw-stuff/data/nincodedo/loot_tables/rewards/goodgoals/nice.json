@@ -61,6 +61,17 @@
                   "lore": [
                     {
                       "text": "Nice"
+                    },
+                    {
+                      "text": "A reward from attempt #",
+                      "extra": [
+                        {
+                          "score": {
+                            "name": "PrevAttempt",
+                            "objective": "rhcdata"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
