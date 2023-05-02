@@ -13,139 +13,21 @@
   },
   "parent": "nincodedo:player_gifts/root",
   "criteria": {
-    "all_nin": {
-      "trigger": "minecraft:tick",
+    "allish": {
+      "trigger": "minecraft:location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:entity_properties",
+            "condition": "minecraft:entity_scores",
             "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/nin_gifts/root": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "all_metal": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/metal_gifts/root": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "all_nova": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/nova_gifts/root": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "all_try4se": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/try4se_gifts/root": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "all_undead": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/undead_gifts/root": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "all_tunasz": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "nincodedo:player_gifts/tunasz_gifts/root": true
-                }
+            "scores": {
+              "ocwplayergiftcount": {
+                "min": 5
               }
             }
           }
         ]
       }
     }
-  },
-  "requirements": [
-    [
-      "all_nova"
-    ],
-    [
-      "all_try4se"
-    ],
-    [
-      "all_undead"
-    ],
-    [
-      "all_metal"
-    ],
-    [
-      "all_nin"
-    ],
-    [
-      "all_tunasz"
-    ]
-  ]
+  }
 }
