@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:piston"
+    },
+    "title": "Push push",
+    "description": "Sticky? Not sticky? Either is fine",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nincodedo:player_gifts/shokkz_gifts/root",
+  "criteria": {
+    "give_shokkz_piston": {
+      "trigger": "minecraft:thrown_item_picked_up_by_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "nincodedo:isentityshokkz"
+            }
+          }
+        ],
+        "entity": {
+          "type": "minecraft:player",
+          "nbt": "{UUID:[I;-1821251562,-110607629,-1745842003,-154273168]}"
+        },
+        "item": {
+          "items": [
+            "minecraft:piston",
+            "minecraft:sticky_piston"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "give_shokkz_piston"
+    ]
+  ]
+}

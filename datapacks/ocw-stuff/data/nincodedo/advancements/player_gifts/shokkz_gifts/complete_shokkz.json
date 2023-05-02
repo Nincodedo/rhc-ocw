@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "criteria": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "nincodedo:player_gifts/shokkz_gifts/pistons": true,
+                  "nincodedo:player_gifts/shokkz_gifts/redstone": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:advancements/completeshokkz"
+  }
+}
