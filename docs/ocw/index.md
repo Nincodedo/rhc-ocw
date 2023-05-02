@@ -23,15 +23,19 @@ OCW players have specific gifts that when given to them grant you an advancement
 
 ## Unique Items
 
-Unique Items are custom items specially created for an individual OCW player. All unique items are bound to a specific OCW player and the item's powers will only activate for that player. They can be found in structures related to that player or in the [Library's Forbidden Wing structure](#the-librarys-forbidden-wing).
+Unique Items are custom items specially created for an individual OCW player. All unique items are bound to a specific OCW player and the item's powers will only activate for that player. They can be found in structures related to that player or in the [Library's Forbidden Wing structure](#the-librarys-forbidden-wing). Some unique items have special abilities, or over-powered enchantments, or both! The enchantments are slightly randomized so you may receive different enchantments than shown in any screenshots here.
 
 ### Iridium Rod
 
 The Iridium Rod is a fishing rod for Nincodedo. It has a chance of fishing up a second fish/treasure/junk. It can be found in the [Cave Base](#cave-base).
 
+![A screenshot of Minecraft. It displays a tooltip for a fishing rod item in the player's inventory. The tooltip shows "Nin's Iridium Fishing Rod. Unbreaking I. Lure I. Luck of the Sea V. Unique Item. From Stardew Valley! Only Nin can use this. When in Main Hand: +1 Luck."](/images/iridium_fishing_rod_tooltip.png)
+
 ### The Master Sword
 
 Straight from the Legend of Zelda, The Master Sword is a diamond sword equivilant for Metal_Link. When at full health, you can use sword beams and the spin attack. It can be found in [Metal_Link's House](#metal_links-house).
+
+![A screenshot of Minecraft. It displays a tooltip for a sword item in the player's inventory. The tooltip shows "The Master Sword. Smite I. Sharpness X. Looting II. Unbreaking III. Unique Item. The Blade of Evil's Bane. It can only be wielded by the Hero of Metal. Right Button: Sword Beam. Left Shift + Right Button: Spin Attack. When in Main Hand: +7 Attack Damage. -1.6 Attack Speed."](/images/master_sword_tooltip.png)
 
 #### Sword Beam
 
