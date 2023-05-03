@@ -1,4 +1,7 @@
 FROM debian:buster-slim AS build
+
+ARG bedrock_bone_meal_version=1.1.0
+
 RUN apt-get update \
   && apt-get install zip -y --no-install-recommends \
   && apt-get clean \
@@ -10,10 +13,9 @@ RUN cd /datapacks/ocw-stuff \
   && mv ocw-stuff.zip /datapacks \
   && cd /datapacks/who-did-this \
   && zip -r who-did-this.zip . \
-  && mv who-did-this.zip /datapacks \
-  && cd /datapacks/bedrock-bone-meal \
-  && zip -r bedrock-bone-meal.zip . \
-  && mv bedrock-bone-meal.zip /datapacks
+  && mv who-did-this.zip /datapacks
+
+RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-java-bedrock-bone-meal-datapack/releases/download/$bedrock_bone_meal_version/bedrock-bone-meal-$bedrock_bone_meal_version.zip
 
 FROM itzg/minecraft-server:2023.3.0
 
