@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "nincodedo:root",
+  "parent": "youdidthis:root",
   "criteria": {
     "killed_another_player": {
       "trigger": "minecraft:player_killed_entity",
