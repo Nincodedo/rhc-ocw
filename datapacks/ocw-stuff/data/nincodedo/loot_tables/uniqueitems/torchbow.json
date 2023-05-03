@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"TT\",NinPowered:1}"
+              "tag": "{NinUnique:\"TT\",NinPowered:1,Unbreakable:1b}"
             },
             {
               "function": "minecraft:set_enchantments",
@@ -18,10 +18,6 @@
                 "minecraft:power": {
                   "min": 5,
                   "max": 10
-                },
-                "minecraft:unbreaking": {
-                  "min": 0,
-                  "max": 3
                 },
                 "minecraft:punch": {
                   "min": 0,

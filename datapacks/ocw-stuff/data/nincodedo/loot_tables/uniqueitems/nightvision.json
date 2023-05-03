@@ -5,70 +5,121 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:leather_helmet",
-          "functions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416}}"
-            },
-            {
-              "function": "minecraft:set_enchantments",
-              "enchantments": {
-                "minecraft:aqua_affinity": 1
-              }
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 40,
-              "treasure": false
-            },
-            {
-              "function": "minecraft:set_name",
-              "entity": "this",
-              "name": {
-                "text": "Undead's Night Vision Goggles",
-                "color": "dark_purple",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
+              "type": "minecraft:item",
+              "name": "minecraft:leather_helmet",
+              "functions": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
-                  "name": "Sneaky",
-                  "amount": 3,
-                  "operation": "addition",
-                  "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
-                  "slot": "head"
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
                 },
                 {
-                  "attribute": "minecraft:generic.armor",
-                  "name": "LeatherDefense",
-                  "amount": 1,
-                  "operation": "addition",
-                  "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
-                  "slot": "head"
+                  "function": "minecraft:set_enchantments",
+                  "enchantments": {
+                    "minecraft:aqua_affinity": 1,
+                    "minecraft:respiration": {
+                      "min": 1,
+                      "max": 3
+                    },
+                    "minecraft:protection": {
+                      "min": 1,
+                      "max": 5
+                    }
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.25
                 }
               ]
             },
             {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
+              "type": "minecraft:item",
+              "name": "minecraft:leather_helmet",
+              "functions": [
                 {
-                  "text": "Unique Item",
-                  "color": "gold"
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
                 },
                 {
-                  "text": "A lost relic of modded Minecraft past."
-                },
-                {
-                  "text": "It seems only Undead knows how to use this."
+                  "function": "minecraft:set_enchantments",
+                  "enchantments": {
+                    "minecraft:aqua_affinity": 1,
+                    "minecraft:respiration": {
+                      "min": 1,
+                      "max": 3
+                    },
+                    "minecraft:projectile_protection": {
+                      "min": 1,
+                      "max": 5
+                    }
+                  }
                 }
               ],
-              "replace": false
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.3334
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:leather_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                },
+                {
+                  "function": "minecraft:set_enchantments",
+                  "enchantments": {
+                    "minecraft:aqua_affinity": 1,
+                    "minecraft:respiration": {
+                      "min": 1,
+                      "max": 3
+                    },
+                    "minecraft:fire_protection": {
+                      "min": 1,
+                      "max": 5
+                    }
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.375
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:leather_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                },
+                {
+                  "function": "minecraft:set_enchantments",
+                  "enchantments": {
+                    "minecraft:aqua_affinity": 1,
+                    "minecraft:respiration": {
+                      "min": 1,
+                      "max": 3
+                    },
+                    "minecraft:blast_protection": {
+                      "min": 1,
+                      "max": 5
+                    }
+                  }
+                }
+              ]
             }
           ],
           "conditions": [
@@ -85,6 +136,55 @@
               "range": 0
             }
           ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": {
+            "text": "Undead's Night Vision Goggles",
+            "color": "dark_purple",
+            "italic": false
+          }
+        },
+        {
+          "function": "minecraft:set_attributes",
+          "modifiers": [
+            {
+              "attribute": "minecraft:generic.attack_damage",
+              "name": "Sneaky",
+              "amount": 3,
+              "operation": "addition",
+              "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+              "slot": "head"
+            },
+            {
+              "attribute": "minecraft:generic.armor",
+              "name": "LeatherDefense",
+              "amount": 1,
+              "operation": "addition",
+              "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
+              "slot": "head"
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "text": "Unique Item",
+              "color": "gold"
+            },
+            {
+              "text": "A lost relic of modded Minecraft past."
+            },
+            {
+              "text": "It seems only Undead knows how to use this."
+            }
+          ],
+          "replace": false
         }
       ]
     }
