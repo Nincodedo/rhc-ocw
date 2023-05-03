@@ -5,4 +5,6 @@ data merge entity @e[type=minecraft:pillager,name=!"Salesman",limit=1] {CustomNa
 
 execute as @e[type=minecraft:wandering_trader,limit=1,tag=!traderswap] run function nincodedo:quests/tradermap
 
+execute as @a run function nincodedo:advancements/open_gifts
+
 schedule function nincodedo:slowtick 2s
