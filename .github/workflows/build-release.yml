@@ -58,3 +58,16 @@ jobs:
             ghcr.io/nincodedo/rhc-ocw-mc:latest
             ghcr.io/nincodedo/rhc-ocw-mc:${{ github.sha }}
             ghcr.io/nincodedo/rhc-ocw-mc:${{ github.ref_name }}
+  createRelease:
+    needs: [ buildlw, buildmc ]
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+          discussion_category_name: 'Announcements'
+  
