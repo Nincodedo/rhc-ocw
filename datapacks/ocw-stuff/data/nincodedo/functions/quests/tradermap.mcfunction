@@ -3,6 +3,6 @@ data modify entity @s Offers.Recipes append value {buy:{Count:1b,id:"minecraft:e
 item replace entity @s weapon with map
 loot replace entity @s weapon loot nincodedo:rng/emeralds
 data modify entity @s Offers.Recipes[-1].buy set from entity @s HandItems[0]
-loot replace entity @s weapon loot nincodedo:uniqueitems/maps
+loot replace entity @s weapon loot nincodedo:ocw_map
 data modify entity @s Offers.Recipes[-1].sell set from entity @s HandItems[0]
 item replace entity @s weapon with air

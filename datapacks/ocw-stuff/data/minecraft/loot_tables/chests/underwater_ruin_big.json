@@ -121,7 +121,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 5,
-          "name": "nincodedo:uniqueitems/maps"
+          "name": "nincodedo:ocw_map"
         }
       ]
     }

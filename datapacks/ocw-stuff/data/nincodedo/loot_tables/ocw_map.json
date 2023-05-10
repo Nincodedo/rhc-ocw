@@ -166,13 +166,6 @@
           "name": "minecraft:map",
           "functions": [
             {
-              "function": "minecraft:set_enchantments",
-              "enchantments": {
-                "minecraft:fire_protection": 1
-              },
-              "add": false
-            },
-            {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_undeads_cottage",
               "decoration": "blue_marker",
@@ -186,6 +179,10 @@
                 "text": "Ancient OCW Structure Map",
                 "italic": false
               }
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Enchantments:[{id:\"minecraft:fire_protection\",lvl:1s}]}"
             }
           ]
         },
