@@ -4,7 +4,7 @@
       "item": "minecraft:totem_of_undying"
     },
     "title": "Next Attempt Rewards",
-    "description": "Complete advancements in this attempt to receive rewards at the beginning of the next!",
+    "description": "This shows which advancements in this attempt will give you rewards at the beginning of the next.",
     "background": "minecraft:textures/block/birch_planks.png",
     "frame": "task",
     "show_toast": false,
