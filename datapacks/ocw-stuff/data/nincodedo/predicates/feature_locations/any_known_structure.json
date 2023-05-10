@@ -24,6 +24,10 @@
     {
       "condition": "minecraft:reference",
       "name": "nincodedo:feature_locations/desert_pyramid"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "nincodedo:any_ocw_structure"
     }
   ]
 }

@@ -12,6 +12,8 @@ execute at @s if predicate nincodedo:feature_locations/desert_pyramid run give @
 
 execute at @s if predicate nincodedo:feature_locations/mansion run give @s minecraft:brown_banner
 
+execute at @s if predicate nincodedo:any_ocw_structure run give @s minecraft:light_blue_banner
+
 execute at @s if predicate nincodedo:feature_locations/any_known_structure run scoreboard players add @s bannerplz 1
 
 execute unless score @s bannerplz matches 1 run schedule function nincodedo:triggers/resetbannertrigger 120s replace
