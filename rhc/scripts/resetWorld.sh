@@ -112,7 +112,7 @@ while :; do
     checkMotdLength=${#checkMotd}
     if [ "$checkMotdLength" -eq 0 ] && [ $checkHealth -eq 0 ]; then
       log "Restarting $minecraft_docker_container_name container because bad motd"
-      docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name >/dev/null
+      docker compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name >/dev/null
       docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
       checkHealth=$?
     fi
@@ -157,6 +157,6 @@ while :; do
     rm -rf world
     mkdir world/
     chown -R 1000:1000 world/
-    docker-compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
+    docker compose -f $minecraft_compose_dir/docker-compose.yaml up -d $minecraft_docker_container_name
   fi
 done
