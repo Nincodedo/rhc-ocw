@@ -38,7 +38,7 @@ execute as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:34b,ta
 execute as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:35b,tag:{NinUnique:"MS",NinPowered:0}}]}] run item modify entity @s inventory.26 nincodedo:powerupms
 execute as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"MS",NinPowered:0}}]}] run item modify entity @s weapon.offhand nincodedo:powerupms
 
-execute if score masterswordfirst rhcdata matches 1.. as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{tag:{NinUnique:"MS",NinPowered:1}}]}] run playsound nincodedo:mastersword.power_up player @a ^-.5 ^ ^ 1
+execute if score masterswordfirst rhcdata matches 1.. as @s[predicate=nincodedo:isentitymetallink,nbt={SelectedItem:{tag:{NinUnique:"MS",NinPowered:1}}}] run playsound nincodedo:mastersword.power_up player @a ^-.5 ^ ^ 1
 
 execute as @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:0b,tag:{NinUnique:"MS",NinPowered:1}}]}] run item modify entity @s hotbar.0 nincodedo:powerdownms
 execute as @s[predicate=!nincodedo:isentitymetallink,nbt={Inventory:[{Slot:1b,tag:{NinUnique:"MS",NinPowered:1}}]}] run item modify entity @s hotbar.1 nincodedo:powerdownms
@@ -116,6 +116,6 @@ execute if score config_debug rhcconfig matches 1 as @s[nbt={Inventory:[{Slot:34
 execute if score config_debug rhcconfig matches 1 as @s[nbt={Inventory:[{Slot:35b,tag:{NinUnique:"MS",NinPowered:0}}]}] run item modify entity @s inventory.26 nincodedo:powerupms
 execute if score config_debug rhcconfig matches 1 as @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"MS",NinPowered:0}}]}] run item modify entity @s weapon.offhand nincodedo:powerupms
 
-execute if score config_debug rhcconfig matches 1 if score masterswordfirst rhcdata matches 1.. as @s[nbt={Inventory:[{tag:{NinUnique:"MS",NinPowered:1}}]}] run playsound nincodedo:mastersword.power_up player @a ^-.5 ^ ^ 1
+execute if score config_debug rhcconfig matches 1 if score masterswordfirst rhcdata matches 1.. as @s[nbt={SelectedItem:{tag:{NinUnique:"MS",NinPowered:1}}}] run playsound nincodedo:mastersword.power_up player @a ^-.5 ^ ^ 1
 
 advancement revoke @s only nincodedo:unique_items/master_sword/any
