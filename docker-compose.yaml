@@ -20,6 +20,7 @@ services:
       MEMORY: '3G'
       BROADCAST_RCON_TO_OPS: 'false'
       FUNCTION_PERMISSION_LEVEL: '4'
+      ENABLE_COMMAND_BLOCK: 'true'
       SPAWN_PROTECTION: '0'
       ENABLE_AUTOPAUSE: 'true'
       MAX_TICK_TIME: "-1"
@@ -93,6 +94,7 @@ services:
       MEMORY: '2G'
       BROADCAST_RCON_TO_OPS: 'false'
       FUNCTION_PERMISSION_LEVEL: '4'
+      ENABLE_COMMAND_BLOCK: 'true'
       SPAWN_PROTECTION: '0'
       ENABLE_AUTOPAUSE: 'true'
       MAX_TICK_TIME: "-1"
