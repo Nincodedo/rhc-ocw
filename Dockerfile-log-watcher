@@ -7,5 +7,5 @@ COPY *.env /app/ocw-minecraft/
 COPY rhc/scripts/*.sh /app/
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN find /app -type f -print0 | xargs -0 dos2unix --
-LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
+LABEL org.opencontainers.image.source="https://github.com/Nincodedo/rhc-ocw"
 ENTRYPOINT ["sh", "/app/resetWorld.sh"]

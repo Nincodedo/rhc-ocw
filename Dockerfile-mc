@@ -37,4 +37,4 @@ ENV REPLACE_ENV_VARIABLES=true
 ENV REPLACE_ENV_DURING_SYNC=true
 ENV SYNC_SKIP_NEWER_IN_DESTINATION=false
 
-LABEL org.opencontainers.image.source = "https://github.com/Nincodedo/rhc-ocw"
+LABEL org.opencontainers.image.source="https://github.com/Nincodedo/rhc-ocw"
