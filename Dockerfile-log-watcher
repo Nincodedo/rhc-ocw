@@ -1,7 +1,7 @@
 FROM alpine:3.18.0
 RUN mkdir -p /app/ocw-minecraft /config /data/defaultconfigs
 WORKDIR /app
-RUN apk --no-cache add docker=23.0.6-r2 docker-cli-compose=2.17.3-r2 curl=8.1.1-r1 jq=1.6-r3
+RUN apk --no-cache add docker=23.0.6-r2 docker-cli-compose=2.17.3-r2 curl=8.1.2-r0 jq=1.6-r3
 COPY docker-compose.yaml /app/ocw-minecraft/docker-compose.yaml
 COPY *.env /app/ocw-minecraft/
 COPY rhc/scripts/*.sh /app/
