@@ -10,6 +10,7 @@ check_rewards() {
         cat $player.txt | awk -F : '{print "nincodedo:rewards/"$2""}' > "$player-rewards.txt"
         count=$(wc -l "$player-rewards.txt" | awk '{print $1}')
         rcon_command "scoreboard players set $player advrewards $count" > /dev/null
+        rcon_command "execute if score $player advrewards matches 41.. run scoreboard players set $player advrewards 40" > /dev/null
         while read line;
         do
             rcon_command "advancement grant $player only $line" > /dev/null
