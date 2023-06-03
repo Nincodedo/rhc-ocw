@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:efficiency": 1
+  },
+  "add": true,
+  "conditions": [
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.5
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:efficiency": 0
+    },
+    "add": false
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[{}]}"
+  }
+]

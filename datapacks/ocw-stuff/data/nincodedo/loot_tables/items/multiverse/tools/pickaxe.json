@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:1,RepairCost:40,CustomModelData:1010101,NinUnique:\"CobaltPickaxe\",Enchantments:[{}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Cobalt Pickaxe",
+                "color": "blue",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "From ",
+                  "extra": [
+                    {
+                      "text": "Terraria",
+                      "color": "dark_green",
+                      "italic": true
+                    }
+                  ]
+                },
+                {
+                  "text": "Momentum I",
+                  "color": "gray",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

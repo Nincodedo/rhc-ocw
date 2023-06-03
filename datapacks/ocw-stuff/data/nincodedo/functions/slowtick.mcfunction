@@ -7,4 +7,6 @@ execute as @e[type=minecraft:wandering_trader,limit=1,tag=!traderswap] run funct
 
 execute as @a run function nincodedo:advancements/open_gifts
 
+execute as @a run function nincodedo:items/multiverse/tools/calculate_mined_blocks
+
 schedule function nincodedo:slowtick 2s
