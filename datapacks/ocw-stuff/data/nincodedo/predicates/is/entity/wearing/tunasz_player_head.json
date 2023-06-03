@@ -4,9 +4,6 @@
   "predicate": {
     "equipment": {
       "head": {
-        "items": [
-          "minecraft:player_head"
-        ],
         "nbt": "{SkullOwner: {Id: [I;-1134297099, 228347247, -1929822783, -611013429]}}"
       }
     }
