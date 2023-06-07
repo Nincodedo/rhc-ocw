@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "minecraft:dispenser",
+        "state": {
+          "facing": "down"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "custcompost:composter/hopper/check_placement"
+  }
+}
