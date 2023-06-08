@@ -1,0 +1,9 @@
+execute if block ~ ~ ~ minecraft:composter[level=0] run scoreboard players set @s composterlevel 0
+execute if block ~ ~ ~ minecraft:composter[level=1] run scoreboard players set @s composterlevel 1
+execute if block ~ ~ ~ minecraft:composter[level=2] run scoreboard players set @s composterlevel 2
+execute if block ~ ~ ~ minecraft:composter[level=3] run scoreboard players set @s composterlevel 3
+execute if block ~ ~ ~ minecraft:composter[level=4] run scoreboard players set @s composterlevel 4
+execute if block ~ ~ ~ minecraft:composter[level=5] run scoreboard players set @s composterlevel 5
+execute if block ~ ~ ~ minecraft:composter[level=6] run scoreboard players set @s composterlevel 6
+execute if block ~ ~ ~ minecraft:composter[level=7] run scoreboard players set @s composterlevel 7
+execute if block ~ ~ ~ minecraft:composter[level=8] run scoreboard players set @s composterlevel 8
