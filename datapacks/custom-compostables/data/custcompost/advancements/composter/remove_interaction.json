@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "lookingatcomposter"
+            },
+            "range": 0
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "custcompost:composter/remove_interaction"
+  }
+}
