@@ -3,10 +3,7 @@
     "requirement": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "block": "minecraft:dispenser",
-        "state": {
-          "facing": "down"
-        }
+        "block": "minecraft:hopper"
       }
     }
   },
