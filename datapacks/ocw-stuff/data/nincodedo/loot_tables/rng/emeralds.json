@@ -13,8 +13,22 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 15,
-                "max": 25
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "emeraldsmin"
+                  },
+                  "score": "rhcdata"
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "emeraldsmax"
+                  },
+                  "score": "rhcdata"
+                }
               },
               "add": false
             }
