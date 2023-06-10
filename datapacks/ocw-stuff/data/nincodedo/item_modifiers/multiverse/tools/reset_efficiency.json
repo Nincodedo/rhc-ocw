@@ -1,0 +1,39 @@
+[
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:efficiency": 0
+    },
+    "add": false,
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "nbt": "{NinUnique:\"CobaltPickaxe\"}"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{Enchantments:[{}]}",
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "nbt": "{NinUnique:\"CobaltPickaxe\"}"
+            }
+          }
+        }
+      }
+    ]
+  }
+]
