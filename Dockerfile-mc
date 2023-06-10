@@ -22,7 +22,7 @@ RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-jav
 
 FROM itzg/minecraft-server:2023.3.0
 
-ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,rightclickharvest,jade,rei,memoryleakfix,servertick,mc-server-description
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,c2me-fabric,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,jamlib,rightclickharvest,jade,rei,servertick,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip,/datapacks/custom-compostables.zip
 RUN mkdir -p /datapacks
