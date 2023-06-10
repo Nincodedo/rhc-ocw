@@ -6,6 +6,17 @@
   "add": true,
   "conditions": [
     {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "nbt": "{NinUnique:\"CobaltPickaxe\"}"
+          }
+        }
+      }
+    },
+    {
       "condition": "minecraft:random_chance",
       "chance": 0.5
     }
