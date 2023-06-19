@@ -1,0 +1,22 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": "this",
+    "ops": [
+      {
+        "source": "Inventory[{tag:{NinUnique:\"PotionBundle\"}}].tag.StoredEnchantments",
+        "target": "Enchantments",
+        "op": "replace"
+      },
+      {
+        "source": "Inventory[{tag:{NinUnique:\"PotionBundle\"}}].tag.StoredItems",
+        "target": "Items",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{StoredEnchantments:[{}], StoredItems:[], NinPowered:1}"
+  }
+]

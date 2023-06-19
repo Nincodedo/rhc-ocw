@@ -1,0 +1,23 @@
+{
+  "parent": "nincodedo:unique_items/potion_bundle/initial",
+  "criteria": {
+    "get_potion_bundle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"PotionBundle\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_potion_bundle"
+    ]
+  ],
+  "rewards": {
+    "function": "nincodedo:uniqueitems/potionbundle"
+  }
+}

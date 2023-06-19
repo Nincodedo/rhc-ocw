@@ -1,0 +1,577 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[0]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 0
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[1]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[2]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[3]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[4]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 4
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[5]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 5
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[6]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 6
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[7]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 7
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[8]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 8
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[9]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 9
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[10]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 10
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[11]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 11
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[12]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 12
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[13]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 13
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[14]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 14
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[15]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 15
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[16]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 16
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[17]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 17
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[18]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 18
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[19]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 19
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[20]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 20
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[21]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 21
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[22]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 22
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[23]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 23
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "goodpotions[24]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng": 24
+        }
+      }
+    ]
+  }
+]

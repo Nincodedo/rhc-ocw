@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bundle",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinUnique:\"PotionBundle\",Enchantments:[{id:\"minecraft:infinity\",lvl:1s}],Items: [{id: \"minecraft:splash_potion\", Count: 1b, tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:luck\"}}, {id: \"minecraft:splash_potion\", tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_regeneration\"}, Count: 1b}, {id: \"minecraft:splash_potion\", Count: 1b, tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_slow_falling\"}}, {id: \"minecraft:splash_potion\", tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_water_breathing\"}, Count: 1b}, {id: \"minecraft:splash_potion\", Count: 1b, tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_swiftness\"}}, {id: \"minecraft:splash_potion\", tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_fire_resistance\"}, Count: 1b}, {id: \"minecraft:splash_potion\", Count: 1b, tag: {NinUnique:\"UnlimitedPotion\",Potion: \"minecraft:long_invisibility\"}}, {id: \"minecraft:splash_potion\", tag: {NinUnique:\"UnlimitedPotion\",NinPowered:1,Potion: \"minecraft:long_night_vision\"}, Count: 1b}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Bottomless Potion Bundle",
+                "color": "dark_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "Always full of random potions!"
+                },
+                {
+                  "text": "Hold this in your off hand"
+                },
+                {
+                  "text": "to use with the Potion Horn."
+                },
+                {
+                  "text": "Only works for ShokkZ."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
