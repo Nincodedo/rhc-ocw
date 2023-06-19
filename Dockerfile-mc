@@ -20,7 +20,7 @@ RUN cd /datapacks/ocw-stuff \
 
 RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-java-bedrock-bone-meal-datapack/releases/download/$bedrock_bone_meal_version/bedrock-bone-meal-$bedrock_bone_meal_version.zip
 
-FROM itzg/minecraft-server:2023.3.0
+FROM itzg/minecraft-server:2023.6.1
 
 ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,jamlib,rightclickharvest,jade,rei,memoryleakfix,servertick,mc-server-description
 
