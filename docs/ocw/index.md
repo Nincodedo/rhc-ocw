@@ -5,6 +5,7 @@
   * [Iridium Rod](#iridium-rod)
   * [The Master Sword](#the-master-sword)
   * [Night Vision Helmet](#night-vision-helmet)
+  * [Potion Bundle](#potion-bundle)
   * [Potion Horn](#potion-horn)
   * [Sheep Horn](#sheep-horn)
   * [Torch Bow](#torch-bow)
@@ -53,7 +54,13 @@ Default key: Sneak + Use (Right click)
 
 The Night Vision Helmet is a leather helmet for Undead_Zeratul. It grants infinite Night Vision while worn. Can be found in [Undead_Zeratul's Cottage](#undead_zeratuls-cottage).
 
+### Potion Bundle
+
+The Potion Bundle is a bundle filled with splash potions. It can be used in tandem with the [Potion Horn](#potion-horn). The bundle automatically refills with more potions when it runs out. It can only be found in [The Library's Forbidden Wing](#the-librarys-forbidden-wing).
+
 ### Potion Horn
+
+The Potion Horn is a goat horn for ShokkZ. It shares splash potion effects with all players within earshot of the horn (256 blocks). It can be found in [Pillager Outposts](https://minecraft.fandom.com/wiki/Pillager_Outpost).
 
 ### Sheep Horn
 
