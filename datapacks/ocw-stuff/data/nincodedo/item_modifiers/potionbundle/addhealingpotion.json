@@ -1,0 +1,48 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "healingpotions[0]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng2": 0
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "healingpotions[1]",
+        "target": "Items",
+        "op": "append"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "potionbundlerng2": 1
+        }
+      }
+    ]
+  }
+]
