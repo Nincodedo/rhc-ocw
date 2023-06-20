@@ -1,4 +1,5 @@
 scoreboard objectives add potionbundlerng dummy
+scoreboard objectives add potionbundlerng2 dummy
 
 data remove storage nincodedo:potions goodpotions
 data remove storage nincodedo:potions badpotions
