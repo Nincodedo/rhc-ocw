@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": "What's Updog?",
+    "description": "nm how bout u",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/master_sword/main",
+  "criteria": {
+    "got_root": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:metal_link_house"
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "mastersword"
+              },
+              "score": "rhcdata"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  }
+}

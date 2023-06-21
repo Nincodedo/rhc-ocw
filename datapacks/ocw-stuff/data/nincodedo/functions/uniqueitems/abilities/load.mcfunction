@@ -1,6 +1,16 @@
 scoreboard objectives add potionbundlerng dummy
 scoreboard objectives add potionbundlerng2 dummy
 
+scoreboard objectives add ascend_phase dummy
+scoreboard objectives add ascend_height_check dummy
+scoreboard objectives add ascend_ok_start dummy
+scoreboard objectives add ascend_initial_bg_loop dummy
+scoreboard objectives add ascend_start_y dummy
+scoreboard objectives add ascend_y dummy
+scoreboard objectives add ascend_accept_timeout dummy
+scoreboard players set ascend_height_limit rhcconfig 10
+scoreboard players set ascend_accept_timeout rhcconfig 600
+
 data remove storage nincodedo:potions goodpotions
 data remove storage nincodedo:potions badpotions
 data remove storage nincodedo:potions healingpotions
