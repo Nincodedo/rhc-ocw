@@ -6,7 +6,8 @@
         "items": [
           {
             "items": [
-              "minecraft:compass"
+              "minecraft:leather",
+              "minecraft:saddle"
             ]
           }
         ]
@@ -15,7 +16,7 @@
   },
   "rewards": {
     "recipes": [
-      "nincodedo:boat_compass"
+      "nincodedo:saddle_to_leather"
     ]
   }
 }

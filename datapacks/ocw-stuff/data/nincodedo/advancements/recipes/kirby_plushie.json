@@ -1,13 +1,22 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:recipe_unlocked",
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "recipe": "nincodedo:kirby_plushie"
+        "items": [
+          {
+            "items": [
+              "minecraft:red_wool",
+              "minecraft:pink_wool"
+            ]
+          }
+        ]
       }
     }
   },
   "rewards": {
-    "function": "nincodedo:recipes/give_kirby_plushie"
+    "recipes": [
+      "nincodedo:kirby_plushie"
+    ]
   }
 }

@@ -95,6 +95,7 @@ while :; do
   attempt_number=$(wc -l "$combined_log_name" | sort -r | head -n 1 | awk '{print $1}')
   previous_attempt=$attempt_number
   attempt_number=$((++attempt_number))
+  log "Starting up for attempt $attempt_number"
   echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
   printf "\n" >>$minecraft_compose_dir/motd_override.env
   echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
@@ -141,6 +142,7 @@ while :; do
   setup_background_scripts
   log "Found healthy container, tailing docker log"
   (docker logs $minecraft_docker_container_name --tail 0 -f &) | grep -q "$grep_phrase"
+  log "End of attempt $attempt_number, resetting"
   world_ending_announcements
   backup_attempt
   if [ -n "$dead_player" ]; then
