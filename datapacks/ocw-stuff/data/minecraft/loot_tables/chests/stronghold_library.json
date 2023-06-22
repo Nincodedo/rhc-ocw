@@ -76,10 +76,6 @@
         {
           "type": "minecraft:loot_table",
           "name": "nincodedo:ocw_books"
-        },
-        {
-          "type": "minecraft:empty",
-          "weight": 2
         }
       ]
     },
