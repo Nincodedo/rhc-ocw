@@ -6,8 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:red_wool",
-              "minecraft:pink_wool"
+              "minecraft:gold_ingot"
             ]
           }
         ]
@@ -16,7 +15,7 @@
   },
   "rewards": {
     "recipes": [
-      "nincodedo:kirby_plushie"
+      "nincodedo:bell_recipe"
     ]
   }
 }
