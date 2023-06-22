@@ -1,3 +1,7 @@
+scoreboard players set @s[gamemode=survival] ascend_prev_gamemode 0
+scoreboard players set @s[gamemode=creative] ascend_prev_gamemode 1
+scoreboard players set @s[gamemode=adventure] ascend_prev_gamemode 2
+scoreboard players set @s[gamemode=spectator] ascend_prev_gamemode 3
 gamemode spectator
 scoreboard players set @s ascend_phase 1
 scoreboard players set @s used_ms 0

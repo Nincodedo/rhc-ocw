@@ -8,6 +8,7 @@ scoreboard objectives add ascend_initial_bg_loop dummy
 scoreboard objectives add ascend_start_y dummy
 scoreboard objectives add ascend_y dummy
 scoreboard objectives add ascend_accept_timeout dummy
+scoreboard objectives add ascend_prev_gamemode dummy
 scoreboard players set ascend_height_limit rhcconfig 10
 scoreboard players set ascend_accept_timeout rhcconfig 600
 
