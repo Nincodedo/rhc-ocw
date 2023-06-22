@@ -1,9 +1,9 @@
-execute unless block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of if block ~ ~ ~ #nincodedo:safe_replace run setblock ~ ~ ~ minecraft:torch
+execute unless block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:torch
 
-execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~-1 ~ ~ #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #nincodedo:safe_replace run setblock ~ ~ ~ minecraft:wall_torch[facing=east] keep
-execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~1 ~ ~ #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #nincodedo:safe_replace run setblock ~ ~ ~ minecraft:wall_torch[facing=west] keep
-execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~ ~ ~-1 #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #nincodedo:safe_replace run setblock ~ ~ ~ minecraft:wall_torch[facing=south] keep
-execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~ ~ ~1 #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #nincodedo:safe_replace run setblock ~ ~ ~ minecraft:wall_torch[facing=north] keep
+execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~-1 ~ ~ #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:wall_torch[facing=east] keep
+execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~1 ~ ~ #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:wall_torch[facing=west] keep
+execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~ ~ ~-1 #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:wall_torch[facing=south] keep
+execute if block ~ ~-1 ~ #nincodedo:cannot_place_torch_on_top_of unless block ~ ~ ~1 #nincodedo:cannot_place_torch_on_side_of if block ~ ~ ~ #minecraft:replaceable run setblock ~ ~ ~ minecraft:wall_torch[facing=north] keep
 
 execute if block ~ ~ ~ #nincodedo:torches run playsound minecraft:block.wood.place block @a
 

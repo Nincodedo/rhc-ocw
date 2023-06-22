@@ -1,13 +1,12 @@
 {
   "pack": {
-    "pack_format": 12,
+    "pack_format": 15,
     "description": "OCW Stuff"
   },
   "features": {
     "enabled": [
       "vanilla",
-      "bundle",
-      "update_1_20"
+      "bundle"
     ]
   }
 }
