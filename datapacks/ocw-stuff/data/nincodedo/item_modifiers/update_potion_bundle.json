@@ -1,0 +1,34 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "Items",
+        "target": "Items",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{FirstItem:{}}"
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "nincodedo:potions"
+    },
+    "ops": [
+      {
+        "source": "Items[0]",
+        "target": "FirstItem",
+        "op": "replace"
+      }
+    ]
+  }
+]

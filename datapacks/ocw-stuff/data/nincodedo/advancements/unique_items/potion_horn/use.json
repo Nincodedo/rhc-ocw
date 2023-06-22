@@ -14,11 +14,23 @@
             }
           },
           {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "nbt": "{Inventory:[{Slot:-106b,id:\"minecraft:splash_potion\"}],SelectedItem:{tag:{NinUnique:\"PS\",NinPowered:1}}}"
-            }
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Inventory:[{Slot:-106b,id:\"minecraft:splash_potion\"}],SelectedItem:{tag:{NinUnique:\"PS\",NinPowered:1}}}"
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Inventory:[{Slot:-106b,tag:{NinUnique:\"PotionBundle\"}}],SelectedItem:{tag:{NinUnique:\"PS\",NinPowered:1}}}"
+                }
+              }
+            ]
           }
         ]
       }

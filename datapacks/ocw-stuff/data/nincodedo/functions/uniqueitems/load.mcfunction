@@ -19,3 +19,5 @@ scoreboard players set config_ms_cooldown rhcconfig 40
 scoreboard players set config_ms_projlife rhcconfig 30
 scoreboard players set config_ms_spinatklife rhcconfig 20
 scoreboard players set ms_cooldown rhcdata 0
+
+function nincodedo:uniqueitems/abilities/load

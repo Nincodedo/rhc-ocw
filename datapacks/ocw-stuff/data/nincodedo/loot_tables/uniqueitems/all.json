@@ -96,6 +96,42 @@
                   "range": 0
                 }
               ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/potionhorn",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "potionhorn"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/potionbundle",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "potionhorn"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": 1
+                }
+              ]
             }
           ]
         }

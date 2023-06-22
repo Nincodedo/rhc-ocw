@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:splash_potion"
+            ],
+            "nbt": "{NinUnique:\"UnlimitedPotion\"}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:uniqueitems/abilities/potionbundle/clear_unlimited_potions"
+  }
+}

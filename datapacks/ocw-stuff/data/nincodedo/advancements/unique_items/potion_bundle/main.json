@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner: {Id: [I; -1821251562, -110607629, -1745842003, -154273168], Properties: {textures: [{Value: \"ewogICJ0aW1lc3RhbXAiIDogMTY3OTYyNzIzMzc4NiwKICAicHJvZmlsZUlkIiA6ICI5MzcxZTgxNmY5Njg0MmYzOTdmMDkwYWRmNmNkZmE3MCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTaG9ra1oiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzAzZTU0YzAxOGY1N2RlODBiYjZiYjdmMWM4Y2ZmYWIzZGI1ZTZkY2RiOTkxNDQxYTY1NzAwOGE0MDYxMDc4MSIKICAgIH0KICB9Cn0=\", Signature: \"MnBwLE1GJzczaMhTmEbpArfGXcANUSMdOOrZJKealRwnnfAaxR+GzmHTobEXJnDTkklSIvzl/4aphlIPJcR+SgmfJJkXwB+p0mes8frTevW4AzjE82Fg2b1atP0DD4QBwrIxqy/2fDJefs9k1SMC2EMrAFkxCw/Np5HufAgT9+TvPZSAgKW5ZAXPj563cIIxhESQqUs7ulGMy0I+UvnHxFfkVLU+ryZNIVBrcd/tttgtltEwSYVacvvrvirRgaI81M6JmtOqi3y/+ErFeBTzbbPAq44QTJ3Z0jlDVQ17teiJKVhiBpuvLnRNNx8UkHQmrkRWzvbH3CSkJPra16AnymznZ0sWWQ5b2dQaLBpnF/2mlhKHELq76C0owaPG2bMAWEFkpvfZJyocAbGglapsY1LRo3GAbSKtMbPFvUpOro5CyiZ5fc427YPtceZf5o7E8R8ZJG1jeE3U4vRnSXMvxLerKTX7FI1qSTbgyj4xKfdEciPIEmpLzrgp8EgzSt2i6BL+ZLwlRLwYPD/0scRvHBvGyJzctzLIDZcxvL7BIEcsVxn/oK6HvoLGNPXKCAi4x25h1scNo/GFowVh8lg8QnS+ssVcDwFulf/lTng4O5HXMjKUABVPBVxHFSSx1NgnmpTPZ4Nv5ptI0wtlgtyk0ySNTS/++1Js362RU977kFY=\"}]}, Name: \"ShokkZ\"}}"
+    },
+    "title": "The Bottomless Potion Bundle",
+    "description": "Unlimited Potions!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/potion_bundle/initial",
+  "criteria": {
+    "get_potion_bundle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"PotionBundle\"}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:advancements/getpotionbundle"
+  }
+}
