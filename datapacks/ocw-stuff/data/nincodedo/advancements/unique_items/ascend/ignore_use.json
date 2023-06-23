@@ -10,16 +10,14 @@
             "scores": {
               "used_ms": {
                 "min": 1
-              },
-              "ascend_phase": 0,
-              "ascend_ok_start": 1
+              }
             }
           },
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{SelectedItem:{tag:{NinUnique:\"Ascend\",NinPowered:1}},OnGround:1b}"
+              "nbt": "{SelectedItem:{tag:{NinUnique:\"Ascend\",NinPowered:1}},OnGround:0b}"
             }
           }
         ]
@@ -27,6 +25,6 @@
     }
   },
   "rewards": {
-    "function": "nincodedo:uniqueitems/abilities/ascend/start_ascend"
+    "function": "nincodedo:uniqueitems/abilities/ascend/ignore_use"
   }
 }
