@@ -9,4 +9,3 @@ schedule function nincodedo:uniqueitems/abilities/ascend/initial_activate_loop_b
 
 function nincodedo:uniqueitems/abilities/ascend/find_ceiling
 advancement revoke @s only nincodedo:unique_items/ascend/use_initial
-

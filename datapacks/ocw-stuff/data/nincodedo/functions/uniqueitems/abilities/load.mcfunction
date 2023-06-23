@@ -11,6 +11,7 @@ scoreboard objectives add ascend_accept_timeout dummy
 scoreboard objectives add ascend_prev_gamemode dummy
 scoreboard players set ascend_height_limit rhcconfig 10
 scoreboard players set ascend_accept_timeout rhcconfig 600
+scoreboard players set 2 math 2
 
 data remove storage nincodedo:potions goodpotions
 data remove storage nincodedo:potions badpotions
