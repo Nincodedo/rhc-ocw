@@ -8,7 +8,6 @@ execute if entity @e[tag=ascend_good] run scoreboard players set @p[tag=ascendin
 execute if entity @e[tag=ascend_bad] run scoreboard players set @p[tag=ascending] ascend_ok_start 0
 data modify entity @s Pos[0] set from entity @p[tag=ascending] Pos[0]
 data modify entity @s Pos[2] set from entity @p[tag=ascending] Pos[2]
-execute at @s run tp ~-0.5 ~ ~-0.5
 tag @s remove moving
 execute at @s if block ~ ~ ~ #minecraft:replaceable if block ~ ~1 ~ #minecraft:replaceable run tag @s add moving
 execute at @s if block ~ ~ ~ #minecraft:replaceable if block ~ ~1 ~ #minecraft:replaceable run tp ~ ~1 ~
