@@ -152,7 +152,7 @@ while :; do
     echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
     printf "\n" >>$minecraft_compose_dir/motd_override.env
     echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
-    sleep $death_reset_delay_seconds
+    sleep 20
     rcon_command "kick @a Better luck next time..."
     docker stop $minecraft_docker_container_name
     docker rm $minecraft_docker_container_name
