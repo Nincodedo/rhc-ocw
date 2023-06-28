@@ -1,3 +1,4 @@
+tag @s remove ascend_anchor_target
 effect give @s minecraft:slow_falling 1 0 true
 execute positioned as @e[tag=ascend_undo,sort=nearest,limit=1] run tp ~ ~1 ~
 effect clear @s minecraft:blindness

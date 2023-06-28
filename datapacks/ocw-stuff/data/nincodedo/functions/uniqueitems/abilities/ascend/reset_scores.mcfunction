@@ -10,3 +10,4 @@ scoreboard players reset @s ascend_accept_timeout
 scoreboard players reset @s ascend_initial_bg_loop
 scoreboard players reset @s ascend_height_check
 scoreboard players reset @s ascend_ok_start
+scoreboard players reset @s ascend_anchor_check
