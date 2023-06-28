@@ -1,4 +1,5 @@
 tellraw @a[tag=debug_logging,tag=debug_trace] {"text": "[Debug] Entering watch_ascend_action"}
+title @a[tag=!no_ascend_tutorial_plz,scores={ascend_phase=4}] actionbar [{"keybind":"key.jump","color":"white","extra":[[{"text":": "}],{"translate":"gui.ascend.tutorial_prompt.exit","fallback":"Exit"},{"text":", "}]},{"keybind":"key.sneak","color":"white","extra":[[{"text":": "}],{"translate":"dataPack.validation.back","fallback":"Go Back"}]}]
 execute as @a[scores={ascend_phase=4}] at @s run function nincodedo:uniqueitems/abilities/ascend/store_ascend_watch
 execute as @a[scores={ascend_phase=4}] at @s if score @s ascend_accept_timeout matches ..0 run tellraw @a[tag=debug_logging] {"text": "[Debug] Accept ascend on timeout"}
 execute as @a[scores={ascend_phase=4}] at @s if score @s ascend_accept_timeout matches ..0 run function nincodedo:uniqueitems/abilities/ascend/accept_ascend

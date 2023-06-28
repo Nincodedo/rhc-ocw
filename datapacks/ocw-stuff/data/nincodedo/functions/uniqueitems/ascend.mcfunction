@@ -1,4 +1,5 @@
 scoreboard players set @s ascend_phase -1
+scoreboard players enable @s ascend_tutorial_popup_toggle
 
 execute as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:0b,tag:{NinUnique:"Ascend",NinPowered:0}}]}] run item modify entity @s hotbar.0 nincodedo:powerupth
 execute as @s[predicate=nincodedo:isentitymetallink,nbt={Inventory:[{Slot:1b,tag:{NinUnique:"Ascend",NinPowered:0}}]}] run item modify entity @s hotbar.1 nincodedo:powerupth

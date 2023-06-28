@@ -42,50 +42,6 @@
                       "text": ": Initially Activate Ascend"
                     }
                   ]
-                },
-                {
-                  "text": "After Activated:",
-                  "color": "gray"
-                },
-                {
-                  "keybind": "key.use",
-                  "color": "gray",
-                  "extra": [
-                    {
-                      "text": ": Ascend"
-                    }
-                  ]
-                },
-                {
-                  "keybind": "key.sneak",
-                  "color": "gray",
-                  "extra": [
-                    {
-                      "text": ": Cancel"
-                    }
-                  ]
-                },
-                {
-                  "text": "After Ascending:",
-                  "color": "gray"
-                },
-                {
-                  "keybind": "key.jump",
-                  "color": "gray",
-                  "extra": [
-                    {
-                      "text": ": Exit"
-                    }
-                  ]
-                },
-                {
-                  "keybind": "key.sneak",
-                  "color": "gray",
-                  "extra": [
-                    {
-                      "text": ": Go back"
-                    }
-                  ]
                 }
               ]
             }

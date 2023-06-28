@@ -8,3 +8,4 @@ execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled]
 scoreboard players enable @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] ascend_emergency_fix
 tag @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] add triggerascendemr
 execute as @a[scores={ascend_emergency_fix=1}] at @s run function nincodedo:triggers/ascend_emergency_fix
+execute as @a[scores={ascend_tutorial_popup_toggle=1}] at @s run function nincodedo:triggers/ascend_tutorial_popup_toggle
