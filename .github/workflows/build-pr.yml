@@ -1,8 +1,8 @@
 on:
-  push:
+  pull_request:
     branches:
       - main
-name: Main Build
+name: PR on Main Build
 jobs:
   buildlw:
     name: Build Log Watcher
@@ -13,23 +13,14 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.PACKAGE_ACTIONS_TOKEN }}
-      - name: Build and push
+      - name: Build
         uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile-log-watcher
           platforms: linux/amd64
-          push: true
+          push: false
           provenance: false
-          tags: |
-            ghcr.io/nincodedo/rhc-ocw:unstable
-            ghcr.io/nincodedo/rhc-ocw:${{ github.sha }}
   buildmc:
     name: Build Minecraft
     runs-on: ubuntu-latest
@@ -39,20 +30,11 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.PACKAGE_ACTIONS_TOKEN }}
-      - name: Build and push
+      - name: Build
         uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile-mc
           platforms: linux/amd64
-          push: true
+          push: false
           provenance: false
-          tags: |
-            ghcr.io/nincodedo/rhc-ocw-mc:unstable
-            ghcr.io/nincodedo/rhc-ocw-mc:${{ github.sha }}
