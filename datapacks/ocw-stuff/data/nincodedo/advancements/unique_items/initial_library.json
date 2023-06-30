@@ -19,7 +19,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "structure": "nincodedo:library_hidden_wing"
+              "structure": "nincodedo:small_library"
             }
           }
         ]

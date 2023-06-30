@@ -11,7 +11,7 @@
     "announce_to_chat": false,
     "hidden": true
   },
-  "parent": "nincodedo:unique_items/master_sword/main",
+  "parent": "nincodedo:unique_items/library",
   "criteria": {
     "got_root": {
       "trigger": "minecraft:location",
@@ -20,20 +20,8 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "structure": "nincodedo:metal_link_house"
+              "structure": "nincodedo:library_hidden_wing"
             }
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "mastersword"
-              },
-              "score": "rhcdata"
-            },
-            "range": 1
           }
         ]
       }

@@ -6,7 +6,7 @@
     },
     "title": "Ascend",
     "description": "My Zelda Needs Me",
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
@@ -23,8 +23,5 @@
         ]
       }
     }
-  },
-  "rewards": {
-    "function": "nincodedo:advancements/getascend"
   }
 }

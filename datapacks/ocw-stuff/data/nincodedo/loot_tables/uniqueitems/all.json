@@ -135,21 +135,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "nincodedo:uniqueitems/ascend",
-              "conditions": [
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "mastersword"
-                    },
-                    "score": "rhcdata"
-                  },
-                  "range": 1
-                }
-              ]
+              "name": "nincodedo:uniqueitems/ascend"
             }
           ]
         }
