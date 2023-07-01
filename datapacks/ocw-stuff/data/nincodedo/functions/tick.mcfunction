@@ -9,3 +9,4 @@ scoreboard players enable @a[advancements={nincodedo:unique_items/ascend/main=tr
 tag @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] add triggerascendemr
 execute as @a[scores={ascend_emergency_fix=1}] at @s run function nincodedo:triggers/ascend_emergency_fix
 execute as @a[scores={ascend_tutorial_popup_toggle=1}] at @s run function nincodedo:triggers/ascend_tutorial_popup_toggle
+execute as @a[scores={nightvision_helmet_fix=1}] at @s run function nincodedo:triggers/fix_nightvision_helmet

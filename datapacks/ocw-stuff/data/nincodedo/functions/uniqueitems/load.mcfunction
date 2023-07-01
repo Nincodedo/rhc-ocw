@@ -7,6 +7,7 @@ scoreboard objectives add arrowshot minecraft.used:minecraft.bow
 scoreboard objectives add spin_attack_life dummy
 scoreboard objectives add nopotionsplz trigger
 scoreboard objectives add ascend_emergency_fix trigger
+scoreboard objectives add nightvision_helmet_fix trigger
 
 execute unless score torchbow rhcdata matches 1 run scoreboard players set torchbow rhcdata 0
 execute unless score iridiumrod rhcdata matches 1 run scoreboard players set iridiumrod rhcdata 0

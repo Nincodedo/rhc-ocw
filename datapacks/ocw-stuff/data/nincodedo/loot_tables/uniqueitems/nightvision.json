@@ -12,8 +12,8 @@
               "name": "minecraft:leather_helmet",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
                 },
                 {
                   "function": "minecraft:set_enchantments",
@@ -42,8 +42,8 @@
               "name": "minecraft:leather_helmet",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
                 },
                 {
                   "function": "minecraft:set_enchantments",
@@ -72,8 +72,8 @@
               "name": "minecraft:leather_helmet",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
                 },
                 {
                   "function": "minecraft:set_enchantments",
@@ -102,8 +102,8 @@
               "name": "minecraft:leather_helmet",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinUnique:\"UG\", NinPowered:1,color:8991416,display:{color:8991416},HideFlags:64,Unbreakable:1b}"
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
                 },
                 {
                   "function": "minecraft:set_enchantments",
