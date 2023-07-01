@@ -9,6 +9,8 @@
   * [Potion Horn](#potion-horn)
   * [Sheep Horn](#sheep-horn)
   * [Torch Bow](#torch-bow)
+* [Other Powerful Items](#other-powerful-items)
+  * [Ascend](#ascend)
 * [Structures](#structures)
   * [Cave Base](#cave-base)
   * [The Library's Forbidden Wing](#the-librarys-forbidden-wing)
@@ -65,6 +67,14 @@ The Potion Horn is a goat horn for ShokkZ. It shares splash potion effects with 
 ### Sheep Horn
 
 ### Torch Bow
+
+## Other Powerful Items
+
+### Ascend
+
+From The Legend of Zelda: Tears of the Kingdom, the ability Ascend lets players travel through ceilings and pop out the other side. Ascend can only be found in [The Library's Forbidden Wing](#the-librarys-forbidden-wing) after finding all other unique items.
+
+[![Ascend in Minecraft](http://img.youtube.com/vi/oNrsQmt_Jq0/0.jpg)](http://www.youtube.com/watch?v=oNrsQmt_Jq0 "Ascend in Minecraft")
 
 ## Structures
 
