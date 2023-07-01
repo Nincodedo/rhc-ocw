@@ -54,7 +54,7 @@ Default key: Sneak + Use (Right click)
 
 ### Night Vision Helmet
 
-The Night Vision Helmet is a leather helmet for Undead_Zeratul. It grants infinite Night Vision while worn. Can be found in [Undead_Zeratul's Cottage](#undead_zeratuls-cottage).
+The Night Vision Helmet is a leather helmet for Undead_Zeratul. It grants infinite Night Vision while worn. The helmet will also transform to match the rest of the armor currently worn. For example, if you are wearing a golden chestplate, golden leggings, and golden boots the Night Vision Helmet will transform into a golden helmet. It can be found in [Undead_Zeratul's Cottage](#undead_zeratuls-cottage).
 
 ### Potion Bundle
 
