@@ -1,3 +1,5 @@
+execute as @s[predicate=nincodedo:isentityundeadzeratul] run scoreboard players enable @s nightvision_helmet_fix
+
 execute as @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:0b,tag:{NinUnique:"UG",NinPowered:0}}]}] run item modify entity @s hotbar.0 nincodedo:powerupug
 execute as @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:1b,tag:{NinUnique:"UG",NinPowered:0}}]}] run item modify entity @s hotbar.1 nincodedo:powerupug
 execute as @s[predicate=nincodedo:isentityundeadzeratul,nbt={Inventory:[{Slot:2b,tag:{NinUnique:"UG",NinPowered:0}}]}] run item modify entity @s hotbar.2 nincodedo:powerupug

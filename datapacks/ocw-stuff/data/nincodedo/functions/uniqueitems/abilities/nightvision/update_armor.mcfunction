@@ -25,6 +25,10 @@ scoreboard players add @s[predicate=nincodedo:is/entity/wearing/netherite/chestp
 scoreboard players add @s[predicate=nincodedo:is/entity/wearing/netherite/leggings] nightvision_armor_total 10
 scoreboard players add @s[predicate=nincodedo:is/entity/wearing/netherite/boots] nightvision_armor_total 7
 
+# Technically the elytra does not add any armor points, however doing this allows the helmet to become diamond when wearing
+# an elytra, netherite leggings, and netherite boots. I think this is a fair change.
+scoreboard players add @s[predicate=nincodedo:is/entity/wearing/elytra] nightvision_armor_total 2
+
 data modify storage nincodedo:storage nightvision.Enchantments set from entity @s Inventory[{tag:{NinUnique:"UG"}}].tag.Enchantments
 
 scoreboard players set @s[predicate=!nincodedo:is/entity/wearing/leather/helmet,scores={nightvision_armor_total=..7}] nightvision_armor_changed 1
