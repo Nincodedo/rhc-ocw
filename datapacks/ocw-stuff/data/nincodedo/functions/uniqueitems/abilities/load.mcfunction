@@ -1,5 +1,9 @@
-scoreboard objectives add potionbundlerng dummy
-scoreboard objectives add potionbundlerng2 dummy
+# Night Vision
+
+scoreboard objectives add nightvision_armor_total dummy
+scoreboard objectives add nightvision_armor_changed dummy
+
+# Ascend
 
 scoreboard objectives add ascend_phase dummy
 scoreboard objectives add ascend_height_check dummy
@@ -17,6 +21,11 @@ scoreboard objectives add ascend_tutorial_popup_toggle trigger
 scoreboard players set ascend_height_limit rhcconfig 10
 scoreboard players set ascend_accept_timeout rhcconfig 600
 scoreboard players set 2 math 2
+
+# Potion Bundle
+
+scoreboard objectives add potionbundlerng dummy
+scoreboard objectives add potionbundlerng2 dummy
 
 data remove storage nincodedo:potions goodpotions
 data remove storage nincodedo:potions badpotions
