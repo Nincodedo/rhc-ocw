@@ -24,7 +24,4 @@ scoreboard players set 2 math 2
 
 # Potion Bundle
 
-scoreboard objectives add potionbundlerng dummy
-scoreboard objectives add potionbundlerng2 dummy
-
 data modify storage nincodedo:potions unlimitedpotiontag set value {NinUnique:"UnlimitedPotion"}
