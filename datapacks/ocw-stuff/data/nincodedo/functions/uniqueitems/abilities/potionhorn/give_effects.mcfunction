@@ -1,7 +1,7 @@
 # Check if Potion Bundle has potions
 execute as @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}]}] run function nincodedo:uniqueitems/abilities/potionbundle/update_bundle
 execute store result score potionbundlecount rhcdata run data get entity @s Inventory[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}].tag.Items
-tellraw @a[tag=debug_logging] {"nbt":"Inventory[{Slot:-106b}].tag.FirstItem","entity":"@p"}
+tellraw @a[tag=debug_logging] [{"text": "[Debug] "},{"nbt":"Inventory[{Slot:-106b}].tag.FirstItem","entity":"@p"}]
 
 # Speed
 execute if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion",tag:{Potion:"minecraft:swiftness"}}]}] run effect give @a[distance=..256,tag=!nopotionsplz] minecraft:speed 180 0 false
