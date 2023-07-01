@@ -5,3 +5,7 @@ execute as @a[tag=!triggerbannerenabled] run loot give @s loot nincodedo:docs/fa
 execute as @a[tag=!triggerbannerenabled] run tag @s add triggerbannerenabled
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run scoreboard players enable @s nopotionsplz
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run tag @s add triggernopotionenabled
+scoreboard players enable @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] ascend_emergency_fix
+tag @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] add triggerascendemr
+execute as @a[scores={ascend_emergency_fix=1}] at @s run function nincodedo:triggers/ascend_emergency_fix
+execute as @a[scores={ascend_tutorial_popup_toggle=1}] at @s run function nincodedo:triggers/ascend_tutorial_popup_toggle

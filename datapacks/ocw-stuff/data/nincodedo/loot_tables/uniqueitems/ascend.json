@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{NinPowered:1,NinUnique:\"Ascend\",Enchantments:[{}],CustomModelData:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Ascend",
+                "color": "green",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Unique Item",
+                  "color": "gold"
+                },
+                {
+                  "text": "Found in the Gutanbac Shrine"
+                },
+                {
+                  "text": "on the Great Sky Plateau."
+                },
+                {
+                  "keybind": "key.use",
+                  "color": "gray",
+                  "extra": [
+                    {
+                      "text": ": Initially Activate Ascend"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

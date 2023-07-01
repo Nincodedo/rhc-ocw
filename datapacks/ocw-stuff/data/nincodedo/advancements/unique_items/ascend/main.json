@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": "Ascend",
+    "description": "My Zelda Needs Me",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/ascend/initial",
+  "criteria": {
+    "get_ascend": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"Ascend\"}"
+          }
+        ]
+      }
+    }
+  }
+}

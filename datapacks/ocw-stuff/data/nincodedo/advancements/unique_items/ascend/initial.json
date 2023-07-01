@@ -1,25 +1,26 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:bookshelf"
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:1}"
     },
-    "title": "Research ancient evil?",
-    "description": "You could find any unique item here!",
+    "title": "What's Updog?",
+    "description": "nm how bout u",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
-    "hidden": false
+    "hidden": true
   },
-  "parent": "nincodedo:unique_items/rumors",
+  "parent": "nincodedo:unique_items/library",
   "criteria": {
-    "requirement": {
+    "got_root": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "structure": "nincodedo:small_library"
+              "structure": "nincodedo:library_hidden_wing"
             }
           }
         ]
