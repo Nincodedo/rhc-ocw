@@ -1,5 +1,4 @@
-execute as @p[nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] run tag @s add nightvision
-execute as @p[nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] run effect give @s minecraft:night_vision infinite 0 true
-execute as @p[tag=nightvision] unless entity @s[nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] run effect clear @s minecraft:night_vision
-execute as @p[tag=nightvision] unless entity @s[nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] run tag @s remove nightvision
-execute if entity @p[tag=nightvision] run schedule function nincodedo:uniqueitems/abilities/nightvision 5s append
+tag @s[nbt={Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] add nightvision
+effect give @s[tag=nightvision] minecraft:night_vision infinite 0 true
+effect clear @s[tag=nightvision,nbt=!{Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] minecraft:night_vision
+tag @s[tag=nightvision,nbt=!{Inventory:[{Slot:103b,tag:{NinUnique:"UG",NinPowered:1}}]}] remove nightvision
