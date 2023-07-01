@@ -1,0 +1,486 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:slowness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_slowness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_slowness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:turtle_master"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_turtle_master"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_turtle_master"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:harming"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_harming"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:poison"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_poison"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_poison"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:weakness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_weakness"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.125
+                },
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "average_health"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": {
+                    "min": 18
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:healing"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_healing"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.125
+                },
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "average_health"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": {
+                    "max": 6
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:swiftness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_swiftness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_swiftness"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:night_vision"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_night_vision"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:invisibility"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_invisibility"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:leaping"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_leaping"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_leaping"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:fire_resistance"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_fire_resistance"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:luck"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:slow_falling"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_slow_falling"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:water_breathing"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_water_breathing"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:healing"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_healing"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:regeneration"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_regeneration"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_regeneration"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strength"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:long_strength"
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:splash_potion",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_potion",
+                      "id": "minecraft:strong_strength"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:copy_nbt",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "nincodedo:potions"
+      },
+      "ops": [
+        {
+          "source": "unlimitedpotiontag",
+          "target": "{}",
+          "op": "merge"
+        }
+      ]
+    }
+  ]
+}
