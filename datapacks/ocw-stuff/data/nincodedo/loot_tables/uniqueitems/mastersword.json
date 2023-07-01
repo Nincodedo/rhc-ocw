@@ -31,7 +31,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinUnique:\"MS\", NinPowered:1, CustomModelData:2020202}"
+              "tag": "{NinUnique:\"MS\", NinPowered:1, CustomModelData:2020202, Unbreakable:1b}"
             },
             {
               "function": "minecraft:set_enchantments",

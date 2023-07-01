@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{NinPowered:1,NinUnique:\"Ascend\",Enchantments:[{}],CustomModelData:1}"
+              "tag": "{NinPowered:1,NinUnique:\"Ascend\",Enchantments:[{}],CustomModelData:1,Unbreakable:1b}"
             },
             {
               "function": "minecraft:set_name",
