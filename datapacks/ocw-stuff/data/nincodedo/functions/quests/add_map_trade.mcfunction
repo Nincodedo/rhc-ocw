@@ -1,3 +1,4 @@
+tag @s add traderswap_map
 data modify entity @s Offers.Recipes append value {buy:{Count:1b,id:"minecraft:emerald"},buyB:{Count:1b,id:"minecraft:compass"},maxUses:1,uses:0,demand:1,priceMultiplier:0.05,rewardExp:true,sell:{Count:1b,id:"minecraft:map"}}
 item replace entity @s weapon with map
 scoreboard players set emeraldsmin rhcdata 15

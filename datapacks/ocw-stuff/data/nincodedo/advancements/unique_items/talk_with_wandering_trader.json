@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:wandering_trader",
-              "nbt": "{Tags:[\"traderswap\"]}"
+              "nbt": "{Tags:[\"traderswap_map\"]}"
             }
           }
         ]

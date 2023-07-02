@@ -1,3 +1,4 @@
+tag @s add traderswap_cobalt_pick
 data modify entity @s Offers.Recipes append value {buy:{Count:1b,id:"minecraft:emerald"},buyB:{Count:1b,id:"minecraft:diamond_pickaxe"},maxUses:1,uses:0,demand:1,priceMultiplier:0.05,rewardExp:true,sell:{Count:1b,id:"minecraft:diamond_pickaxe"}}
 item replace entity @s weapon with minecraft:diamond_pickaxe
 scoreboard players set emeraldsmin rhcdata 30
