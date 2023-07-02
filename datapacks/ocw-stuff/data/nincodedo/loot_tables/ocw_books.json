@@ -90,7 +90,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{title:\"Lost Knowledge Vol 4\",author:\"The Inventor\",generation:1,resolved:1b,pages:['[{\"text\":\"My latest creation! The \\\\\"\"},{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\".\\\\\" The name might need some work. I have a Name Guy, they\\'ll come up with something good. They always do. Anyways, you just gotta surround a compass with boats in a crafting table and BAM. \",\"italic\":false},{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\".\",\"italic\":false}]','{\"text\":\"Name Guy is on it. It\\'ll be great.\"}']}"
+              "tag": "{title:\"Lost Knowledge Vol 4\",author:\"The Inventor\",generation:1,resolved:1b,pages:['[{\"text\":\"My latest creation! The \\\\\"\"},{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\".\\\\\" The name might need some work. I have a Name Guy, they\\'ll come up with something good. They always do. Anyways, you just gotta surround a compass with boats in a crafting table and BAM. \",\"italic\":false}]','[{\"text\":\"Find The Boat You Just Got Out Of 5000\",\"italic\":true},{\"text\":\". \",\"italic\":false},{\"italic\":false,\"text\":\"Name Guy is on it. It\\'ll be great.\"}]']}"
             }
           ]
         }
