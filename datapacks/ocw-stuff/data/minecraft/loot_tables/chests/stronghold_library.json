@@ -80,16 +80,15 @@
       ]
     },
     {
-      "rolls": {
-        "min": 0,
-        "max": 1
-      },
+      "rolls": 1,
+      "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "name": "nincodedo:ocw/advanced_furnace_recipes"
+          "type": "minecraft:item",
+          "name": "minecraft:eye_armor_trim_smithing_template"
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:chests/stronghold_library"
 }

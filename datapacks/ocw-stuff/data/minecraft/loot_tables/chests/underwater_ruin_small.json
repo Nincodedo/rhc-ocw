@@ -105,5 +105,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:chests/underwater_ruin_small"
 }

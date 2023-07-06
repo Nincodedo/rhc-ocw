@@ -328,5 +328,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:chests/abandoned_mineshaft"
 }
