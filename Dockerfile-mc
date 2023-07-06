@@ -1,4 +1,5 @@
-FROM debian:buster-slim AS build
+# syntax=docker/dockerfile:1
+FROM debian:stable-slim AS build
 
 ARG bedrock_bone_meal_version=1.2.0+1.20
 
@@ -22,7 +23,7 @@ RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-jav
 
 FROM itzg/minecraft-server:2023.7.0
 
-ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,compass-ribbon,jamlib,rightclickharvest,jade,rei,memoryleakfix,servertick,mc-server-description
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,jamlib,rightclickharvest,jade,rei,memoryleakfix,mc-server-description
 
 ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip,/datapacks/custom-compostables.zip
 RUN mkdir -p /datapacks
