@@ -5,83 +5,29 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:cod",
-              "functions": [
-                {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinReward:1}"
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "min": 3,
-                    "max": 8
-                  }
-                },
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "A reward from attempt #",
-                      "extra": [
-                        {
-                          "score": {
-                            "name": "PrevAttempt",
-                            "objective": "rhcdata"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "minecraft:salmon",
-              "functions": [
-                {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{NinReward:1}"
-                },
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "min": 3,
-                    "max": 8
-                  }
-                },
-                {
-                  "function": "minecraft:set_lore",
-                  "entity": "this",
-                  "lore": [
-                    {
-                      "text": "A reward from attempt #",
-                      "extra": [
-                        {
-                          "score": {
-                            "name": "PrevAttempt",
-                            "objective": "rhcdata"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "type": "minecraft:item",
+          "name": "minecraft:cod"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:salmon"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NinReward:1}"
+        },
+        {
+          "function": "minecraft:set_count",
+          "count": {
+            "min": 6,
+            "max": 12
+          }
+        },
+        {
+          "function": "minecraft:reference",
+          "name": "nincodedo:rewards/generic_lore"
         }
       ]
     }

@@ -12,21 +12,8 @@
               "tag": "{NinReward:1}"
             },
             {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "A reward from attempt #",
-                  "extra": [
-                    {
-                      "score": {
-                        "name": "PrevAttempt",
-                        "objective": "rhcdata"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "function": "minecraft:reference",
+              "name": "nincodedo:rewards/generic_lore"
             }
           ]
         }

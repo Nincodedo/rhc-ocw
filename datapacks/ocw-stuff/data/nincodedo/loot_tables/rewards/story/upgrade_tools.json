@@ -24,35 +24,29 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": "Day 1 Pickaxe"
+              "name": {
+                "text": "Day 1 Pickaxe",
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:vanishing_curse": 2,
-                "minecraft:silk_touch": 0
+                "minecraft:silk_touch": 0,
+                "minecraft:fortune": 3
               },
               "add": false
             },
             {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "Disappears after the first night"
-                },
-                {
-                  "text": "A reward from attempt #",
-                  "extra": [
-                    {
-                      "score": {
-                        "name": "PrevAttempt",
-                        "objective": "rhcdata"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:vanishing_curse": 2
+              },
+              "add": false
+            },
+            {
+              "function": "minecraft:reference",
+              "name": "nincodedo:rewards/day1tool_lore"
             }
           ]
         }

@@ -24,7 +24,10 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": "Day 1 Hoe"
+              "name": {
+                "text": "Day 1 Hoe",
+                "italic": false
+              }
             },
             {
               "function": "minecraft:set_enchantments",
@@ -34,24 +37,8 @@
               "add": true
             },
             {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "Disappears after the first night"
-                },
-                {
-                  "text": "A reward from attempt #",
-                  "extra": [
-                    {
-                      "score": {
-                        "name": "PrevAttempt",
-                        "objective": "rhcdata"
-                      }
-                    }
-                  ]
-                }
-              ]
+              "function": "minecraft:reference",
+              "name": "nincodedo:rewards/day1tool_lore"
             }
           ]
         }

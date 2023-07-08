@@ -6,37 +6,24 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:cookie",
-          "functions": [
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{NinReward:1}"
-            },
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 10
-              }
-            },
-            {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "A reward from attempt #",
-                  "extra": [
-                    {
-                      "score": {
-                        "name": "PrevAttempt",
-                        "objective": "rhcdata"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
+          "name": "minecraft:cookie"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_nbt",
+          "tag": "{NinReward:1}"
+        },
+        {
+          "function": "minecraft:set_count",
+          "count": {
+            "min": 3,
+            "max": 12
+          }
+        },
+        {
+          "function": "minecraft:reference",
+          "name": "nincodedo:rewards/generic_lore"
         }
       ]
     }

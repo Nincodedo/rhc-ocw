@@ -9,51 +9,113 @@
           "name": "minecraft:golden_sword",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{NinReward:1}"
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "levels": {
-                "type": "minecraft:score",
-                "target": "this",
-                "score": "advrewards"
-              },
-              "treasure": false
-            },
-            {
-              "function": "minecraft:set_name",
-              "entity": "this",
-              "name": "Day 1 Sword"
-            },
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:sharpness": {
+                  "min": 2,
+                  "max": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_sword",
+          "functions": [
             {
               "function": "minecraft:set_enchantments",
               "enchantments": {
-                "minecraft:vanishing_curse": 2
-              },
-              "add": true
-            },
-            {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "Disappears after the first night"
-                },
-                {
-                  "text": "A reward from attempt #",
-                  "extra": [
-                    {
-                      "score": {
-                        "name": "PrevAttempt",
-                        "objective": "rhcdata"
-                      }
-                    }
-                  ]
+                "minecraft:bane_of_arthropods": {
+                  "min": 3,
+                  "max": 6
                 }
-              ]
+              }
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:smite": {
+                  "min": 3,
+                  "max": 6
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:copy_nbt",
+          "source": {
+            "type": "minecraft:storage",
+            "source": "nincodedo:storage"
+          },
+          "ops": [
+            {
+              "source": "rewards.tag",
+              "target": "{}",
+              "op": "merge"
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": {
+            "text": "Day 1 Sword",
+            "italic": false
+          }
+        },
+        {
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:looting": 3
+          },
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.5
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:unbreaking": {
+              "min": 1,
+              "max": 3
+            },
+            "minecraft:knockback": {
+              "min": 0,
+              "max": 2
+            },
+            "minecraft:sweeping": {
+              "min": 0,
+              "max": 3
+            },
+            "minecraft:fire_aspect": {
+              "min": 0,
+              "max": 2
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_enchantments",
+          "enchantments": {
+            "minecraft:vanishing_curse": 2
+          },
+          "add": true
+        },
+        {
+          "function": "minecraft:reference",
+          "name": "nincodedo:rewards/day1tool_lore"
         }
       ]
     }
