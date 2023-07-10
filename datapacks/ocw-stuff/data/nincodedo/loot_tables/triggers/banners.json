@@ -1,0 +1,104 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:yellow_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/village"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:magenta_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/ruined_portal"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:green_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/stronghold"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:orange_banner",
+              "functions": [
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "nbt": "banners.orange.id",
+                    "storage": "nincodedo:storage"
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/dungeon_spawner"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:purple_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/amethyst_geode"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:cyan_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/desert_pyramid"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:brown_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:feature_locations/mansion"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:light_blue_banner",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "nincodedo:any_ocw_structure"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
