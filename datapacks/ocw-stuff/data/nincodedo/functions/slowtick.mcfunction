@@ -1,5 +1,11 @@
 execute store result score current_day rhcdata run time query day
 execute store result score player_count rhcdata run list
+execute store result score moon_phase rhcdata run scoreboard players get current_day rhcdata
+scoreboard players operation moon_phase rhcdata %= 8 math
+execute store result score moon_damage rhcdata run scoreboard players get 5 math
+scoreboard players operation moon_damage rhcdata -= moon_phase rhcdata
+execute if score moon_damage rhcdata matches ..0 run scoreboard players operation moon_damage rhcdata -= 2 math
+execute if score moon_damage rhcdata matches ..-1 run scoreboard players operation moon_damage rhcdata *= m1 math
 
 data merge entity @e[type=minecraft:pillager,name=!"Salesman",limit=1] {CustomName: '{"text":"Salesman"}', CustomNameVisible: 1, KillMessage: '%s sold some wares to %s'}
 

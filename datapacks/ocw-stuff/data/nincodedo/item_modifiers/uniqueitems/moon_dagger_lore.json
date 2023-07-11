@@ -1,0 +1,46 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "lore": [
+    {
+      "text": "THE MOON"
+    },
+    {
+      "text": ""
+    },
+    {
+      "text": "When in Main Hand",
+      "color": "gray",
+      "italic": false
+    },
+    {
+      "text": "or Off Hand:",
+      "color": "gray",
+      "italic": false
+    },
+    {
+      "text": " ",
+      "color": "dark_green",
+      "italic": false,
+      "extra": [
+        [
+          {
+            "score": {
+              "name": "moon_damage",
+              "objective": "rhcdata"
+            }
+          },
+          {
+            "text": " Attack Damage"
+          }
+        ]
+      ]
+    },
+    {
+      "text": " 1 Attack Speed",
+      "color": "dark_green",
+      "italic": false
+    }
+  ],
+  "replace": true
+}

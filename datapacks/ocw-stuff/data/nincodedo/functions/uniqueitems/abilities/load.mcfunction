@@ -25,3 +25,10 @@ scoreboard players set 2 math 2
 # Potion Bundle
 
 data modify storage nincodedo:potions unlimitedpotiontag set value {NinUnique:"UnlimitedPotion"}
+
+# Moon Dagger
+
+scoreboard objectives add moon_dagger_effect dummy
+scoreboard objectives add moon_dagger_stealth_strike_cooldown dummy
+scoreboard players set moon_dagger_stun_time_ticks rhcconfig 15
+scoreboard players set moon_dagger_cooldown_time_ticks rhcconfig 300
