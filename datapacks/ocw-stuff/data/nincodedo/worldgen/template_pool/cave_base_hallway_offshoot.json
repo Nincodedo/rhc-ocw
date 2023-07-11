@@ -1,0 +1,41 @@
+{
+  "name": "nincodedo:cave_base_hallway_offshot",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/small_crafting_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/ladder",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/infinite_water_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "empty_pool_element",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

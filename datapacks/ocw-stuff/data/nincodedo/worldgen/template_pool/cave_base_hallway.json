@@ -1,0 +1,33 @@
+{
+  "name": "nincodedo:cave_base_hallway",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/hallway1",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "nincodedo:ocw_old/cave_base/hallway2",
+          "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "location": "nincodedo:ocw_old/cave_base/hallway-l1",
+          "processors": "nincodedo:age_cave_base"
+      }
+    }
+  ]
+}
