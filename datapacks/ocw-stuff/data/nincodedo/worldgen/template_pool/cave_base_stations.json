@@ -1,0 +1,42 @@
+{
+  "name": "nincodedo:cave_base_stations",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/furnace_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/potion_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/storage_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/cave_base/water_station",
+        "processors": "nincodedo:age_cave_base"
+      }
+    }
+  ]
+}
