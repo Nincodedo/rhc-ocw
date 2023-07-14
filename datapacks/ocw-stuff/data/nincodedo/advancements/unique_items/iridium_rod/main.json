@@ -2,7 +2,7 @@
   "display": {
     "icon": {
       "item": "minecraft:fishing_rod",
-      "nbt": "{CustomModelData:1010101}"
+      "nbt": "{CustomModelData:1010101,Enchantments:[{}]}"
     },
     "title": "Nin's Iridium Fishing Rod",
     "description": "Imported from Pelican Town",

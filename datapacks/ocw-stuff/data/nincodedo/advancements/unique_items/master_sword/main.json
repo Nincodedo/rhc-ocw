@@ -1,8 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:{Id:[I;450543885,1948795936,-1970712964,-182362290],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQyMjVmMTg3M2VmNTMzYzFhZmZhYTUzMzQyZTJiYWZhYWQwZWYwMTM2OTlmMjQxOTVkOGE3ZDViYTQ4NTBlZSJ9fX0=\"}]}}}"
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:2020202,Enchantments:[{}]}"
     },
     "title": "The Master Sword",
     "description": "The Blade of Evil's Bane",

@@ -1,7 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:cod"
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:Nincodedo}"
     },
     "title": "Need some better fishins?",
     "description": "Don't fall into a cave while you're lookin",
