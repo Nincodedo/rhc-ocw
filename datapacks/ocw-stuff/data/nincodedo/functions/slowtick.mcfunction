@@ -9,4 +9,6 @@ execute as @a run function nincodedo:advancements/open_gifts
 
 execute as @a run function nincodedo:items/multiverse/tools/calculate_mined_blocks
 
+execute unless entity @a[scores={ascend_phase=0..5}] run kill @e[tag=ascend_anchor]
+
 schedule function nincodedo:slowtick 2s
