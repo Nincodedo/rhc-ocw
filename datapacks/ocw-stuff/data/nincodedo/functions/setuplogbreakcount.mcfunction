@@ -4,4 +4,6 @@ scoreboard objectives add drk_oa_log_break minecraft.mined:minecraft.dark_oak_lo
 scoreboard objectives add jungle_log_break minecraft.mined:minecraft.jungle_log
 scoreboard objectives add oak_log_break minecraft.mined:minecraft.oak_log
 scoreboard objectives add spruce_log_break minecraft.mined:minecraft.spruce_log
+scoreboard objectives add mngrv_log_break minecraft.mined:minecraft.mangrove_log
+scoreboard objectives add cherry_log_break minecraft.mined:minecraft.cherry_log
 scoreboard objectives add log_break dummy
