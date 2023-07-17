@@ -8,7 +8,7 @@ execute positioned ~ ~1 ~ summon minecraft:marker run tag @s add spin_attack_rot
 tag @e[tag=spin_attack_rotate] add spin_attack
 data modify entity @e[tag=spin_attack_rotate,sort=nearest,limit=1] Rotation[0] set from entity @s Rotation[0]
 scoreboard players set @e[tag=spin_attack,sort=nearest,limit=2] spin_attack_life 0
-playsound nincodedo:mastersword.spin_attack player @a ~ ~ ~ 1 1
+playsound nincodedo:mastersword.spin_attack player @a
 schedule function nincodedo:uniqueitems/abilities/mastersword/spin_attack_animate 1t
 
 scoreboard players set @s used_ms 0

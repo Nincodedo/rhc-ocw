@@ -9,6 +9,10 @@
           "name": "minecraft:map",
           "functions": [
             {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
+            {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_cave_base",
               "decoration": "blue_marker",
@@ -42,6 +46,10 @@
           "name": "minecraft:map",
           "functions": [
             {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
+            {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_desert_tower",
               "decoration": "blue_marker",
@@ -71,6 +79,10 @@
           "type": "minecraft:item",
           "name": "minecraft:map",
           "functions": [
+            {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
             {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_metal_links_house",
@@ -111,6 +123,10 @@
           "type": "minecraft:item",
           "name": "minecraft:map",
           "functions": [
+            {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
             {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_sheep_farm",
@@ -166,6 +182,10 @@
           "name": "minecraft:map",
           "functions": [
             {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
+            {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:is_undeads_cottage",
               "decoration": "blue_marker",
@@ -191,6 +211,10 @@
           "quality": 5,
           "name": "minecraft:map",
           "functions": [
+            {
+              "function": "minecraft:reference",
+              "name": "nincodedo:ocw_map_nbt"
+            },
             {
               "function": "minecraft:exploration_map",
               "destination": "nincodedo:on_large_ocw_treasure_maps",

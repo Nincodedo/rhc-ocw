@@ -1,7 +1,8 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:bow"
+      "item": "minecraft:bow",
+      "nbt": "{Enchantments:[{}]}"
     },
     "title": "The Torch Bow",
     "description": "Shoot torches to light up areas long distance!",

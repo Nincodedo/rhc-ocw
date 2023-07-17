@@ -7,20 +7,27 @@
     "title": "What's Updog?",
     "description": "nm how bout u",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
-    "hidden": true
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
   },
-  "parent": "nincodedo:unique_items/library",
+  "parent": "nincodedo:unique_items/initial_library",
   "criteria": {
     "got_root": {
       "trigger": "minecraft:location",
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:location_check",
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
             "predicate": {
-              "structure": "nincodedo:library_hidden_wing"
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "nincodedo:unique_items/initial_library": true,
+                  "nincodedo:unique_items/master_sword/initial": true
+                }
+              }
             }
           }
         ]

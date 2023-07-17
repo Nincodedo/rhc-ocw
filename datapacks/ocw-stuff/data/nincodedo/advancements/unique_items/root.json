@@ -7,13 +7,37 @@
     "description": "Powerful rare items",
     "background": "minecraft:textures/block/sandstone_top.png",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },
   "criteria": {
     "any_ocw_structure": {
-      "trigger": "minecraft:impossible"
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "nincodedo:any_ocw_structure"
+          }
+        ]
+      }
+    },
+    "find_a_map": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"OCWMap\"}"
+          }
+        ]
+      }
     }
-  }
+  },
+  "requirements": [
+    [
+      "find_a_map",
+      "any_ocw_structure"
+    ]
+  ]
 }

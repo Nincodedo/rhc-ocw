@@ -22,7 +22,7 @@ execute if score @s[tag=holdingcobaltpickaxe] cobalt_momentum matches 3 if score
 execute if score @s[tag=holdingcobaltpickaxe] cobalt_momentum matches 4 if score @s cobalt_momentum_prev < @s cobalt_momentum at @s run playsound minecraft:entity.player.levelup player @s ~ ~ ~ 0.5 1.4
 scoreboard players add @s[tag=holdingcobaltpickaxe,scores={cobalt_momentum=5..}] cobalt_momentum_max 1
 item modify entity @s[tag=holdingcobaltpickaxe,scores={cobalt_momentum_max=8..}] weapon.mainhand nincodedo:multiverse/tools/reset_efficiency
-execute at @s[tag=holdingcobaltpickaxe,scores={cobalt_momentum_max=8..}] run playsound minecraft:entity.zombie_villager.cure player @s ^-1 ^ ^ 0.4 1
+execute at @s[tag=holdingcobaltpickaxe,scores={cobalt_momentum_max=8..}] run playsound nincodedo:item.cobalt_pickaxe.cooldown player @s ^-1 ^ ^ 0.4 1
 execute if score @s[tag=holdingcobaltpickaxe] cobalt_momentum matches 1.. if score @s mined_total matches ..2 run item modify entity @s weapon.mainhand nincodedo:multiverse/tools/reset_efficiency
 execute store result score @s[tag=holdingcobaltpickaxe] cobalt_momentum_prev run scoreboard players get @s cobalt_momentum
 scoreboard players reset @s[scores={cobalt_momentum_max=8..}] cobalt_momentum
