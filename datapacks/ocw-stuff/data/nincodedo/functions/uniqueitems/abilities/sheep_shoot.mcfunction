@@ -19,7 +19,7 @@ execute anchored eyes run summon firework_rocket ^-3 ^2 ^-1.5 {Tags:["bahproject
 # Purple
 execute anchored eyes run summon firework_rocket ^-5 ^2 ^-2 {Tags:["bahprojectile"], NoGravity:1,Life:0,LifeTime:40,ShotAtAngle:1b,FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;9699539]},{Type:0,Colors:[I;9699539]},{Type:0,Colors:[I;9699539]},{Type:0,Colors:[I;9699539]}]}}},Passengers:[{id:"minecraft:sheep",Age:-3000,DeathLootTable:"",Invulnerable:1b,Tags:["sheepprojectile"],Color:10b}]}
 
-execute as @e[tag=sheepprojectile] at @s run playsound minecraft:entity.sheep.ambient neutral @a ~ ~ ~ 1
+execute as @e[tag=sheepprojectile] at @s run playsound minecraft:entity.sheep.ambient neutral @a
 execute as @e[tag=bahprojectile] run data modify entity @s Motion set from storage nincodedo:storage Motion
 data modify storage nincodedo:storage UUID set from entity @s UUID
 execute as @e[tag=bahprojectile] run data modify entity @s Owner set from storage nincodedo:storage UUID
