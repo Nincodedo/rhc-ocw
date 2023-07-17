@@ -4,7 +4,7 @@
       "item": "minecraft:cookie"
     },
     "title": "Smart Cookie",
-    "description": "Craft a shield by the end of the first day",
+    "description": "Craft a shield",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -12,25 +12,10 @@
   },
   "parent": "nincodedo:goodgoals/root",
   "criteria": {
-    "first_day_shield": {
-      "trigger": "minecraft:inventory_changed",
+    "requirement": {
+      "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:time_check",
-            "value": {
-              "min": 0,
-              "max": 24000
-            }
-          }
-        ],
-        "items": [
-          {
-            "items": [
-              "minecraft:shield"
-            ]
-          }
-        ]
+        "recipe_id": "minecraft:shield"
       }
     }
   },
