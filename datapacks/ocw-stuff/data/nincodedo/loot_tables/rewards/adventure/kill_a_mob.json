@@ -114,6 +114,15 @@
           "add": true
         },
         {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "text": "Reward from killing a mob."
+            }
+          ]
+        },
+        {
           "function": "minecraft:reference",
           "name": "nincodedo:rewards/day1tool_lore"
         }

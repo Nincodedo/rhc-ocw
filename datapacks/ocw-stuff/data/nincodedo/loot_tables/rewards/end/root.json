@@ -26,6 +26,15 @@
   ],
   "functions": [
     {
+      "function": "minecraft:set_lore",
+      "entity": "this",
+      "lore": [
+        {
+          "text": "Reward from going to The End."
+        }
+      ]
+    },
+    {
       "function": "minecraft:reference",
       "name": "nincodedo:rewards/generic_lore"
     }

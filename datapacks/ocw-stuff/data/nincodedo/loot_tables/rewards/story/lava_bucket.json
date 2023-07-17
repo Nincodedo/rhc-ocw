@@ -19,6 +19,15 @@
               }
             },
             {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Reward from getting a lava bucket."
+                }
+              ]
+            },
+            {
               "function": "minecraft:reference",
               "name": "nincodedo:rewards/generic_lore"
             }
