@@ -1,0 +1,52 @@
+# syntax=docker/dockerfile:1
+FROM debian:stable-slim AS build
+
+ARG bedrock_bone_meal_version=1.2.0+1.20
+
+RUN apt-get update \
+  && apt-get install zip wget ca-certificates -y --no-install-recommends \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY datapacks /datapacks
+RUN cd /datapacks/ocw-stuff \
+  && zip -r ocw-stuff.zip . \
+  && mv ocw-stuff.zip /datapacks \
+  && cd /datapacks/who-did-this \
+  && zip -r who-did-this.zip . \
+  && mv who-did-this.zip /datapacks \
+  && cd /datapacks/custom-compostables \
+  && zip -r custom-compostables.zip . \
+  && mv custom-compostables.zip /datapacks
+
+RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-java-bedrock-bone-meal-datapack/releases/download/$bedrock_bone_meal_version/bedrock-bone-meal-$bedrock_bone_meal_version.zip
+
+FROM itzg/minecraft-server:2023.7.0
+
+ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,jamlib,rightclickharvest,jade,rei,memoryleakfix,mc-server-description,syncmatica
+
+RUN mkdir -p /mods
+COPY mods/*.jar /mods
+
+ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip,/datapacks/custom-compostables.zip
+RUN mkdir -p /datapacks
+COPY --from=build /datapacks/*.zip /datapacks
+
+ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
+RUN mkdir -p /vt
+COPY rhc/vt/*.json /vt
+
+RUN mkdir -p /patches
+COPY rhc/patches/*.json /patches
+ENV PATCH_DEFINITIONS=/patches
+
+ENV REPLACE_ENV_VARIABLES=true
+ENV REPLACE_ENV_DURING_SYNC=true
+ENV SYNC_SKIP_NEWER_IN_DESTINATION=false
+
+ENV MOTD="testin stuuuuuuff"
+ENV MODE=creative
+ENV LEVEL_TYPE=FLAT
+ENV GENERATOR_SETTINGS='{"biome":"minecraft:desert","layers":[{"block":"minecraft:sandstone","height":60}],"structures":{}}'
+
+LABEL org.opencontainers.image.source="https://github.com/Nincodedo/rhc-ocw"
