@@ -11,4 +11,8 @@ execute as @a run function nincodedo:items/multiverse/tools/calculate_mined_bloc
 
 execute unless entity @a[scores={ascend_phase=0..5}] run kill @e[tag=ascend_anchor]
 
+execute store result score nnewdaytime rhcdata run time query daytime
+execute if score nnewdaytime rhcdata < nolddaytime rhcdata run function nincodedo:rewards/calc_time_skip
+execute store result score nolddaytime rhcdata run time query daytime
+
 schedule function nincodedo:slowtick 2s
