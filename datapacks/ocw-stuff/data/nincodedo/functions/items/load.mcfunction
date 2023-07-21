@@ -17,3 +17,5 @@ scoreboard objectives add mined_redstone minecraft.mined:minecraft.redstone_ore
 scoreboard objectives add mined_lapis minecraft.mined:minecraft.lapis_ore
 scoreboard objectives add mined_emerald minecraft.mined:minecraft.emerald_ore
 scoreboard objectives add mined_total dummy
+
+scoreboard objectives add bundle_item_count dummy
