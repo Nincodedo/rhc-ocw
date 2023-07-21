@@ -1,0 +1,27 @@
+{
+  "values": [
+    "minecraft:enchanted_book",
+    "minecraft:golden_sword",
+    "minecraft:ender_eye",
+    "minecraft:poisonous_potato",
+    "minecraft:dead_bush",
+    "minecraft:clay_ball",
+    "minecraft:brick",
+    "minecraft:dirt",
+    "minecraft:cobblestone",
+    "minecraft:raw_iron",
+    "minecraft:diamond",
+    "minecraft:golden_boots",
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:golden_axe",
+    "minecraft:cookie",
+    "minecraft:stone_hoe",
+    "minecraft:golden_hoe",
+    "minecraft:lapis_lazuli",
+    "minecraft:lava_bucket",
+    "minecraft:coal",
+    "minecraft:iron_pickaxe",
+    "minecraft:golden_pickaxe"
+  ]
+}

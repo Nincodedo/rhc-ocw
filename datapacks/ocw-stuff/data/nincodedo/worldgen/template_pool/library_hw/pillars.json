@@ -1,0 +1,42 @@
+{
+  "name": "nincodedo:library_hw/pillars",
+  "fallback": "nincodedo:library_hw/normal_pillar",
+  "elements": [
+    {
+      "weight": 4,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/entrance/pillar1",
+        "processors": "nincodedo:library/pillar"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/entrance/pillar_center",
+        "processors": "nincodedo:library/pillar"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/entrance/pillar_spawner1",
+        "processors": "nincodedo:library/pillar"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "nincodedo:ocw_old/library_town/library_hw/entrance/pillar_treasure1",
+        "processors": "nincodedo:library/pillar"
+      }
+    }
+  ]
+}
