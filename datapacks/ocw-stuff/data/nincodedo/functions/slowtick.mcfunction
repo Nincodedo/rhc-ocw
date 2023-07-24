@@ -19,6 +19,7 @@ execute unless entity @a[scores={ascend_phase=0..5}] run kill @e[tag=ascend_anch
 
 execute store result score nnewdaytime rhcdata run time query daytime
 execute if score nnewdaytime rhcdata < nolddaytime rhcdata run function nincodedo:rewards/calc_time_skip
+execute if score nnewdaytime rhcdata < nolddaytime rhcdata as @a[nbt={Inventory:[{tag:{NinUnique:"MoonDagger"}}]}] run function nincodedo:uniqueitems/moondagger
 execute store result score nolddaytime rhcdata run time query daytime
 
 schedule function nincodedo:slowtick 2s
