@@ -37,5 +37,5 @@ item modify entity @s[nbt={Inventory:[{Slot:35b,tag:{NinUnique:"BoatCompass"}}]}
 item modify entity @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"BoatCompass"}}]}] weapon.offhand nincodedo:set_boat_compass
 
 advancement revoke @s only nincodedo:items/get_out_of_boat
-playsound minecraft:item.lodestone_compass.lock block @s ~ ~ ~ 1
+playsound minecraft:item.lodestone_compass.lock block @s
 scoreboard players set @s inboat 2

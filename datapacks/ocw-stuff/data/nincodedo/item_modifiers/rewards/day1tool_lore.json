@@ -4,7 +4,7 @@
     "entity": "this",
     "lore": [
       {
-        "text": "Disappears after the first night"
+        "text": "Disappears after your first day (minus sleep)"
       }
     ]
   },

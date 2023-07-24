@@ -23,6 +23,15 @@
               "add": false
             },
             {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Reward from \"You should have died\" advancement."
+                }
+              ]
+            },
+            {
               "function": "minecraft:reference",
               "name": "nincodedo:rewards/generic_lore"
             }

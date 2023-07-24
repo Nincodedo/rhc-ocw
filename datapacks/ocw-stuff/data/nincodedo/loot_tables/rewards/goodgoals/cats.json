@@ -26,6 +26,15 @@
           }
         },
         {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "text": "Reward from breeding cats."
+            }
+          ]
+        },
+        {
           "function": "minecraft:reference",
           "name": "nincodedo:rewards/generic_lore"
         }

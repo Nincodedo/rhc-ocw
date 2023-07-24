@@ -37,6 +37,15 @@
               "add": true
             },
             {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Reward from cutting down trees."
+                }
+              ]
+            },
+            {
               "function": "minecraft:reference",
               "name": "nincodedo:rewards/day1tool_lore"
             }

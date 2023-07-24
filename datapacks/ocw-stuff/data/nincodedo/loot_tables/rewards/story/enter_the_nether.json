@@ -12,6 +12,15 @@
               "tag": "{NinReward:1}"
             },
             {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Reward from going to The Nether."
+                }
+              ]
+            },
+            {
               "function": "minecraft:reference",
               "name": "nincodedo:rewards/generic_lore"
             }

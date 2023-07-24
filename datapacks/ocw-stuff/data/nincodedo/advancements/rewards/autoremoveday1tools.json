@@ -5,9 +5,14 @@
       "conditions": {
         "player": [
           {
-            "condition": "minecraft:time_check",
+            "condition": "minecraft:value_check",
             "value": {
-              "min": 24000
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "day1toolticks"
+            },
+            "range": {
+              "max": 0
             }
           }
         ]
