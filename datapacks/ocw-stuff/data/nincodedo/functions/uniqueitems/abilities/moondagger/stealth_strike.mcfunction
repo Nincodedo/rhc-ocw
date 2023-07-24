@@ -10,9 +10,19 @@ tag @e[type=#nincodedo:enemy_mobs,sort=nearest,limit=1] add stealth_strike_count
 execute at @e[tag=stealth_strike_victim,sort=nearest,limit=1] run summon minecraft:text_display ~ ~2.3 ~ {text:'{"text":"?"}',billboard:"center",Tags:["stealth_strike_effect","stealth_strike_counter"]}
 data modify entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] NoAI set value true
 
-particle minecraft:cloud ~ ~1 ~ .125 .25 .125 .1 25
+particle minecraft:cloud ~ ~1 ~ .125 .5 .125 .05 25
 playsound nincodedo:item.stealthstrike.teleport player @a[distance=..16] ~ ~ ~ 0.7
-execute positioned as @e[tag=stealth_strike_victim,sort=nearest,limit=1] rotated as @e[tag=stealth_strike_victim,sort=nearest,limit=1] positioned ^ ^ ^-1.7 if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air facing entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] feet run tp @s ~ ~ ~ ~ ~
+execute positioned as @e[tag=stealth_strike_victim,sort=nearest,limit=1] rotated as @e[tag=stealth_strike_victim,sort=nearest,limit=1] positioned ^ ^ ^-1.7 facing entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] feet run summon minecraft:marker ~ ~ ~ {Tags:["stealth_strike_tele","stealth_strike_tele1"]}
+execute positioned as @e[tag=stealth_strike_victim,sort=nearest,limit=1] rotated as @e[tag=stealth_strike_victim,sort=nearest,limit=1] positioned ^ ^ ^-1.7 positioned over motion_blocking_no_leaves facing entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] feet run summon minecraft:marker ~ ~ ~ {Tags:["stealth_strike_tele","stealth_strike_tele2"]}
+execute as @e[tag=stealth_strike_tele] run data modify entity @s Rotation set from entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] Rotation
+
+execute as @e[tag=stealth_strike_tele2,sort=nearest,limit=1] at @s unless entity @e[tag=stealth_strike_victim,sort=nearest,limit=1,distance=..2] run kill @s
+
+execute at @e[tag=stealth_strike_tele1,sort=nearest,limit=1] if block ~ ~ ~ #minecraft:replaceable if block ~ ~ ~ #minecraft:replaceable run tp @s ~ ~ ~ ~ ~
+execute at @e[tag=stealth_strike_tele1,sort=nearest,limit=1] unless block ~ ~ ~ #minecraft:replaceable at @e[tag=stealth_strike_tele2,sort=nearest,limit=1] if block ~ ~ ~ #minecraft:replaceable if block ~ ~ ~ #minecraft:replaceable run tp @s ~ ~ ~ ~ ~
+execute at @e[tag=stealth_strike_tele1,sort=nearest,limit=1] if block ~ ~ ~ #minecraft:replaceable unless block ~ ~ ~ #minecraft:replaceable at @e[tag=stealth_strike_tele2,sort=nearest,limit=1] if block ~ ~ ~ #minecraft:replaceable if block ~ ~ ~ #minecraft:replaceable run tp @s ~ ~ ~ ~ ~
+
+kill @e[tag=stealth_strike_tele,sort=nearest,limit=2]
 
 execute store result score @e[tag=stealth_strike_counter] moon_dagger_effect run scoreboard players get moon_dagger_stun_time_ticks rhcconfig
 execute store result score @s moon_dagger_stealth_strike_cooldown run scoreboard players get moon_dagger_cooldown_time_ticks rhcconfig

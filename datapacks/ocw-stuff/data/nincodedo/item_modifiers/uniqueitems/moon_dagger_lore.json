@@ -3,7 +3,17 @@
   "entity": "this",
   "lore": [
     {
-      "text": "THE MOON"
+      "text": "Unique Item",
+      "color": "gold"
+    },
+    {
+      "text": "These curved blades shine like"
+    },
+    {
+      "text": "the crescent moon on a dark night."
+    },
+    {
+      "text": "Only Undead has the skill to use this."
     },
     {
       "text": ""

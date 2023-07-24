@@ -30,5 +30,5 @@ data modify storage nincodedo:potions unlimitedpotiontag set value {NinUnique:"U
 
 scoreboard objectives add moon_dagger_effect dummy
 scoreboard objectives add moon_dagger_stealth_strike_cooldown dummy
-scoreboard players set moon_dagger_stun_time_ticks rhcconfig 15
+scoreboard players set moon_dagger_stun_time_ticks rhcconfig 20
 scoreboard players set moon_dagger_cooldown_time_ticks rhcconfig 300
