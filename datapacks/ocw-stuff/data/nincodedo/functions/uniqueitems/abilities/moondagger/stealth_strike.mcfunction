@@ -2,6 +2,10 @@ execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run tellraw @a
 execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run function nincodedo:uniqueitems/abilities/moondagger/no_stealth_strike
 execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run return -1
 
+execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run tellraw @a[tag=debug_logging] {"text": "[Debug] On cooldown, not attacking"}
+execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run function nincodedo:uniqueitems/abilities/moondagger/no_stealth_strike
+execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run return -2
+
 tellraw @a[tag=debug_logging] {"text": "[Debug] Attacking with stealth strike"}
 
 tag @e[type=#nincodedo:enemy_mobs,sort=nearest,limit=1] add stealth_strike_victim
