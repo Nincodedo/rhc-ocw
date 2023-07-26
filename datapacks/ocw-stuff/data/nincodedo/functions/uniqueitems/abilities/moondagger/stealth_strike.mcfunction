@@ -31,6 +31,8 @@ kill @e[tag=stealth_strike_tele,sort=nearest,limit=2]
 execute store result score @e[tag=stealth_strike_counter] moon_dagger_effect run scoreboard players get moon_dagger_stun_time_ticks rhcconfig
 execute store result score @s moon_dagger_stealth_strike_cooldown run scoreboard players get moon_dagger_cooldown_time_ticks rhcconfig
 
+tag @s add next_attack_stealth_strike
+
 function nincodedo:uniqueitems/abilities/moondagger/setup_cooldown_bar
 schedule function nincodedo:uniqueitems/abilities/moondagger/watch_effect_counter 1t
 schedule function nincodedo:uniqueitems/abilities/moondagger/watch_cooldown 1t
