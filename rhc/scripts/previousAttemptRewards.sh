@@ -49,10 +49,18 @@ do
     id=${f:2:-5}
     if [ ! -f ./$id.txt ]
     then
-        username=$(curl -s --request GET --url "https://playerdb.co/api/player/minecraft/$id" --header 'User-Agent: Nincodedo (nincodedo@gmail.com)' | jq -r .data.player.username)
+        username=""
+        if [ ! -f /data/rhc-playerdata/$id.txt ]
+        then
+          log "Did not find player in cached data, getting info from PlayerDB"
+          username=$(curl -s --request GET --url "https://playerdb.co/api/player/minecraft/$id" --header 'User-Agent: Nincodedo (nincodedo@gmail.com)' | jq -r .data.player.username)
+          echo "$username" > "/data/rhc-playerdata/$id.txt"
+          echo "$id" > "/data/rhc-playerdata/$username.txt"
+        else
+          log "Found player in cached data"
+          username=$(cat "/data/rhc-playerdata/$id.txt")
+        fi
         echo "$username" > $id.txt
-        echo "$username" > "/data/rhc-playerdata/$id.txt"
-        echo "$id" > "/data/rhc-playerdata/$username.txt"
         jq -r '. | to_entries[] | select(.value.done == true) | select(.key|contains("recipes")|not) | select(.key|startswith("uncraftable")|not) | select(.key|startswith("vanilla")|not) | .key' $f 2> /dev/null > $username.txt
         transformed=$((++transformed))
     fi
