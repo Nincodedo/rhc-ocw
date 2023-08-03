@@ -6,6 +6,7 @@ effect clear @s minecraft:blindness
 tag @s remove ascending
 scoreboard players set @s ascend_phase 4
 execute at @s run summon minecraft:marker ~ ~ ~ {Tags:["ascend_action"]}
+data modify entity @e[tag=ascend_action,sort=nearest,distance=..1,limit=1] Rotation set from entity @s Rotation
 tp @s @e[tag=ascend_action,sort=nearest,distance=..1,limit=1]
 execute at @s if block ~ ~1 ~ minecraft:water run playsound nincodedo:item.ascend.pop_out_head_water player @a ~ ~2 ~
 execute at @s run playsound nincodedo:item.ascend.pop_out_head_ground player @a ~ ~2 ~

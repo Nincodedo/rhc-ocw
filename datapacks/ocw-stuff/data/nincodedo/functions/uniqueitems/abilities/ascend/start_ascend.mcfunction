@@ -9,6 +9,7 @@ playsound nincodedo:item.ascend.start_jump_ding player @a
 playsound nincodedo:item.ascend.jump_kick player @a
 playsound nincodedo:item.ascend.jump_woosh player @a
 execute summon minecraft:marker run data merge entity @s {Tags:["ascend_undo"]}
+data modify entity @e[tag=ascend_undo,sort=nearest,limit=1,distance=..2] Rotation set from entity @s Rotation
 summon minecraft:armor_stand ~ ~ ~ {Tags:["ascend_anchor"],NoGravity:1b,Invisible:1b,Marker:1b}
 tag @s add ascend_anchor_target
 ride @s mount @e[tag=ascend_anchor,sort=nearest,distance=..1,limit=1]
