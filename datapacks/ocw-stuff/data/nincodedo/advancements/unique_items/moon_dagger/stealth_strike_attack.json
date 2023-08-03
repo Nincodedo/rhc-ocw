@@ -30,13 +30,6 @@
                 }
               }
             ]
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "nbt": "{Tags:[\"next_attack_stealth_strike\"]}"
-            }
           }
         ],
         "entity": [

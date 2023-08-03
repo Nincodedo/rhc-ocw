@@ -8,11 +8,11 @@ execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run return -
 
 tellraw @a[tag=debug_logging] {"text": "[Debug] Attacking with stealth strike"}
 
-tag @e[type=#nincodedo:enemy_mobs,sort=nearest,limit=1] add stealth_strike_victim
-tag @e[type=#nincodedo:enemy_mobs,sort=nearest,limit=1] add stealth_strike_counter
+tag @e[type=#nincodedo:enemy_mobs,sort=nearest,distance=..3] add stealth_strike_victim
+tag @e[type=#nincodedo:enemy_mobs,sort=nearest,distance=..3] add stealth_strike_counter
 
-execute at @e[tag=stealth_strike_victim,sort=nearest,limit=1] run summon minecraft:text_display ~ ~2.3 ~ {text:'{"text":"?"}',billboard:"center",Tags:["stealth_strike_effect","stealth_strike_counter"]}
-data modify entity @e[tag=stealth_strike_victim,sort=nearest,limit=1] NoAI set value true
+execute at @e[tag=stealth_strike_victim,sort=nearest,distance=..3] run summon minecraft:text_display ~ ~2.3 ~ {text:'{"text":"?"}',billboard:"center",Tags:["stealth_strike_effect","stealth_strike_counter"]}
+execute as @e[tag=stealth_strike_victim,sort=nearest,distance=..3] run data modify entity @s NoAI set value true
 
 particle minecraft:cloud ~ ~1 ~ .125 .5 .125 .05 25
 playsound nincodedo:item.stealthstrike.teleport player @a[distance=..16] ~ ~ ~ 0.7
