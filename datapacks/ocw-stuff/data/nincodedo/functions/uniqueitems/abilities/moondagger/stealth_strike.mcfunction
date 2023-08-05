@@ -1,10 +1,10 @@
 execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run tellraw @a[tag=debug_logging] {"text": "[Debug] no nearby mob, canceled stealth strike"}
 execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run function nincodedo:uniqueitems/abilities/moondagger/no_stealth_strike
-execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run return -1
+execute unless entity @e[type=#nincodedo:enemy_mobs,distance=..3] run return 0
 
-execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run tellraw @a[tag=debug_logging] {"text": "[Debug] On cooldown, not attacking"}
-execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run function nincodedo:uniqueitems/abilities/moondagger/no_stealth_strike
-execute if score @s moon_dagger_stealth_strike_cooldown matches 1.. run return -2
+execute unless score config_debug rhcconfig matches 1 if score @s moon_dagger_stealth_strike_cooldown matches 1.. run tellraw @a[tag=debug_logging] {"text": "[Debug] On cooldown, not attacking"}
+execute unless score config_debug rhcconfig matches 1 if score @s moon_dagger_stealth_strike_cooldown matches 1.. run function nincodedo:uniqueitems/abilities/moondagger/no_stealth_strike
+execute unless score config_debug rhcconfig matches 1 if score @s moon_dagger_stealth_strike_cooldown matches 1.. run return 0
 
 tellraw @a[tag=debug_logging] {"text": "[Debug] Attacking with stealth strike"}
 

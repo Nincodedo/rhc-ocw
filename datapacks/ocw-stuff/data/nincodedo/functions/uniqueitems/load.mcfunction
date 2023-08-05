@@ -4,6 +4,7 @@ scoreboard objectives add sheephorn dummy
 scoreboard objectives add used_th minecraft.used:minecraft.goat_horn
 scoreboard objectives add projectilelife dummy
 scoreboard objectives add arrowshot minecraft.used:minecraft.bow
+scoreboard objectives add debug_success dummy
 scoreboard objectives add spin_attack_life dummy
 scoreboard objectives add nopotionsplz trigger
 scoreboard objectives add ascend_emergency_fix trigger
