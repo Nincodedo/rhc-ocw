@@ -1,8 +1,8 @@
 execute if predicate nincodedo:feature_locations/dungeon_spawner run data modify storage nincodedo:storage banners.orange.id set string block ~ ~-1 ~ SpawnData.entity.id 10
 
-loot give @s loot nincodedo:triggers/banners
+execute store result score bannerplz rhcdata run loot give @s loot nincodedo:triggers/banners
 
-execute if predicate nincodedo:feature_locations/any_known_structure run scoreboard players add @s bannerplz 1
+scoreboard players operation @s bannerplz += bannerplz rhcdata
 
 execute unless score @s bannerplz matches 1 run schedule function nincodedo:triggers/resetbannertrigger 120s append
 execute unless score @s bannerplz matches 1 run tellraw @s {"text":"Banner found for your location! 2 minute command cooldown started.","color":"aqua"}
