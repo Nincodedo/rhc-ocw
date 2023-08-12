@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:{Id:[I;438326035,1742884492,-2058107404,-1550935400],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmFlYTNkNTVhYTJmOTYyYzIzMTNkNWJmOTllOGJkZDEwNTZhZDI0MGM1ZGEzMGRiYzU1ZDQ2NmE2ZjJiMTcxOCJ9fX0=\"}]}}}"
+    },
+    "title": "Have you considered the moon phases though?",
+    "description": "Moon.",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "nincodedo:unique_items/rumors",
+  "criteria": {
+    "got_root": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "nincodedo:undeadcottage"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
