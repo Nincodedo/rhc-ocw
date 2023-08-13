@@ -4,6 +4,7 @@
 * [Unique Items](#unique-items)
   * [Iridium Rod](#iridium-rod)
   * [The Master Sword](#the-master-sword)
+  * [Moon Dagger](#moon-dagger)
   * [Night Vision Helmet](#night-vision-helmet)
   * [Potion Bundle](#potion-bundle)
   * [Potion Horn](#potion-horn)
@@ -51,6 +52,16 @@ Default key: Use (Right click)
 Default key: Sneak + Use (Right click)
 
 ![A video of Minecraft. The player is holding a sword and facing a Creeper. The player's sword is the Master Sword. The player crouches near the Creeper and spins the Master Sword around themselves, damaging the Creeper. The player does this twice, before killing the Creeper with a regular sword attack.](/images/spin_attack_demo.gif)
+
+### Moon Dagger
+
+The Moon Daggers are a set of dual wielding daggers for Undead_Zeratul. The amount of damage they output is based on the current moon phase, with the full moon granting the most damage, 5 damage per dagger. It can be found in [Undead_Zeratul's Cottage](#undead_zeratuls-cottage) after the [Night Vision Helmet](#night-vision-helmet) has been found.
+
+#### Sneak Strike
+
+Default key: Sneak + Use (Right click)
+
+Sneak strike teleports you behind enemies and stuns them for a brief time. Attacks that land on stunned enemies will do additional damage.
 
 ### Night Vision Helmet
 

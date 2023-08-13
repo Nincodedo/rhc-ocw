@@ -135,6 +135,24 @@
             },
             {
               "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/moondagger",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "moondagger"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
               "name": "nincodedo:uniqueitems/ascend"
             }
           ]

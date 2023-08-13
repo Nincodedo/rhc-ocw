@@ -1,0 +1,10 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{AttributeModifiers:[]}"
+  },
+  {
+    "function": "minecraft:reference",
+    "name": "nincodedo:uniqueitems/moon_dagger_lore"
+  }
+]

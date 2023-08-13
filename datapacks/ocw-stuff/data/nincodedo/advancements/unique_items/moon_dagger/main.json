@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:2}"
+    },
+    "title": "Moon Daggers",
+    "description": "Because Moon",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nincodedo:unique_items/moon_dagger/initial",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"MoonDagger\"}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:advancements/getmoondagger"
+  }
+}

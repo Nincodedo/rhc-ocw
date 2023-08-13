@@ -1,5 +1,5 @@
 # Check if Potion Bundle has potions
-execute as @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}]}] run function nincodedo:uniqueitems/abilities/potionbundle/update_bundle
+execute as @s[predicate=nincodedo:is/entity/equipment/offhand/potion_bundle] run function nincodedo:uniqueitems/abilities/potionbundle/update_bundle
 execute store result score potionbundlecount rhcdata run data get entity @s Inventory[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}].tag.Items
 tellraw @a[tag=debug_logging] [{"text": "[Debug] "},{"nbt":"Inventory[{Slot:-106b}].tag.FirstItem","entity":"@p"}]
 
@@ -144,13 +144,13 @@ item replace entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:splash_potion"}
 
 # Remove top splash potion from bundle
 data remove storage nincodedo:potions Items
-data modify storage nincodedo:potions Items set from entity @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}]}] Inventory[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}].tag.Items
+data modify storage nincodedo:potions Items set from entity @s[predicate=nincodedo:is/entity/equipment/offhand/potion_bundle] Inventory[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}].tag.Items
 data remove storage nincodedo:potions Items[0]
-item modify entity @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}]}] weapon.offhand nincodedo:update_potion_bundle
+item modify entity @s[predicate=nincodedo:is/entity/equipment/offhand/potion_bundle] weapon.offhand nincodedo:update_potion_bundle
 
 # Refill potion bundle if empty
 execute store result score potionbundlecount rhcdata run data get entity @s Inventory[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}].tag.Items
-execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{NinUnique:"PotionBundle"}}]}] if score potionbundlecount rhcdata matches 0 run function nincodedo:uniqueitems/abilities/potionbundle/fill_bundle
+execute if entity @s[predicate=nincodedo:is/entity/equipment/offhand/potion_bundle] if score potionbundlecount rhcdata matches 0 run function nincodedo:uniqueitems/abilities/potionbundle/fill_bundle
 
 advancement revoke @s only nincodedo:unique_items/potion_horn/use
 scoreboard players set @s used_th 0

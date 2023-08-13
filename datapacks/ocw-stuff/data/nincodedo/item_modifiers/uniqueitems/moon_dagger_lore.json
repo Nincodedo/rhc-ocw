@@ -1,0 +1,75 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "lore": [
+    {
+      "text": "Unique Item",
+      "color": "gold"
+    },
+    {
+      "text": "These curved blades shine like"
+    },
+    {
+      "text": "the crescent moon on a dark night."
+    },
+    {
+      "text": "Only Undead has the skill to use this."
+    },
+    {
+      "text": ""
+    },
+    {
+      "text": "When in Main Hand",
+      "color": "gray",
+      "italic": false
+    },
+    {
+      "text": "or Off Hand:",
+      "color": "gray",
+      "italic": false
+    },
+    {
+      "text": " ",
+      "color": "dark_green",
+      "italic": false,
+      "extra": [
+        [
+          {
+            "score": {
+              "name": "moon_damage",
+              "objective": "rhcdata"
+            }
+          },
+          {
+            "text": " Attack Damage"
+          }
+        ]
+      ]
+    },
+    {
+      "text": " 2 Attack Speed",
+      "color": "dark_green",
+      "italic": false
+    },
+    {
+      "keybind": "key.use",
+      "color": "gray",
+      "extra": [
+        {
+          "text": " + "
+        },
+        {
+          "keybind": "key.sneak"
+        },
+        {
+          "text": ": Use Sneak Strike"
+        }
+      ]
+    },
+    {
+      "text": "  (Only works near enemy mobs)",
+      "color": "gray"
+    }
+  ],
+  "replace": true
+}

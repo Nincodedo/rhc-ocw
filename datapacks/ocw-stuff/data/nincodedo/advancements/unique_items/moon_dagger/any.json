@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "get_mastersword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "nbt": "{NinUnique:\"MoonDagger\"}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:uniqueitems/moondagger"
+  }
+}
