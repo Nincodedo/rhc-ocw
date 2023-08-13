@@ -50,6 +50,25 @@
       "text": " 2 Attack Speed",
       "color": "dark_green",
       "italic": false
+    },
+    {
+      "keybind": "key.use",
+      "color": "gray",
+      "extra": [
+        {
+          "text": " + "
+        },
+        {
+          "keybind": "key.sneak"
+        },
+        {
+          "text": ": Use Sneak Strike"
+        }
+      ]
+    },
+    {
+      "text": "  (Only works near enemy mobs)",
+      "color": "gray"
     }
   ],
   "replace": true
