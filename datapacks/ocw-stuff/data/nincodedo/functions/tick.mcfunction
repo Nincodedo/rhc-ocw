@@ -1,6 +1,7 @@
 execute as @a[scores={bannerplz=1}] at @s run function nincodedo:triggers/givebannerforlocation
 execute as @a[scores={nopotionsplz=1}] run function nincodedo:triggers/nopotionsplz
 execute as @a[scores={day1tooltime=1}] run function nincodedo:triggers/day1tooltimecheck
+execute as @a[scores={ping=1}] at @s run function nincodedo:triggers/ping/start_ping
 execute as @a[tag=!triggerbannerenabled] run function nincodedo:util/setup_new_player
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run scoreboard players enable @s nopotionsplz
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run tag @s add triggernopotionenabled
