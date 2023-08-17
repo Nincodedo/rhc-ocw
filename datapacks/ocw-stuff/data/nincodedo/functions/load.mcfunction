@@ -1,6 +1,7 @@
 function nincodedo:uniqueitems/load
 function nincodedo:items/load
 function nincodedo:rewards/load
+function nincodedo:triggers/ping/load
 
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger

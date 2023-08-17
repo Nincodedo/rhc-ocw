@@ -14,6 +14,7 @@ There are a few non-vanilla Java Minecraft features implemented through datapack
 
 - [Minecraft Bedrock's bone meal](https://github.com/Nincodedo/mc-java-bedrock-bone-meal-datapack)
 - [Custom composter items](customcomposter/index.md)
+- [Trigger Commands](trigger/index.md)
 
 ### OCW Features
 
