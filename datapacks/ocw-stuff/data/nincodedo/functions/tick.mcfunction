@@ -2,7 +2,12 @@ execute as @a[scores={bannerplz=1}] at @s run function nincodedo:triggers/giveba
 execute as @a[scores={nopotionsplz=1}] run function nincodedo:triggers/nopotionsplz
 execute as @a[scores={day1tooltime=1}] run function nincodedo:triggers/day1tooltimecheck
 execute as @a[scores={ping=1}] at @s run function nincodedo:triggers/ping/start_ping
+execute as @a[scores={ping_config=0}] run function nincodedo:triggers/ping/show_config
+execute as @a[scores={ping_config=1..16}] run function nincodedo:triggers/ping/set_config
 execute as @a[tag=!triggerbannerenabled] run function nincodedo:util/setup_new_player
+execute as @a[tag=!ping_config_set] run scoreboard players enable @s ping_config
+execute as @a[tag=!ping_config_set] run scoreboard players set @s ping_config -1
+execute as @a[tag=!ping_config_set] run tag @s add ping_config_set
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run scoreboard players enable @s nopotionsplz
 execute if score potionhorn rhcdata matches 1 as @a[tag=!triggernopotionenabled] run tag @s add triggernopotionenabled
 scoreboard players enable @a[advancements={nincodedo:unique_items/ascend/main=true},tag=!triggerascendemr] ascend_emergency_fix

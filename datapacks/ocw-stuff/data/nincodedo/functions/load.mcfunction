@@ -1,14 +1,12 @@
 function nincodedo:uniqueitems/load
 function nincodedo:items/load
 function nincodedo:rewards/load
+function nincodedo:triggers/ping/load
 
 scoreboard objectives add advrewards dummy
 scoreboard objectives add bannerplz trigger
 scoreboard players enable @a bannerplz
 scoreboard objectives add ocwplayergiftcount dummy
-scoreboard objectives add ping_lifetime dummy
-scoreboard objectives add raycast_steps dummy
-scoreboard objectives add ping trigger
 
 execute store result score current_day rhcdata run time query day
 function nincodedo:setuplogbreakcount
@@ -21,6 +19,3 @@ scoreboard players set 8 math 8
 scoreboard players set 5 math 5
 scoreboard players set 2 math 2
 scoreboard players set m1 math -1
-
-scoreboard players set config_ping_ping_lifetime rhcconfig 140
-scoreboard players set max_raycast_steps rhcconfig 120
