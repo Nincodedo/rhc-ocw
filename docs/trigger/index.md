@@ -6,7 +6,7 @@ Using `/trigger bannerplz` when at certain structure locations will give the pla
 
 ## day1tooltime
 
-Using `/trigger day1tooltime` will show you how much time you have left on your Day 1 tools.
+Using `/trigger day1tooltime` will show you how much time you have left on your Day 1 tools. This trigger is only available if you have remaining Day 1 tool time.
 
 ## ping
 
