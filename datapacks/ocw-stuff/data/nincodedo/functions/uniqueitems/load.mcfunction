@@ -1,5 +1,4 @@
 scoreboard objectives add used_ms minecraft.used:minecraft.carrot_on_a_stick
-scoreboard objectives add goggles dummy
 scoreboard objectives add sheephorn dummy
 scoreboard objectives add used_th minecraft.used:minecraft.goat_horn
 scoreboard objectives add projectilelife dummy
@@ -14,10 +13,9 @@ execute unless score torchbow rhcdata matches 1 run scoreboard players set torch
 execute unless score iridiumrod rhcdata matches 1 run scoreboard players set iridiumrod rhcdata 0
 execute unless score mastersword rhcdata matches 1..2 run scoreboard players set mastersword rhcdata 0
 execute unless score masterswordfirst rhcdata matches 1.. run scoreboard players set masterswordfirst rhcdata 0
-execute unless score global goggles matches 1 run scoreboard players set global goggles 0
+execute unless score nightvision rhcdata matches 1..2 run scoreboard players set nightvision rhcdata 0
 execute unless score global sheephorn matches 1 run scoreboard players set global sheephorn 0
 execute unless score potionhorn rhcdata matches 1..2 run scoreboard players set potionhorn rhcdata 0
-execute unless score moondagger rhcdata matches 1 run scoreboard players set moondagger rhcdata 0
 scoreboard players set config_torchbow_motion rhcconfig 1
 scoreboard players set config_ms_cooldown rhcconfig 40
 scoreboard players set config_ms_projlife rhcconfig 30

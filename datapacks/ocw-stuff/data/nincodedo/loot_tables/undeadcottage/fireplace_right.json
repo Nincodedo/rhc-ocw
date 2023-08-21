@@ -38,9 +38,9 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "global"
+                  "name": "nightvision"
                 },
-                "score": "goggles"
+                "score": "rhcdata"
               },
               "range": 0
             }
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "rolls": 2,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:loot_table",
@@ -61,11 +61,11 @@
                 "type": "minecraft:score",
                 "target": {
                   "type": "minecraft:fixed",
-                  "name": "moondagger"
+                  "name": "nightvision"
                 },
                 "score": "rhcdata"
               },
-              "range": 0
+              "range": 1
             }
           ]
         }

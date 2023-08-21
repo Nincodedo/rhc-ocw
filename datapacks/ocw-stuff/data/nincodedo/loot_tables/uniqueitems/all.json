@@ -35,9 +35,9 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "global"
+                      "name": "nightvision"
                     },
-                    "score": "goggles"
+                    "score": "rhcdata"
                   },
                   "range": 0
                 }
@@ -143,11 +143,11 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "moondagger"
+                      "name": "nightvision"
                     },
                     "score": "rhcdata"
                   },
-                  "range": 0
+                  "range": 1
                 }
               ]
             },

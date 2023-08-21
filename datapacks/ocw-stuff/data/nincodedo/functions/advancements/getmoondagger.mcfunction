@@ -1,1 +1,1 @@
-scoreboard players set moondagger rhcdata 1
+scoreboard players set nightvision rhcdata 2
