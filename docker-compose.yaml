@@ -28,8 +28,8 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.20.1'
-      INITIAL_ENABLED_PACKS: 'bundle'
+      VERSION: '1.20.2'
+      INITIAL_ENABLED_PACKS: 'bundle,trade_rebalance'
       RCON_CMDS_STARTUP: |-
         gamerule doDaylightCycle false
         chunky radius 3000
@@ -51,7 +51,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore 6.4.0 - Minecraft 1.20.1"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore 6.4.0 - Minecraft 1.20.2"
       dev.nincodedo.gameservercommander.connection_info: "games.nincodedo.dev"
       com.centurylinklabs.watchtower.enable: false
   log-watcher:
@@ -102,8 +102,8 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.20.1'
-      INITIAL_ENABLED_PACKS: 'bundle'
+      VERSION: '1.20.2'
+      INITIAL_ENABLED_PACKS: 'bundle,trade_rebalance'
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack?type=beta'
       RCON_CMDS_STARTUP: |-
         gamerule doDaylightCycle false
