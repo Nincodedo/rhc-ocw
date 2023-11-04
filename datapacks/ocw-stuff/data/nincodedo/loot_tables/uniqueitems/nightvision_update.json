@@ -1,0 +1,377 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:leather_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "LeatherDefense",
+                      "amount": 1,
+                      "operation": "addition",
+                      "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "nightvision_armor_total": {
+                      "max": 7
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:golden_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "IronDefense",
+                      "amount": 2,
+                      "operation": "addition",
+                      "id": "50e38477-ac04-4c78-ad67-a56a43b02139",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "nightvision_armor_total": {
+                      "min": 8,
+                      "max": 9
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:chainmail_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "IronDefense",
+                      "amount": 2,
+                      "operation": "addition",
+                      "id": "50e38477-ac04-4c78-ad67-a56a43b02139",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "nightvision_armor_total": {
+                      "min": 10,
+                      "max": 11
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "IronDefense",
+                      "amount": 2,
+                      "operation": "addition",
+                      "id": "50e38477-ac04-4c78-ad67-a56a43b02139",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "nightvision_armor_total": {
+                      "min": 12,
+                      "max": 18
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor_toughness",
+                      "name": "DiamondToughness",
+                      "amount": 2,
+                      "operation": "addition",
+                      "id": "d108bcca-f74b-4fe1-8044-de9f2408531f",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "DiamondDefense",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:entity_scores",
+                  "entity": "this",
+                  "scores": {
+                    "nightvision_armor_total": {
+                      "min": 19,
+                      "max": 26
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:netherite_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:reference",
+                  "name": "nincodedo:uniqueitems/nightvision_nbt"
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "entity": "this",
+                  "name": {
+                    "text": "Undead's Night Vision Goggles",
+                    "color": "dark_purple",
+                    "italic": false
+                  }
+                },
+                {
+                  "function": "minecraft:set_attributes",
+                  "modifiers": [
+                    {
+                      "attribute": "minecraft:generic.attack_damage",
+                      "name": "Sneaky",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "ea7efde3-2877-4f48-9895-93f58b0b6c5d",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor_toughness",
+                      "name": "NetheriteToughness",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "16d02124-512d-4ab8-a042-445c88553bd6",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.armor",
+                      "name": "DiamondDefense",
+                      "amount": 3,
+                      "operation": "addition",
+                      "id": "c7990929-c40f-42e8-a69b-9dfe7718f671",
+                      "slot": "head"
+                    },
+                    {
+                      "attribute": "minecraft:generic.knockback_resistance",
+                      "name": "NetheriteKnockbackResist",
+                      "amount": 0.1,
+                      "operation": "addition",
+                      "id": "203dac06-1dd6-4af5-89f9-8d382438bf01",
+                      "slot": "head"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:copy_nbt",
+          "source": "this",
+          "ops": [
+            {
+              "source": "Inventory[{Slot:103b}].tag.Enchantments",
+              "target": "Enchantments",
+              "op": "replace"
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": {
+            "text": "Undead's Night Vision Goggles",
+            "color": "dark_purple",
+            "italic": false
+          }
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "text": "Unique Item",
+              "color": "gold"
+            },
+            {
+              "text": "A lost relic of modded Minecraft past."
+            },
+            {
+              "text": "It seems only Undead knows how to use this."
+            }
+          ],
+          "replace": true
+        }
+      ]
+    }
+  ]
+}

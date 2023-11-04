@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "mainhand": {
+                      "nbt": "{NinUnique:\"MoonDagger\"}"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "offhand": {
+                      "nbt": "{NinUnique:\"MoonDagger\"}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "items": [
+          {
+            "nbt": "{NinUnique:\"MoonDagger\"}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "nincodedo:uniqueitems/moondagger"
+  }
+}

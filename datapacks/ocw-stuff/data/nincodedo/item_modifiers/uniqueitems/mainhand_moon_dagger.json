@@ -1,0 +1,38 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{AttributeModifiers:[]}"
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.attack_damage",
+        "name": "MoonDaggerAttack",
+        "amount": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "moon_damage"
+          },
+          "score": "rhcdata"
+        },
+        "operation": "addition",
+        "id": "9d485acd-3c02-4d65-94d4-684a37bf1fe8",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.attack_speed",
+        "name": "MoonDaggerAttackSpeed",
+        "amount": -2,
+        "operation": "addition",
+        "id": "0e56daad-780f-4d4f-8b71-fa00965f8c2f",
+        "slot": "mainhand"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:reference",
+    "name": "nincodedo:uniqueitems/moon_dagger_lore"
+  }
+]

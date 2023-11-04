@@ -35,9 +35,9 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "global"
+                      "name": "nightvision"
                     },
-                    "score": "goggles"
+                    "score": "rhcdata"
                   },
                   "range": 0
                 }
@@ -126,6 +126,24 @@
                     "target": {
                       "type": "minecraft:fixed",
                       "name": "potionhorn"
+                    },
+                    "score": "rhcdata"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "nincodedo:uniqueitems/moondagger",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "nightvision"
                     },
                     "score": "rhcdata"
                   },

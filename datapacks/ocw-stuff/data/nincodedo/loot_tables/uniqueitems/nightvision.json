@@ -121,20 +121,6 @@
                 }
               ]
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "global"
-                },
-                "score": "goggles"
-              },
-              "range": 0
-            }
           ]
         }
       ],

@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:carrot_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:2,NinUnique:\"MoonDagger\",Unbreakable:1b,HideFlags:2}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Moon Dagger",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:reference",
+              "name": "nincodedo:uniqueitems/mainhand_moon_dagger"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

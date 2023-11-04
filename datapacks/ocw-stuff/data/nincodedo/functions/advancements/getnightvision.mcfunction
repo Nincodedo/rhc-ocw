@@ -1,1 +1,1 @@
-scoreboard players set global goggles 1
+scoreboard players set nightvision rhcdata 1

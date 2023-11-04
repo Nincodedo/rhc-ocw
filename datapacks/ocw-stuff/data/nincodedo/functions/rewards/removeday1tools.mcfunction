@@ -8,3 +8,4 @@ tellraw @s[scores={clearday1tools=1}] {"text":"Aww, your Day 1 tool vanished..."
 tellraw @s[scores={clearday1tools=2..}] [{"text":"Aww, your "},{"score":{"name":"@s","objective":"clearday1tools"}},{"text":" Day 1 tools vanished..."}]
 
 advancement revoke @s only nincodedo:rewards/removeday1tools
+scoreboard players reset @s day1tooltime

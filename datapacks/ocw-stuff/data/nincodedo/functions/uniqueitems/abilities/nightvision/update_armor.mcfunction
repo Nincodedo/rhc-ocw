@@ -40,13 +40,6 @@ scoreboard players set @s[predicate=!nincodedo:is/entity/wearing/netherite/helme
 
 tellraw @a[tag=debug_logging] [{"text":"[Debug] Night Vision Armor: Changed to ","extra":[{"score":{"name":"@s","objective":"nightvision_armor_changed"}}]},{"text":" total: ","extra":[{"score":{"name":"@s","objective":"nightvision_armor_total"}}]}]
 
-item replace entity @s[scores={nightvision_armor_changed=1,nightvision_armor_total=..7}] armor.head with leather_helmet
-item replace entity @s[scores={nightvision_armor_changed=2,nightvision_armor_total=8..9}] armor.head with golden_helmet
-item replace entity @s[scores={nightvision_armor_changed=3,nightvision_armor_total=10..11}] armor.head with chainmail_helmet
-item replace entity @s[scores={nightvision_armor_changed=4,nightvision_armor_total=12..18}] armor.head with iron_helmet
-item replace entity @s[scores={nightvision_armor_changed=5,nightvision_armor_total=19..26}] armor.head with diamond_helmet
-item replace entity @s[scores={nightvision_armor_changed=6,nightvision_armor_total=27..}] armor.head with netherite_helmet
-
-item modify entity @s[scores={nightvision_armor_changed=1..}] armor.head nincodedo:uniqueitems/nightvision_reconstruct
+loot replace entity @s[scores={nightvision_armor_changed=1..}] armor.head loot nincodedo:uniqueitems/nightvision_update
 
 advancement revoke @s only nincodedo:unique_items/nightvision/update_armor
