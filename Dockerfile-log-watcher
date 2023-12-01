@@ -1,11 +1,11 @@
 # syntax=docker/dockerfile:1
-FROM alpine:3.18.4 AS build
+FROM alpine:3.18.5 AS build
 RUN mkdir -p rhc/scripts
 COPY rhc/scripts/*.sh rhc/scripts
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN find rhc/scripts -type f -print0 | xargs -0 dos2unix --
 
-FROM alpine:3.18.4
+FROM alpine:3.18.5
 RUN mkdir -p /app/ocw-minecraft /config /data/defaultconfigs
 WORKDIR /app
 RUN apk --no-cache add docker=23.0.6-r6 docker-cli-compose=2.17.3-r7 curl=8.4.0-r0 jq=1.6-r3
