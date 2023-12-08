@@ -8,7 +8,7 @@ RUN find rhc/scripts -type f -print0 | xargs -0 dos2unix --
 FROM alpine:3.19.0
 RUN mkdir -p /app/ocw-minecraft /config /data/defaultconfigs
 WORKDIR /app
-RUN apk --no-cache add docker=23.0.6-r7 docker-cli-compose=2.17.3-r8 curl=8.4.0-r0 jq=1.6-r3
+RUN apk --no-cache add docker=24.0.7-r0 docker-cli-compose=2.23.3-r0 curl=8.5.0-r0 jq=1.7-r2
 COPY --from=build --chmod=755 rhc/scripts/*.sh .
 COPY docker-compose.yaml ocw-minecraft/docker-compose.yaml
 COPY *.env ocw-minecraft/
