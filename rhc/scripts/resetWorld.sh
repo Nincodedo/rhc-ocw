@@ -96,9 +96,9 @@ while :; do
   previous_attempt=$attempt_number
   attempt_number=$((++attempt_number))
   log "Starting up for attempt $attempt_number"
-  echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
+  echo "MOTD='$SERVER_NAME - Attempt #$attempt_number'" >$minecraft_compose_dir/motd_override.env
   printf "\n" >>$minecraft_compose_dir/motd_override.env
-  echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
+  echo "CFG_MOTD='$SERVER_NAME - Attempt #$attempt_number'" >>$minecraft_compose_dir/motd_override.env
   chown -R 1000:1000 world/
   log "Checking for healthy container status"
   docker ps -f name=$minecraft_docker_container_name | grep healthy >/dev/null
@@ -149,9 +149,9 @@ while :; do
     death_reset=true
     previous_attempt=$attempt_number
     attempt_number=$((++attempt_number))
-    echo "MOTD=$SERVER_NAME - Attempt \#$attempt_number" >$minecraft_compose_dir/motd_override.env
+    echo "MOTD='$SERVER_NAME - Attempt #$attempt_number'" >$minecraft_compose_dir/motd_override.env
     printf "\n" >>$minecraft_compose_dir/motd_override.env
-    echo "CFG_MOTD=$SERVER_NAME - Attempt \#$attempt_number" >>$minecraft_compose_dir/motd_override.env
+    echo "CFG_MOTD='$SERVER_NAME - Attempt #$attempt_number'" >>$minecraft_compose_dir/motd_override.env
     sleep 20
     rcon_command "kick @a Better luck next time..."
     docker stop $minecraft_docker_container_name
