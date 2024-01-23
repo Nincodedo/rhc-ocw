@@ -2,3 +2,5 @@
 /.idea/
 /secrets
 *.jar
+/build/
+/.assets_helper/links.json
