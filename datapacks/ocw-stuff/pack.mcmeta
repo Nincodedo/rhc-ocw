@@ -1,12 +1,14 @@
 {
   "pack": {
-    "pack_format": 16,
+    "pack_format": 26,
     "description": "OCW Stuff"
   },
   "features": {
     "enabled": [
       "vanilla",
-      "bundle"
+      "bundle",
+      "trade_rebalance",
+      "update_1_21"
     ]
   }
 }
