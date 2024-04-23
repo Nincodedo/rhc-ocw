@@ -137,43 +137,10 @@
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "name": [
-                {
-                  "text": "Anci",
-                  "color": "red",
-                  "italic": false,
-                  "extra": [
-                    {
-                      "text": "ent ",
-                      "color": "orange",
-                      "extra": [
-                        {
-                          "text": "OCW ",
-                          "color": "yellow",
-                          "extra": [
-                            {
-                              "text": "Stru",
-                              "color": "green",
-                              "extra": [
-                                {
-                                  "text": "ctur",
-                                  "color": "blue",
-                                  "extra": [
-                                    {
-                                      "text": "e Map",
-                                      "color": "purple"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "name": {
+                "text": "Ancient OCW Structure Map",
+                "italic": false
+              }
             }
           ]
         },
