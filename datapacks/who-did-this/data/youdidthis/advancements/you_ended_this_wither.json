@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:wither_rose"
+      "id": "minecraft:wither_rose"
     },
     "title": "You... Did this!",
     "description": "Killed the Wither",
