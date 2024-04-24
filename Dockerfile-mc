@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM debian:stable-slim AS build
 
-ARG bedrock_bone_meal_version=1.2.1+1.20
+ARG bedrock_bone_meal_version=1.2.1+1.20.5
 
 RUN apt-get update \
   && apt-get install zip wget ca-certificates -y --no-install-recommends \
@@ -25,11 +25,11 @@ FROM itzg/minecraft-server:2024.4.1
 
 ENV MODRINTH_PROJECTS=fabric-api,cloth-config,lithium,ferrite-core,starlight,fastback,chunky,no-chat-reports,disableinsecurechattoast,inventory-sorting,jamlib,architectury-api,rightclickharvest,jade,rei,memoryleakfix,mc-server-description
 
-ENV DATAPACKS=/datapacks/ocw-stuff.zip,/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip,/datapacks/custom-compostables.zip
+ENV DATAPACKS=/datapacks/who-did-this.zip,/datapacks/bedrock-bone-meal.zip
 RUN mkdir -p /datapacks
 COPY --from=build /datapacks/*.zip /datapacks
 
-ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json,/vt/datapacks.json
+ENV VANILLATWEAKS_FILE=/vt/craftingtweaks.json
 RUN mkdir -p /vt
 COPY rhc/vt/*.json /vt
 
