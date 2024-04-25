@@ -1,0 +1,50 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "inventory.*": {
+            "components": {
+              "minecraft:custom_data": {
+                "NinUnique": "BoatCompass"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "hotbar.*": {
+            "components": {
+              "minecraft:custom_data": {
+                "NinUnique": "BoatCompass"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "weapon.offhand": {
+            "components": {
+              "minecraft:custom_data": {
+                "NinUnique": "BoatCompass"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
