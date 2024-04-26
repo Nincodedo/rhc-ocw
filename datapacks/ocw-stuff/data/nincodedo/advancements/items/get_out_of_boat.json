@@ -38,8 +38,11 @@
             }
           },
           {
-            "condition": "minecraft:reference",
-            "name": "nincodedo:is/entity/inventory/have_boat_compass"
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Inventory:[{id:\"minecraft:compass\",components:{\"minecraft:custom_data\":{NinUnique:\"BoatCompass\"}}}]}"
+            }
           }
         ]
       }
