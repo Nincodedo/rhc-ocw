@@ -4,7 +4,7 @@
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "item": {
-          "tag": "custcompost:compostables",
+          "items": "#custcompost:compostables",
           "count": {
             "min": 1
           }
