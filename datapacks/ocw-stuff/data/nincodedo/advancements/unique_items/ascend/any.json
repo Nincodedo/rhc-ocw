@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "components": {
+            "predicates": {
               "minecraft:custom_data": {
                 "nincodedo:unique_item": "Ascend"
               }
