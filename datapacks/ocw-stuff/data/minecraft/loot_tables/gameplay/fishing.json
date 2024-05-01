@@ -90,8 +90,8 @@
           "predicate": {
             "components": {
               "minecraft:custom_data": {
-                "NinUnique":"NR",
-                "NinPowered":1
+                "nincodedo:unique_item":"NR",
+                "nincodedo:powered":1
               }
             }
           }
