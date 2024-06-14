@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:totem_of_undying"
+      "id": "minecraft:totem_of_undying"
     },
     "title": "You... almost did this",
     "description": "Close one, bud",

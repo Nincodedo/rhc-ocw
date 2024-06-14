@@ -10,7 +10,7 @@
             "predicate": {
               "equipment": {
                 "mainhand": {
-                  "tag": "custcompost:compostables"
+                  "items": "#custcompost:compostables"
                 }
               }
             }
