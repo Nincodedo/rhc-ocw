@@ -23,7 +23,7 @@
 
 ## Player Gifts
 
-OCW players have specific gifts that when given to them grant you an advancement. If you complete all the gift advancements for a player, you will be given a [Player Head](https://minecraft.fandom.com/wiki/Head#Player_skins) of them.
+OCW players have specific gifts that when given to them grant you an advancement. If you complete all the gift advancements for a player, you will be given a [Player Head](https://minecraft.wiki/w/Player_Head#Player_skins) of them.
 
 ## Unique Items
 
@@ -73,7 +73,7 @@ The Potion Bundle is a bundle filled with splash potions. It can be used in tand
 
 ### Potion Horn
 
-The Potion Horn is a goat horn for ShokkZ. It shares splash potion effects with all players within earshot of the horn (256 blocks). It can be found in [Pillager Outposts](https://minecraft.fandom.com/wiki/Pillager_Outpost).
+The Potion Horn is a goat horn for ShokkZ. It shares splash potion effects with all players within earshot of the horn (256 blocks). It can be found in [Pillager Outposts](https://minecraft.wiki/w/Pillager_Outpost).
 
 ### Sheep Horn
 
@@ -99,7 +99,7 @@ Found in the following biomes: Birch Forest, Dark Forest, Flower Forest, Forest,
 
 Originally built by Zedar from OCW Minecraft 1.3, the library town (2012). Expanded upon by Nincodedo (2023).
 
-Found in the same biomes as [Strongholds](https://minecraft.fandom.com/wiki/Stronghold)
+Found in the same biomes as [Strongholds](https://minecraft.wiki/w/Stronghold)
 
 ### Metal_Link's House
 
