@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:pufferfish"
+      "id": "minecraft:pufferfish"
     },
     "title": "gALAXY bRAIN",
     "description": "wow, you did this in the worst way",

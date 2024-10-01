@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:totem_of_undying"
+      "id": "minecraft:totem_of_undying"
     },
     "title": {
       "text": "You could have ",

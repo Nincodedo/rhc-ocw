@@ -11,17 +11,17 @@ scoreboard players set @s hopperslot2other 0
 scoreboard players set @s hopperslot3other 0
 scoreboard players set @s hopperslot4other 0
 
-execute store result score @s hopperslot0 run data get block ~ ~1 ~ Items[{Slot:0b,id:"minecraft:poisonous_potato"}].Count
-execute store result score @s hopperslot1 run data get block ~ ~1 ~ Items[{Slot:1b,id:"minecraft:poisonous_potato"}].Count
-execute store result score @s hopperslot2 run data get block ~ ~1 ~ Items[{Slot:2b,id:"minecraft:poisonous_potato"}].Count
-execute store result score @s hopperslot3 run data get block ~ ~1 ~ Items[{Slot:3b,id:"minecraft:poisonous_potato"}].Count
-execute store result score @s hopperslot4 run data get block ~ ~1 ~ Items[{Slot:4b,id:"minecraft:poisonous_potato"}].Count
+execute store result score @s hopperslot0 run data get block ~ ~1 ~ Items[{Slot:0b,id:"minecraft:poisonous_potato"}].count
+execute store result score @s hopperslot1 run data get block ~ ~1 ~ Items[{Slot:1b,id:"minecraft:poisonous_potato"}].count
+execute store result score @s hopperslot2 run data get block ~ ~1 ~ Items[{Slot:2b,id:"minecraft:poisonous_potato"}].count
+execute store result score @s hopperslot3 run data get block ~ ~1 ~ Items[{Slot:3b,id:"minecraft:poisonous_potato"}].count
+execute store result score @s hopperslot4 run data get block ~ ~1 ~ Items[{Slot:4b,id:"minecraft:poisonous_potato"}].count
 
-execute store result score @s hopperslot0other run data get block ~ ~1 ~ Items[{Slot:0b}].Count
-execute store result score @s hopperslot1other run data get block ~ ~1 ~ Items[{Slot:1b}].Count
-execute store result score @s hopperslot2other run data get block ~ ~1 ~ Items[{Slot:2b}].Count
-execute store result score @s hopperslot3other run data get block ~ ~1 ~ Items[{Slot:3b}].Count
-execute store result score @s hopperslot4other run data get block ~ ~1 ~ Items[{Slot:4b}].Count
+execute store result score @s hopperslot0other run data get block ~ ~1 ~ Items[{Slot:0b}].count
+execute store result score @s hopperslot1other run data get block ~ ~1 ~ Items[{Slot:1b}].count
+execute store result score @s hopperslot2other run data get block ~ ~1 ~ Items[{Slot:2b}].count
+execute store result score @s hopperslot3other run data get block ~ ~1 ~ Items[{Slot:3b}].count
+execute store result score @s hopperslot4other run data get block ~ ~1 ~ Items[{Slot:4b}].count
 
 scoreboard players operation @s hopperslot0other -= @s hopperslot0
 scoreboard players operation @s hopperslot1other -= @s hopperslot1
