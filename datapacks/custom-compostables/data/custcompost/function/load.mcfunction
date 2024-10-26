@@ -13,3 +13,5 @@ scoreboard objectives add hopperslot2other dummy
 scoreboard objectives add hopperslot3other dummy
 scoreboard objectives add hopperslot4other dummy
 scoreboard objectives add hopperslottotal dummy
+
+execute if entity @e[tag=hopper_enabled_composter] run schedule function custcompost:composter/hopper/schedule_hopper_tick_check 8t

@@ -4,12 +4,6 @@
       "id": "minecraft:player_head",
       "components": {
         "minecraft:profile": {
-          "id": [
-            494443864,
-            -350796260,
-            -1925633719,
-            472495106
-          ],
           "properties": [
             {
               "name": "textures",
@@ -33,9 +27,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:crafting_table"
-            ]
+            "items": "minecraft:crafting_table"
           }
         ]
       }

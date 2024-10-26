@@ -11,7 +11,7 @@
   },
   "parent": "youdidthis:root",
   "criteria": {
-    "anydeath": {
+    "almostdeath": {
       "trigger": "minecraft:used_totem"
     }
   },

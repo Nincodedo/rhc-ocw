@@ -27,11 +27,6 @@
       }
     }
   },
-  "requirements": [
-    [
-      "killed_dragon"
-    ]
-  ],
   "rewards": {
     "function": "youdidthis:small_celebration"
   }

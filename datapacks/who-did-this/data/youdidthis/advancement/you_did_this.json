@@ -16,7 +16,7 @@
       "conditions": {
         "player": {
           "type_specific": {
-            "type": "player",
+            "type": "minecraft:player",
             "stats": [
               {
                 "type": "minecraft:custom",

@@ -3,7 +3,7 @@
   "entity": "this",
   "predicate": {
     "type_specific": {
-      "type": "player",
+      "type": "minecraft:player",
       "advancements": {
         "youdidthis:you_did_this": true
       }

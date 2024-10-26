@@ -5,7 +5,7 @@
     "predicate": {
       "equipment": {
         "mainhand": {
-          "tag": "custcompost:compostables_65",
+          "items": "#custcompost:compostables_65",
           "count": {
             "min": 1
           }

@@ -27,11 +27,6 @@
       }
     }
   },
-  "requirements": [
-    [
-      "killed_wither"
-    ]
-  ],
   "rewards": {
     "function": "youdidthis:create_end_countdown"
   }

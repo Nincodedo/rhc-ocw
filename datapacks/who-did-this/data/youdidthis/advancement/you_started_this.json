@@ -15,15 +15,16 @@
     "summon_wither": {
       "trigger": "minecraft:summoned_entity",
       "conditions": {
-        "entity": {
-          "type": "minecraft:wither"
-        }
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:wither"
+            }
+          }
+        ]
       }
     }
-  },
-  "requirements": [
-    [
-      "summon_wither"
-    ]
-  ]
+  }
 }
