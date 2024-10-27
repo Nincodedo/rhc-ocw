@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   mc:
     build:
@@ -102,8 +100,8 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.20.5'
-      INITIAL_ENABLED_PACKS: 'bundle,trade_rebalance,update_1_21'
+      VERSION: '1.21.3'
+      INITIAL_ENABLED_PACKS: 'trade_rebalance,winter_drop,minecart_improvements'
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack?type=beta'
       RCON_CMDS_STARTUP: |-
         gamerule doDaylightCycle false
