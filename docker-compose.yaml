@@ -1,13 +1,17 @@
+name: ocw-minecraft
+
 services:
-  mc:
+  mc: &mc
     build:
       context: .
-      dockerfile: Dockerfile-mc
+      dockerfile: Dockerfile
+      target: mc
     image: ghcr.io/nincodedo/rhc-ocw-mc:6.6.0
     env_file:
       - motd_override.env
       - docker.env
-    environment:
+      - common.env
+    environment: &mc-env
       DIFFICULTY: 'hard'
       HARDCORE: 'true'
       OVERRIDE_SERVER_PROPERTIES: 'true'
@@ -30,15 +34,10 @@ services:
       INITIAL_ENABLED_PACKS: 'bundle,trade_rebalance,update_1_21'
       RCON_CMDS_STARTUP: |-
         gamerule doDaylightCycle false
-        chunky radius 3000
-        chunky start
-        chunky continue
       RCON_CMDS_FIRST_CONNECT: |-
         gamerule doDaylightCycle true
-        chunky pause
       RCON_CMDS_LAST_DISCONNECT: |-
         gamerule doDaylightCycle false
-        chunky continue
     volumes:
       - mc_server:/data
       - mc_mod_configs:/config
@@ -52,18 +51,19 @@ services:
       dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore 6.6.0 - Minecraft 1.20.5"
       dev.nincodedo.gameservercommander.connection_info: "games.nincodedo.dev"
       com.centurylinklabs.watchtower.enable: false
-  log-watcher:
+      mc-router.host: "games.nincodedo.dev"
+      mc-router.default: true
+  log-watcher: &log-watcher
     build:
       context: .
-      dockerfile: Dockerfile-log-watcher
-      labels:
-        - "com.centurylinklabs.watchtower.enable=false"
+      dockerfile: Dockerfile
+      target: log_watcher
     image: ghcr.io/nincodedo/rhc-ocw:6.6.0
     container_name: log-watcher
     env_file:
       - docker.env
+      - common.env
     environment:
-      TZ: 'CST6CDT'
       MC_CONTAINER_NAME: 'mc'
     secrets:
       - discord_webhook
@@ -75,71 +75,48 @@ services:
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       com.centurylinklabs.watchtower.enable: false
   mc-test:
-    build:
-      context: .
-      dockerfile: Dockerfile-mc
+    <<: *mc
     image: ghcr.io/nincodedo/rhc-ocw-mc:unstable
-    env_file:
-      - motd_override.env
-      - docker.env
     environment:
-      DIFFICULTY: 'hard'
-      HARDCORE: 'true'
-      OVERRIDE_SERVER_PROPERTIES: 'true'
-      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
-      RESOURCE_PACK_SHA1: '1a6115175498b822e63f97a667276b97fad8d4aa'
-      WHITELIST_FILE: 'https://pub-45c3705f3f054e47a324249ec3c7e698.r2.dev/whitelist.json'
+      <<: *mc-env
       MEMORY: '2G'
-      BROADCAST_RCON_TO_OPS: 'false'
-      FUNCTION_PERMISSION_LEVEL: '4'
-      ENABLE_COMMAND_BLOCK: 'true'
-      SPAWN_PROTECTION: '0'
-      ENABLE_AUTOPAUSE: 'true'
-      MAX_TICK_TIME: "-1"
-      AUTOPAUSE_TIMEOUT_EST: '30'
-      AUTOPAUSE_TIMEOUT_INIT: '120'
-      TYPE: 'FABRIC'
-      REMOVE_OLD_MODS: 'true'
       VERSION: '1.21.3'
       INITIAL_ENABLED_PACKS: 'trade_rebalance,winter_drop,minecart_improvements'
       RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack?type=beta'
-      RCON_CMDS_STARTUP: |-
-        gamerule doDaylightCycle false
-      RCON_CMDS_FIRST_CONNECT: |-
-        gamerule doDaylightCycle true
-      RCON_CMDS_LAST_DISCONNECT: |-
-        gamerule doDaylightCycle false
     volumes:
       - mc_server_test:/data
     container_name: mc-test
-    tty: true
-    stdin_open: true
     labels:
       com.centurylinklabs.watchtower.enable: false
+      mc-router.host: "rhctest.nincodedo.dev"
+      dev.nincodedo.gameservercommander.game: "Minecraft"
+      dev.nincodedo.gameservercommander.group: "MC-RHC-TEST"
+      dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC TEST"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Test - Minecraft 1.21.3"
+      dev.nincodedo.gameservercommander.connection_info: "rhctest.nincodedo.dev"
+      mc-router.default: false
   log-watcher-test:
-    build:
-      context: .
-      dockerfile: Dockerfile-log-watcher
-      labels:
-        - "com.centurylinklabs.watchtower.enable=false"
+    <<: *log-watcher
     image: ghcr.io/nincodedo/rhc-ocw:unstable
     container_name: log-watcher-test
-    env_file:
-      - docker.env
     environment:
-      TZ: 'CST6CDT'
       MC_CONTAINER_NAME: 'mc-test'
     volumes:
       - mc_server_test:/data
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       com.centurylinklabs.watchtower.enable: false
+      dev.nincodedo.gameservercommander.group: "MC-RHC-TEST"
+    secrets:
+      - !reset null
   router:
     image: itzg/mc-router
     container_name: router
     ports:
       - "25565:25565"
-    command: --mapping=games.nincodedo.dev=mc:25565,rhctest.nincodedo.dev=mc-test:25565
+    command: -in-docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 volumes:
   mc_server:
   mc_server_test:

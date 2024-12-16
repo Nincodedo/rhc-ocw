@@ -21,9 +21,10 @@ check_rewards() {
     fi
 }
 
-source /app/common.sh
+# shellcheck source=rhc/scripts/common.sh
+. common.sh
 
-cd /data
+cd /data || exit 1
 
 script_name="Rewards"
 previous_attempt="$1"
@@ -63,7 +64,7 @@ do
         fi
         echo "$username" > "$id.txt"
         jq -r '. | to_entries[] | select(.value.done == true) | select(.key|contains("recipes")|not) | select(.key|startswith("uncraftable")|not) | select(.key|startswith("vanilla")|not) | .key' "$f" 2> /dev/null > "$username".txt
-        transformed=$((++transformed))
+        transformed=$((transformed + 1))
     fi
 done
 

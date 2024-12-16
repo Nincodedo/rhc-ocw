@@ -65,7 +65,7 @@ world_ending_announcements() {
   fi
 }
 
-source /app/common.sh
+. common.sh
 
 script_name="LogWatcher"
 minecraft_server_dir=/data
