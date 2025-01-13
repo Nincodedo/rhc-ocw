@@ -18,7 +18,7 @@ RUN cd /datapacks/who-did-this \
 
 RUN wget -O /datapacks/bedrock-bone-meal.zip https://github.com/Nincodedo/mc-java-bedrock-bone-meal-datapack/releases/download/$bedrock_bone_meal_version/bedrock-bone-meal-$bedrock_bone_meal_version.zip
 
-FROM itzg/minecraft-server:2024.10.2
+FROM itzg/minecraft-server:2025.1.0
 
 ENV MODRINTH_PROJECTS=mc-server-description,rightclickharvest,vanilla-pings
 ENV MODRINTH_DOWNLOAD_DEPENDENCIES=required
