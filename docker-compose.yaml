@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       target: mc
-    image: ghcr.io/nincodedo/rhc-ocw-mc:6.6.0
+    image: ghcr.io/nincodedo/rhc-ocw-mc:7.0.0
     env_file:
       - motd_override.env
       - docker.env
@@ -16,8 +16,6 @@ services:
       HARDCORE: 'true'
       OVERRIDE_SERVER_PROPERTIES: 'true'
       ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
-      RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack'
-      RESOURCE_PACK_SHA1: '1a6115175498b822e63f97a667276b97fad8d4aa'
       WHITELIST_FILE: 'https://pub-45c3705f3f054e47a324249ec3c7e698.r2.dev/whitelist.json'
       MEMORY: '3G'
       BROADCAST_RCON_TO_OPS: 'false'
@@ -30,8 +28,7 @@ services:
       AUTOPAUSE_TIMEOUT_INIT: '120'
       TYPE: 'FABRIC'
       REMOVE_OLD_MODS: 'true'
-      VERSION: '1.20.5'
-      INITIAL_ENABLED_PACKS: 'bundle,trade_rebalance,update_1_21'
+      VERSION: '1.21.9'
       RCON_CMDS_STARTUP: |-
         gamerule doDaylightCycle false
       RCON_CMDS_FIRST_CONNECT: |-
@@ -48,17 +45,17 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore 6.6.0 - Minecraft 1.20.5"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore 7.0.0 - Minecraft 1.21.9"
       dev.nincodedo.gameservercommander.connection_info: "games.nincodedo.dev"
       com.centurylinklabs.watchtower.enable: false
       mc-router.host: "games.nincodedo.dev"
-      mc-router.default: true
+      mc-router.default: false
   log-watcher: &log-watcher
     build:
       context: .
       dockerfile: Dockerfile
       target: log_watcher
-    image: ghcr.io/nincodedo/rhc-ocw:6.6.0
+    image: ghcr.io/nincodedo/rhc-ocw:7.0.0
     container_name: log-watcher
     env_file:
       - docker.env
@@ -80,9 +77,6 @@ services:
     environment:
       <<: *mc-env
       MEMORY: '2G'
-      VERSION: '1.21.3'
-      INITIAL_ENABLED_PACKS: 'trade_rebalance,winter_drop,minecart_improvements'
-      RESOURCE_PACK: 'https://ocw-rhc.services.nincodedo.dev/v1/resource-pack?type=beta'
     volumes:
       - mc_server_test:/data
     container_name: mc-test
@@ -92,7 +86,7 @@ services:
       dev.nincodedo.gameservercommander.game: "Minecraft"
       dev.nincodedo.gameservercommander.group: "MC-RHC-TEST"
       dev.nincodedo.gameservercommander.name: "OCW Minecraft RHC TEST"
-      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Test - Minecraft 1.21.3"
+      dev.nincodedo.gameservercommander.description: "OCW Radical Hardcore Test - Minecraft 1.21.9"
       dev.nincodedo.gameservercommander.connection_info: "rhctest.nincodedo.dev"
       mc-router.default: false
   log-watcher-test:
@@ -109,6 +103,41 @@ services:
       dev.nincodedo.gameservercommander.group: "MC-RHC-TEST"
     secrets:
       - !reset null
+  mc-industrial-village:
+    image: itzg/minecraft-server:latest
+    container_name: mc-industrial-village
+    env_file:
+      - motd_override.env
+      - docker.env
+      - common.env
+      - secrets/curseforge.env
+    environment:
+      EULA: "TRUE"
+      MEMORY: '4G'
+      TYPE: AUTO_CURSEFORGE
+      CF_PAGE_URL: 'https://www.curseforge.com/minecraft/modpacks/industrial-village'
+      CF_EXCLUDE_MODS: '317269,263420,317780'
+      CURSEFORGE_FILES: 'distant-horizons'
+      OVERRIDE_SERVER_PROPERTIES: 'true'
+      ICON: 'https://cdn.discordapp.com/icons/109466144993210368/a_63bcc148bca7700101d1fb6b9522d638.png'
+      SPAWN_PROTECTION: '0'
+      ENABLE_AUTOPAUSE: 'true'
+      MAX_TICK_TIME: "-1"
+      AUTOPAUSE_TIMEOUT_EST: '30'
+      AUTOPAUSE_TIMEOUT_INIT: '120'
+      WHITELIST_FILE: 'https://pub-45c3705f3f054e47a324249ec3c7e698.r2.dev/whitelist.json'
+      RCON_CMDS_STARTUP: |-
+        gamerule doDaylightCycle false
+      RCON_CMDS_FIRST_CONNECT: |-
+        gamerule doDaylightCycle true
+      RCON_CMDS_LAST_DISCONNECT: |-
+        gamerule doDaylightCycle false
+    labels:
+      com.centurylinklabs.watchtower.enable: false
+      mc-router.host: "mc.nincodedo.dev"
+      mc-router.default: true
+    volumes:
+      - mc_iv_server:/data
   router:
     image: itzg/mc-router
     container_name: router
@@ -121,6 +150,7 @@ volumes:
   mc_server:
   mc_server_test:
   mc_mod_configs:
+  mc_iv_server:
 secrets:
   discord_webhook:
     file: ./secrets/discord_webhook.txt
