@@ -6,9 +6,14 @@
       "unpackable nether wart",
       "unpackable wool"
     ],
+    "craftables": [
+      "craftable bundles rabbit hide"
+    ],
     "quality of life": [
       "back to blocks",
-      "sandstone dyeing"
+      "sandstone dyeing",
+      "universal dyeing",
+      "blackstone cobblestone"
     ]
   },
   "type": "craftingtweaks",
