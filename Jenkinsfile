@@ -11,6 +11,11 @@ pipeline {
                   steps {
                     sh "docker compose build log-watcher-test"
                   }
+                  post {
+                    cleanup {
+                      sh "docker image rm ghcr.io/nincodedo/rhc-ocw:unstable"
+                    }
+                  }
                 }
                 stage('Build MC') {
                   agent {
@@ -18,6 +23,11 @@ pipeline {
                   }
                   steps {
                     sh "docker compose build mc-test"
+                  }
+                  post {
+                    cleanup {
+                      sh "docker image rm ghcr.io/nincodedo/rhc-ocw-mc:unstable"
+                    }
                   }
                 }
             }
