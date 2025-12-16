@@ -9,7 +9,7 @@ pipeline {
                     label 'buildx'
                   }
                   steps {
-                    sh "docker compose build log-watcher-test"
+                    sh "docker compose build --no-cache log-watcher-test"
                   }
                   post {
                     cleanup {
@@ -22,7 +22,7 @@ pipeline {
                     label 'buildx'
                   }
                   steps {
-                    sh "docker compose build mc-test"
+                    sh "docker compose build --no-cache mc-test"
                   }
                   post {
                     cleanup {
